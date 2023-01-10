@@ -1,0 +1,80 @@
+Modèle pertinent :
+
+Ce qu'on veut montrer == nombre de frappes / buts par equipe et donc victoire et défaite
+
+variables explicatives qui ont du sens  : 
+	- possession (encore que ?) --> FBREF
+	- contre attaque 
+	- formation --> FBREF
+	- coach     === ces deux derniers ont pour but de montrer le style de jeu et peut-être expliqueront-ils les occasions --TRANSFERMARKT
+	- effectifs == valeur de l'effectif c'est un peu le seul truc que je peux avoir (notes fifa ?) --TRANSFERMARKT
+	- fautes subies ou penaltys+coup francs == aggressivité, capacité à provoquer la faute (trop de faute provoquée s'expliquerait peut-être par une différence de niveau forte entre les équipes) --> FBREF
+	- saves du gardien (par match ou par équipe ?) --> expliquerait la part liée au gardien !! ATTENTION cependant à ce que ça ne soit pas trop corrélé avec le nombre de frappes mais, expliquerait peut-être la qualité offensive d'une équipe ???
+	- Forme == le repos est il pertinent entre deux matchs (sachant que dans le foot, peu d'équipe jouent plus de 2 matchs par semaine) et série en cours (aspect psychologique de l'équipe) --> A recalculer
+	- age moyen de l'équipe == capacité à jouer fort contrebalancée par l'expérience , qui a le plus d'effet ? --> TRANSFERMARKT??
+	- Période de l'année (certains joueurs plus endurants dans le froid ou plus performant dans le chaud ???) --> PARTOUT EN VRAI
+	- Si possible, nombre de passes moyen par match ? mais pas sûr de la pertinence + doublon avec possession peut-être --> FBREF
+
+Comment connaitre la valeur d'une équipe avant chaque match (avec les absents etc....) Le PSG sans neymar, Mbappé et Messi c'est toujours bien mais c'est moins fou ?
+Attention à l'effet coach = 
+La possession, le nombre de passe, le nombre de frappe, le nombre de save du gardien vont aussi dépendre du schéma de jeu. Par conséquent le fait d'introduire le coach et la formation de l'équipe dans l'équation pourrait créer une corrélation forte entre toutes ces variables .
+
+
+Où trouver les données  ::
+Problème de ESPN == URL avec des codes matchs sans logique évidente
+Problème de Whoscored == Site protégé, impossible de scrapper 
+Problème de récupérer les csv == Mise à jour ?
+Problème des API == API complètes payantes
+Problème de azscore ou xscore je sais plus == url avec logique d'id de match random comme espn 
+
+Dans les csv de football-data.co.uk :
+Equipes
+Date
+Nb de buts
+Nb de tirs
+Nb de tirs cadrés
+Résultat
+Fautes
+Corner
+Jaunes
+Rouges
+
+fbref !!! YOUHOU !!! mais pb d'url encore
+codes url dans un fichier text
+
+Dans les fichiers fbref scores & fixtures:
+Date
+Heure
+Equipe
+compétition
+Home/Away
+Résultat
+Nombre de buts
+Nombre de buts encaissés
+Possession
+Attendance
+Capitaine
+Formation Arbitre
+
+Dans les fichiers fbref shoots:
+Tirs
+Tirs cadrés
+Distance moyenne
+Free kicks
+Penaltys
+
+Dans les fichiers fbref passing:
+Passes complétées
+% de passes réussies
+
+Dans les fichiers defensive actions:
+Tacles
+interceptions
+
+Dans les fichiers miscallenous stats:
+Cartons jaunes
+Cartons rouges
+Fautes 
+Hors jeu
+
+
