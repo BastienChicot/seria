@@ -1,0 +1,21 @@
+code;team;code_url
+Atalanta;Atalanta;922493f3
+Bologna;Bologna;1d8099f8
+Empoli;Empoli;a3d88bd8
+Fiorentina;Fiorentina;421387cf
+Hellas-Verona;Hellas Verone;0e72edf2
+Internazionale;Inter Milan;d609edc0
+Juventus;Juventus;e0652b02
+Lazio;Lazio Rome;7213da33
+Milan;AC Milan;dc56fe14
+Napoli;Napoli;d48ad4ff
+Roma;As Roma;cf74a709
+Salernitana;Salernitana;c5577084
+Sampdoria;Sampdoria;8ff9e3b3
+Sassuolo;Sassuolo;e2befd26
+Spezia;Spezia;68449f6d
+Torino;Torino;105360fe
+Udinese;Udinese;04eea015
+Cagliari;Cagliari;c4260e09
+Genoa;Genoa;658bf2de
+Venezia;Venezia;af5d5982
