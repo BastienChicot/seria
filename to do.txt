@@ -80,3 +80,28 @@ Hors jeu
 Récup sur transfermarkt :
 Galère == tables en js
 Selenium plus retouches à la main pour obtenir un fichier correct et exploitable mais à ne faire qu'une fois par saison donc EZ
+
+
+Comment exprimer concretement les variables :
+Modèle ==>
+Nombre de but / Victoire-Défaite = Date + Home/away + Possession + Formation + Tirs? + Distance moyenne + % de passes completées + interceptions + Tacles + Cartons + Fautes + Valeur equipe
+
+Intégration de variable de l'adversaire ? --> Valeur equipe adverse , Formation equipe adverse
+
+Nombre de buts ou Victoire == Resulat dans les bases FBREF
+
+- Date == Ou période de l'année (peut-être ne garder que le mois / fonctionnait bien sur la NBA)
+- Home/Away = Tel quel dans les bases FBREF
+- Possession == Juste la possession de l'equipe (Voir s'il ne serait pas pertinent de la comparer avec la possession moyenne de la saison) dans FBREF
+- Formation == Voir si il est bien pertinent de garder la formation sous forme de str --> Peut-être créer trois nouvelles variables = nb defenseurs, nb milieu, nb attaquants (seul problème, les formations type 4-2-3-1 mais peut être possible en faisant 11 - (nb_att + nb_def))
+- Tirs : gros risque de corrélation avec la var a expliquée surtout si je garde le nombre de but. + tirs ou tirs cadrés ?
+- Distance == FBREF, interessant mais potentiellement fortement correlée au nombre de tirs
+- % de passes completées == tel quel dans FBREF
+- interceptions == FBREF 
+- Tacles == FBREF, voir la pertinence
+- Cartons == Jaunes ou rouges ? voir pertinence également
+- Fautes == soit cartons soit ça en gros
+- valeur équipe == supprimer les caractères inutiles (€ et m)
+- age
+- valeur équipe adverse == idem
+- formation équipe adverse == pareil (nb de défenseur etc...) 
