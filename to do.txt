@@ -105,3 +105,62 @@ Nombre de buts ou Victoire == Resulat dans les bases FBREF
 - age
 - valeur équipe adverse == idem
 - formation équipe adverse == pareil (nb de défenseur etc...) 
+- Nb de jours de repos == recalculer depuis FBREF
+
+CORRELATION DES VARIABLES, OBSERVATIONS SUR LA SAISON 21 22 (a confirmer avec les données des autres saisons):
+possession ==>
+tirs cadrés : 0.39
+cmp% : 0.57
+repos : 0.46
+
+age ==>
+value : 0.18
+
+tirs cardés ==>
+possession : 0.39
+cmp% : 0.33
+
+distance ==>
+tirs cadrés : 0.2
+
+cmp% ==>
+possession : 0.57
+value : 0.47
+
+int ==>
+possession : -0.26
+cmp% : -0.26
+
+fls ==>
+cmp% : -0.27
+
+value ==> 
+cmp% : 0.47
+
+repos ==>
+value : 0.17
+
+opp_value ==>
+possession : -0.38
+
+VICTOIRE ==>
+possession : 0.17
+tirs cadrés : 0.41
+cmp% : 0.18
+value : 0.28
+opp_value : -0.26 (s'annule avec la value) 
+
+Il peut-être intéressant de travailler sur la différence de valeur plutôt que sur les valeurs directement
+
+diff_value ==>
+possession : 0.53
+tirs cadrés : 0.33
+cmp% : 0.34
+VICTOIRE : 0.4
+
+On garde la diff c'est mieux!
+Test sur les équipes à domicile mais rien de fou 
+
+le nombre de milieu et d'attaquant semble être plus corrélés à la victoire ou à la défaite(nul) que le nombre de défenseur. Voir avec la différence peut-être.
+
+Pour les années précédente, je suis bloqué car je n'ai plus accès au site (access denied == robots). tester un autre jour ou sur un autre ordi.
