@@ -272,3 +272,479 @@ En Machine Learning je pourrais plus facilement faire des modèles en fonction d
 A refaire : tester d'autres types de modèles avant de partir en ML 
 Créer des variables pour différencier les formations sans partir sur des trucs catégoriels trop chiants
 Voir s'il n'y a pas d'autres variables dans la base d'origine qui pourraient être intéressantes à exploiter (peut-être en en modifiant la forme)
+
+Matrice de corrélation sur la table d'origine :
+Shot - possession plus fort que tirs cadrés possession
+FK free kick pas mal avec possession
+Attempt (Att) plus fort que Cmp%
+Yellow cards pas mal, red cards pas fou
+Offside nul
+Victoire : plus faible avec tirs qu'avec tirs cadrés, pas mal avec PK (penalty), meilleur avec Cmp% qu'avec Att, Yellow et red cards pareil et c'est pas mal.
+
+On va ajouter PK, Shot, Att et les deux cards + je recalcul des diff entre post (att - defopp, def-attopp et milieu-milieuopp)
+différence au milieu joue bien sur la possession par contre, c'est mieux que le nombre de milieu, de défenseur ou d'attaquant mais ça reste faiblard sur la victoire.
+
+Nouvelle regression :
+<class 'statsmodels.iolib.summary.Summary'>
+"""
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:               victoire   No. Observations:                 1197
+Model:                          Logit   Df Residuals:                     1173
+Method:                           MLE   Df Model:                           23
+Date:                Tue, 17 Jan 2023   Pseudo R-squ.:                  0.2689
+Time:                        21:01:52   Log-Likelihood:                -576.30
+converged:                       True   LL-Null:                       -788.29
+Covariance Type:            nonrobust   LLR p-value:                 2.021e-75
+=================================================================================
+                    coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------
+Intercept        -1.4344      7.706     -0.186      0.852     -16.539      13.670
+C(Mois)[T.2]      0.0414      0.328      0.126      0.900      -0.601       0.684
+C(Mois)[T.3]      0.3132      0.351      0.893      0.372      -0.374       1.000
+C(Mois)[T.4]      0.1906      0.301      0.634      0.526      -0.398       0.780
+C(Mois)[T.5]     -0.2097      0.321     -0.653      0.514      -0.840       0.420
+C(Mois)[T.8]     -0.2137      0.379     -0.563      0.573      -0.957       0.530
+C(Mois)[T.9]      0.3173      0.308      1.032      0.302      -0.285       0.920
+C(Mois)[T.10]     0.3849      0.290      1.327      0.184      -0.184       0.953
+C(Mois)[T.11]     0.3641      0.304      1.197      0.231      -0.232       0.960
+C(Mois)[T.12]    -0.1458      0.310     -0.471      0.638      -0.753       0.461
+diff_off          0.0209        nan        nan        nan         nan         nan
+diff_def          0.0024        nan        nan        nan         nan         nan
+diff_mil         -0.0233        nan        nan        nan         nan         nan
+home              0.4094      0.150      2.730      0.006       0.115       0.703
+np.log(age)       2.2240      2.026      1.098      0.272      -1.747       6.195
+np.log(Poss)     -2.3274      0.533     -4.366      0.000      -3.372      -1.283
+SoT               0.4631      0.047      9.933      0.000       0.372       0.554
+np.log(Dist)     -0.5751      0.454     -1.266      0.205      -1.465       0.315
+np.log(Cmp)       0.6353      1.174      0.541      0.588      -1.665       2.936
+np.log(Int)       0.2176      0.162      1.340      0.180      -0.101       0.536
+diff_value        0.0044      0.000     10.737      0.000       0.004       0.005
+Sh               -0.0950      0.021     -4.565      0.000      -0.136      -0.054
+PK                1.0607      0.191      5.566      0.000       0.687       1.434
+CrdY             -0.0411      0.057     -0.717      0.474      -0.154       0.071
+CrdR             -0.6325      0.242     -2.610      0.009      -1.107      -0.158
+=================================================================================
+"""
+
+Toujours Octobre et Novembre, va savoir pourquoi ? Arrivé du froid, mise en route des équipes...
+Pourquoi les diff par postes sont en nan ? A chercher...
+home est très bien
+log de l'age se défend, à voir dans un modèle plus petit
+possession et tirs cadrés toujours au top
+log d'int est défendable
+diff value, shot et penalty kick sont cool
+Red cards aussi
+
+R² un peu mieux que sur les modèles précédents.
+
+Un par un, diff milieu est celui qui sort avec le meilleur score (le problème devait être que les 3 variables en même temps s'annulaient : 11 joueurs contre 11) mais avec un 0.52 dégueu.
+
+Comment prendre en compte la formation de l'équipe adverse ?
+J'ai besoin d'un élément traduisant la stratégie sur le terrain. La possession en est un mais parfois celle ci s'explique surtout parce que les joueurs d'une équipe sont simplement techniquement beaucoup plus forts que leur adversaires et ont le ballon tout le temps.
+
+De plus, j'imagine qu'il existe des situations où des coachs arrivent à empiéter sur la technique de leur adversaire même si celui-ci est meilleur, juste avec un ajustement tactique entraînant une modification de la formation.
+
+La formation doit également me permettre de simuler des changements techniques liés à l'absence d'un cadre ou d'un joueur clé. La modification d'une formation en est la preuve puisqu'elle découle forcément d'un ajustement (soit face à cet adversaire, soit suite à une absence d'un joueur).
+
+Après, chaque formation est unique et dépend de l'équipe qui l'a réalise .
+J'imagine que le 4-3-3 du Milan n'aura pas le même impact que celui de la Roma sur un 4-4-2 de l'Inter. Je ne souhaite pas faire un modèle par équipe pour plusieurs raisons :
+- Manque de données
+- Déjà qu'en bossant sur 3 années j'ai des divergences de coach, d'effectifs etc alors bosser sur les seuls matchs d'une seule année par équipe et en pondre un modèle me semble risqué et peu prometteur.
+- Eviter l'overfitting comme sur mes modèle NBA.
+
+La variable opp_Formation pourrait être sympa mais le problème est le même, chaque formation appartenant à une équipe n'aura pas le même impact sur son adversaire. Peut-être que l'Inter ne perds jamais contre un 4-2-3-1 alors que la Forientina perd tout le temps contre ce type de formation (== renvoi encore à l'idée d'un modèle pas équipe qui n'est pas une solution viable).
+
+On va quand même tester l'opp_formation en variable dummy.
+
+<class 'statsmodels.iolib.summary.Summary'>
+"""
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:               victoire   No. Observations:                 1197
+Model:                          Logit   Df Residuals:                     1159
+Method:                           MLE   Df Model:                           37
+Date:                Tue, 17 Jan 2023   Pseudo R-squ.:                  0.2788
+Time:                        21:23:14   Log-Likelihood:                -568.54
+converged:                      False   LL-Null:                       -788.29
+Covariance Type:            nonrobust   LLR p-value:                 2.544e-70
+===============================================================================================
+                                  coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------------------
+Intercept                      -1.7675      7.854     -0.225      0.822     -17.162      13.627
+C(Mois)[T.2]                    0.1036      0.333      0.311      0.755      -0.548       0.755
+C(Mois)[T.3]                    0.3940      0.355      1.108      0.268      -0.303       1.091
+C(Mois)[T.4]                    0.1866      0.308      0.606      0.544      -0.417       0.790
+C(Mois)[T.5]                   -0.1715      0.326     -0.526      0.599      -0.811       0.468
+C(Mois)[T.8]                   -0.1285      0.388     -0.331      0.741      -0.889       0.632
+C(Mois)[T.9]                    0.3894      0.317      1.229      0.219      -0.232       1.011
+C(Mois)[T.10]                   0.4320      0.297      1.454      0.146      -0.150       1.014
+C(Mois)[T.11]                   0.4289      0.313      1.371      0.170      -0.184       1.042
+C(Mois)[T.12]                  -0.1108      0.317     -0.350      0.726      -0.731       0.510
+C(opp_Formation)[T.3-4-1-2]    -0.5469      0.662     -0.826      0.409      -1.845       0.751
+C(opp_Formation)[T.3-4-3]      -0.9044      0.635     -1.425      0.154      -2.148       0.339
+C(opp_Formation)[T.3-5-1-1]    -0.7012      0.848     -0.827      0.408      -2.363       0.961
+C(opp_Formation)[T.3-5-2]      -0.7029      0.601     -1.171      0.242      -1.880       0.474
+C(opp_Formation)[T.4-1-3-2]    14.2217    615.361      0.023      0.982   -1191.864    1220.307
+C(opp_Formation)[T.4-1-4-1]    -0.9311      0.812     -1.147      0.252      -2.523       0.661
+C(opp_Formation)[T.4-2-3-1]    -0.8688      0.634     -1.371      0.170      -2.111       0.373
+C(opp_Formation)[T.4-3-1-2]    -0.8017      0.658     -1.218      0.223      -2.091       0.488
+C(opp_Formation)[T.4-3-2-1]    -0.7027      0.776     -0.905      0.365      -2.224       0.819
+C(opp_Formation)[T.4-3-3]      -0.7299      0.626     -1.166      0.244      -1.957       0.497
+C(opp_Formation)[T.4-4-1-1]    -0.3570      0.853     -0.419      0.675      -2.028       1.314
+C(opp_Formation)[T.4-4-2]      -0.4342      0.644     -0.674      0.500      -1.697       0.829
+C(opp_Formation)[T.4-5-1]       8.8054   1011.736      0.009      0.993   -1974.161    1991.772
+C(opp_Formation)[T.5-3-2]       0.4376      0.993      0.441      0.659      -1.508       2.383
+C(opp_Formation)[T.5-4-1]       0.3103      1.338      0.232      0.817      -2.311       2.932
+diff_def                        0.0197      0.154      0.128      0.899      -0.283       0.322
+home                            0.4180      0.151      2.761      0.006       0.121       0.715
+np.log(age)                     2.9480      2.069      1.425      0.154      -1.108       7.004
+np.log(Poss)                   -2.4542      0.552     -4.449      0.000      -3.535      -1.373
+SoT                             0.4693      0.047      9.969      0.000       0.377       0.562
+np.log(Dist)                   -0.6390      0.476     -1.341      0.180      -1.573       0.295
+np.log(Cmp)                     0.4676      1.209      0.387      0.699      -1.901       2.837
+np.log(Int)                     0.1927      0.167      1.152      0.250      -0.135       0.521
+diff_value                      0.0043      0.000     10.261      0.000       0.004       0.005
+Sh                             -0.0935      0.021     -4.395      0.000      -0.135      -0.052
+PK                              1.1046      0.193      5.714      0.000       0.726       1.484
+CrdY                           -0.0358      0.059     -0.612      0.540      -0.150       0.079
+CrdR                           -0.6192      0.244     -2.533      0.011      -1.098      -0.140
+===============================================================================================
+"""
+
+R² toujours pas dingue
+Octobre Novembre as usual (travailler en saison ? ?)
+3-4-3, 4-2-3-1 avec les meilleurs scores ==> Vérifier qui joue en 3-4-3 c'est peut-être simplement le Milan ou la Juve et du coup ils influencent à fond les matchs et ils sont les seuls à jouer dans ces formations.
+
+On va commencer à réfléchir à un modèle plus simple avec moins de variable mais je dois encore tester la variable Att.
+
+Les équipes en 3-4-3
+Torino         45
+Atalanta       41
+Roma           39
+Bologna        17
+Venezia         5
+Cagliari        3
+Napoli          3
+Sassuolo        2
+Spezia          2
+Udinese         2
+Fiorentina      2
+Salernitana     1
+
+les équipe en 4-2-3-1:
+Milan          74
+Napoli         50
+Sassuolo       46
+Bologna        33
+Spezia         15
+Roma           14
+Genoa          13
+Cagliari        7
+Juventus        7
+Fiorentina      5
+Salernitana     4
+Sampdoria       3
+Atalanta        3
+Venezia         1
+
+En vrai il y en a beaucoup avec des niveaux très différents c'est plutôt rassurant
+
+Modèle avec Att :
+
+<class 'statsmodels.iolib.summary.Summary'>
+"""
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:               victoire   No. Observations:                 1197
+Model:                          Logit   Df Residuals:                     1158
+Method:                           MLE   Df Model:                           38
+Date:                Tue, 17 Jan 2023   Pseudo R-squ.:                  0.2788
+Time:                        21:32:04   Log-Likelihood:                -568.53
+converged:                      False   LL-Null:                       -788.29
+Covariance Type:            nonrobust   LLR p-value:                 8.796e-70
+===============================================================================================
+                                  coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------------------
+Intercept                      -2.0453      8.210     -0.249      0.803     -18.136      14.045
+C(Mois)[T.2]                    0.1028      0.333      0.309      0.757      -0.549       0.755
+C(Mois)[T.3]                    0.3947      0.356      1.110      0.267      -0.302       1.092
+C(Mois)[T.4]                    0.1824      0.310      0.589      0.556      -0.425       0.790
+C(Mois)[T.5]                   -0.1760      0.329     -0.536      0.592      -0.820       0.468
+C(Mois)[T.8]                   -0.1341      0.391     -0.343      0.732      -0.901       0.633
+C(Mois)[T.9]                    0.3858      0.318      1.212      0.226      -0.238       1.010
+C(Mois)[T.10]                   0.4281      0.299      1.432      0.152      -0.158       1.014
+C(Mois)[T.11]                   0.4298      0.313      1.374      0.169      -0.183       1.043
+C(Mois)[T.12]                  -0.1102      0.317     -0.348      0.728      -0.731       0.510
+C(opp_Formation)[T.3-4-1-2]    -0.5433      0.663     -0.819      0.413      -1.843       0.756
+C(opp_Formation)[T.3-4-3]      -0.9020      0.635     -1.421      0.155      -2.146       0.342
+C(opp_Formation)[T.3-5-1-1]    -0.6997      0.848     -0.825      0.409      -2.362       0.962
+C(opp_Formation)[T.3-5-2]      -0.7017      0.601     -1.168      0.243      -1.879       0.475
+C(opp_Formation)[T.4-1-3-2]    10.4920     94.940      0.111      0.912    -175.587     196.571
+C(opp_Formation)[T.4-1-4-1]    -0.9281      0.813     -1.142      0.253      -2.521       0.665
+C(opp_Formation)[T.4-2-3-1]    -0.8668      0.634     -1.367      0.172      -2.109       0.376
+C(opp_Formation)[T.4-3-1-2]    -0.8040      0.658     -1.221      0.222      -2.094       0.486
+C(opp_Formation)[T.4-3-2-1]    -0.7001      0.777     -0.902      0.367      -2.222       0.822
+C(opp_Formation)[T.4-3-3]      -0.7275      0.626     -1.162      0.245      -1.955       0.500
+C(opp_Formation)[T.4-4-1-1]    -0.3496      0.855     -0.409      0.683      -2.025       1.326
+C(opp_Formation)[T.4-4-2]      -0.4302      0.645     -0.667      0.505      -1.695       0.834
+C(opp_Formation)[T.4-5-1]       8.0444    682.083      0.012      0.991   -1328.814    1344.903
+C(opp_Formation)[T.5-3-2]       0.4417      0.993      0.445      0.657      -1.505       2.389
+C(opp_Formation)[T.5-4-1]       0.3204      1.340      0.239      0.811      -2.307       2.948
+diff_def                        0.0195      0.154      0.126      0.900      -0.283       0.322
+home                            0.4183      0.151      2.762      0.006       0.121       0.715
+np.log(age)                     2.9964      2.111      1.419      0.156      -1.141       7.134
+np.log(Poss)                   -2.3585      0.988     -2.387      0.017      -4.295      -0.422
+SoT                             0.4693      0.047      9.970      0.000       0.377       0.562
+np.log(Dist)                   -0.6393      0.477     -1.341      0.180      -1.573       0.295
+np.log(Cmp)                     0.5796      1.544      0.375      0.707      -2.446       3.606
+np.log(Int)                     0.1961      0.170      1.154      0.248      -0.137       0.529
+diff_value                      0.0043      0.000     10.255      0.000       0.004       0.005
+Sh                             -0.0936      0.021     -4.395      0.000      -0.135      -0.052
+PK                              1.1035      0.194      5.701      0.000       0.724       1.483
+CrdY                           -0.0370      0.059     -0.623      0.533      -0.154       0.079
+CrdR                           -0.6203      0.245     -2.536      0.011      -1.100      -0.141
+np.log(Att)                    -0.1201      1.028     -0.117      0.907      -2.135       1.895
+===============================================================================================
+"""
+
+Change rien au R² et p-value éclatée au sol, on oublie ça!
+
+Je vais créer des regroupement de formation pour qu'elles aient un peu plus la même tête avec 3 valeurs. Ca fausse carrément l'info par contre ça m'évitera les 4-4-1-1 qui doivent être relativement rares et qui du coup ont une p-value pourrie. Le vrai problème se pose au niveau des 4-2-3-1 et 4-3-2-1 le second étant défensif à fond contrairement au premier == donc l'info sur la stratégie est biaisée (pour pas dire autre chose).
+
+les formations adverses avec le nombre d'apparition:
+4-2-3-1    264
+3-5-2      240
+4-3-3      205
+3-4-3      154
+4-4-2       92
+4-3-1-2     63
+3-4-1-2     62
+4-3-2-1     26
+4-1-4-1     20
+3-5-1-1     20
+3-1-4-2     17
+4-4-1-1     15
+5-3-2       10
+5-4-1        4
+4-1-3-2      4
+4-5-1        1
+
+Soit je garde les plus importantes (>50 apparitions) soit je regroupe avec finalement très peu de risque car le premier regroupement problématique est le passage du 3-4-1-2 dans le 3-5-2 au dessus.
+
+Go regrouper !
+Toutefois, cela ne me permets pas de constater l'effet d'un 4-3-3 sur un 4-4-2 et celui du même 4-3-3 sur un 3-5-2 par exemple.
+Une fois les regroupements fait, je pourrai peut-être faire de même avec les formations des équipes étudiés et créer des couple de formation en variable quali.
+
+
+Avec les nouvelles formations adversaire :
+
+<class 'statsmodels.iolib.summary.Summary'>
+"""
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:               victoire   No. Observations:                 1217
+Model:                          Logit   Df Residuals:                     1188
+Method:                           MLE   Df Model:                           28
+Date:                Tue, 17 Jan 2023   Pseudo R-squ.:                  0.2761
+Time:                        21:46:52   Log-Likelihood:                -580.78
+converged:                      False   LL-Null:                       -802.33
+Covariance Type:            nonrobust   LLR p-value:                 3.221e-76
+===================================================================================================
+                                      coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------
+Intercept                           0.2011      6.809      0.030      0.976     -13.144      13.546
+C(Mois)[T.2]                        0.0378      0.325      0.116      0.908      -0.600       0.676
+C(Mois)[T.3]                        0.3150      0.346      0.911      0.362      -0.363       0.993
+C(Mois)[T.4]                        0.1798      0.300      0.598      0.550      -0.409       0.769
+C(Mois)[T.5]                       -0.2208      0.321     -0.688      0.491      -0.850       0.408
+C(Mois)[T.8]                       -0.2040      0.377     -0.541      0.589      -0.943       0.535
+C(Mois)[T.9]                        0.3264      0.307      1.063      0.288      -0.275       0.928
+C(Mois)[T.10]                       0.3518      0.290      1.213      0.225      -0.217       0.920
+C(Mois)[T.11]                       0.3687      0.307      1.199      0.230      -0.234       0.971
+C(Mois)[T.12]                      -0.2279      0.312     -0.731      0.465      -0.839       0.383
+C(opp_Formation)[T.3-5-2]           0.3131      0.255      1.229      0.219      -0.186       0.813
+C(opp_Formation)[T.3-6-1]           0.2678      0.623      0.430      0.667      -0.952       1.488
+C(opp_Formation)[T.3-<NA>-<NA>]    17.9380   1.74e+04      0.001      0.999    -3.4e+04     3.4e+04
+C(opp_Formation)[T.4-3-3]           0.2003      0.276      0.725      0.469      -0.341       0.742
+C(opp_Formation)[T.4-4-2]           0.4259      0.295      1.446      0.148      -0.152       1.003
+C(opp_Formation)[T.4-5-1]           0.1402      0.257      0.545      0.586      -0.364       0.645
+C(opp_Formation)[T.4-<NA>-<NA>]     1.5265      0.887      1.720      0.085      -0.213       3.266
+C(opp_Formation)[T.5-3-2]           1.3889      0.825      1.683      0.092      -0.228       3.006
+C(opp_Formation)[T.5-4-1]           1.2593      1.224      1.029      0.304      -1.140       3.659
+home                                0.4347      0.149      2.922      0.003       0.143       0.726
+np.log(age)                         2.5032      2.019      1.240      0.215      -1.454       6.460
+np.log(Poss)                       -2.3915      0.460     -5.198      0.000      -3.293      -1.490
+SoT                                 0.4734      0.046     10.255      0.000       0.383       0.564
+np.log(Dist)                       -0.5104      0.464     -1.100      0.272      -1.420       0.399
+np.log(Int)                         0.1877      0.163      1.154      0.248      -0.131       0.506
+diff_value                          0.0045      0.000     10.861      0.000       0.004       0.005
+Sh                                 -0.0980      0.021     -4.730      0.000      -0.139      -0.057
+PK                                  1.0656      0.190      5.598      0.000       0.692       1.439
+CrdR                               -0.6979      0.239     -2.920      0.003      -1.166      -0.230
+===================================================================================================
+"""
+
+R² bouge pas
+Là c'est tout l'automne qui semble bizarre. Je vais faire 2 saisons (début de saison et reste de l'année).
+3-6-1 ? Merci l'erreur
+3-5-2, 4-4-2, 4-na-na (pf...) , 5-3-2 sont pas mal. Je pense virer les formations qui sortent pas souvent ou celles qui comportent des erreurs ùais y a un début de quelque chose.
+Tester age, Dist et Int sans log maintenant peut-être.
+
+<class 'statsmodels.iolib.summary.Summary'>
+"""
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:               victoire   No. Observations:                 1217
+Model:                          Logit   Df Residuals:                     1188
+Method:                           MLE   Df Model:                           28
+Date:                Tue, 17 Jan 2023   Pseudo R-squ.:                  0.2767
+Time:                        21:51:37   Log-Likelihood:                -580.36
+converged:                      False   LL-Null:                       -802.33
+Covariance Type:            nonrobust   LLR p-value:                 2.167e-76
+===================================================================================================
+                                      coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------
+Intercept                           4.9593      2.682      1.849      0.064      -0.298      10.216
+C(Mois)[T.2]                        0.0469      0.326      0.144      0.886      -0.592       0.686
+C(Mois)[T.3]                        0.3184      0.346      0.921      0.357      -0.359       0.996
+C(Mois)[T.4]                        0.1861      0.301      0.619      0.536      -0.403       0.776
+C(Mois)[T.5]                       -0.2121      0.321     -0.660      0.509      -0.842       0.417
+C(Mois)[T.8]                       -0.1928      0.378     -0.511      0.610      -0.933       0.547
+C(Mois)[T.9]                        0.3353      0.307      1.091      0.275      -0.267       0.938
+C(Mois)[T.10]                       0.3540      0.290      1.220      0.222      -0.215       0.923
+C(Mois)[T.11]                       0.3684      0.308      1.198      0.231      -0.234       0.971
+C(Mois)[T.12]                      -0.2294      0.312     -0.735      0.462      -0.841       0.382
+C(opp_Formation)[T.3-5-2]           0.3141      0.255      1.233      0.218      -0.185       0.813
+C(opp_Formation)[T.3-6-1]           0.2652      0.624      0.425      0.671      -0.958       1.488
+C(opp_Formation)[T.3-<NA>-<NA>]    17.8441   1.73e+04      0.001      0.999    -3.4e+04     3.4e+04
+C(opp_Formation)[T.4-3-3]           0.2017      0.276      0.730      0.465      -0.340       0.743
+C(opp_Formation)[T.4-4-2]           0.4294      0.295      1.458      0.145      -0.148       1.007
+C(opp_Formation)[T.4-5-1]           0.1391      0.257      0.541      0.589      -0.365       0.643
+C(opp_Formation)[T.4-<NA>-<NA>]     1.5208      0.888      1.712      0.087      -0.220       3.262
+C(opp_Formation)[T.5-3-2]           1.4070      0.824      1.707      0.088      -0.208       3.023
+C(opp_Formation)[T.5-4-1]           1.2761      1.226      1.041      0.298      -1.126       3.678
+home                                0.4354      0.149      2.924      0.003       0.144       0.727
+age                                 0.1027      0.080      1.284      0.199      -0.054       0.259
+np.log(Poss)                       -2.3849      0.460     -5.180      0.000      -3.287      -1.483
+SoT                                 0.4736      0.046     10.244      0.000       0.383       0.564
+Dist                               -0.0327      0.027     -1.232      0.218      -0.085       0.019
+Int                                 0.0236      0.018      1.335      0.182      -0.011       0.058
+diff_value                          0.0045      0.000     10.819      0.000       0.004       0.005
+Sh                                 -0.0984      0.021     -4.753      0.000      -0.139      -0.058
+PK                                  1.0770      0.191      5.637      0.000       0.702       1.451
+CrdR                               -0.6964      0.239     -2.912      0.004      -1.165      -0.228
+===================================================================================================
+"""
+
+C'est mieux!
+
+Test avec les couples de formations. Je veux filtrer les moins courants pour pas avoir 70 lignes de couples de formations.
+Ca donne : 
+
+<class 'statsmodels.iolib.summary.Summary'>
+"""
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:               victoire   No. Observations:                  959
+Model:                          Logit   Df Residuals:                      923
+Method:                           MLE   Df Model:                           35
+Date:                Tue, 17 Jan 2023   Pseudo R-squ.:                  0.2734
+Time:                        21:57:01   Log-Likelihood:                -458.85
+converged:                       True   LL-Null:                       -631.50
+Covariance Type:            nonrobust   LLR p-value:                 1.107e-52
+=====================================================================================================
+                                        coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------------------------
+Intercept                             5.6729      3.126      1.814      0.070      -0.455      11.801
+C(Mois)[T.2]                         -0.0943      0.358     -0.264      0.792      -0.795       0.606
+C(Mois)[T.3]                          0.4268      0.371      1.150      0.250      -0.301       1.154
+C(Mois)[T.4]                          0.1147      0.332      0.345      0.730      -0.536       0.765
+C(Mois)[T.5]                         -0.1329      0.357     -0.372      0.710      -0.834       0.568
+C(Mois)[T.8]                         -0.2315      0.443     -0.523      0.601      -1.099       0.636
+C(Mois)[T.9]                          0.5711      0.342      1.669      0.095      -0.100       1.242
+C(Mois)[T.10]                         0.4282      0.333      1.288      0.198      -0.224       1.080
+C(Mois)[T.11]                         0.2468      0.369      0.669      0.504      -0.476       0.970
+C(Mois)[T.12]                        -0.0939      0.350     -0.268      0.788      -0.780       0.592
+C(couple_Formation)[T.3-4-33-5-2]     0.1168      0.587      0.199      0.842      -1.034       1.268
+C(couple_Formation)[T.3-4-34-5-1]     0.1830      0.635      0.288      0.773      -1.061       1.427
+C(couple_Formation)[T.3-5-23-4-3]    -0.2643      0.611     -0.433      0.665      -1.461       0.933
+C(couple_Formation)[T.3-5-23-5-2]    -0.1870      0.536     -0.349      0.727      -1.238       0.864
+C(couple_Formation)[T.3-5-24-3-3]    -0.1740      0.564     -0.308      0.758      -1.280       0.932
+C(couple_Formation)[T.3-5-24-4-2]    -0.2201      0.610     -0.361      0.718      -1.416       0.976
+C(couple_Formation)[T.3-5-24-5-1]    -0.0235      0.549     -0.043      0.966      -1.100       1.053
+C(couple_Formation)[T.4-3-33-5-2]     0.2990      0.549      0.545      0.586      -0.777       1.375
+C(couple_Formation)[T.4-3-34-5-1]     0.2098      0.562      0.373      0.709      -0.892       1.312
+C(couple_Formation)[T.4-4-23-5-2]    -0.4171      0.612     -0.682      0.495      -1.616       0.782
+C(couple_Formation)[T.4-4-24-5-1]    -0.1751      0.595     -0.294      0.769      -1.342       0.991
+C(couple_Formation)[T.4-5-13-4-3]    -0.1936      0.629     -0.308      0.758      -1.426       1.039
+C(couple_Formation)[T.4-5-13-5-2]     0.3760      0.534      0.704      0.482      -0.671       1.423
+C(couple_Formation)[T.4-5-14-3-3]    -0.1180      0.559     -0.211      0.833      -1.213       0.977
+C(couple_Formation)[T.4-5-14-4-2]     0.4612      0.568      0.812      0.417      -0.652       1.574
+C(couple_Formation)[T.4-5-14-5-1]    -0.4415      0.536     -0.823      0.410      -1.493       0.609
+home                                  0.5459      0.168      3.245      0.001       0.216       0.876
+age                                   0.1146      0.095      1.204      0.229      -0.072       0.301
+np.log(Poss)                         -2.6508      0.524     -5.057      0.000      -3.678      -1.623
+SoT                                   0.4799      0.052      9.247      0.000       0.378       0.582
+Dist                                 -0.0271      0.031     -0.872      0.383      -0.088       0.034
+Int                                   0.0362      0.020      1.787      0.074      -0.004       0.076
+diff_value                            0.0045      0.000      9.590      0.000       0.004       0.005
+Sh                                   -0.1015      0.023     -4.368      0.000      -0.147      -0.056
+PK                                    0.8983      0.215      4.170      0.000       0.476       1.321
+CrdR                                 -0.6687      0.275     -2.434      0.015      -1.207      -0.130
+=====================================================================================================
+"""
+
+R² bouge toujours pas
+Aucun couple de Formation ne semble significatif == On va rester sur les formations des adversaires je crois. cette dernière variable peut être plus significative si j'étudie le nombre de but plutôt que la victoire.
+Dans le machine learning je pourrai tester les réseaux de neurones pour expliquer le résultat du match (W, D ou L) 3 valeurs au lieu de 2, c'est plus chiant pour les régressions standards.
+
+Du coup dernier modèle, le plus significatif je pense avec le moins de variables possible et avec les saisons : 
+
+<class 'statsmodels.iolib.summary.Summary'>
+"""
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:               victoire   No. Observations:                 1217
+Model:                          Logit   Df Residuals:                     1196
+Method:                           MLE   Df Model:                           20
+Date:                Tue, 17 Jan 2023   Pseudo R-squ.:                  0.2751
+Time:                        22:13:09   Log-Likelihood:                -581.60
+converged:                      False   LL-Null:                       -802.33
+Covariance Type:            nonrobust   LLR p-value:                 4.910e-81
+===================================================================================================
+                                      coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------
+Intercept                          -1.5311      2.117     -0.723      0.470      -5.681       2.619
+C(saison)[T.reste]                 -0.3525      0.154     -2.284      0.022      -0.655      -0.050
+C(opp_Formation)[T.3-5-2]           0.3465      0.254      1.366      0.172      -0.151       0.844
+C(opp_Formation)[T.3-6-1]           0.2009      0.619      0.325      0.746      -1.012       1.414
+C(opp_Formation)[T.3-<NA>-<NA>]    18.3521   1.74e+04      0.001      0.999    -3.4e+04    3.41e+04
+C(opp_Formation)[T.4-3-3]           0.2102      0.275      0.763      0.445      -0.330       0.750
+C(opp_Formation)[T.4-4-2]           0.4447      0.294      1.513      0.130      -0.131       1.021
+C(opp_Formation)[T.4-5-1]           0.1670      0.255      0.654      0.513      -0.333       0.667
+C(opp_Formation)[T.4-<NA>-<NA>]     1.5177      0.885      1.715      0.086      -0.217       3.252
+C(opp_Formation)[T.5-3-2]           1.3498      0.809      1.668      0.095      -0.237       2.936
+C(opp_Formation)[T.5-4-1]           1.4264      1.224      1.165      0.244      -0.973       3.826
+home                                0.4403      0.149      2.965      0.003       0.149       0.731
+age                                 0.1073      0.080      1.346      0.178      -0.049       0.264
+Poss                               -0.0516      0.010     -5.262      0.000      -0.071      -0.032
+SoT                                 0.4660      0.046     10.179      0.000       0.376       0.556
+Dist                               -0.0332      0.027     -1.250      0.211      -0.085       0.019
+Int                                 0.0232      0.018      1.320      0.187      -0.011       0.058
+diff_value                          0.0045      0.000     10.863      0.000       0.004       0.005
+Sh                                 -0.0953      0.020     -4.653      0.000      -0.135      -0.055
+PK                                  1.0827      0.190      5.713      0.000       0.711       1.454
+CrdR                               -0.7028      0.238     -2.949      0.003      -1.170      -0.236
+===================================================================================================
+"""
+
+R² rien à dire ça bouge pas
+Cool le reste de l'année devient significatif. Du coup, il y a moins de chances de victoires le reste de l'année qu'en automne ~ PLus de matchs nuls ?
+
+A faire : Tester ce modèle avec les éléments que j'avais utilisé pour le modèle sur le Turf (graph etc...) avant de partir faire du machine learning.
+BTW le log likelihood est à chier mais bon ... 
+
+Je peux aussi recherche pourquoi j'avais fait le produit de deux variables dans le modèle Turf. ça pourrait aider à rendre un truc plus significatif peut-être. 
+
+

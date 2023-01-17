@@ -22,8 +22,14 @@ df_reg=df_reg.dropna()
 
 df_reg.columns
 df_reg.info()
-df_reg.Formation.value_counts()
-reg = smf.logit('victoire ~ np.log(opp_att) + np.log(opp_def) + np.log(opp_milieu) + home + np.log(age) + np.log(Poss) + SoT + np.log(Dist) + np.log(Cmp) + np.log(Int) + diff_value + C(Mois)',
+# a = df_reg.couple_Formation.value_counts()
+# a = a.reset_index()
+# a = a.rename(columns={"index":"couple_Formation", "couple_Formation":"n_form"})
+
+# df_reg = df_reg.merge(a, how="left", on="couple_Formation")
+# df_reg = df_reg.loc[df_reg["n_form"] >= 30]
+
+reg = smf.logit('victoire ~ home + age + Poss + SoT + Dist + Int + diff_value + C(saison) + Sh + PK + CrdR + C(opp_Formation)',
                   data=df_reg).fit()
 
 reg.summary()
