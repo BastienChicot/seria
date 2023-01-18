@@ -745,6 +745,391 @@ Cool le reste de l'année devient significatif. Du coup, il y a moins de chances
 A faire : Tester ce modèle avec les éléments que j'avais utilisé pour le modèle sur le Turf (graph etc...) avant de partir faire du machine learning.
 BTW le log likelihood est à chier mais bon ... 
 
-Je peux aussi recherche pourquoi j'avais fait le produit de deux variables dans le modèle Turf. ça pourrait aider à rendre un truc plus significatif peut-être. 
+Je peux aussi recherche pourquoi j'avais fait le produit de deux variables dans le modèle Turf. ça pourrait aider à rendre un truc plus significatif peut-être. ==> c'est utile pour les variables qui sont liées entre elles . Par exemple : l'age et le sexe du cheval dans e turf. Le femelle ne subissent pas le même effet de l'age que les mâles.
+
+Ici on pourrait utiliser ça pour les équipes et les formations des opposants ==> risque de diminuer le nombre d'observation mais pourquoi pas.
+D'après la matrice de corrélation on peut lier :
+home et Sh == 0.18
+SoT et poss == 0.27
+SoT et diff value == 0.35
+SoT et Sh mais va falloir que j'en choisisse qu'un (Sh plus précis et moins d'erreur mais coeff beaucoup plus faible...)
+Dist et PK == 0.14
+Dist et diff_value == -0.19
+Dist et SoT == -0.19
+Int et poss == -0.19
+Diff_value (poss, sot, Sh : 0.47 ; 0.37 ; 0.36)
+Sh home et Sh Poss (0.18 et 0.46)
+
+Du coup pour libérer Sh je croiserais bien SoT et Dist 
+Diff value a pas mal de corrélation avec les variables du modèle, est-ce que je devrais la croiser aussi (à tester)
+J'ajoute aussi un croisement team*opp_Formation
+
+Pas pu croiser team et opp_Formation (pas assez d'observations du coup j'obtiens une erreur de matrice). Pour le reste voilà ce qu'on a :
+
+<class 'statsmodels.iolib.summary.Summary'>
+"""
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:               victoire   No. Observations:                 1217
+Model:                          Logit   Df Residuals:                     1194
+Method:                           MLE   Df Model:                           22
+Date:                Wed, 18 Jan 2023   Pseudo R-squ.:                  0.2767
+Time:                        20:56:46   Log-Likelihood:                -580.34
+converged:                      False   LL-Null:                       -802.33
+Covariance Type:            nonrobust   LLR p-value:                 3.287e-80
+===================================================================================================
+                                      coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------
+Intercept                          -2.3886      2.265     -1.054      0.292      -6.829       2.051
+C(saison)[T.reste]                 -0.3621      0.155     -2.337      0.019      -0.666      -0.058
+C(opp_Formation)[T.3-5-2]           0.3523      0.253      1.390      0.164      -0.144       0.849
+C(opp_Formation)[T.3-6-1]           0.2012      0.622      0.324      0.746      -1.018       1.420
+C(opp_Formation)[T.3-<NA>-<NA>]    18.2004   1.74e+04      0.001      0.999    -3.4e+04     3.4e+04
+C(opp_Formation)[T.4-3-3]           0.1948      0.275      0.708      0.479      -0.344       0.734
+C(opp_Formation)[T.4-4-2]           0.4353      0.294      1.480      0.139      -0.141       1.012
+C(opp_Formation)[T.4-5-1]           0.1630      0.255      0.640      0.522      -0.336       0.662
+C(opp_Formation)[T.4-<NA>-<NA>]     1.5374      0.885      1.738      0.082      -0.197       3.271
+C(opp_Formation)[T.5-3-2]           1.3036      0.808      1.613      0.107      -0.280       2.887
+C(opp_Formation)[T.5-4-1]           1.2912      1.227      1.053      0.292      -1.113       3.695
+home                                0.4438      0.149      2.982      0.003       0.152       0.736
+age                                 0.1057      0.080      1.324      0.186      -0.051       0.262
+Poss                               -0.0524      0.010     -5.297      0.000      -0.072      -0.033
+diff_value                          0.0028      0.002      1.523      0.128      -0.001       0.006
+Poss:diff_value                  3.457e-05   3.59e-05      0.963      0.336   -3.58e-05       0.000
+SoT                                 0.7269      0.214      3.396      0.001       0.307       1.146
+Dist                                0.0183      0.049      0.373      0.709      -0.078       0.115
+SoT:Dist                           -0.0147      0.012     -1.248      0.212      -0.038       0.008
+Int                                 0.0238      0.018      1.351      0.177      -0.011       0.058
+Sh                                 -0.0974      0.021     -4.716      0.000      -0.138      -0.057
+PK                                  1.0730      0.190      5.655      0.000       0.701       1.445
+CrdR                               -0.7033      0.238     -2.955      0.003      -1.170      -0.237
+===================================================================================================
+"""
+
+R² change pas
+Poss*diff_value pas significatif
+Tirs cadrés et distance améliore la significativité de la distance mais nul pour SoT
+
+avec le log de la distance sur la possession ?
+
+<class 'statsmodels.iolib.summary.Summary'>
+"""
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:               victoire   No. Observations:                 1217
+Model:                          Logit   Df Residuals:                     1178
+Method:                           MLE   Df Model:                           38
+Date:                Wed, 18 Jan 2023   Pseudo R-squ.:                  0.2932
+Time:                        21:00:56   Log-Likelihood:                -567.10
+converged:                      False   LL-Null:                       -802.33
+Covariance Type:            nonrobust   LLR p-value:                 5.732e-76
+===================================================================================================
+                                      coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------
+Intercept                           0.2069   9.66e+06   2.14e-08      1.000   -1.89e+07    1.89e+07
+C(team)[T.Bologna]                 -0.3652   3.15e+05  -1.16e-06      1.000   -6.18e+05    6.18e+05
+C(team)[T.Cagliari]                -0.9535   1.97e+05  -4.84e-06      1.000   -3.86e+05    3.86e+05
+C(team)[T.Empoli]                  -0.0725      0.494     -0.147      0.883      -1.040       0.895
+C(team)[T.Fiorentina]              -0.2337   3.55e+05  -6.59e-07      1.000   -6.95e+05    6.95e+05
+C(team)[T.Genoa]                   -1.2364   6.31e+05  -1.96e-06      1.000   -1.24e+06    1.24e+06
+C(team)[T.Juventus]                -0.7922   1.97e+05  -4.02e-06      1.000   -3.86e+05    3.86e+05
+C(team)[T.Lazio]                    0.0588   1.06e+06   5.53e-08      1.000   -2.09e+06    2.09e+06
+C(team)[T.Milan]                   -0.0685   3.15e+05  -2.17e-07      1.000   -6.18e+05    6.18e+05
+C(team)[T.Napoli]                   0.5851   3.15e+05   1.86e-06      1.000   -6.18e+05    6.18e+05
+C(team)[T.Roma]                    -0.1814   2.76e+05  -6.58e-07      1.000   -5.41e+05    5.41e+05
+C(team)[T.Salernitana]             -0.7230   5.52e+05  -1.31e-06      1.000   -1.08e+06    1.08e+06
+C(team)[T.Sampdoria]               -0.5866    6.7e+05  -8.76e-07      1.000   -1.31e+06    1.31e+06
+C(team)[T.Sassuolo]                -0.4433   1.97e+05  -2.25e-06      1.000   -3.86e+05    3.86e+05
+C(team)[T.Spezia]                   0.0481   3.55e+05   1.36e-07      1.000   -6.95e+05    6.95e+05
+C(team)[T.Torino]                  -0.6977   1.18e+05   -5.9e-06      1.000   -2.32e+05    2.32e+05
+C(team)[T.Udinese]                 -0.4491   1.97e+05  -2.28e-06      1.000   -3.86e+05    3.86e+05
+C(team)[T.Venezia]                 -0.7210   7.88e+04  -9.15e-06      1.000   -1.54e+05    1.54e+05
+C(saison)[T.reste]                 -0.3684      0.157     -2.344      0.019      -0.677      -0.060
+C(opp_Formation)[T.3-5-2]           0.3678      0.262      1.405      0.160      -0.145       0.881
+C(opp_Formation)[T.3-6-1]           0.3092      0.637      0.485      0.628      -0.940       1.558
+C(opp_Formation)[T.3-<NA>-<NA>]    18.1789   1.74e+04      0.001      0.999    -3.4e+04     3.4e+04
+C(opp_Formation)[T.4-3-3]           0.1739      0.284      0.614      0.540      -0.382       0.730
+C(opp_Formation)[T.4-4-2]           0.4724      0.300      1.574      0.116      -0.116       1.061
+C(opp_Formation)[T.4-5-1]           0.1600      0.260      0.615      0.539      -0.350       0.670
+C(opp_Formation)[T.4-<NA>-<NA>]     1.8035      0.941      1.917      0.055      -0.041       3.648
+C(opp_Formation)[T.5-3-2]           1.6529      0.826      2.001      0.045       0.034       3.272
+C(opp_Formation)[T.5-4-1]           1.5332      1.243      1.234      0.217      -0.903       3.969
+home                                0.4767      0.152      3.141      0.002       0.179       0.774
+age                                 0.1455   3.94e+05   3.69e-07      1.000   -7.72e+05    7.72e+05
+Poss                               -0.0755      0.132     -0.573      0.566      -0.334       0.183
+np.log(Dist)                       -0.8925      2.265     -0.394      0.694      -5.332       3.547
+Poss:np.log(Dist)                   0.0052      0.046      0.113      0.910      -0.085       0.095
+SoT                                 0.4568      0.047      9.705      0.000       0.365       0.549
+diff_value                          0.0042      0.001      7.519      0.000       0.003       0.005
+Int                                 0.0323      0.019      1.740      0.082      -0.004       0.069
+Sh                                 -0.0959      0.021     -4.465      0.000      -0.138      -0.054
+PK                                  1.0627      0.195      5.459      0.000       0.681       1.444
+CrdR                               -0.7136      0.242     -2.952      0.003      -1.187      -0.240
+===================================================================================================
+"""
+Aucune équipe n'est significative LOL
+Log de la dist avec poss et l'ajout de l'équipe me flingue la significativité de l'age.
+On oublie ça!
+
+Modèle "final" avec uniquement les formation opposées qui sortent plus de 100 fois :
+
+reg = smf.logit('victoire ~ home + age + Poss + Dist + SoT + diff_value + Int + C(saison) + Sh + PK + CrdR + C(opp_Formation)',
+                  data=df_reg).fit()
 
 
+<class 'statsmodels.iolib.summary.Summary'>
+"""
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:               victoire   No. Observations:                 1173
+Model:                          Logit   Df Residuals:                     1157
+Method:                           MLE   Df Model:                           15
+Date:                Wed, 18 Jan 2023   Pseudo R-squ.:                  0.2696
+Time:                        21:05:49   Log-Likelihood:                -560.16
+converged:                       True   LL-Null:                       -766.87
+Covariance Type:            nonrobust   LLR p-value:                 1.039e-78
+=============================================================================================
+                                coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------
+Intercept                    -1.4130      2.146     -0.658      0.510      -5.619       2.793
+C(saison)[T.reste]           -0.3605      0.156     -2.310      0.021      -0.666      -0.055
+C(opp_Formation)[T.3-5-2]     0.3283      0.254      1.293      0.196      -0.169       0.826
+C(opp_Formation)[T.4-3-3]     0.2102      0.276      0.762      0.446      -0.330       0.751
+C(opp_Formation)[T.4-4-2]     0.4219      0.294      1.434      0.152      -0.155       0.999
+C(opp_Formation)[T.4-5-1]     0.1617      0.256      0.633      0.527      -0.339       0.663
+home                          0.4838      0.152      3.188      0.001       0.186       0.781
+age                           0.0944      0.081      1.170      0.242      -0.064       0.252
+Poss                         -0.0494      0.010     -4.976      0.000      -0.069      -0.030
+Dist                         -0.0297      0.027     -1.095      0.273      -0.083       0.023
+SoT                           0.4712      0.046     10.141      0.000       0.380       0.562
+diff_value                    0.0045      0.000     10.748      0.000       0.004       0.005
+Int                           0.0247      0.018      1.376      0.169      -0.010       0.060
+Sh                           -0.0951      0.021     -4.557      0.000      -0.136      -0.054
+PK                            1.0045      0.192      5.220      0.000       0.627       1.382
+CrdR                         -0.7089      0.242     -2.931      0.003      -1.183      -0.235
+=============================================================================================
+"""
+INFOS SUR LE MODELE
+
+np.mean(df_reg["error"])
+Out[29]: -6.341427335881116e-18
+Super faible c'est cool ---------------------
+
+np.std(df_reg["error"])
+Out[30]: 0.3955620646424434
+Pas mal élevé pas dingue ----------------
+
+np.percentile(df_reg["pred"],2.5)
+Out[34]: 0.02769251005225839
+
+np.percentile(df_reg["pred"],75)
+Out[35]: 0.565428359825682
+75% des observations ont une valeur inférieure à 0.56
+C'est pas 0.5 mais pas loin mais du coup c'est peut-être cool car en comptant les défaites et les matchs nuls, il n'y aurait rien d'étonnant à ce qu'il y ait 30 % seulement de victoire dans ma base :
+
+sum(df_reg["victoire"])/len(df_reg)
+Out[38]: 0.36061381074168797
+Hey hey 36% de victoire seulement, c'est bon signe !!
+
+Quelques tests graphique sur la nécessité de faire un log pour les variables numériques :
+Voir le script python pour sortir les graphs
+
+- Dist == aucun besoin, répartition presque normale à l'oeil
+- age == pas mieux en log malheureusement (c'est ptetre pour ça que c'est pas giga significatif)
+- Poss == Quelle belle distribution normale (j'ai pas mieux en log)
+- SoT == Impossible car j'ai des 0 qui me donne -inf et foutent la merde
+- diff_value == Carrément mieux sans log 
+- Int == A l'air un peu mieux en log
+- Sh == pas utile je pense 
+- PK == Impossible car présence de 0 (comme SoT) mais seulement un max de 2 --> Tester en variable quali ?
+- Idem pour CrdR
+
+Test avec quali PK CrdR et home et log de int :
+
+Il faut d'abord recoder les variables PK et CrdR pour n'avoir que 2 catégories à chaque fois (il y en a au moins un, il y en a pas)
+
+<class 'statsmodels.iolib.summary.Summary'>
+"""
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:               victoire   No. Observations:                 1173
+Model:                          Logit   Df Residuals:                     1157
+Method:                           MLE   Df Model:                           15
+Date:                Wed, 18 Jan 2023   Pseudo R-squ.:                  0.2668
+Time:                        21:36:54   Log-Likelihood:                -562.24
+converged:                       True   LL-Null:                       -766.87
+Covariance Type:            nonrobust   LLR p-value:                 7.809e-78
+=============================================================================================
+                                coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------
+Intercept                    -1.4572      2.186     -0.667      0.505      -5.741       2.827
+C(home)[T.1]                  0.4750      0.151      3.138      0.002       0.178       0.772
+C(saison)[T.reste]           -0.3490      0.156     -2.239      0.025      -0.654      -0.044
+C(Penalty)[T.1]               1.0350      0.215      4.822      0.000       0.614       1.456
+C(Rouge)[T.1]                -0.8033      0.265     -3.036      0.002      -1.322      -0.285
+C(opp_Formation)[T.3-5-2]     0.2728      0.252      1.083      0.279      -0.221       0.766
+C(opp_Formation)[T.4-3-3]     0.1534      0.274      0.560      0.575      -0.383       0.690
+C(opp_Formation)[T.4-4-2]     0.3823      0.292      1.309      0.191      -0.190       0.955
+C(opp_Formation)[T.4-5-1]     0.1183      0.254      0.466      0.641      -0.380       0.616
+age                           0.0890      0.080      1.106      0.269      -0.069       0.247
+Poss                         -0.0491      0.010     -4.952      0.000      -0.069      -0.030
+Dist                         -0.0273      0.027     -1.009      0.313      -0.080       0.026
+SoT                           0.4653      0.046     10.070      0.000       0.375       0.556
+diff_value                    0.0045      0.000     10.814      0.000       0.004       0.005
+np.log(Int)                   0.2044      0.164      1.243      0.214      -0.118       0.527
+Sh                           -0.0955      0.021     -4.578      0.000      -0.136      -0.055
+=============================================================================================
+"""
+
+J'améliore le score du carton rouge mais baisse un peu l'effet début de saison, age, Dist et Int.
+
+J'enlève le log de Int :
+
+<class 'statsmodels.iolib.summary.Summary'>
+"""
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:               victoire   No. Observations:                 1173
+Model:                          Logit   Df Residuals:                     1157
+Method:                           MLE   Df Model:                           15
+Date:                Wed, 18 Jan 2023   Pseudo R-squ.:                  0.2669
+Time:                        21:38:59   Log-Likelihood:                -562.18
+converged:                       True   LL-Null:                       -766.87
+Covariance Type:            nonrobust   LLR p-value:                 7.336e-78
+=============================================================================================
+                                coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------
+Intercept                    -1.2215      2.140     -0.571      0.568      -5.416       2.973
+C(home)[T.1]                  0.4765      0.151      3.147      0.002       0.180       0.773
+C(saison)[T.reste]           -0.3480      0.156     -2.233      0.026      -0.653      -0.043
+C(Penalty)[T.1]               1.0391      0.215      4.839      0.000       0.618       1.460
+C(Rouge)[T.1]                -0.8011      0.265     -3.027      0.002      -1.320      -0.282
+C(opp_Formation)[T.3-5-2]     0.2779      0.252      1.104      0.270      -0.215       0.771
+C(opp_Formation)[T.4-3-3]     0.1596      0.274      0.583      0.560      -0.377       0.696
+C(opp_Formation)[T.4-4-2]     0.3885      0.292      1.331      0.183      -0.184       0.961
+C(opp_Formation)[T.4-5-1]     0.1234      0.254      0.486      0.627      -0.374       0.621
+age                           0.0880      0.080      1.094      0.274      -0.070       0.246
+Poss                         -0.0491      0.010     -4.953      0.000      -0.069      -0.030
+Dist                         -0.0273      0.027     -1.009      0.313      -0.080       0.026
+SoT                           0.4665      0.046     10.084      0.000       0.376       0.557
+diff_value                    0.0045      0.000     10.793      0.000       0.004       0.005
+Int                           0.0232      0.018      1.299      0.194      -0.012       0.058
+Sh                           -0.0958      0.021     -4.592      0.000      -0.137      -0.055
+=============================================================================================
+"""
+
+Constat :
+
+j'améliore le log-likelihood mais je perds en significativité sur certaines variables.
+J'améliore aussi la p-value mais cette version me pose un problème :
+
+	Dans le cas des penaltys et des cartons rouges, le fait d'en prendre un dans le match a certes un effet sur le cours du matchs mais le fait d'en avoir 2 ou plus est quand même le signe que le match part u peu en la faveur/défaveur d'une équipe.
+Un fait de jeu peu entraîner un rouge et le sur nombre de l'equipe adverse peu jouer sur le résultat final (dépendemment du poste du joueur exclu et du temps de jeu écoulé). Cependant, en prendre 2 ou 3 est quand même signe que l'équipe soit n'arrive pas à suivre l'adversaire et se frustre, soit que l'arbitre a une petite préférence. Et inversement pour le nombre de penaltys obtenus.
+	Pour le coup, avoir plus d'un penalty ou plus d'un carton rouge est véritablement signe d'un déséquilibre dans le match et peut entraîner un changement radical du cours du jeu. 
+Malheureusement, je n'ai pas assez d'observations pour les matchs avec 2 ou plus penaltys ou carton rouges et ces valeurs ne sont pas significatives :
+
+C(PK)[T.1]                    0.9196      0.221      4.153      0.000       0.486       1.354
+C(PK)[T.2]                    2.4439      0.712      3.430      0.001       1.047       3.840
+C(PK)[T.3]                   16.6306   5864.846      0.003      0.998   -1.15e+04    1.15e+04
+C(CrdR)[T.1]                 -0.7592      0.273     -2.780      0.005      -1.294      -0.224
+C(CrdR)[T.2]                 -0.9926      0.960     -1.034      0.301      -2.874       0.888
+
+La valeur des 2 penaltys et cool et significative et celle des 3 est folle mais non significative
+Les deux rouges ne sont pas significatifs mais me donnent envie de les garder.
+Je vire de la base les matchs avec 3 peno (j'en avais 1 seul) : 
+
+<class 'statsmodels.iolib.summary.Summary'>
+"""
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:               victoire   No. Observations:                 1172
+Model:                          Logit   Df Residuals:                     1154
+Method:                           MLE   Df Model:                           17
+Date:                Wed, 18 Jan 2023   Pseudo R-squ.:                  0.2691
+Time:                        21:49:38   Log-Likelihood:                -559.74
+converged:                       True   LL-Null:                       -765.85
+Covariance Type:            nonrobust   LLR p-value:                 5.134e-77
+=============================================================================================
+                                coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------
+Intercept                    -1.4698      2.150     -0.684      0.494      -5.683       2.744
+C(home)[T.1]                  0.4842      0.152      3.189      0.001       0.187       0.782
+C(saison)[T.reste]           -0.3675      0.157     -2.348      0.019      -0.674      -0.061
+C(PK)[T.1]                    0.9196      0.221      4.153      0.000       0.486       1.354
+C(PK)[T.2]                    2.4439      0.712      3.430      0.001       1.047       3.840
+C(CrdR)[T.1]                 -0.7592      0.273     -2.780      0.005      -1.294      -0.224
+C(CrdR)[T.2]                 -0.9926      0.960     -1.034      0.301      -2.874       0.888
+C(opp_Formation)[T.3-5-2]     0.3515      0.256      1.372      0.170      -0.151       0.854
+C(opp_Formation)[T.4-3-3]     0.2330      0.278      0.837      0.403      -0.313       0.778
+C(opp_Formation)[T.4-4-2]     0.4406      0.296      1.489      0.136      -0.139       1.020
+C(opp_Formation)[T.4-5-1]     0.1837      0.258      0.713      0.476      -0.321       0.689
+age                           0.0969      0.081      1.200      0.230      -0.061       0.255
+Poss                         -0.0497      0.010     -4.995      0.000      -0.069      -0.030
+Dist                         -0.0301      0.027     -1.108      0.268      -0.083       0.023
+SoT                           0.4726      0.047     10.146      0.000       0.381       0.564
+diff_value                    0.0045      0.000     10.747      0.000       0.004       0.005
+Int                           0.0253      0.018      1.408      0.159      -0.010       0.061
+Sh                           -0.0954      0.021     -4.569      0.000      -0.136      -0.054
+=============================================================================================
+"""
+
+Ca me plait bien. C'est un bon milieu entre le premier modèle avec beaucoup de variables significative mais des valeurs du modèle améliorables et le second avec un meilleur LLH et une meilleur p-value.
+ 
+Je refais les test stat du modèle :
+
+np.mean(df_reg["error"])
+Out[81]: -1.1805592529343869e-17 ==>> minuscule c'est cool
+
+np.std(df_reg["error"])
+Out[82]: 0.39552773198394914 ==>> Un peu toujours pareil
+
+np.percentile(df_reg["pred"],2.5)
+Out[83]: 0.027486871231418193
+
+np.percentile(df_reg["pred"],70)
+Out[84]: 0.4930309242363654
+
+A retenir de ce premier modèle de régression avant de passer au machine learning ::
+
+	- Il n'est pas possible via un modèle logit de prouver qu'une organisation d'équipe aura plus d'impact sur une Formation qu'une autre. C'est dommage, c'est la piste que je voulais explorer, peut-être que le machine learning me permettra d'obtenir quelque chose de ça.
+
+	- La valeur de l'équipe au sens de TransferMarkt, reflète en général plutôt bien les résultats de l'équipe. En effet, posséder des joueurs plus chers (surtout en série A plus qu'en Premier league j'imagine) entraîne un meilleur niveau de jeu donc une possession du ballon plus simple, plus de frappes dont plus de tirs cadrés et ainsi de siute. La valeur des équipe a un effet sur la victoire (triste je trouve) mais réaliste. Cependant le coefficient de la différence de valeur de 2 équipes reste relativement faible. Dans la mesure où il s'agit de montant en centaines exprimées en millions d'€ pour les plus grandes écuries, on peut multiplier ce coefficient par 100 pour obtenir l'effet d'un écart de 100 millions.
+Toutefois, il reste inférieur à 0.5. Ce qui signifie que techniquement avoir un effectif beaucoup plus cher aide à gagner mais n'assure en rien une victoire. Après, tout ça reste logique.
+
+	- Je ne dispose pas d'assez d'observations par équipe pour introduire l'équipe comme une variable couplée à la formation adverse afin d'observer l'effet d'un 4-3-3 sur l'Inter par exemple...
+
+	- Le fait de jouer à domicile entraîne 48 % de chances de plus de victoire (quid de Milan et de l'Inter lorsqu'ils se recontrent?)
+
+	- Il existe un effet début de saison/automne que je dois encore approfondir. Durant cette période il semblerait que les chances de victoire soient plus élevée. Pour le moment, par pure logique je penses simplement qu'en début de saison les équipes sont au complet (pas de blessé) et reposées, elles veulent entrer en matière le mieux possible et s'arrachent peut-être plus pour aller chercher les 3 points afin d'asseoir leur leadership dans le championnat avant d'atteindre une vitesse de croisière le reste de la saison quitte à prendre un ou deux matchs nuls en plus pour préserver les stars (pour la LDC par exemple).
+
+	- L'obtention de penaltys augmente de manière exponentielle les chances de victoire. Un seul penalty (à équipe égales) augmente de 91% les chance de victoire. 2 les augmente de plus de 200 % et 3 (comme vu tout à l'heure) de plus de 1 600% 
+
+	- L'obtention de cartons rouges entraînent une chute des chances de victoire (75% pour 1 rouge et 99 % pour 2 à équipes équivalentes). L'effet est bien plus fort que ce que j'aurais imaginé avant de créer le modèle (surtout pour 1). Je pensais qu'il arrivait souvent qu'une équipe gagne même en ayant pris un rouge parce que le coach organise bien le remplacement et joue plus la défense. L'étude des matchs nuls et défaites dans le cadre du machine learning m'aidera peut-être à y voir plus clair. 
+ 
+	- Les deux seules formations pas trop dégueu en termes de significativité sont le 3-5-2 et le 4-4-2. Le 4-5-1 étant la référence du modèle, toutes les autres formations augmentent les chances de victoire (jusqu'à 44 % pour le 4-4-2). Le 4-5-1 étant souvent défensif, cela s'expliquerait ainsi. Tester avec un autre système référence serait intéliigent.
+
+	- L'âge n'est pas très significatif mais ce qu'il indique est que plus un effectif est expérimenté, plus il a de chance de gagner. Bien sûr, il n'est pas difficile d'imaginer qu'une équipe de quadra en chierait face à une équipe de série A. Ce qu'il faut voir ici, c'est que lorsque l'effectif monté par les dirigeants et les directeurs sportifs sont un peu plus experimentés, ils sont plus peformants (sûrement plus chers aussi et donc cela se recroise avec la diff_value vue plus haut ==> entraîne plus de possession donc plus de frappes, donc plus de tirs cadrés et plus de buts etc...) BTW, le max est de 27.2 ans , c'est pas bien vieux... Mais cette variable traduit de la bonne conception d'un effectif je pense.
+
+	- Etonnemment, le coeff de la possession est négatif. cela voudrait dire que plus une équipe a le ballon, moins elle peut gagner (à hauteur de -5 % si elle a 100% de possession). Je ne m'attendais pas à ça. Du coup, pourquoi pas mais qu'est ce qui explique cela? Est-ce qu'une trop forte possession entraîne plus de défene en face et donc moins de réussite --> moins de buts --> plus de matchs nuls (voir plus de défait si en plus l'adversaire profite d'un contre ou d'un penalty). En soit, l'équipe de France a prouvé en 2018 que ça tenait la route de laisser le ballon à l'adversaire. Est-ce que les coachs en Italie se sont tous mis à la page Deschamps ? Je vais continuer de matter des  matchs et me renseigner là dessus quand même car même si l'effet reste très léger il n'en est pas moins contre-intuitif (prends ça dans les dents Mourinho).
+
+	- Le fait que le coefficient de la distance soit négatif est quant à lui bien plus logique. En effet, si l'équipe tire en moyenne de plus loin c'est qu'elle n'arrive pas à ce créer les bonnes opportunité. Le cas extrême c'est le houra-football dans lequel l'équipe frappe désespéremment à 45 mètres du cadre parce qu'au delà, elle se fait reprendre la balle. Cette variable semble également traduire de la domination d'une équipe sur l'autre. Tester la colinéarité avec les cartons rouges et/ou les pénaltys.
+
+	- SoT est significatif et positif ==> Logique, plus l'équipe se procure de frappes cadrées, plus elle a de chance de marquer et donc de gagner le match. Rien à dire ici.
+
+	- Effectuer plus d'interception augmente les chance de victoire : plutôt logique. Mais cet élément est à garder dans un coin de la tête si je veux bosser sur l'effet milieu def d'une équipe (je pense que le milieu défensif est peut-être l'élément le plus important d'un bon effectif et d'une équipe qui gagne. Un meilleur 6 entraîne plus de sérénité et de meilleurs résultats ==> C'est ce que j'aimerais prouver pour montrer que l'attaque c'est cool mais le milieu c'est plus important).
+
+	- Enfin, le nombre de tir total est significatif mais négatif --> En gros prendre pleins de tirs n'assure pas du tout de marquer plus que l'adversaire, c'est le réalisme qui paye le plus #Deschamps encore. Cependant, il serait intéressant de coupler cette variable avec la distance (plutôt que les tirs cadrés comme je l'ai déjà fait). Dans la matrice de corrélation de la table, ces deux variables ont un coefficient de -0.1. En gros, si une équipe tir de plus loin, elle a automatiquement moins de frappes.
+
+Pour poursuivre, j'aimerais donc bosser sur les effets des formations sur les équipes et je commence fortement à penser à un indicateur de domination dans le jeu regroupant le nombre de cartons rouges/jaunes de l'adversaire, la possession (même si on a vu que cette variable était contre-intuitive), la distance de tir et le nombre total de tirs. Ces deux dernières expriment les difficultés rencontrées par l'équipe à attaquer alors que les penaltys et les cartons, montrent plutôt les difficultés à défendre. 
+
+Ne serait-il pas possible de voir l'effet d'une formation sur la difficulté d'attaquer et de défendre d'une équipe == A CREUSER!
+
+Voir également si je peux pas tester mon modèle sur les matchs non perdu pour voir la différence d'effet sur la victoire ou le match nul ou un truc du style (car je verrai pas les coeff en machine learning)
++
+Teste avec une autre formation que le 4-5-1 en référence pour les coeffs.
++
+Tester la colinéarité avec les cartons rouges et/ou les pénaltys.
++ 
+Voir la création d'un indicateur de difficultés defensives et un de difficultés offensives
++ 
+Le croiser avec les formations
