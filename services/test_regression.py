@@ -7,6 +7,8 @@ Created on Mon Jan 16 20:40:48 2023
 
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 #IMPORT DU FICHIER
 data = pd.read_csv("bdd/data/data_ml.csv", sep= ";", index_col = 0)
@@ -36,7 +38,19 @@ corr = df_reg.corr()
 
 df_reg = df_reg.loc[df_reg["PK"] < 3]
 
-reg = smf.logit('victoire ~ C(home) + age + Poss + Dist + SoT + diff_value + Int + C(saison) + Sh + C(PK) + C(CrdR) + C(opp_Formation)',
+# test = df_reg.loc[df_reg["Poss"] > 50]
+# test = test.loc[test["victoire"] == 1]
+# test.groupby(by=["team"]).count()
+# test.team.value_counts()
+
+df_reg['periode'] = pd.Series(df_reg["Date"].str[0:7])
+df_reg['nb_def'] = pd.Series(df_reg["Formation"].str[0:1])
+test = df_reg.groupby(by = ["periode","nb_def"]).count().reset_index()
+test = test[["periode","nb_def","Result"]]
+
+test.pivot_table(values="Result", index="periode", columns="nb_def").plot()
+
+reg = smf.logit('not_lose ~ C(home) + age + Poss + Dist + SoT + diff_value + Int + C(saison) + Sh + C(PK) + C(CrdR) + C(opp_Formation)',
                   data=df_reg).fit()
 
 reg.summary()
@@ -53,8 +67,7 @@ np.percentile(df_reg["pred"],70)
 
 sum(df_reg["victoire"])/len(df_reg)
 
-import matplotlib.pyplot as plt
-
+##PLOT POUR LES NP LOG
 plt.hist(df_reg["Poss"])
 plt.hist(np.log(df_reg["Poss"]))
 

@@ -1122,14 +1122,100 @@ Toutefois, il reste inférieur à 0.5. Ce qui signifie que techniquement avoir u
 
 Pour poursuivre, j'aimerais donc bosser sur les effets des formations sur les équipes et je commence fortement à penser à un indicateur de domination dans le jeu regroupant le nombre de cartons rouges/jaunes de l'adversaire, la possession (même si on a vu que cette variable était contre-intuitive), la distance de tir et le nombre total de tirs. Ces deux dernières expriment les difficultés rencontrées par l'équipe à attaquer alors que les penaltys et les cartons, montrent plutôt les difficultés à défendre. 
 
+A priori l'effet sur la possession viendrait du fait que seules quelques équipes jouent la possession mais que le Calcio est un football de contre. Je vérifie ça dans les datas :
+
+205 victoire sur 551 équipes avec une possession de plus de 50 % ==> 37 %
+Le top des équipes avec la possession et qui gagnent :
+Napoli         39
+Milan          25
+Lazio          21
+Juventus       21
+Atalanta       18
+Fiorentina     16
+Roma           15
+Sassuolo       14
+
+En effet, le Napoli, Milan, la Lazio et la Juve ressortent (4 des 5 premiers de série A cette année). Ce sont plutôt les gros qui jouent la possession.
+
+Autre question :: évolution des formations avec 3 défenseurs .
+
+Pas d'évolution notable sur les 3 saisons du fichier. Cependant, je dois confirmer le fait que c'est un truc plutôt italien (catenacio) axé sur la défense. Je suis biaisé car pour moi les systèmes les plus communs seront plutôt des variantes du 4-4-2 ou du 4-3-3 mais toujours avec 4 défenseurs. Mais je peux me tromper. Pour en être sûr je devrais regarder dans d'autres championnats.
+A priori c'est plutôt un style de jeu italien dans lequel les deux milieux latéraux passent en attaque sur les phases offensives et viennent renforcer la défense (défense à 5) lors des phases défensives == est-ce que c'est le catenacio ?
+ 
+
 Ne serait-il pas possible de voir l'effet d'une formation sur la difficulté d'attaquer et de défendre d'une équipe == A CREUSER!
 
 Voir également si je peux pas tester mon modèle sur les matchs non perdu pour voir la différence d'effet sur la victoire ou le match nul ou un truc du style (car je verrai pas les coeff en machine learning)
-+
+
+<class 'statsmodels.iolib.summary.Summary'>
+"""
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:               not_lose   No. Observations:                 1172
+Model:                          Logit   Df Residuals:                     1154
+Method:                           MLE   Df Model:                           17
+Date:                Thu, 19 Jan 2023   Pseudo R-squ.:                  0.2193
+Time:                        21:01:05   Log-Likelihood:                -607.06
+converged:                      False   LL-Null:                       -777.61
+Covariance Type:            nonrobust   LLR p-value:                 3.484e-62
+=============================================================================================
+                                coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------
+Intercept                     2.0480      2.015      1.016      0.310      -1.902       5.998
+C(home)[T.1]                  0.3698      0.144      2.563      0.010       0.087       0.653
+C(saison)[T.reste]            0.2307      0.149      1.550      0.121      -0.061       0.522
+C(PK)[T.1]                    0.9288      0.249      3.737      0.000       0.442       1.416
+C(PK)[T.2]                   24.3161   5.08e+04      0.000      1.000   -9.95e+04    9.96e+04
+C(CrdR)[T.1]                 -0.6737      0.224     -3.007      0.003      -1.113      -0.235
+C(CrdR)[T.2]                  0.1299      0.826      0.157      0.875      -1.489       1.749
+C(opp_Formation)[T.3-5-2]     0.3138      0.239      1.315      0.189      -0.154       0.782
+C(opp_Formation)[T.4-3-3]    -0.1191      0.254     -0.468      0.639      -0.618       0.379
+C(opp_Formation)[T.4-4-2]     0.2910      0.279      1.045      0.296      -0.255       0.837
+C(opp_Formation)[T.4-5-1]     0.0491      0.235      0.209      0.834      -0.411       0.509
+age                           0.0170      0.075      0.227      0.820      -0.130       0.164
+Poss                         -0.0560      0.010     -5.799      0.000      -0.075      -0.037
+Dist                         -0.0183      0.024     -0.764      0.445      -0.065       0.029
+SoT                           0.3356      0.046      7.342      0.000       0.246       0.425
+diff_value                    0.0044      0.000     10.847      0.000       0.004       0.005
+Int                           0.0088      0.017      0.511      0.609      -0.025       0.043
+Sh                           -0.0484      0.020     -2.367      0.018      -0.088      -0.008
+=============================================================================================
+
+le R² est pire
+le LLH est pire 
+et la p value aussi
+
+Le double pénalty est complétement non significatif
+presque p	areil pour le double rouge ==> Quelque part ces deux modifs sont logiques et confirment leur effet sur la défaite vu dans le modèle précédent.
+
+L'age est encore moins significatif également
+
+Sur les coeff significatifs, quelles peuvent être les différences avec le modèle basé sur les victoires :
+	La possession a un effet encore plus négatif == Donc les équipe qui ont la possession ne font même pas de matchs nuls
+	Les tirs cadrés baissent également (logique puisqu'on étudie aussi les matchs nuls dans ce modèle)
+	La différence de valeur bouge peu mais vu qu'elle induit des montant élevés, ce n'est pas si anodin. Elle a ici un peu moins d'impact sur le résultat du match.
+
+
+
 Teste avec une autre formation que le 4-5-1 en référence pour les coeffs.
 +
 Tester la colinéarité avec les cartons rouges et/ou les pénaltys.
 + 
-Voir la création d'un indicateur de difficultés defensives et un de difficultés offensives
-+ 
-Le croiser avec les formations
+
+Voir la création d'un indicateur de difficultés defensives et un de difficultés offensives ==> 
+Ce qu'on a comme variables pour créer ça:
+ATTAQUE
+- nombre de frappes (positif)
+- nombre de tirs cadrés (positif)
+- possession (positif)
+- Distance de tirs (négatif)
+- nombre de fautes provoquées et cartons (positifs)
+- penalty et coup francs (positifs)
+
+DEFENSE
+- nombre de fautes (negatif)
+- nombre de penalty et coup francs encaissés (négatifs)
+- nombre de cartons pris (négatif)
+- nombre de tacles réussi (positif)
+
+

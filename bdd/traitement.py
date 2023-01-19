@@ -28,10 +28,11 @@ opp = opp.rename(columns={"Formation":"opp_Formation", "value":"opp_value",
 ##INTEGRATION DES DONNEES DE L ADVERSAIRE
 data = data.merge(opp, how="left", on=["opp_key"])
 data['victoire'] = np.where(data['Result']=='W', 1, 0)
+data['not_lose'] = np.where(data['Result']!='L', 1, 0)
 corr = data.corr()
 
 ##CREATION DE LA BASE DE ML AVEC MISE EN FORME DES VARIABLES
-data_ml = data[["Result","Date","Venue","Poss","age","Formation","SoT","Dist","Cmp%","Int",
+data_ml = data[["not_lose","Result","Date","Venue","Poss","age","Formation","SoT","Dist","Cmp%","Int",
                 "Fls","value","repos","opp_Formation","opp_value", "team", "Sh", "PK", "CrdY", "CrdR"]]
 
 data_ml['Mois'] = pd.Series(data_ml["Date"].str[5:7])
@@ -60,6 +61,7 @@ data_ml["diff_def"] = data_ml["nb_def"] - data_ml["opp_att"]
 data_ml["diff_off"] = data_ml["nb_att"] - data_ml["opp_def"]
 data_ml["diff_mil"] = data_ml["nb_milieu"] - data_ml["opp_milieu"]
 
+data_ml["saison"] = "reste"
 for i in data_ml.index:
     if 9 <= data_ml["Mois"][i] < 12 :
         data_ml["saison"][i] = "automne"
@@ -78,7 +80,7 @@ data_ml.columns
 # test = data.loc[data["opp_Formation"] == "4-2-3-1"]
 # test.Opponent.value_counts()
 
-data_ml = data_ml[["Result","victoire","Venue","home","Poss","age","Formation","SoT","Dist","Cmp%",
+data_ml = data_ml[["Date","Result","victoire","not_lose","Venue","home","Poss","age","Formation","SoT","Dist","Cmp%",
                    "Int","Fls","diff_value","repos","Mois","opp_Formation","team", "saison",
                    "Sh","PK","CrdY","CrdR"]]
 #EXPORT
