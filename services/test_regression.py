@@ -50,10 +50,25 @@ test = test[["periode","nb_def","Result"]]
 
 test.pivot_table(values="Result", index="periode", columns="nb_def").plot()
 
-reg = smf.logit('not_lose ~ C(home) + age + Poss + Dist + SoT + diff_value + Int + C(saison) + Sh + C(PK) + C(CrdR) + C(opp_Formation)',
+df_reg['opp_Formation'] = pd.Categorical(df_reg['opp_Formation'])
+
+reg = smf.logit('victoire ~ C(home) + age + Poss + Dist + SoT + diff_value + Int + C(saison) + Sh + C(PK) + C(CrdR) + C(opp_Formation, Treatment(reference="4-5-1"))',
                   data=df_reg).fit()
 
 reg.summary()
+
+##TEST colinéarité
+from statsmodels.stats.outliers_influence import variance_inflation_factor
+from patsy import dmatrices
+
+df_test = df_reg[["victoire","SoT","CrdY", "PK","home","age","Poss","Dist","diff_value","Int","saison","Sh","opp_Formation"]]
+
+y, X = dmatrices('victoire ~ C(home) + age + Poss + Dist + SoT + diff_value + Int + C(saison) + Sh + C(PK) + C(CrdY) + C(opp_Formation)', 
+                 df_test, return_type='dataframe')
+
+vif = pd.DataFrame()
+vif["VIF Factor"] = [variance_inflation_factor(X.values, i) for i in range(X.shape[1])]
+vif["features"] = X.columns
 
 ##PREDICTIONS ET ERREURS
 df_reg['pred']=reg.predict(df_reg)
@@ -70,4 +85,8 @@ sum(df_reg["victoire"])/len(df_reg)
 ##PLOT POUR LES NP LOG
 plt.hist(df_reg["Poss"])
 plt.hist(np.log(df_reg["Poss"]))
+
+df_reg.CrdY.value_counts()
+
+df_reg.to_csv("bdd/data/data_reg_logit.csv", sep= ";")
 
