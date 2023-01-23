@@ -1286,64 +1286,6 @@ La valeur de l'intercept passe à 881. C'est pire !
 
 Bon bah on va garder ce modèle.
 
-##PROCHAINE ETAPE pour le modèle == INTEGRER DES VARIABLES SUR LE NIVEAU DES JOUEURS A CHAQUE POSTE 
-Ce travail va nécessiter de nouvelles tables de données mais aussi des recherches sur les statistiques utiles pour évaluer la productivité des joueurs en fonction de leur poste puis pour les classer en fonction de leur centile de productivité par rapport aux autres joueurs du même poste 
-
-!!!ACHTUNG ::: Se concentrer sur un seul championnat pour que les joueurs soient comparables --> En effet, si je venais à ajouter des joueurs de premiere league et de ligue 1 dans le classement en fonction de la productivité je viendrais totalement biaiser le résultat puisque la plupart de ces équipes ne jouent jamais les mêmes équipes que celles des autres championnats (hors LDC et europa league). 
-Par conséquent, la productivité d'un attaquant de série A où le jeu est très défensif avec des grosses écuries européenne n'a rien à voir avec les performances d'un attaquant de ligue 1 (déso), championnat dans lequel les différences de niveaux sont encore trop marquées et où le jeu est moins défensif.
-
-Par contre je risque d'avoir des petits échantillons du coup. Je vais partir sur les stats cumulées sur les saisons et les stats moyennes.
-FBREF sera la source je pense.
-
-ET REFAIRE LE MODELE AVEC LES VARIABLES DE L EQUIPE OPPOSEE (fautes, cartons, tirs et coup de pieds arretés) + Relancer car il manquait l'inter et hellas verone
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ##En attendant :
 
 Stats descriptives de la table en sortie csv
@@ -1440,4 +1382,379 @@ Spezia  		1.340549
 Salernitana  	1.366890
 Cagliari  	1.415780
 
-Je m'apercois que je n'ai pas l'INTER ??? Ils disparaissent avec le dropna . A vérifier d'où ça vient (diff_value ??) == C'était un problème de nom dans la base d'origine (idem pour hellas verone)
+Je m'apercois que je n'ai pas l'INTER ??? Ils disparaissent avec le dropna . A vérifier d'où ça vient (diff_value ??) == C'était un problème de nom dans la base d'origine (idem pour hellas verone).
+
+recalcul du FDA avec l'ajout du pourcentage de passes réussies :
+
+Meilleures attaques : 
+Napoli  			2.967030
+Internazionale  	2.819415
+Atalanta  		2.768520
+Sassuolo  		2.740186
+Juventus  		2.739583
+
+Pires attaques :
+Cagliari  	2.302430
+Spezia  		2.237433
+Salernitana  	2.228053
+Genoa  		2.128451
+Venezia  		2.065401
+
+L'Ac milan sort du top 5 je sais pas trop si c'est un bon signe
+sur les 5 derniers c'est toujours les mêmes mais dans un ordre différent.
+
+Meilleure perf : 4.91 par la Roma.
+
+Si j'ajoute ces scores à la régression, il faut que je vire des variables histoire de pas faire doublons (nb de tirs etc ...).
+
+A virer pour FDD == Int je crois et en plus y a pas de corrélation forte entre les deux donc peut-être la garder
+A virer pour FDA == Poss et Cmp, Sh et peut-être Sot + forte corrélation avec diff_value
+
+En croisant les formations dans la table vif je constate une colinéarité un peu élevée entre certaines formation 
+(ex 10.4 de vif pour le 4-3-3 de l'opponent)
+
+Je test un modèle avec FDA et FDD et le croisement des formations :
+
+					victoire ~ C(home) + FDD + FDA + age + Dist + SoT + diff_value + Int + C(saison) + C(PK) + C(CrdR) + C(Formation)*C(opp_Formation, Treatment(reference="4-5-1"))
+
+<class 'statsmodels.iolib.summary.Summary'>
+"""
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:               victoire   No. Observations:                 1436
+Model:                          Logit   Df Residuals:                     1398
+Method:                           MLE   Df Model:                           37
+Date:                Mon, 23 Jan 2023   Pseudo R-squ.:                  0.2617
+Time:                        20:36:50   Log-Likelihood:                -698.10
+converged:                       True   LL-Null:                       -945.56
+Covariance Type:            nonrobust   LLR p-value:                 1.877e-81
+=================================================================================================================================================
+                                                                                    coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Intercept                                                                        -0.4973      1.998     -0.249      0.804      -4.414       3.420
+C(home)[T.1]                                                                      0.3968      0.136      2.909      0.004       0.130       0.664
+C(saison)[T.reste]                                                               -0.2923      0.141     -2.070      0.038      -0.569      -0.016
+C(PK)[T.1]                                                                        1.0967      0.201      5.451      0.000       0.702       1.491
+C(PK)[T.2]                                                                        2.4079      0.748      3.221      0.001       0.943       3.873
+C(CrdR)[T.1]                                                                     -0.6439      0.255     -2.530      0.011      -1.143      -0.145
+C(CrdR)[T.2]                                                                     -0.8260      0.940     -0.878      0.380      -2.669       1.017
+C(Formation)[T.3-5-2]                                                            -0.0587      0.427     -0.137      0.891      -0.896       0.778
+C(Formation)[T.4-3-3]                                                            -0.0081      0.478     -0.017      0.987      -0.944       0.928
+C(Formation)[T.4-4-2]                                                            -0.0615      0.495     -0.124      0.901      -1.031       0.908
+C(Formation)[T.4-5-1]                                                            -0.4750      0.445     -1.066      0.286      -1.348       0.398
+C(opp_Formation, Treatment(reference="4-5-1"))[T.3-4-3]                           0.0559      0.484      0.116      0.908      -0.893       1.004
+C(opp_Formation, Treatment(reference="4-5-1"))[T.3-5-2]                          -0.1821      0.444     -0.410      0.682      -1.052       0.688
+C(opp_Formation, Treatment(reference="4-5-1"))[T.4-3-3]                          -0.4049      0.572     -0.708      0.479      -1.526       0.716
+C(opp_Formation, Treatment(reference="4-5-1"))[T.4-4-2]                           0.4277      0.611      0.700      0.484      -0.769       1.625
+C(Formation)[T.3-5-2]:C(opp_Formation, Treatment(reference="4-5-1"))[T.3-4-3]    -0.2832      0.607     -0.466      0.641      -1.473       0.907
+C(Formation)[T.4-3-3]:C(opp_Formation, Treatment(reference="4-5-1"))[T.3-4-3]    -0.8655      0.788     -1.098      0.272      -2.411       0.680
+C(Formation)[T.4-4-2]:C(opp_Formation, Treatment(reference="4-5-1"))[T.3-4-3]    -0.4683      0.814     -0.575      0.565      -2.064       1.128
+C(Formation)[T.4-5-1]:C(opp_Formation, Treatment(reference="4-5-1"))[T.3-4-3]     0.3445      0.637      0.541      0.588      -0.903       1.592
+C(Formation)[T.3-5-2]:C(opp_Formation, Treatment(reference="4-5-1"))[T.3-5-2]    -0.1455      0.559     -0.260      0.795      -1.242       0.951
+C(Formation)[T.4-3-3]:C(opp_Formation, Treatment(reference="4-5-1"))[T.3-5-2]     0.3454      0.608      0.568      0.570      -0.847       1.537
+C(Formation)[T.4-4-2]:C(opp_Formation, Treatment(reference="4-5-1"))[T.3-5-2]    -0.1321      0.676     -0.195      0.845      -1.457       1.193
+C(Formation)[T.4-5-1]:C(opp_Formation, Treatment(reference="4-5-1"))[T.3-5-2]     0.6989      0.577      1.212      0.225      -0.431       1.829
+C(Formation)[T.3-5-2]:C(opp_Formation, Treatment(reference="4-5-1"))[T.4-3-3]     0.1674      0.680      0.246      0.805      -1.165       1.500
+C(Formation)[T.4-3-3]:C(opp_Formation, Treatment(reference="4-5-1"))[T.4-3-3]     0.7225      0.789      0.916      0.360      -0.823       2.268
+C(Formation)[T.4-4-2]:C(opp_Formation, Treatment(reference="4-5-1"))[T.4-3-3]     0.3697      0.841      0.440      0.660      -1.279       2.018
+C(Formation)[T.4-5-1]:C(opp_Formation, Treatment(reference="4-5-1"))[T.4-3-3]     0.6726      0.711      0.946      0.344      -0.721       2.066
+C(Formation)[T.3-5-2]:C(opp_Formation, Treatment(reference="4-5-1"))[T.4-4-2]    -0.7300      0.745     -0.980      0.327      -2.190       0.730
+C(Formation)[T.4-3-3]:C(opp_Formation, Treatment(reference="4-5-1"))[T.4-4-2]    -0.4090      0.856     -0.478      0.633      -2.088       1.269
+C(Formation)[T.4-4-2]:C(opp_Formation, Treatment(reference="4-5-1"))[T.4-4-2]    -0.3485      0.959     -0.364      0.716      -2.228       1.531
+C(Formation)[T.4-5-1]:C(opp_Formation, Treatment(reference="4-5-1"))[T.4-4-2]     0.3821      0.748      0.511      0.609      -1.083       1.847
+FDD                                                                               0.2498      0.079      3.160      0.002       0.095       0.405
+FDA                                                                              -1.2725      0.175     -7.292      0.000      -1.615      -0.930
+age                                                                               0.1173      0.072      1.623      0.105      -0.024       0.259
+Dist                                                                             -0.0878      0.026     -3.351      0.001      -0.139      -0.036
+SoT                                                                               0.4183      0.037     11.408      0.000       0.346       0.490
+diff_value                                                                        0.0038      0.000     10.794      0.000       0.003       0.005
+Int                                                                               0.0288      0.017      1.647      0.100      -0.005       0.063
+=================================================================================================================================================
+"""
+
+R² pas dingue, le LLH est à chier 
+
+Le croisement de formation avec la meilleure p-value est le 4-5-1 de l'équipe contre le 3-5-2 de l'opposant avec 0.225 ce qui est mauvais.
+FDA et FDD sont significatifs.
+Les opp_formation ont des meilleures p-values même si elles restent élevées que les formation tout court.
+ 
+retest:
+
+<class 'statsmodels.iolib.summary.Summary'>
+"""
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:               victoire   No. Observations:                 1436
+Model:                          Logit   Df Residuals:                     1418
+Method:                           MLE   Df Model:                           17
+Date:                Mon, 23 Jan 2023   Pseudo R-squ.:                  0.2554
+Time:                        20:43:13   Log-Likelihood:                -704.08
+converged:                       True   LL-Null:                       -945.56
+Covariance Type:            nonrobust   LLR p-value:                 7.338e-92
+===========================================================================================================================
+                                                              coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------------------------------
+Intercept                                                  -0.1760      1.904     -0.092      0.926      -3.909       3.557
+C(home)[T.1]                                                0.3982      0.135      2.948      0.003       0.133       0.663
+C(saison)[T.reste]                                         -0.2714      0.138     -1.971      0.049      -0.541      -0.002
+C(PK)[T.1]                                                  1.0925      0.199      5.502      0.000       0.703       1.482
+C(PK)[T.2]                                                  2.4134      0.709      3.406      0.001       1.025       3.802
+C(CrdR)[T.1]                                               -0.6135      0.251     -2.442      0.015      -1.106      -0.121
+C(CrdR)[T.2]                                               -0.7850      0.917     -0.856      0.392      -2.582       1.012
+C(opp_Formation, Treatment(reference="4-5-1"))[T.3-4-3]    -0.0786      0.211     -0.372      0.710      -0.493       0.336
+C(opp_Formation, Treatment(reference="4-5-1"))[T.3-5-2]     0.0033      0.180      0.018      0.985      -0.349       0.355
+C(opp_Formation, Treatment(reference="4-5-1"))[T.4-3-3]    -0.0386      0.215     -0.180      0.857      -0.459       0.382
+C(opp_Formation, Treatment(reference="4-5-1"))[T.4-4-2]     0.2020      0.235      0.858      0.391      -0.259       0.664
+FDD                                                         0.2517      0.078      3.235      0.001       0.099       0.404
+FDA                                                        -1.2199      0.171     -7.134      0.000      -1.555      -0.885
+age                                                         0.0935      0.066      1.407      0.160      -0.037       0.224
+Dist                                                       -0.0864      0.025     -3.412      0.001      -0.136      -0.037
+SoT                                                         0.4153      0.036     11.402      0.000       0.344       0.487
+diff_value                                                  0.0038      0.000     10.787      0.000       0.003       0.004
+Int                                                         0.0271      0.017      1.595      0.111      -0.006       0.060
+===========================================================================================================================
+"""
+
+Sans Poss et Sh je perds en R²
+
+Je recalcul le FDA sans Poss pour pouvoir récupérer la possession dans le modèle et sans Int car pas significatif
+
+reg = smf.logit('victoire ~ C(home) + Poss + FDD + FDA + age + Dist + SoT + diff_value + C(saison) + C(PK) + C(CrdR) + C(opp_Formation, Treatment(reference="4-5-1"))',
+                  data=df_reg).fit()
+
+
+<class 'statsmodels.iolib.summary.Summary'>
+"""
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:               victoire   No. Observations:                 1436
+Model:                          Logit   Df Residuals:                     1418
+Method:                           MLE   Df Model:                           17
+Date:                Mon, 23 Jan 2023   Pseudo R-squ.:                  0.2649
+Time:                        20:49:41   Log-Likelihood:                -695.03
+converged:                       True   LL-Null:                       -945.56
+Covariance Type:            nonrobust   LLR p-value:                 1.141e-95
+===========================================================================================================================
+                                                              coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------------------------------
+Intercept                                                   0.6999      1.853      0.378      0.706      -2.931       4.331
+C(home)[T.1]                                                0.3435      0.136      2.524      0.012       0.077       0.610
+C(saison)[T.reste]                                         -0.2769      0.139     -1.994      0.046      -0.549      -0.005
+C(PK)[T.1]                                                  1.0894      0.200      5.437      0.000       0.697       1.482
+C(PK)[T.2]                                                  2.5643      0.723      3.547      0.000       1.148       3.981
+C(CrdR)[T.1]                                               -0.6332      0.252     -2.509      0.012      -1.128      -0.139
+C(CrdR)[T.2]                                               -0.7987      0.942     -0.848      0.397      -2.645       1.048
+C(opp_Formation, Treatment(reference="4-5-1"))[T.3-4-3]    -0.1218      0.213     -0.571      0.568      -0.540       0.296
+C(opp_Formation, Treatment(reference="4-5-1"))[T.3-5-2]     0.0801      0.182      0.440      0.660      -0.276       0.436
+C(opp_Formation, Treatment(reference="4-5-1"))[T.4-3-3]    -0.0905      0.217     -0.417      0.676      -0.515       0.334
+C(opp_Formation, Treatment(reference="4-5-1"))[T.4-4-2]     0.2518      0.237      1.063      0.288      -0.213       0.716
+Poss                                                       -0.0611      0.009     -6.588      0.000      -0.079      -0.043
+FDD                                                         0.3078      0.074      4.160      0.000       0.163       0.453
+FDA                                                        -0.6250      0.218     -2.866      0.004      -1.052      -0.198
+age                                                         0.0978      0.067      1.464      0.143      -0.033       0.229
+Dist                                                       -0.0591      0.026     -2.243      0.025      -0.111      -0.007
+SoT                                                         0.3880      0.037     10.540      0.000       0.316       0.460
+diff_value                                                  0.0041      0.000     11.251      0.000       0.003       0.005
+===========================================================================================================================
+"""
+
+Je récupère mon R²
+Pas de soucis avec l'intercept non significatif.
+Je garde les formations pour le moment mais ça commence à prendre forme.
+
+Pour FDD et FDA :
+formules 
+data["FDD"] = (data["Int"]/(data.Int.quantile([0.75]).values)) - ((data["opp_Sh"]/(data.opp_Sh.quantile([0.75]).values)) + 
+                                                (data["Fls"]/(data.Fls.quantile([0.75]).values)) + 
+                                                (data["coup_arret"]/(data.coup_arret.quantile([0.75]).values)))
+
+data["FDA"] = ((data["Sh"]/(data.Sh.quantile([0.75]).values)) + 
+               (data["opp_fls"]/(data.opp_fls.quantile([0.75]).values)) + 
+               (data["Cmp"]/(data.Cmp.quantile([0.75]).values))) - (data["Dist"]/(data.Dist.quantile([0.75]).values)) 
+
+Lorsque FDD augmente les chances de victoires augmentent. 
+Lorsque FDA augmente les chances de victoires diminuent ??? --> Ca c'est vraiment chelou car ca veut dire que plus je frappe de près et plus je réussi mes passes et plus je risque de perdre ?
+DAFUK
+
+Au passage, les coup de pieds arrêté et les tirs de l'adversaires ne sont pas significatifs tandis que les fautes de l'adversaire le sont.
+Je ne l'ajoute pas car c'est déjà pris en compte dans le FDD !
+
+##PROCHAINE ETAPE pour le modèle == INTEGRER DES VARIABLES SUR LE NIVEAU DES JOUEURS A CHAQUE POSTE 
+
+
+Recherche des données par postes
+
+Ce travail va nécessiter de nouvelles tables de données mais aussi des recherches sur les statistiques utiles pour évaluer la productivité des joueurs en fonction de leur poste puis pour les classer en fonction de leur centile de productivité par rapport aux autres joueurs du même poste 
+
+!!!ACHTUNG ::: Se concentrer sur un seul championnat pour que les joueurs soient comparables --> En effet, si je venais à ajouter des joueurs de premiere league et de ligue 1 dans le classement en fonction de la productivité je viendrais totalement biaiser le résultat puisque la plupart de ces équipes ne jouent jamais les mêmes équipes que celles des autres championnats (hors LDC et europa league). 
+Par conséquent, la productivité d'un attaquant de série A où le jeu est très défensif avec des grosses écuries européenne n'a rien à voir avec les performances d'un attaquant de ligue 1 (déso), championnat dans lequel les différences de niveaux sont encore trop marquées et où le jeu est moins défensif.
+
+Par contre je risque d'avoir des petits échantillons du coup. Je vais partir sur les stats cumulées sur les saisons et les stats moyennes.
+FBREF sera la source je pense.
+
+Definition poste par poste pour voir les variables qui ont de l'intérêt.
+
+Après, il faut simplifier un max pour pas trop démultiplier les postes et donc les observations.
+
+Mon idée de base portant sur les milieux défensifs, je les garde tels quels.
+
+Je groupe les défenseurs centraux entre eux
+Je groupe les défenseurs latéraux
+Je vais peut-être grouper les milieux centraux et les milieux offensifs même si les premiers doivent à priori plus être présent à la récupération tandis que les seconds sont plur en attaque
+Je groupe les milieux latéraux
+Je groupe les attaquants (ce ne sont vraiment pas l'objet de cette étude)
+et je prends le gardien.
+
+J'ai donc 7 groupes de postes pour lesquels je dois évaluer la productivité (je ne peux pas affirmer qu'un joueur est meilleur qu'un autre dans la mesure où ces stats ne reflètent pas forcément son talent et qu'il existe une infinité de facteurs qui peuvent abaisser la productivité chiffrable d'un joueur). Le but ici est vraiment de pouvoir distinguer la présence d'un joueur qui apporte beaucoup à un poste face à celui d'une autre équipe et d'en évaluer l'impact TCEPA.
+
+Il faudra que je me penche sur les modèle où on peut bloquer les effets des autres postes. En effet, il y a de grandes chances qu'une équipe avec un très bon 6, ait également un bon 10, un bon 9 etc ... et inversement pour les clubs à plus petits budgets.
+
+	MILIEUX DEFENSIFS
+
+wiki :  ils sont là pour intercepter les ballons et briser l'attaque adverse.
+
+decathlon : LA VISION D’UNE TOUR DE CONTRÔLE / UNE TECHNIQUE À LA BUSQUETS (> Je fais le minimum de touches de balles > Je fais une passe puis je me déplace pour proposer une solution > Je favorise le jeu en triangle, les appels contre-appels) / UNE GESTION DE L’EFFORT CALCULÉE AU MÈTRE PRÈS /  LE POSITIONNEMENT
+
+footeo : On dit souvent d’un bon milieu défensif qu’il possède un “gros volume de jeu”, ce qui signifie qu’il est capable de multiplier les efforts et d’être toujours près du ballon.
+Tous ses gestes - les conduites de balles, les passes courtes, les passes longues - doivent être les plus simples et précis possibles.
+
+sport-equipement.fr : Ce sont sans doute les joueurs qui courent le plus pendant un match de foot. En effet, ils doivent tout faire ! Un milieu de terrain se doit d’empêcher la balle d’arriver dans les pieds de l’attaquant adverse, et à l’inverse, bien ajuster ses passes pour placer son attaquant dans les meilleures conditions possible.
+
+Le placement et la lecture du jeu semblent être des notions qui sont difficiles à comptabiliser.
+Cependant, en ce qui concerne le volume de jeu, la défense et les qualité technique je pourrais partir sur:
+	
+	- Nombre de km parcourus == Je le trouve pas sur FBREF
+	- Nombre d'interceptions
+	- %age de passes réussies
+	- p-ê passes décisives
+	- Tacles réussis
+
+	- Nombre de cartons
+	- Balles perdues 
+
+	MILIEUX OFFENSIFS
+
+wiki : Ils sont chargés d'organiser le jeu offensif de l'équipe. C'est le poste qui permet la meilleure expression du potentiel technique du joueur.
+
+footeo : Si la qualité de dribble est très importante, elle est moins décisive si elle n’est pas accompagnée d’une grosse explosivité et d’une bonne vitesse de pointe / Si le sens du dribble est la qualité la plus évidente, il doit aussi être accompagné d’une bonne qualité de passe et de centre pour permettre d’être décisif 
+
+Des gars technique quoi :
+	
+	- Nombre de dribbles (ou %age de réussis)
+	- Nombre de passes réussies
+	- Nombre de passes décisives
+	- Nombre de buts sûrement
+	- Nombre d'occasions créées
+
+	- Balles perdues
+	- Nombre de hors-jeu (placement)
+
+	MILIEUX LATERAUX
+
+wiki :le milieu de terrain est un joueur dont le rôle est de réaliser la liaison entre la défense et l'attaque. Après la récupération de la balle
+
+Plusieures pages le confondent avec le milieu offensif (en plus ça doit dépendre des systèmes.) Du coup je vais utiliser les mêmes variables et supprimer cette catégorie.
+
+	DEFENSEURS CENTRAUX
+
+wiki : Les défenseurs (ou arrières) sont des joueurs de football dont la tâche principale consiste à perturber, ou idéalement empêcher, le jeu d'attaque de l'équipe adverse.
+
+uniqueathlete : l’objectif principal d’un défenseur central de stopper les attaquants et d’empêcher à ce que les attaquants parviennent dans la surface de réparation ou parviennent à s’approcher trop près du but.  / Bon jeu aérien / 
+
+Pas trop besoin d'aller plus loin :
+
+	- Nombre de tacles
+	- Nombre d'interceptions et/ou Blocks
+	- Nombres de duels aériens gagnés
+	
+	- Fautes et cartons
+
+	DEFENSEURS LATERAUX
+
+On est un peu sur le même profil que les mecs d'avant
+A priori c'est un défenseur qui cours plus souvent
+
+	- Nombre de tacles
+	- Interceptions ou Blocks
+	- Duels aériens
+
+On ajoute juste
+	- Longues passes ou %age de passes réussies
+	- %age de dribbles réussis
+
+	- Fautes et cartons
+	- Balles perdues
+
+	GARDIEN
+
+Il y a des tables spéciales gardiens sur FBREF:
+
+	- % de "crosses" stopés par le gardien (feintes)
+	- % de saves
+
+	- Nombre de buts encaissés
+	- Cartons ?
+
+	ATTAQUANTS
+
+Ben mettre des buts, dribbler et faire quelques passes décisives non ?
+
+	- Nombre de buts
+	- % de dribbles réussis
+	- % de passes réussis 
+	- Nombre d'actions créées
+	- Nombre de tirs (cadrés ?)
+
+	- Nombre de hors-jeu (placement)
+	- Ballons perdus
+
+Je vais devoir télécharger toutes les tables des stats par joueurs sur 90 minutes sur les saisons complètes dont je dispose (20 - 21 et  21 - 22) ==> Peut-être récupérer deux autres saisons ? Ou alors travailler sur une seule saison ?
+Va falloir sortir une variable "saison" pour croiser les tables et avoir les bons effectifs.
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
