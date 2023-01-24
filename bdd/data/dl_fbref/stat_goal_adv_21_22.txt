@@ -1,0 +1,50 @@
+Player,Pos,Squad,Age,Cmp%,Opp,Stp,Stp%,-9999
+Emil Audero,GK,Sampdoria,24,43.0,418,22,5.3,649b01d8
+Nicola Bagnolini,GK,Bologna,17,0.0,3,0,0.0,ad263695
+Francesco Bardi,GK,Bologna,29,26.3,24,2,8.3,0acda699
+Vid Belec,GK,Salernitana,31,43.4,329,12,3.6,4f8ce0e1
+Alessandro Berardi,GK,Hellas Verona,30,21.1,12,0,0.0,ec1f737d
+Etrit Berisha,GK,Torino,32,28.2,148,7,4.7,ee833569
+Andrea Consigli,GK,Sassuolo,34,43.2,491,21,4.3,8cabdc1e
+Alessio Cragno,GK,Cagliari,27,45.7,484,22,4.5,f554e29b
+Bartłomiej Drągowski,GK,Fiorentina,23,44.3,61,2,3.3,085e71a7
+Wladimiro Falcone,GK,Sampdoria,26,42.0,164,7,4.3,9f5a610b
+Vincenzo Fiorillo,GK,Salernitana,31,64.7,16,0,0.0,a2565f79
+Luca Gemello,GK,Torino,21,25.0,10,0,0.0,53e494ec
+Samir Handanović,GK,Inter,37,46.2,393,15,3.8,74419746
+Luca Lezzerini,GK,Venezia,26,37.3,100,2,2.0,c9c32262
+Niki Mäenpää,GK,Venezia,36,31.7,275,6,2.2,14a96e1c
+Mike Maignan,GK,Milan,26,42.0,347,25,7.2,fcb38f57
+Davide Marfella,GK,Napoli,21,,1,0,0.0,880fcdbb
+Alex Meret,GK,Napoli,24,44.8,89,3,3.4,9413b19f
+Vanja Milinković-Savić,GK,Torino,24,29.1,290,18,6.2,9fa26bc2
+Lorenzo Montipò,GK,Hellas Verona,25,32.8,495,21,4.2,c1d95617
+Juan Musso,GK,Atalanta,27,42.2,308,28,9.1,a111cf41
+David Ospina,GK,Napoli,32,37.8,353,18,5.1,82b1198a
+Daniele Padelli,GK,Udinese,35,28.6,56,1,1.8,cf1c23d8
+Ivor Pandur,GK,Hellas Verona,21,57.7,22,1,4.5,457cb02f
+Rui Patrício,GK,Roma,33,44.3,393,12,3.1,79b0d6a0
+Gianluca Pegolo,GK,Sassuolo,40,40.0,8,1,12.5,f058ed1f
+Mattia Perin,GK,Juventus,28,38.2,77,1,1.3,4c62d0c8
+Carlo Pinsoglio,GK,Juventus,31,100.0,12,0,0.0,f6a06749
+Ivan Provedel,GK,Spezia,27,33.4,476,28,5.9,277da414
+Ionuț Radu,GK,Inter,24,50.0,4,0,0.0,67f649be
+Boris Radunović,GK,Cagliari,25,35.5,42,1,2.4,0dfce079
+Nicola Ravaglia,GK,Sampdoria,32,50.0,1,0,0.0,d7a35008
+Pepe Reina,GK,Lazio,38,49.6,186,10,5.4,e358587b
+Sergio Romero,GK,Venezia,34,38.1,265,14,5.3,1e26e376
+Francesco Rossi,GK,Atalanta,30,33.3,3,0,0.0,7b5f516f
+Giacomo Satalino,GK,Sassuolo,22,,1,0,0.0,b1f0b916
+Adrian Šemper,GK,Genoa,23,28.6,14,2,14.3,f02dde20
+Luigi Sepe,GK,Salernitana,30,51.9,235,10,4.3,343f753a
+Marco Silvestri,GK,Udinese,30,38.8,462,16,3.5,0d422df7
+Salvatore Sirigu,GK,Genoa,34,42.5,476,14,2.9,10dc46f0
+Łukasz Skorupski,GK,Bologna,30,42.0,498,27,5.4,ab4449d6
+Marco Sportiello,GK,Atalanta,29,24.2,45,1,2.2,ac4003af
+Thomas Strakosha,GK,Lazio,26,49.1,283,11,3.9,339fe0e8
+Wojciech Szczęsny,GK,Juventus,31,45.4,481,24,5.0,01b8a2b2
+Ciprian Tătărușanu,GK,Milan,35,44.6,82,6,7.3,b056e3da
+Pietro Terracciano,GK,Fiorentina,31,42.5,291,22,7.6,e1b0a70d
+Guglielmo Vicario,GK,Empoli,24,34.5,602,35,5.8,77d6fd4d
+Jeroen Zoet,GK,Spezia,30,29.0,95,2,2.1,cc1a0c57
+Petar Zovko,GK,Spezia,19,25.0,4,0,0.0,54f6afe3

@@ -1708,29 +1708,16 @@ Ben mettre des buts, dribbler et faire quelques passes décisives non ?
 	- Nombre de hors-jeu (placement)
 	- Ballons perdus
 
-Je vais devoir télécharger toutes les tables des stats par joueurs sur 90 minutes sur les saisons complètes dont je dispose (20 - 21 et  21 - 22) ==> Peut-être récupérer deux autres saisons ? Ou alors travailler sur une seule saison ?
+Je vais devoir télécharger toutes les tables des stats par joueurs sur 90 minutes (== non en fait comme je fais des sommes de productiion de joueurs ja vais regarder comment je peux gérer ces tables) sur les saisons complètes dont je dispose (20 - 21 et  21 - 22) ==> Peut-être récupérer deux autres saisons ? Ou alors travailler sur une seule saison ?
 Va falloir sortir une variable "saison" pour croiser les tables et avoir les bons effectifs.
 	
+Je test une table sur une saison
 
+Finalement je DL toutes les tables en texte
+Y a les gardiens dans tous les fichiers OKZOU
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Avant de créer une table de tous les joueurs avec toutes les stats, je dois travailler rapidement chaque fichier (renommage de variables, création d'une clé de jointure etc...)
+La clé de jointure c'est la variable "-9999"
 
 
 
