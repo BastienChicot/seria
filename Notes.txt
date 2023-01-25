@@ -1719,8 +1719,65 @@ Y a les gardiens dans tous les fichiers OKZOU
 Avant de créer une table de tous les joueurs avec toutes les stats, je dois travailler rapidement chaque fichier (renommage de variables, création d'une clé de jointure etc...)
 La clé de jointure c'est la variable "-9999"
 
+Je garde toutes les variables des stats standards
+Pour les tirs :: tirs, tirs cadrés et % de tirs cadrés (que je renomme pour virer le %)
+Pour les passes :: passes complétées, passes tentées, % de passes réussies (idem, rename pour virer le %) == lors de la merge j'ai des lignes en plus.... -- présence de doublons ??
+Pour les SCA :: juste SCA -- ajout de lignes encore == je drop duplicate à la fin des merge pour voir
+Pour la défense :: tacles, tacles remportés, %age de tacles réussis, block, shots bloqués, passes bloquées, Interceptions, TKL + Int, Clr et erreurs (je dois renommer le var avec un % et celle qui s'appelle Sh)
+Pour les possessions ::Touches, % de dribbles réussis, Mis et Dis (rename le %age)
+Pour les misc :: Fautes, hors jeu, crosses, % duels aériens gagnés (renommer le %)
+Goals :: saves % et cross % (renommer les deux)
 
+Les doublons semblent venir du fait que certains joueurs ont changés d'équipe et/ou sont à zéro sur certaines stats dans des tableaux.
+Je ne l'explique pas vraiment puisque je merge sur une clé créée par le site et que chaque table compte le même nombre de lignes exactement (632). Même lorsque je merge sur le nom du joueur j'ai les doublons qui apparaissent. On va continuer comme ça et si je vis que les résultats partent en vrille, je tenterai une autre façon pour merger les tables.
 
+Je dois regrouper les postes et aussi modifier les squads pour l'Inter et le Hellas Verone
+Les groupes à créer : 
+Milieux defensifs (sur FBREF :: DM == super! y'en a pas dans le fichier je vais voir comment sont codifiés les milieux défensifs sur fbref --> >Tonali, brozovic et Bennacer sont en MF mais il y a des milieux droits, gauches etc dans les MF c'est n'imp)
+
+Milieux de terrain
+défenseurs centraux
+défenseurs latéraux
+Attaquants
+Gardiens
+
+Je vais devoir me trouver une tables plus claires avec juste les bons postes == peut-être sur transfermarkt
+En supposant que les MF sont majoritairement des gars qui auront à défendre, est-ce que j'ai d'autres postes pour les autres joueurs :
+DF      1078 == Defenders (merci...) ptetre les def centraux
+FW       854 == Forwards : bon là c'est clair c'est les attaquants
+MF       645 == Midfielders : tout et n'importe quoi dont mes milieux défensifs 
+MFFW     363 == Genre Dybala == Ce serait mes milieux offensifs
+FWMF     238 == Zaccagni :: Milieux off aussi
+DFMF     209 == Voilà ce qu'on trouve là dedans (DF-MF (AM-DM-WM, left)) ... Les gars font tout en gros ?? Putain de site FBREF ils iront dans les milieux latéraux donc milieux off
+MFDF      76 == Des milieux centraux mais de toute manière y'en a pas 100 000
+FWDF      70 == Plutot des attaquants (messias par exemple)
+GK        49 == Heureusement celui là fonctionne
+DFFW      10 == Pour 10 pélo, balec
+
+En fait je vais me trouver une liste de milieux défensifs seulement. Peut-être juste ceux qui ont le plus joués et basta. 
+
+Voilà la répartitiion que j'obtien :
+DF        1078
+FW         924
+Milieu     896
+MF         645
+GK          49
+
+reste à trouver un moyen de sortir mes milieux défensifs de la catégorie MF.
+(Fait main avec des copier coller de footballcritic.com...)
+J'obtiens :
+FW        924
+DF        876
+Milieu    825
+DM        561
+MF        357
+GK         49
+
+ Je suppose donc que j'avais 357 lignes de MF qui n'étaient pas des milieux défensifs
+
+Etape suivante == Vérifier que le nombre de minutes par équipe correspond au nombre de matchs joués par l'équipe divisé par 90 minutes fois 11 joueurs.
+
+--> Faire la somme des minutes par équipe (group_by squad) . J'ai cette variables de 90's jouées par joueurs. Peut-être que juste la somme de ça par squad suffira en fait
 
 
 
