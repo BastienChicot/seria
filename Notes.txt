@@ -1646,7 +1646,7 @@ Des gars technique quoi :
 	- Nombre de buts sûrement
 	- Nombre d'occasions créées
 
-	- Balles perdues
+	- Fautes
 	- Nombre de hors-jeu (placement)
 
 	MILIEUX LATERAUX
@@ -1779,21 +1779,81 @@ Etape suivante == Vérifier que le nombre de minutes par équipe correspond au n
 
 --> Faire la somme des minutes par équipe (group_by squad) . J'ai cette variables de 90's jouées par joueurs. Peut-être que juste la somme de ça par squad suffira en fait
 
+A priori le problème de doublon vient de l'utilisation de la variable -9999 qui n'est pas fiable. J'ai du recréer une variable "key" pour les merges.
 
+Le problème est réglé. Toutes les équipes ont bien 38 matchs c'est cool. Du coup j'ai les stats que pour les matchs de saisons. Il faudra que je pense à virer les matchs d'europa league et champions league plus supercoppa etc dans la table 2021 - 2022 si je veux l'utiliser.
 
+Je vais pouvoir passer à la création des indicateurs de productivité par poste. 
 
+Une fois les variables identifiées pour chaque poste/groupe de poste, je pense d'abord grouper par joueur et calculer son indice en fonction de son poste. Ensuite il faudra que je ramène ça sur 90 minutes pour que ce soit comparable et enfin, je pourrai leur attribuer un rang en fonction de leur productivité. (Un rang ou bien un score si je vois qu'il existe de trop grandes disparités = En effet, il serait injuste pour un joueur beaucoup plus productif que celui qui le suit de n'avoir qu'un petit point de plus et qu'en parallèle, deux types avec quasiment le même volume de jeu se retrouvent séparés de 1 point).
+Je vais peut-être m'inspirer de mon indicateur sur les équipe avec le fait d'être au dessus d'un certain centile etc...
+Le but in fine n'est pas d'obtenir un classement mais bien une variable dummy qui indique la présence d'un joueur plus productif que les autres sur un poste.
 
+Théoriquement, j'ai juste à calculer la production individuelle selon les critères choisis par poste et à le diviser par la variable 90s.
+Ensuite je n'aurai plus qu'à comparer les productions par postes et à définir à partir de quel seuil un joueur est considérer comme un joueur plus productif que le reste de la série A (je penche pour un 80ème centile)
+Pour me simplifier la tâche, je vais créer une table pour chaque poste et faire mes calculs à partir de là.
+ 
+En fait je dois d'abord créer les variables relative au temps de jeu puis je pourrai les comparer au reste des joueurs et les additionner pour créer l'indicateur
 
+Les milieux les plus productifs seraient ::
 
+Que des gars que je connais pas. Je vais peut-être filtrer sur le nombre de minutes jouées ou le nombre de match commencés (en fait sur le nombre de 90s et m'assurer qu'ils ont joués plus de 15 matchs == limite à partir de laquelle on voit des noms connus que j'aimerais garder même si en 15 matchs l'impact du joueur est pas fou mais on n'oublie pas qu'au max il ne peuvent en avoir que 38 donc en soit c'est déjà un bon nombre)
 
+C'est déjà mieux :
+Luis Muriel  		6.409775
+Luis Alberto  	5.086470
+Hakan Çalhanoğlu  	4.749490
+Paulo Dybala  	4.482196
+Piotr Zieliński  	4.417816
 
+J'ai des doutes sur les deux premiers mais je vais chercher : Luis Muriel c'est pas déconnant mais à priori il est plutôt attaquant (encore merci FBREF pour la qualité des données sur les postes) , et Luis Alberto c'est propre aussi apparemment et c'est un vrai milieu. Je pars là dessus du coup.
 
+Les défenseurs les plus productifs :: 
+Simone Romagnoli  		6.103273
+Giorgio Chiellini  	6.022241
+Luca Ceppitelli  		5.090104
+Bram Nuytinck  		4.932286
+Chris Smalling  		4.658759
 
+Le deuxième nom e dit long déjà
 
+Par contre les 4 autres sont pas fou (sauf peut être Smalling mais bof bof selon Fifa)
 
+Les attaquants les plus productifs::
+Domenico Berardi  	5.241619
+Lorenzo Insigne  	5.199009
+Rafael Leão  		5.009532
+Duván Zapata  	4.922852
+Hirving Lozano  	4.398347
 
+Les milieux def les plus productifs::
+Joakim Mæhle  	5.195354
+Kristjan Asllani  	5.191117
+Jordan Veretout  	5.154285
+Rade Krunić  		4.926145
+Mërgim Vojvoda  	4.898269
 
+Tonali est si loin c'est bizarre
+En virant quelques variables pas très pertinentes c'est un peu mieux mais tonali est toujours bien bas (j'ai viré les cartons rouges, les duels aériens gagnés et les assists)
+Samuele Ricci  	4.839677
+Jerdy Schouten  	4.037835
+Joakim Mæhle  	3.693086
+Kristjan Asllani  	3.663138
+Milan Badelj  	3.505838
 
+Les gardiens les plus prolifiques (c'est pas forcément bon signe) ::
+Luigi Sepe  			3.193002
+Sergio Romero  		3.128332
+Mike Maignan  		2.956710
+David Ospina  		2.838236
+Pietro Terracciano  	2.813442
+
+Ok bon, prochaine étape pour chaque table, créer une variable indiquant si le joueur fait partie ou non des 20% des plus productifs à son poste.
+
+Du coup j'obtiens des résultats sympa par équipe (voir table nb_top_joueur) dont le fait que le napoli possède 5 des milieux les plus productifs de série A ou que l'Inter a 2 des meilleurs attaquants du championnat.
+
+Prochain mouve : Intégrer ces données dans la table des matchs de la saison 21 - 22 au travers de 5 variables (nb de top goal, nb de top defenseur etc...) et faire tourner le modèle avec ces variables en plus.
+Pour le moment j'ai l'impression que c'est pas tant un poste précis qui va faire la diff mais plutôt le fait d'avoir plusieurs joueurs fort sur un secteur de jeu (à confirmer). 
 
 
 
