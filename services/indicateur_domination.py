@@ -11,7 +11,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 #IMPORT DU FICHIER
-data = pd.read_csv("bdd/data/data_ml.csv", sep= ";", index_col = 0)
+data = pd.read_csv("bdd/data/data_ml_21_22.csv", sep= ";", index_col = 0)
+nb_top = pd.read_csv("bdd/data/nb_top_joueurs.csv",sep=";")
 
 data = data.dropna()
 
@@ -39,8 +40,8 @@ Def = data.groupby("team").mean("FDD").reset_index()
 Def = Def[["team","FDD"]].sort_values(by = ["FDD"],ascending=True)
 Def.head
 
-
-data.to_csv("bdd/data/data_temp.csv", sep= ";")
+data = data.merge(nb_top, how = "left", left_on = "team", right_on = "Squad")
+data.to_csv("bdd/data/data_temp_2122.csv", sep= ";")
 
 import statsmodels.formula.api as smf
 
@@ -68,25 +69,72 @@ corr = df_reg.corr()
 
 df_reg = df_reg.loc[df_reg["PK"] < 3]
 
-# test = df_reg.loc[df_reg["Poss"] > 50]
-# test = test.loc[test["victoire"] == 1]
-# test.groupby(by=["team"]).count()
-# test.team.value_counts()
+df_reg["top_GK"] = 0
+df_reg["top_MF"] = 0
+df_reg["top_DM"] = 0
+df_reg["top_DF"] = 0
+df_reg["top_FW"] = 0
 
-# df_reg['periode'] = pd.Series(df_reg["Date"].str[0:7])
-# df_reg['nb_def'] = pd.Series(df_reg["Formation"].str[0:1])
-# test = df_reg.groupby(by = ["periode","nb_def"]).count().reset_index()
-# test = test[["periode","nb_def","Result"]]
+for i in df_reg.index :
+    if df_reg["GK"][i] > 0:
+        df_reg["top_GK"][i] = 1
+for i in df_reg.index :
+    if df_reg["MF"][i] > 0:
+        df_reg["top_MF"][i] = 1
+for i in df_reg.index :
+    if df_reg["DM"][i] > 0:
+        df_reg["top_DM"][i] = 1
+for i in df_reg.index :
+    if df_reg["DF"][i] > 0:
+        df_reg["top_DF"][i] = 1
+for i in df_reg.index :
+    if df_reg["FW"][i] > 0:
+        df_reg["top_FW"][i] = 1
 
-# test.pivot_table(values="Result", index="periode", columns="nb_def").plot()
+df_reg['nb_def'] = pd.Series(df_reg["Formation"].str[0:1])
+df_reg['nb_opp_def'] = pd.Series(df_reg["opp_Formation"].str[0:1])
+
+df_reg['nb_att'] = pd.Series(df_reg["Formation"].str[4:5])
+df_reg['nb_opp_att'] = pd.Series(df_reg["opp_Formation"].str[4:5])
+df_reg['nb_mil'] = pd.Series(df_reg["Formation"].str[2:3])
+df_reg['nb_opp_mil'] = pd.Series(df_reg["opp_Formation"].str[2:3])
+
+df_reg['nb_def'] = pd.to_numeric(df_reg['nb_def'], errors='coerce').convert_dtypes(int)
+df_reg['nb_opp_def'] = pd.to_numeric(df_reg['nb_opp_def'], errors='coerce').convert_dtypes(int)
+df_reg['nb_att'] = pd.to_numeric(df_reg['nb_att'], errors='coerce').convert_dtypes(int)
+df_reg['nb_opp_att'] = pd.to_numeric(df_reg['nb_opp_att'], errors='coerce').convert_dtypes(int)
+df_reg['nb_mil'] = pd.to_numeric(df_reg['nb_mil'], errors='coerce').convert_dtypes(int)
+df_reg['nb_opp_mil'] = pd.to_numeric(df_reg['nb_opp_mil'], errors='coerce').convert_dtypes(int)
+
+df_reg["diff_avant"] = df_reg["nb_att"] - df_reg["nb_opp_def"]
+df_reg["diff_def"] = df_reg["nb_def"] - df_reg["nb_opp_att"]
+df_reg["diff_mil"] = df_reg["nb_mil"] - df_reg["nb_opp_mil"]
+
+df_reg["nb_def"] = df_reg["nb_def"].astype("int64")
+df_reg["nb_opp_att"] = df_reg["nb_opp_att"].astype("int64")
+
+df_reg["diff_avant"] = df_reg["diff_avant"].astype("int64")
+df_reg["diff_def"] = df_reg["diff_def"].astype("int64")
+df_reg["diff_mil"] = df_reg["diff_mil"].astype("int64")
+
+df_reg["sup_def"] = 0
+
+for i in df_reg.index :
+    if df_reg["diff_def"][i] > 0:
+        df_reg["sup_def"][i] = 1
+
+df_reg["diff_def"].value_counts()
+df_reg.info()
 
 df_reg['opp_Formation'] = pd.Categorical(df_reg['opp_Formation'])
 
 
-reg = smf.logit('victoire ~ C(home) + Poss + FDD + FDA + age + Dist + SoT + diff_value + C(saison) + C(PK) + C(CrdR) + C(opp_Formation, Treatment(reference="4-5-1"))',
+reg = smf.logit('victoire ~ C(home) + Poss*C(top_MF) + FDA*C(top_FW) + FDD + age + Dist + SoT + diff_value + C(saison) + C(PK) + C(CrdR) + C(diff_mil) + C(top_GK) + C(top_MF) + C(top_FW) + DF + DM + DM + C(diff_def)',
                   data=df_reg).fit()
 
 reg.summary()
+
+df_reg.to_csv("bdd/data/df_reg.csv", sep= ";")
  
 ##TEST colinéarité
 from statsmodels.stats.outliers_influence import variance_inflation_factor
@@ -100,5 +148,4 @@ y, X = dmatrices('victoire ~ C(home) + FDD + FDA + age + Dist + SoT + diff_value
 vif = pd.DataFrame()
 vif["VIF Factor"] = [variance_inflation_factor(X.values, i) for i in range(X.shape[1])]
 vif["features"] = X.columns
-
 

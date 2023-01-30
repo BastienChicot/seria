@@ -6,6 +6,7 @@ Created on Mon Jan 23 21:35:28 2023
 """
 
 import pandas as pd
+import numpy as np
 
 ##STANDARD
 standard = pd.read_csv("bdd/data/dl_fbref/stat_joueur_stand_21_22.txt", sep= ",", index_col = 0)
@@ -373,9 +374,14 @@ top_player = top_player.merge(ekip, how = "left", on = "key")
 
 nb_top = top_player.groupby(["Squad","Pos"]).sum(["top"]).reset_index()
 
+table = pd.pivot_table(nb_top, values='top', index=['Squad'],
+                    columns=['Pos'], aggfunc=np.sum)
+
+table = table.fillna(0)
 ##XPORT
 full.to_csv("bdd/data/table_joueurs.csv",sep=";")
 
-nb_top.to_csv("bdd/data/nb_top_joueurs.csv",sep=";")
+table.to_csv("bdd/data/nb_top_joueurs.csv",sep=";")
 ##IMPORT
 full = pd.read_csv("bdd/data/table_joueurs.csv",sep=";", index_col = 0)
+
