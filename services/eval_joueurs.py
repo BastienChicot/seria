@@ -185,6 +185,11 @@ test = test.merge(nb_match, how = "left", left_on = "Squad", right_on = "team")
 ##CALCUL DES INDICATEURS
 ##Milieux
 full.columns
+full["90s"] = full["90s"].astype(float)
+full["Gls"] = full["Gls"].astype(float)
+full["Ast"] = full["Ast"].astype(float)
+full["CrdY"] = full["CrdY"].astype(float)
+full["CrdR"] = full["CrdR"].astype(float)
 
 mf = full.loc[full["Pos"] == "MF"]
 mf = mf.loc[mf["90s"] >= 15]
@@ -210,7 +215,7 @@ mf["score"] = ((mf["Drib_pct_rel"]/(mf.Drib_pct_rel.quantile([0.8]).values)) +
                     mf["CrdY_rel"]/(mf.CrdY_rel.quantile([0.8]).values)
                     )
                     
-mf = mf[["Player","score","key"]].sort_values(by = ["score"],ascending=False)
+mf = mf[["Player","Squad","score","key"]].sort_values(by = ["score"],ascending=False)
 mf.head
 
 ##Défenseurs
@@ -240,7 +245,7 @@ df["score"] = ((df["Tkl_pct_rel"]/(df.Tkl_pct_rel.quantile([0.8]).values)) +
                     df["CrdY_rel"]/(df.CrdY_rel.quantile([0.8]).values)
                     )
                     
-df = df[["Player","score","key"]].sort_values(by = ["score"],ascending=False)
+df = df[["Player","Squad","score","key"]].sort_values(by = ["score"],ascending=False)
 df.head
 
 ##Attaquants
@@ -266,12 +271,12 @@ fw["score"] = ((fw["Gls_rel"]/(fw.Gls_rel.quantile([0.8]).values)) +
                     fw["Off_rel"]/(fw.Off_rel.quantile([0.8]).values) 
                     )
                     
-fw = fw[["Player","score","key"]].sort_values(by = ["score"],ascending=False)
+fw = fw[["Player","Squad","score","key"]].sort_values(by = ["score"],ascending=False)
 fw.head
 
 ##Milieux def
 dm = full.loc[full["Pos"] == "DM"]
-dm = dm.loc[dm["90s"] >= 15]
+dm = dm.loc[dm["90s"] >= 2]
 
 dm["Int_rel"] = dm["Int"] / dm["90s"]
 dm["Blocks_rel"] = dm["Blocks"] / dm["90s"]
@@ -290,7 +295,7 @@ dm["score"] = ((dm["Tkl_pct_rel"]/(dm.Tkl_pct_rel.quantile([0.8]).values)) +
                     dm["CrdY_rel"]/(dm.CrdY_rel.quantile([0.8]).values)
                     )
                     
-dm = dm[["Player","score","key"]].sort_values(by = ["score"],ascending=False)
+dm = dm[["Player","Squad","score","key"]].sort_values(by = ["score"],ascending=False)
 dm.head
 
 ##Gardiens
@@ -315,11 +320,12 @@ gk["score"] = ((gk["CS_pct_goal_rel"]/(gk.CS_pct_goal_rel.quantile([0.8]).values
                     gk["CrdY_rel"]/(gk.CrdY_rel.quantile([0.8]).values)
                     )
                     
-gk = gk[["Player","score","key"]].sort_values(by = ["score"],ascending=False)
+gk = gk[["Player","Squad","score","key"]].sort_values(by = ["score"],ascending=False)
 gk.head
 
-##JOUEURS AU DESSUS DU LOT
+##JOUEURS AU DESSUS DU LOT SOLUTION 1
 borne_mf = mf.score.quantile([0.8]).values[0]
+mf["top"] = 0
 
 for i in mf.index:
     if mf["score"][i] >= borne_mf :
@@ -368,6 +374,8 @@ top_player = top_player.append(dm)
 top_player = top_player.append(fw)
 top_player = top_player.append(gk)
 
+top_player = top_player.drop(columns = ["Squad"])
+
 ekip = full[["key","Squad", "Pos"]]
 
 top_player = top_player.merge(ekip, how = "left", on = "key")
@@ -378,6 +386,59 @@ table = pd.pivot_table(nb_top, values='top', index=['Squad'],
                     columns=['Pos'], aggfunc=np.sum)
 
 table = table.fillna(0)
+
+#### SOLUTION 2 Score moyen par joueur
+somme = df.groupby(["Squad"]).sum().reset_index()
+compte = df.groupby(["Squad"]).count().reset_index()
+compte = compte[["Squad","Player"]]
+
+df_sc_mean = pd.merge(somme,compte,on = ["Squad"])
+df_sc_mean["score_df_mean"] = df_sc_mean["score"] / df_sc_mean["Player"]
+df_sc_mean = df_sc_mean[["Squad","score_df_mean"]]
+
+somme = mf.groupby(["Squad"]).sum().reset_index()
+compte = mf.groupby(["Squad"]).count().reset_index()
+compte = compte[["Squad","Player"]]
+
+mf_sc_mean = pd.merge(somme,compte,on = ["Squad"])
+mf_sc_mean["score_mf_mean"] = mf_sc_mean["score"] / mf_sc_mean["Player"]
+mf_sc_mean = mf_sc_mean[["Squad","score_mf_mean"]]
+
+somme = fw.groupby(["Squad"]).sum().reset_index()
+compte = fw.groupby(["Squad"]).count().reset_index()
+compte = compte[["Squad","Player"]]
+
+fw_sc_mean = pd.merge(somme,compte,on = ["Squad"])
+fw_sc_mean["score_fw_mean"] = fw_sc_mean["score"] / fw_sc_mean["Player"]
+fw_sc_mean = fw_sc_mean[["Squad","score_fw_mean"]]
+
+somme = dm.groupby(["Squad"]).sum().reset_index()
+compte = dm.groupby(["Squad"]).count().reset_index()
+compte = compte[["Squad","Player"]]
+
+dm_sc_mean = pd.merge(somme,compte,on = ["Squad"])
+dm_sc_mean["score_dm_mean"] = dm_sc_mean["score"] / dm_sc_mean["Player"]
+dm_sc_mean = dm_sc_mean[["Squad","score_dm_mean"]]
+
+
+somme = gk.groupby(["Squad"]).sum().reset_index()
+compte = gk.groupby(["Squad"]).count().reset_index()
+compte = compte[["Squad","Player"]]
+
+gk_sc_mean = pd.merge(somme,compte,on = ["Squad"])
+gk_sc_mean["score_gk_mean"] = gk_sc_mean["score"] / gk_sc_mean["Player"]
+gk_sc_mean = gk_sc_mean[["Squad","score_gk_mean"]]
+
+table_mean = pd.merge(df_sc_mean,mf_sc_mean, on = ["Squad"])
+table_mean = table_mean.merge(fw_sc_mean,how = "left", on = ["Squad"])
+table_mean = table_mean.merge(dm_sc_mean,how = "left", on = ["Squad"])
+table_mean = table_mean.merge(gk_sc_mean,how = "left", on = ["Squad"])
+
+table_mean = table_mean.fillna(0)
+
+table = table.reset_index()
+
+table = table.merge(table_mean, how = "left", on = ["Squad"])
 ##XPORT
 full.to_csv("bdd/data/table_joueurs.csv",sep=";")
 

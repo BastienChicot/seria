@@ -2575,3 +2575,189 @@ J'aime bien aussi que les facilités offensives avec des attaquants productifs s
 
 C'est cool 
 Next step ML
+Mais avant --> Indice de dissuasion des équipe (diff par rapport à la moyenne annuelle des perf de l'équipe opposée :: cmp%, SoT, Dbb%, distance de frappe etc...)
+et --> passer les postes en ranking ou score de productivité (ranking quand il s'agit de la somme de plusieurs postes (ex: attaquants) et score s'il s'agit d'un seul joueur par équipe (Milieu def et goal)...
+
+Finalement je créé un score moyen par joueur et par poste retenu (MF, DF, FW, GK et DM). Le score moyen tient la route puisque toutes les équipe ont à peu près le même total de 90s tout poste confondu. Les différences en nombre qui vont exister, viendront simplement des différences de système et du nombre de milieux et défenseurs alignés à chaque match. Comme les scores sont ramenés au 90s, il n'y a pas de soucis quant au fait qu'un joueur ait joué l'équivalent de 10 matchs ou de 37.
+
+Je pourrais même coupler ces indicateurs avec mes top joueurs par poste.
+Je remarque que j'avais un filtre sur le nombre de matchs joués par les milieux def ce qui faisait que j'en perdait plein. C'état justifié mais du coup je vais tester sans. == Du coup j'ai Yepes qui fout la merde il avait 0.2 match .... Je garde que ceux qui en ont au moins 2 
+
+J'ai une nouvelle table avec les top joueurs productifs par équipe et les scores moyens.
+Au passage les score moyens élevés sont ::
+Defense == Cagliari
+Milieux == Atalanta
+Attaque == Atalanta
+Milieu def == Juventus
+Gardien == Milan (AC)
+
+Corrélation entre les scores moyens et le reste ::
+Un peu comme les variables par poste, les attaquants et milieux sont fortement corrélés à la possession aux passes et à la valeur de l'équipe. Par contre les défenseurs et milieux déf sont correlés aux coup de pieds arrêtés c'est interessant. 
+Ces variables sont assez fortement correlées aux nombre de top joueurs par poste et certainement à la variable dummy qui indique la présence d'au moins 1 top joueur.
+Du coup je vais faire tourner un modèle sans ces dernières et juste avec les scores moyens.
+
+<class 'statsmodels.iolib.summary.Summary'>
+"""
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:               victoire   No. Observations:                  606
+Model:                          Logit   Df Residuals:                      580
+Method:                           MLE   Df Model:                           25
+Date:                Tue, 31 Jan 2023   Pseudo R-squ.:                  0.2598
+Time:                        21:00:38   Log-Likelihood:                -296.27
+converged:                       True   LL-Null:                       -400.26
+Covariance Type:            nonrobust   LLR p-value:                 8.820e-31
+======================================================================================
+                         coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------
+Intercept              7.8781      3.266      2.412      0.016       1.476      14.280
+C(home)[T.1]           0.2353      0.210      1.118      0.263      -0.177       0.648
+C(saison)[T.reste]    -0.3206      0.224     -1.435      0.151      -0.759       0.117
+C(PK)[T.1]             1.0056      0.324      3.099      0.002       0.370       1.642
+C(PK)[T.2]             1.8507      0.870      2.127      0.033       0.145       3.556
+C(CrdR)[T.1]          -0.6727      0.365     -1.845      0.065      -1.387       0.042
+C(CrdR)[T.2]          -0.1150      1.195     -0.096      0.923      -2.457       2.227
+C(diff_mil)[T.-1]     -0.5045      0.445     -1.134      0.257      -1.377       0.368
+C(diff_mil)[T.0]       0.0971      0.366      0.265      0.791      -0.620       0.814
+C(diff_mil)[T.1]      -0.0663      0.444     -0.149      0.881      -0.936       0.804
+C(diff_mil)[T.2]      -0.1727      0.517     -0.334      0.738      -1.186       0.841
+C(diff_def)[T.1]       0.3438      0.320      1.076      0.282      -0.283       0.970
+C(diff_def)[T.2]       0.3173      0.353      0.899      0.369      -0.375       1.009
+C(diff_def)[T.3]       0.0601      0.457      0.131      0.896      -0.837       0.957
+Poss                  -0.0622      0.016     -3.911      0.000      -0.093      -0.031
+FDA                   -0.5411      0.352     -1.537      0.124      -1.231       0.149
+FDD                    0.1743      0.109      1.596      0.111      -0.040       0.388
+age                   -0.1871      0.123     -1.525      0.127      -0.428       0.053
+Dist                  -0.0445      0.042     -1.070      0.285      -0.126       0.037
+SoT                    0.3563      0.055      6.457      0.000       0.248       0.465
+diff_value             0.0043      0.001      6.321      0.000       0.003       0.006
+score_df_mean         -0.4817      0.162     -2.976      0.003      -0.799      -0.164
+score_mf_mean          0.2498      0.179      1.395      0.163      -0.101       0.601
+score_fw_mean          0.0569      0.169      0.336      0.737      -0.275       0.389
+score_dm_mean         -0.1512      0.094     -1.607      0.108      -0.336       0.033
+score_gk_mean          0.0278      0.121      0.229      0.819      -0.210       0.266
+======================================================================================
+"""
+
+Le score moyen des défenseur est significatif. Celui des milieu def et des milieux est pas mal par contre pour les attaquants et les gardiens c'est pas terrible.
+Pour les df la p-value est meilleure que lorsque je prends le nombre de top défenseurs (effet de groupe et pas d'individualité sur ces postes ??) 
+Pour les DM, le nombre obtenait une meilleure p-value que le score moyen
+Pour les milieux MF == Le score est meilleur que dans l'ancien modèle (je vais tester si je couple la variable avec la possession comme c'était le cas)
+Pour les forward la combinaison top_FW et FDA etait 100 fois mieux que ça
+Par contre je n'obtiens toujours pas un truc intéressant avec les gardiens.
+
+Nouvelle REGRESSION ::
+
+<class 'statsmodels.iolib.summary.Summary'>
+"""
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:               victoire   No. Observations:                  606
+Model:                          Logit   Df Residuals:                      578
+Method:                           MLE   Df Model:                           27
+Date:                Tue, 31 Jan 2023   Pseudo R-squ.:                  0.2674
+Time:                        21:10:29   Log-Likelihood:                -293.24
+converged:                       True   LL-Null:                       -400.26
+Covariance Type:            nonrobust   LLR p-value:                 5.100e-31
+======================================================================================
+                         coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------
+Intercept             10.4092      3.735      2.787      0.005       3.089      17.730
+C(home)[T.1]           0.2375      0.212      1.119      0.263      -0.178       0.653
+C(top_FW)[T.1]         1.8938      1.103      1.717      0.086      -0.268       4.056
+C(saison)[T.reste]    -0.3270      0.225     -1.451      0.147      -0.769       0.115
+C(PK)[T.1]             1.0357      0.328      3.158      0.002       0.393       1.679
+C(PK)[T.2]             1.9444      0.902      2.156      0.031       0.177       3.712
+C(CrdR)[T.1]          -0.7091      0.366     -1.936      0.053      -1.427       0.009
+C(CrdR)[T.2]           0.0399      1.200      0.033      0.973      -2.313       2.392
+C(diff_mil)[T.-1]     -0.5070      0.449     -1.129      0.259      -1.387       0.373
+C(diff_mil)[T.0]       0.1432      0.387      0.370      0.711      -0.615       0.902
+C(diff_mil)[T.1]      -0.0066      0.472     -0.014      0.989      -0.932       0.919
+C(diff_mil)[T.2]      -0.1593      0.553     -0.288      0.773      -1.243       0.924
+C(diff_def)[T.1]       0.3207      0.329      0.975      0.330      -0.324       0.966
+C(diff_def)[T.2]       0.2810      0.371      0.757      0.449      -0.447       1.009
+C(diff_def)[T.3]       0.0007      0.475      0.001      0.999      -0.931       0.933
+Poss                  -0.1203      0.036     -3.346      0.001      -0.191      -0.050
+score_mf_mean         -0.8625      0.665     -1.297      0.195      -2.166       0.441
+Poss:score_mf_mean     0.0237      0.013      1.805      0.071      -0.002       0.049
+FDA                   -0.2174      0.394     -0.552      0.581      -0.989       0.555
+FDA:C(top_FW)[T.1]    -1.0918      0.583     -1.873      0.061      -2.235       0.051
+FDD                    0.1896      0.110      1.730      0.084      -0.025       0.404
+age                   -0.1959      0.119     -1.648      0.099      -0.429       0.037
+Dist                  -0.0433      0.042     -1.020      0.308      -0.126       0.040
+SoT                    0.3607      0.056      6.476      0.000       0.252       0.470
+diff_value             0.0044      0.001      6.610      0.000       0.003       0.006
+score_df_mean         -0.5060      0.169     -2.996      0.003      -0.837      -0.175
+score_dm_mean         -0.1476      0.095     -1.556      0.120      -0.333       0.038
+GK                     0.2096      0.265      0.789      0.430      -0.311       0.730
+======================================================================================
+"""
+
+Du coup, je retrouve mes belles p-values pour les FW
+GK simple semble etre la meilleure solution
+et le score mf_mean atteint des niveau de p-value jamais vu !!
+Bon bah c'est bon signe. Je vais ajouter la dissuasion de l'adversaire. Il s'agira simplement d'ajouter la moyennede la différence de productivité de l'adversaire pour chaque équipe sur certains secteurs (plutôt offensifs comme le nombre de tirs/tirs cadrés, les passes réussies, les distances de tirs et en vrai ça devrait suffire)
+
+J'obtiens les différences moyennes par opposants. Si je normalise les séries de chaque variables je pourrai créer un score avec des additions simples.
+Puis je devrais obtenir un score pour chaque equipe qui traduira sa capacité a dissuader l'adversaire. (diff normalisée distance de frappe + difference normalisée de fautes - diff normalisée de frappes - diff normalisée de passes réussies)
+
+J'obtiens des score plutôt cohérent avec le classement de série A de cette année là et avec le nombre de buts encaissés par les équipes. Empoli et Venezia sont mauvais quand la Juve et le Milan sont bons. La Lazio qui finit haut au classement 2021 - 2022 mais avec beaucoup de buts encaissés fini bas dans mon classement des équipe dissuasives donc ça colle. Les résultats domplets sont dans le fichier score_dis_opp.csv
+
+J'ajoute cette variable dans ma base et mon fichier de régression et je teste mon modèle ::
+
+Une fois de plus cette variable est fortement correlée à la différence de valeur des équipe (c'est vraiment une histoire d'argent). J'aime sa correlation négative avec la victoire (en effet si l'adversaire a un score élevé alors c'est une meilleure défense et gagner devient plus dur).
+
+<class 'statsmodels.iolib.summary.Summary'>
+"""
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:               victoire   No. Observations:                  606
+Model:                          Logit   Df Residuals:                      577
+Method:                           MLE   Df Model:                           28
+Date:                Tue, 31 Jan 2023   Pseudo R-squ.:                  0.2674
+Time:                        21:58:39   Log-Likelihood:                -293.24
+converged:                       True   LL-Null:                       -400.26
+Covariance Type:            nonrobust   LLR p-value:                 1.456e-30
+======================================================================================
+                         coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------
+Intercept             10.4245      3.758      2.774      0.006       3.059      17.790
+C(home)[T.1]           0.2371      0.213      1.116      0.265      -0.179       0.654
+C(top_FW)[T.1]         1.8889      1.111      1.701      0.089      -0.288       4.066
+C(saison)[T.reste]    -0.3272      0.225     -1.451      0.147      -0.769       0.115
+C(PK)[T.1]             1.0365      0.329      3.155      0.002       0.393       1.680
+C(PK)[T.2]             1.9443      0.902      2.155      0.031       0.176       3.713
+C(CrdR)[T.1]          -0.7091      0.366     -1.936      0.053      -1.427       0.009
+C(CrdR)[T.2]           0.0366      1.204      0.030      0.976      -2.323       2.396
+C(diff_mil)[T.-1]     -0.5056      0.451     -1.121      0.262      -1.389       0.378
+C(diff_mil)[T.0]       0.1447      0.389      0.372      0.710      -0.618       0.907
+C(diff_mil)[T.1]      -0.0049      0.475     -0.010      0.992      -0.935       0.925
+C(diff_mil)[T.2]      -0.1574      0.555     -0.283      0.777      -1.246       0.931
+C(diff_def)[T.1]       0.3221      0.331      0.973      0.331      -0.327       0.971
+C(diff_def)[T.2]       0.2835      0.378      0.751      0.453      -0.457       1.024
+C(diff_def)[T.3]       0.0037      0.482      0.008      0.994      -0.942       0.949
+Poss                  -0.1202      0.036     -3.339      0.001      -0.191      -0.050
+score_mf_mean         -0.8639      0.666     -1.297      0.195      -2.170       0.442
+Poss:score_mf_mean     0.0237      0.013      1.805      0.071      -0.002       0.049
+FDA                   -0.2176      0.394     -0.552      0.581      -0.990       0.554
+FDA:C(top_FW)[T.1]    -1.0905      0.584     -1.867      0.062      -2.235       0.054
+FDD                    0.1896      0.110      1.730      0.084      -0.025       0.404
+age                   -0.1966      0.121     -1.631      0.103      -0.433       0.040
+Dist                  -0.0434      0.043     -1.019      0.308      -0.127       0.040
+SoT                    0.3608      0.056      6.459      0.000       0.251       0.470
+diff_value             0.0044      0.001      6.264      0.000       0.003       0.006
+score_df_mean         -0.5057      0.169     -2.992      0.003      -0.837      -0.174
+score_dm_mean         -0.1478      0.095     -1.555      0.120      -0.334       0.039
+GK                     0.2094      0.266      0.789      0.430      -0.311       0.730
+score_dis              0.0017      0.046      0.037      0.970      -0.088       0.091
+======================================================================================
+"""
+
+Oh c'est pas significatif !!!
+Une forte défense ne serait pas la réponse pour une équipe Italienne ? Louche !
+
+A suivre :: Toujours démarrer le ML à moins que j'ai d'autres idées de variables à ajouter au modèle d'ici là.
+
+
+
+

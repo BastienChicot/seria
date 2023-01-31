@@ -45,10 +45,11 @@ data['victoire'] = np.where(data['Result']=='W', 1, 0)
 data['not_lose'] = np.where(data['Result']!='L', 1, 0)
 corr = data.corr()
 
+data["CMP"] = data["Att"]*data["Cmp%"]/100
 ##CREATION DE LA BASE DE ML AVEC MISE EN FORME DES VARIABLES
 data_ml = data[["not_lose","Result","Date","Venue","Poss","age","Formation","SoT","Dist","Cmp%","Int",
                 "Fls","value","repos","opp_Formation","opp_value", "team", "Sh", "PK", "CrdY", "CrdR",
-                "card", "opp_Sh", "coup_arret", "opp_fls"]]
+                "card", "opp_Sh", "coup_arret", "opp_fls","Opponent","CMP","Att"]]
 
 data_ml['Mois'] = pd.Series(data_ml["Date"].str[5:7])
 data_ml['Mois'] = pd.to_numeric(data_ml['Mois'], errors='coerce').convert_dtypes()
@@ -97,6 +98,7 @@ data_ml.columns
 
 data_ml = data_ml[["Date","Result","victoire","not_lose","Venue","home","Poss","age","Formation","SoT","Dist","Cmp%",
                    "Int","Fls","diff_value","repos","Mois","opp_Formation","team", "saison",
-                   "Sh","PK","CrdY","CrdR","card", "opp_Sh", "coup_arret", "opp_fls"]]
+                   "Sh","PK","CrdY","CrdR","card", "opp_Sh", "coup_arret", "opp_fls","Opponent",
+                   "CMP","Att"]]
 #EXPORT
 data_ml.to_csv("bdd/data/data_ml_21_22.csv",sep=";")

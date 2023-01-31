@@ -12,7 +12,8 @@ import seaborn as sns
 
 #IMPORT DU FICHIER
 data = pd.read_csv("bdd/data/data_ml_21_22.csv", sep= ";", index_col = 0)
-nb_top = pd.read_csv("bdd/data/nb_top_joueurs.csv",sep=";")
+nb_top = pd.read_csv("bdd/data/nb_top_joueurs.csv",sep=";", index_col = 0)
+opp_score = pd.read_csv("bdd/data/score_dis_opp.csv",sep=";", index_col = 0)
 
 data = data.dropna()
 
@@ -41,9 +42,8 @@ Def = Def[["team","FDD"]].sort_values(by = ["FDD"],ascending=True)
 Def.head
 
 data = data.merge(nb_top, how = "left", left_on = "team", right_on = "Squad")
+data = data.merge(opp_score, how = "left", on = "Opponent")
 data.to_csv("bdd/data/data_temp_2122.csv", sep= ";")
-
-import statsmodels.formula.api as smf
 
 df_reg = data.copy()
 #df_reg = df_reg.loc[df_reg["team"] == "Milan"]
@@ -128,24 +128,7 @@ df_reg.info()
 
 df_reg['opp_Formation'] = pd.Categorical(df_reg['opp_Formation'])
 
-
-reg = smf.logit('victoire ~ C(home) + Poss*C(top_MF) + FDA*C(top_FW) + FDD + age + Dist + SoT + diff_value + C(saison) + C(PK) + C(CrdR) + C(diff_mil) + C(top_GK) + C(top_MF) + C(top_FW) + DF + DM + DM + C(diff_def)',
-                  data=df_reg).fit()
-
-reg.summary()
-
 df_reg.to_csv("bdd/data/df_reg.csv", sep= ";")
  
-##TEST colinéarité
-from statsmodels.stats.outliers_influence import variance_inflation_factor
-from patsy import dmatrices
 
-df_test = df_reg[["victoire","SoT","CrdR","FDD", "PK","home","age","FDA","Dist","diff_value","Int","saison","Formation","opp_Formation"]]
-
-y, X = dmatrices('victoire ~ C(home) + FDD + FDA + age + Dist + SoT + diff_value + Int + C(saison) + C(PK) + C(CrdR) + C(Formation)*C(opp_Formation, Treatment(reference="4-5-1"))', 
-                 df_test, return_type='dataframe')
-
-vif = pd.DataFrame()
-vif["VIF Factor"] = [variance_inflation_factor(X.values, i) for i in range(X.shape[1])]
-vif["features"] = X.columns
 
