@@ -9,18 +9,49 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+import statsmodels.api as sm
 import statsmodels.formula.api as smf
+
+from scipy.stats import chi2_contingency
 
 df_reg = pd.read_csv("bdd/data/df_reg.csv", sep= ";", index_col = 0)
 
-##PREMIERE REGRESSION
-reg = smf.logit('victoire ~ C(home) + Poss*C(top_MF) + FDA*C(top_FW) + FDD + age + Dist + SoT + diff_value + C(saison) + C(PK) + C(CrdR) + C(diff_mil) + C(top_GK) + C(top_MF) + C(top_FW) + DF + DM + DM + C(diff_def) + ',
-                  data=df_reg).fit()
+corr = df_reg.corr()
+corr.to_csv("Sorties/corr.csv", sep= ";")
+df_reg.columns
 
-reg.summary()
+liste_var = ["home","Formation","opp_Formation","saison",
+             "PK","CrdR","top_GK","top_MF","top_DM","top_DF",
+             "top_FW","diff_avant","diff_def","diff_mil","sup_def"]
+
+liste_result = []
+
+for i in liste_var:
+    for j in liste_var:
+        if i == j:
+            pass
+        else:
+            cross_temp = pd.crosstab(index=df_reg[i],columns=df_reg[j])
+            ChiSqResult = chi2_contingency(cross_temp)
+            result = pd.DataFrame([[i,j,ChiSqResult[1]]], columns = ["i","j","chi2"])
+            liste_result.append(result)
+            
+table_resultat = pd.concat(liste_result)
+View = table_resultat.loc[table_resultat["chi2"] < 0.01]
+
+table_resultat.to_csv("Sorties/chisquare.csv", sep= ";")
+##PREMIERE REGRESSION
+# reg = smf.logit('victoire ~ C(home) + Poss*C(top_MF) + FDA*C(top_FW) + FDD + age + Dist + SoT + diff_value + C(saison) + C(PK) + C(CrdR) + C(diff_mil) + C(top_GK) + C(top_MF) + C(top_FW) + DF + DM + DM + C(diff_def) + ',
+#                   data=df_reg).fit()
+
+# reg.summary()
 
 ##SECONDE REGRESSION
-reg_test = smf.logit('victoire ~ C(home) + Poss*score_mf_mean + FDA*C(top_FW) + FDD + age + Dist + SoT + diff_value + C(saison) + C(PK) + C(CrdR) + C(diff_mil) + C(diff_def) + score_df_mean + score_dm_mean + GK',
+reg_test = smf.logit('victoire ~ C(home)*Sh + Poss*score_mf_mean + FDA + \
+                     + diff_value + Att + age + SoT + C(saison) + \
+                         + C(PK) + C(CrdR) + C(top_DM)*C(Formation)\
+                             + score_df_mean + \
+                                 repos ',
                   data=df_reg).fit()
 
 reg_test.summary()
