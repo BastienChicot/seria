@@ -48,7 +48,7 @@ table_resultat.to_csv("Sorties/chisquare.csv", sep= ";")
 
 ##SECONDE REGRESSION
 reg_test = smf.logit('victoire ~ C(home)*Sh + Poss*score_mf_mean + FDA + \
-                     + diff_value + Att + age + SoT + C(saison) + \
+                     diff_value + Att + age + SoT + C(saison) + \
                          + C(PK) + C(CrdR) + C(Formation)*C(top_DM)\
                              + score_df_mean + \
                                  repos ',
@@ -68,3 +68,4 @@ y, X = dmatrices('victoire ~ C(home) + FDD + FDA + age + Dist + SoT + diff_value
 vif = pd.DataFrame()
 vif["VIF Factor"] = [variance_inflation_factor(X.values, i) for i in range(X.shape[1])]
 vif["features"] = X.columns
+vif
