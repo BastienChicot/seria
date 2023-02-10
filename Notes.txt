@@ -81,6 +81,7 @@ Récup sur transfermarkt :
 Galère == tables en js
 Selenium plus retouches à la main pour obtenir un fichier correct et exploitable mais à ne faire qu'une fois par saison donc EZ
 
+########################################################
 
 Comment exprimer concretement les variables :
 Modèle ==>
