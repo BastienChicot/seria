@@ -181,7 +181,6 @@ Majoritairement la valeur, les tirs cadrés, la possession et la distance moyenn
 Regressions tests:
 Premier test : Explique la variable victoire
 
-#############################################################################################################
 
 <class 'statsmodels.iolib.summary.Summary'>
 """
@@ -1582,7 +1581,7 @@ Au passage, les coup de pieds arrêté et les tirs de l'adversaires ne sont pas 
 Je ne l'ajoute pas car c'est déjà pris en compte dans le FDD !
 
 ##PROCHAINE ETAPE pour le modèle == INTEGRER DES VARIABLES SUR LE NIVEAU DES JOUEURS A CHAQUE POSTE 
-
+#################################################################################################################
 
 Recherche des données par postes
 
