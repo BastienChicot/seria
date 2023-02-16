@@ -1581,7 +1581,7 @@ Au passage, les coup de pieds arrêté et les tirs de l'adversaires ne sont pas 
 Je ne l'ajoute pas car c'est déjà pris en compte dans le FDD !
 
 ##PROCHAINE ETAPE pour le modèle == INTEGRER DES VARIABLES SUR LE NIVEAU DES JOUEURS A CHAQUE POSTE 
-#################################################################################################################
+
 
 Recherche des données par postes
 
@@ -1731,6 +1731,9 @@ Goals :: saves % et cross % (renommer les deux)
 
 Les doublons semblent venir du fait que certains joueurs ont changés d'équipe et/ou sont à zéro sur certaines stats dans des tableaux.
 Je ne l'explique pas vraiment puisque je merge sur une clé créée par le site et que chaque table compte le même nombre de lignes exactement (632). Même lorsque je merge sur le nom du joueur j'ai les doublons qui apparaissent. On va continuer comme ça et si je vis que les résultats partent en vrille, je tenterai une autre façon pour merger les tables.
+
+#################################################################################################################################################################
+
 
 Je dois regrouper les postes et aussi modifier les squads pour l'Inter et le Hellas Verone
 Les groupes à créer : 
