@@ -1732,7 +1732,6 @@ Goals :: saves % et cross % (renommer les deux)
 Les doublons semblent venir du fait que certains joueurs ont changés d'équipe et/ou sont à zéro sur certaines stats dans des tableaux.
 Je ne l'explique pas vraiment puisque je merge sur une clé créée par le site et que chaque table compte le même nombre de lignes exactement (632). Même lorsque je merge sur le nom du joueur j'ai les doublons qui apparaissent. On va continuer comme ça et si je vis que les résultats partent en vrille, je tenterai une autre façon pour merger les tables.
 
-#################################################################################################################################################################
 
 
 Je dois regrouper les postes et aussi modifier les squads pour l'Inter et le Hellas Verone
@@ -1875,6 +1874,8 @@ Ce que nous dit la matrice de corrélation sur les nouvelles variables ::
 	0.43 milieux et FW (ça va ensemble) et 0.29 milieux avec CMP (c'est eux qui ont le ballon).
 
 Nouveau modèle ::
+
+#####################################################################################################################################################
 
 <class 'statsmodels.iolib.summary.Summary'>
 """
