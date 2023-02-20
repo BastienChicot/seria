@@ -1875,7 +1875,7 @@ Ce que nous dit la matrice de corrélation sur les nouvelles variables ::
 
 Nouveau modèle ::
 
-#####################################################################################################################################################
+
 
 <class 'statsmodels.iolib.summary.Summary'>
 """
@@ -3064,6 +3064,7 @@ J'ai ptet' trouvé pour les saisons. Par contre ça le flingue mes coeff pour le
 
 Que ce qu'il y a de significatif ou presque ::
 
+#####################################################################################################################################################################
 
 <class 'statsmodels.iolib.summary.Summary'>
 """
