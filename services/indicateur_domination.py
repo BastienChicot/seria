@@ -13,8 +13,20 @@ import seaborn as sns
 #IMPORT DU FICHIER
 data = pd.read_csv("bdd/data/data_ml_21_22.csv", sep= ";", index_col = 0)
 nb_top = pd.read_csv("bdd/data/nb_top_joueurs.csv",sep=";", index_col = 0)
+nb_top_precis = pd.read_csv("bdd/data/nb_top_joueurs_poste_precis.csv",sep=";", index_col = 0)
 opp_score = pd.read_csv("bdd/data/score_dis_opp.csv",sep=";", index_col = 0)
 
+nb_top_precis = nb_top_precis.fillna(0)
+nb_top_precis = nb_top_precis.rename(
+    columns = {
+        "DF":"DF2",
+        "DM":"DM2",
+        "GK":"GK2",
+        "score_df_mean":"sc_df2_m",
+        "score_fw_mean":"sc_ailliers_m",
+        "score_dm_mean":"sc_dm2_m",
+        "score_gk_mean":"sc_gk2_m"
+        })
 data = data.dropna()
 
 data.team.value_counts()
@@ -42,6 +54,7 @@ Def = Def[["team","FDD"]].sort_values(by = ["FDD"],ascending=True)
 Def.head
 
 data = data.merge(nb_top, how = "left", left_on = "team", right_on = "Squad")
+data = data.merge(nb_top_precis, how = "left", left_on = "team", right_on = "Squad")
 data = data.merge(opp_score, how = "left", on = "Opponent")
 data.to_csv("bdd/data/data_temp_2122.csv", sep= ";")
 
@@ -74,6 +87,9 @@ df_reg["top_MF"] = 0
 df_reg["top_DM"] = 0
 df_reg["top_DF"] = 0
 df_reg["top_FW"] = 0
+df_reg["top_MO"] = 0
+df_reg["top_AIL"] = 0
+df_reg["top_MIL"] = 0
 
 for i in df_reg.index :
     if df_reg["GK"][i] > 0:
@@ -90,6 +106,15 @@ for i in df_reg.index :
 for i in df_reg.index :
     if df_reg["FW"][i] > 0:
         df_reg["top_FW"][i] = 1
+for i in df_reg.index :
+    if df_reg["MO"][i] > 0:
+        df_reg["top_MO"][i] = 1
+for i in df_reg.index :
+    if df_reg["AIL"][i] > 0:
+        df_reg["top_AIL"][i] = 1
+for i in df_reg.index :
+    if df_reg["MIL"][i] > 0:
+        df_reg["top_MIL"][i] = 1
 
 df_reg['nb_def'] = pd.Series(df_reg["Formation"].str[0:1])
 df_reg['nb_opp_def'] = pd.Series(df_reg["opp_Formation"].str[0:1])
