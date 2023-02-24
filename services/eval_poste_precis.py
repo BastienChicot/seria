@@ -440,32 +440,36 @@ compte = df.groupby(["Squad"]).count().reset_index()
 compte = compte[["Squad","Player"]]
 
 df_sc_mean = pd.merge(somme,compte,on = ["Squad"])
-df_sc_mean["score_df_mean"] = df_sc_mean["score"] / df_sc_mean["Player"]
-df_sc_mean = df_sc_mean[["Squad","score_df_mean"]]
+df_sc_mean["score_df2_mean"] = df_sc_mean["score"] / df_sc_mean["Player"]
+df_sc_mean = df_sc_mean[["Squad","score_df2_mean"]]
 
 somme = mf.groupby(["Squad"]).sum().reset_index()
 compte = mf.groupby(["Squad"]).count().reset_index()
 compte = compte[["Squad","Player"]]
 
 mf_sc_mean = pd.merge(somme,compte,on = ["Squad"])
-mf_sc_mean["score_mf_mean"] = mf_sc_mean["score"] / mf_sc_mean["Player"]
-mf_sc_mean = mf_sc_mean[["Squad","score_mf_mean"]]
+mf_sc_mean["score_mil_mean"] = mf_sc_mean["score"] / mf_sc_mean["Player"]
+mf_sc_mean = mf_sc_mean[["Squad","score_mil_mean"]]
+
+mo_sc_mean = pd.merge(somme,compte,on = ["Squad"])
+mo_sc_mean["score_mo_mean"] = mo_sc_mean["score"] / mo_sc_mean["Player"]
+mo_sc_mean = mo_sc_mean[["Squad","score_mo_mean"]]
 
 somme = fw.groupby(["Squad"]).sum().reset_index()
 compte = fw.groupby(["Squad"]).count().reset_index()
 compte = compte[["Squad","Player"]]
 
 fw_sc_mean = pd.merge(somme,compte,on = ["Squad"])
-fw_sc_mean["score_fw_mean"] = fw_sc_mean["score"] / fw_sc_mean["Player"]
-fw_sc_mean = fw_sc_mean[["Squad","score_fw_mean"]]
+fw_sc_mean["score_ail_mean"] = fw_sc_mean["score"] / fw_sc_mean["Player"]
+fw_sc_mean = fw_sc_mean[["Squad","score_ail_mean"]]
 
 somme = dm.groupby(["Squad"]).sum().reset_index()
 compte = dm.groupby(["Squad"]).count().reset_index()
 compte = compte[["Squad","Player"]]
 
 dm_sc_mean = pd.merge(somme,compte,on = ["Squad"])
-dm_sc_mean["score_dm_mean"] = dm_sc_mean["score"] / dm_sc_mean["Player"]
-dm_sc_mean = dm_sc_mean[["Squad","score_dm_mean"]]
+dm_sc_mean["score_dm2_mean"] = dm_sc_mean["score"] / dm_sc_mean["Player"]
+dm_sc_mean = dm_sc_mean[["Squad","score_dm2_mean"]]
 
 
 somme = gk.groupby(["Squad"]).sum().reset_index()
@@ -473,8 +477,8 @@ compte = gk.groupby(["Squad"]).count().reset_index()
 compte = compte[["Squad","Player"]]
 
 gk_sc_mean = pd.merge(somme,compte,on = ["Squad"])
-gk_sc_mean["score_gk_mean"] = gk_sc_mean["score"] / gk_sc_mean["Player"]
-gk_sc_mean = gk_sc_mean[["Squad","score_gk_mean"]]
+gk_sc_mean["score_gk2_mean"] = gk_sc_mean["score"] / gk_sc_mean["Player"]
+gk_sc_mean = gk_sc_mean[["Squad","score_gk2_mean"]]
 
 table_mean = pd.merge(df_sc_mean,mf_sc_mean, on = ["Squad"])
 table_mean = table_mean.merge(fw_sc_mean,how = "left", on = ["Squad"])

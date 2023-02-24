@@ -21,11 +21,7 @@ nb_top_precis = nb_top_precis.rename(
     columns = {
         "DF":"DF2",
         "DM":"DM2",
-        "GK":"GK2",
-        "score_df_mean":"sc_df2_m",
-        "score_fw_mean":"sc_ailliers_m",
-        "score_dm_mean":"sc_dm2_m",
-        "score_gk_mean":"sc_gk2_m"
+        "GK":"GK2"
         })
 data = data.dropna()
 

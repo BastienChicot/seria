@@ -22,7 +22,8 @@ df_reg.columns
 
 liste_var = ["home","Formation","opp_Formation","saison",
              "PK","CrdR","top_GK","top_MF","top_DM","top_DF",
-             "top_FW","diff_avant","diff_def","diff_mil","sup_def"]
+             "top_FW","diff_avant","diff_def","diff_mil","sup_def",
+             "top_MIL","top_AIL","top_MO"]
 
 liste_result = []
 
@@ -49,7 +50,7 @@ table_resultat.to_csv("Sorties/chisquare.csv", sep= ";")
 ##SECONDE REGRESSION
 reg_test = smf.logit('victoire ~ C(home)*Sh + Poss*score_mf_mean + FDA + \
                      diff_value + Att + age + SoT + C(saison) + \
-                         + C(PK) + C(CrdR) + C(Formation)*C(top_FW)\
+                         + C(PK) + C(CrdR) + C(Formation)*C(top_DM)\
                              + score_df_mean + \
                                  repos ',
                   data=df_reg).fit()
@@ -69,3 +70,14 @@ vif = pd.DataFrame()
 vif["VIF Factor"] = [variance_inflation_factor(X.values, i) for i in range(X.shape[1])]
 vif["features"] = X.columns
 vif
+
+
+### BOX PLOT
+import matplotlib.pyplot as plt
+
+liste_poste = ["score_dm_mean","DM"]
+
+for poste in liste_poste :
+    temp = df_reg.boxplot(by = "Formation", column =[poste])
+    plot = temp.get_figure()
+    plot.savefig("Sorties/Formation_"+str(poste)+".png")
