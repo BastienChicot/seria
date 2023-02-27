@@ -75,9 +75,17 @@ vif
 ### BOX PLOT
 import matplotlib.pyplot as plt
 
-liste_poste = ["score_dm_mean","DM"]
+liste_poste = ["score_dm_mean","score_df_mean","score_mf_mean","score_fw_mean",
+               "score_gk_mean","score_mil_mean","score_ail_mean"]
 
 for poste in liste_poste :
-    temp = df_reg.boxplot(by = "Formation", column =[poste])
+    temp = df_reg.boxplot(by = "victoire", column =[poste])
     plot = temp.get_figure()
-    plot.savefig("Sorties/Formation_"+str(poste)+".png")
+    plot.savefig("Sorties/Victoire_"+str(poste)+".png")
+
+for poste in liste_poste :  
+    temp = df_reg.loc[df_reg[poste]>0]
+    x = int(max(temp[poste]) - min(temp[poste])) * 10 
+    plt.hist(np.log(temp[poste]), bins = x)
+    plt.savefig("Sorties/hist_log_"+str(poste)+".png")
+    plt.cla()

@@ -3598,3 +3598,41 @@ Idem pour les mf
 idem pour les mil
 Idem pour les dm
 
+
+BOXPLOT SUR LES VICTOIRES ET LES SCORES MOYENS POSTES (virer les 0 peut-être)
+HISTOGRAMME REPARTITION DES SCORES MOYENS POUR CONSTATER LA NORMALITE
+
+BOXPLOT sur victoire
+
+score ailliers moyen == pas de différence notable
+score df_moyen == Un score moyen légèrement plus faible sur les victoires mais plus dispersé aussi
+score dm _moyen == pas de différence forte. Un peu plus faible dans les victoires mais rien de fou
+score_fw_mean == score plus élevé pour les victoires (logique en soi puisque je prends les buts comme variable dans le calculde leur score et que sans but :: pas de victoire)
+score gardiens == score plus élevé dans les victoires ==> Ce ne serait donc pas forcément les équipes avec les meilleures défenses qui gagnent et si le gardien fait des perfs cela peut engendrer la victoire.
+
+score_mf_mean == comme les attaquants
+score_mil_mean == très dispersé sur les victoires donc pas forcément différents des défaites.
+
+Histogrammes ::
+score ail == pas très normal
+score df == pas fou y a des trous
+score dm == pas dingue
+score fw == ...
+score gk == s'en approche de loin mais trop de trousq
+score mf == no
+score mil == non 
+
+LOG
+score ail == non
+score df == pas fou y a des trous
+score dm == Aaahhh non
+score fw == ...
+score gk == c'était mieux sans log
+score mf == no
+score mil == non 
+
+
+
+
+
+
