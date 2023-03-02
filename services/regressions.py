@@ -75,10 +75,10 @@ vif
 ### BOX PLOT
 import matplotlib.pyplot as plt
 
-liste_poste = ["GK","top_GK"]
+liste_poste = ["score_mean_mo","MO"]
 
 for poste in liste_poste :
-    temp = df_reg.boxplot(by = "Formation", column =[poste])
+    temp = df_reg.boxplot(by = "victoire", column =[poste])
     plot = temp.get_figure()
     plot.savefig("Sorties/Formation_"+str(poste)+".png")
 
