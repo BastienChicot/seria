@@ -18,15 +18,13 @@ import numpy as np
 ##STANDARD
 standard = pd.read_csv("bdd/data/dl_fbref/stat_joueur_stand_21_22.txt", sep= ",", index_col = 0)
 
+standard = standard.reset_index()
+
 standard.columns = standard.iloc[0]
                          
-standard = standard.reset_index()
 standard = standard.loc[standard["-9999"] != "-9999"]
 
 standard.columns
-standard = standard.rename(columns = {
-    "index":"Player"
-    })
 
 standard["key"] = standard["Player"] + standard["Pos"] + standard["Squad"]
 #fichier de base sur lequel je vais joindre les autres
@@ -201,7 +199,7 @@ full["CrdY"] = full["CrdY"].astype(float)
 full["CrdR"] = full["CrdR"].astype(float)
 
 mf = full.loc[full["Pos"] == "MIL"]
-mf = mf.loc[mf["90s"] >= 15]
+mf = mf.loc[mf["90s"] >= 2]
 
 mf["Drib_pct_rel"] = mf["Drib_pct"] / mf["90s"]
 mf["Touches_rel"] = mf["Touches"] / mf["90s"]
@@ -229,7 +227,7 @@ mf.head
 
 #MILIEUX OFF
 mo = full.loc[full["Pos"] == "MO"]
-mo = mo.loc[mo["90s"] >= 15]
+mo = mo.loc[mo["90s"] >= 2]
 
 mo["Drib_pct_rel"] = mo["Drib_pct"] / mo["90s"]
 mo["Touches_rel"] = mo["Touches"] / mo["90s"]
@@ -287,7 +285,7 @@ df.head
 
 ##Attaquants
 fw = full.loc[full["Pos"] == "AIL"]
-fw = fw.loc[fw["90s"] >= 15]
+fw = fw.loc[fw["90s"] >= 2]
 
 fw["Gls_rel"] = fw["Gls"] / fw["90s"]
 fw["Drib_pct_rel"] = fw["Drib_pct"] / fw["90s"]
@@ -451,6 +449,10 @@ mf_sc_mean = pd.merge(somme,compte,on = ["Squad"])
 mf_sc_mean["score_mil_mean"] = mf_sc_mean["score"] / mf_sc_mean["Player"]
 mf_sc_mean = mf_sc_mean[["Squad","score_mil_mean"]]
 
+somme = mo.groupby(["Squad"]).sum().reset_index()
+compte = mo.groupby(["Squad"]).count().reset_index()
+compte = compte[["Squad","Player"]]
+
 mo_sc_mean = pd.merge(somme,compte,on = ["Squad"])
 mo_sc_mean["score_mo_mean"] = mo_sc_mean["score"] / mo_sc_mean["Player"]
 mo_sc_mean = mo_sc_mean[["Squad","score_mo_mean"]]
@@ -480,10 +482,11 @@ gk_sc_mean = pd.merge(somme,compte,on = ["Squad"])
 gk_sc_mean["score_gk2_mean"] = gk_sc_mean["score"] / gk_sc_mean["Player"]
 gk_sc_mean = gk_sc_mean[["Squad","score_gk2_mean"]]
 
-table_mean = pd.merge(df_sc_mean,mf_sc_mean, on = ["Squad"])
+table_mean = pd.merge(df_sc_mean,mf_sc_mean, on = ["Squad"], how="left")
 table_mean = table_mean.merge(fw_sc_mean,how = "left", on = ["Squad"])
 table_mean = table_mean.merge(dm_sc_mean,how = "left", on = ["Squad"])
 table_mean = table_mean.merge(gk_sc_mean,how = "left", on = ["Squad"])
+table_mean = table_mean.merge(mo_sc_mean,how = "left", on = ["Squad"])
 
 table_mean = table_mean.fillna(0)
 

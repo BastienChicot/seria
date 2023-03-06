@@ -50,7 +50,7 @@ table_resultat.to_csv("Sorties/chisquare.csv", sep= ";")
 ##SECONDE REGRESSION
 reg_test = smf.logit('victoire ~ C(home)*Sh + Poss*score_mf_mean + FDA + \
                      diff_value + Att + age + SoT + C(saison) + \
-                         + C(PK) + C(CrdR) + C(Formation)*C(top_DM)\
+                         + C(PK) + C(CrdR) + C(Formation)*C(top_AIL)\
                              + score_df_mean + \
                                  repos ',
                   data=df_reg).fit()
@@ -75,12 +75,12 @@ vif
 ### BOX PLOT
 import matplotlib.pyplot as plt
 
-liste_poste = ["score_mean_mo","MO"]
+liste_poste = ["score_mo_mean","score_mil_mean","score_ail_mean"]
 
 for poste in liste_poste :
-    temp = df_reg.boxplot(by = "victoire", column =[poste])
+    temp = df_reg.boxplot(by = "opp_Formation", column =[poste])
     plot = temp.get_figure()
-    plot.savefig("Sorties/Formation_"+str(poste)+".png")
+    plot.savefig("Sorties/opp_Formation_"+str(poste)+".png")
 
 for poste in liste_poste :  
     temp = df_reg.loc[df_reg[poste]>0]
