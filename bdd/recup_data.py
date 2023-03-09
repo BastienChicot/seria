@@ -10,12 +10,14 @@ import pandas as pd
 import re
 from selenium import webdriver
 import time
+import os
 
+os.chdir("bdd")
 def recup_values(annee):
     driver = webdriver.Chrome()
     
     
-    driver.get("https://www.transfermarkt.com/serie-a/startseite/wettbewerb/IT1/plus/?saison_id="+str(annee))
+    driver.get("https://www.transfermarkt.com/premier-league/startseite/wettbewerb/GB1/plus/?saison_id=2021")
     time.sleep(20)
     print("Va cliquer sur accepter les cookies blaireau !")
     ####ALLEZ CLIQUER SUR VALIDER LES COOKIES AVANT DE LANCER LA SUITE
@@ -40,7 +42,7 @@ def recup_values(annee):
     final.drop([0], axis=0, inplace=True)
     final.drop([1], axis=0, inplace=True)
     
-    final.to_csv("data/value_tm.txt",sep = ";")
+    final.to_csv("data/value_tm_premier.txt",sep = ";")
     
     print("Tu peux aller modifier le fichier sur bloc note morray !")
 
@@ -60,8 +62,8 @@ def data_fbref(saison):
     
     liste_saison = ["2020-2021"]
     
-    codes = pd.read_csv("data/code_seriea.txt", sep = ";")
-    values = pd.read_csv("data/value_tm.txt", sep=";")
+    codes = pd.read_csv("data/code_premiere.txt", sep = ";")
+    values = pd.read_csv("data/value_tm_premier.txt", sep=";")
     liste_df = []
 
     for saison in liste_saison:
@@ -153,7 +155,7 @@ def data_fbref(saison):
 
     data=pd.concat(liste_df)
     
-    data.to_csv("data/data_"+str(saison)+".csv",sep=";")
+    data.to_csv("data/data_premier_"+str(saison)+".csv",sep=";")
 
 ##MERGE all
 

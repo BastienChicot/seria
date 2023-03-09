@@ -1,0 +1,21 @@
+code;team;code_url
+Manchester-City;Manchester City;b8fd03ef
+Liverpool;Liverpool FC;822bd0ba
+Chelsea;Chelsea FC;cff3d9bb
+Tottenham-Hotspur;Tottenham Hotspur;361ca564
+Arsenal;Arsenal FC;18bb7c10
+Manchester-United;Manchester United;19538871
+West-Ham-United;West Ham United;7c21e445
+Leicester-City;Leicester City;a2d435b3
+Brighton-and-Hove-Albion;Brighton & Hove Albion;d07537b9
+Wolverhampton-Wanderers;Wolvehampton Wanderers;8cec06e1
+Newcastle-United;Newcastle United;b2b47a98
+Crystal-Palace;Crystal Palace;47c64c55
+Brentford;Brentford FC;cd051869
+Aston-Villa;Aston Villa;8602292d
+Southampton;Southampton FC;33c895d4
+Everton;Everton FC;d3fd31cc
+Leeds-United;Leeds United;5bfb9659
+Burnley;Burnley FC;943e8050
+Watford;Watford FC;2abfe087
+Norwich-City;Norwich City;1c781004
