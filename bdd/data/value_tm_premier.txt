@@ -1,21 +1,21 @@
 team;Squad;age;etr;valeur-age;value
-Manchester City;39;24.3;23;€25.74m;€1.00bn
-Liverpool FC;49;24.0;28;€18.75m;€918.90m
-Chelsea FC;44;25.1;25;€20.78m;€914.50m
-Manchester United;43;25.5;28;€17.89m;€769.15m
-Tottenham Hotspur;45;23.5;26;€15.32m;€689.35m
-Arsenal FC;41;23.4;24;€14.95m;€613.05m
-Leicester City;40;25.1;24;€13.16m;€526.55m
-Aston Villa;44;24.2;21;€11.09m;€487.75m
-Everton FC;42;25.5;22;€11.41m;€479.05m
-Wolverhampton Wanderers;38;24.4;30;€9.92m;€376.95m
-West Ham United;36;26.0;20;€9.86m;€354.90m
-Brighton & Hove Albion;43;24.1;30;€7.40m;€318.00m
-Newcastle United;34;27.4;18;€9.23m;€313.90m
-Leeds United;35;23.5;19;€8.56m;€299.45m
-Southampton FC;33;25.1;18;€8.31m;€274.30m
-Brentford FC;38;24.3;26;€7.19m;€273.30m
-Crystal Palace;33;25.9;16;€8.21m;€271.05m
-Norwich City;45;24.2;28;€3.63m;€163.20m
-Watford FC;47;25.8;36;€3.32m;€156.20m
-Burnley FC;35;27.3;16;€3.94m;€138.05m
+Manchester-City;39;24.3;23;€25.74m;€1.00bn
+Liverpool;49;24.0;28;€18.75m;€918.90m
+Chelsea;44;25.1;25;€20.78m;€914.50m
+Manchester-United;43;25.5;28;€17.89m;€769.15m
+Tottenham-Hotspur;45;23.5;26;€15.32m;€689.35m
+Arsenal;41;23.4;24;€14.95m;€613.05m
+Leicester-City;40;25.1;24;€13.16m;€526.55m
+Aston-Villa;44;24.2;21;€11.09m;€487.75m
+Everton;42;25.5;22;€11.41m;€479.05m
+Wolverhampton-Wanderers;38;24.4;30;€9.92m;€376.95m
+West-Ham-United;36;26.0;20;€9.86m;€354.90m
+Brighton-and-Hove-Albion;43;24.1;30;€7.40m;€318.00m
+Newcastle-United;34;27.4;18;€9.23m;€313.90m
+Leeds-United;35;23.5;19;€8.56m;€299.45m
+Southampton;33;25.1;18;€8.31m;€274.30m
+Brentford;38;24.3;26;€7.19m;€273.30m
+Crystal-Palace;33;25.9;16;€8.21m;€271.05m
+Norwich-City;45;24.2;28;€3.63m;€163.20m
+Watford;47;25.8;36;€3.32m;€156.20m
+Burnley;35;27.3;16;€3.94m;€138.05m

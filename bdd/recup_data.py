@@ -60,7 +60,7 @@ def data_fbref(saison):
     
     os.chdir("bdd")
     
-    liste_saison = ["2020-2021"]
+    liste_saison = ["2021-2022"]
     
     codes = pd.read_csv("data/code_premiere.txt", sep = ";")
     values = pd.read_csv("data/value_tm_premier.txt", sep=";")
@@ -134,8 +134,8 @@ def data_fbref(saison):
                 tab_temp = tab_temp.merge(tab_pass, how="left",on="key")
                 tab_temp = tab_temp.merge(tab_misc, how="left",on="key")
                 
-                tm_data = values.loc[values["team"] == tab_temp["team"][0]]
-                tm_data = tm_data[["team","age","value"]]    
+                # tm_data = values.loc[values["team"] == tab_temp["team"][0]]
+                tm_data = values[["team","age","value"]]    
                 
                 tab_temp = tab_temp.merge(tm_data, how="left",on="team")
                 
@@ -154,6 +154,8 @@ def data_fbref(saison):
                 
 
     data=pd.concat(liste_df)
+    
+    # data["team"].unique()
     
     data.to_csv("data/data_premier_"+str(saison)+".csv",sep=";")
 
