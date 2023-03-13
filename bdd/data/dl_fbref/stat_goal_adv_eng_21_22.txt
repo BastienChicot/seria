@@ -1,0 +1,43 @@
+Player,Pos,Squad,Age,Cmp%,Opp,Stp,Stp%,-9999
+Alisson,GK,Liverpool,28,44.2,340,22,6.5,7a2e46a8
+Alphonse Areola,GK,West Ham,28,32.1,15,1,6.7,2f965a72
+Kepa Arrizabalaga,GK,Chelsea,26,27.6,44,2,4.5,28d596a0
+Daniel Bachmann,GK,Watford,27,34.3,187,7,3.7,1c0eea98
+Asmir Begović,GK,Everton,34,32.3,50,3,6.0,7b4de647
+Jack Butland,GK,Crystal Palace,28,26.9,139,11,7.9,cc70a1d5
+Willy Caballero,GK,Southampton,39,47.2,33,1,3.0,a179d516
+Karl Darlow,GK,Newcastle Utd,30,44.2,106,5,4.7,cde3309f
+Martin Dúbravka,GK,Newcastle Utd,32,41.6,360,22,6.1,3a949a25
+Ederson,GK,Manchester City,27,47.8,300,21,7.0,3bb7b8b4
+Łukasz Fabiański,GK,West Ham,36,36.8,595,28,4.7,9328b835
+Álvaro Fernández,GK,Brentford,23,29.6,194,9,4.6,f127d782
+Fraser Forster,GK,Southampton,33,31.8,285,19,6.7,c3e39f12
+Ben Foster,GK,Watford,38,31.5,455,20,4.4,d0b3ceb9
+David de Gea,GK,Manchester Utd,30,32.7,525,8,1.5,7ba6d84e
+Vicente Guaita,GK,Crystal Palace,34,37.2,386,17,4.4,ab13a5aa
+Angus Gunn,GK,Norwich City,25,34.9,175,3,1.7,e082af5b
+Wayne Hennessey,GK,Burnley,34,42.9,37,0,0.0,76eca7e2
+Caoimhín Kelleher,GK,Liverpool,22,20.0,20,0,0.0,62d7ef38
+Kristoffer Klaesson,GK,Leeds United,20,33.3,7,0,0.0,3f70db80
+Tim Krul,GK,Norwich City,33,33.6,442,14,3.2,f23f9d20
+Bernd Leno,GK,Arsenal,29,32.1,73,6,8.2,2628fd2b
+Hugo Lloris,GK,Tottenham,34,41.2,567,33,5.8,8f62b6ee
+Jonas Lössl,GK,Brentford,32,36.0,30,1,3.3,939bc634
+Emiliano Martínez,GK,Aston Villa,28,36.0,474,34,7.2,7956236f
+Alex McCarthy,GK,Southampton,31,30.1,255,22,8.6,36c2ca73
+Edouard Mendy,GK,Chelsea,29,43.0,375,28,7.5,33887998
+Illan Meslier,GK,Leeds United,21,26.3,438,23,5.3,6b625ac2
+Robin Olsen,GK,Aston Villa,31,32.0,28,5,17.9,e7ee38c3
+Jordan Pickford,GK,Everton,27,34.8,518,23,4.4,4806ec67
+Nick Pope,GK,Burnley,29,39.5,605,46,7.6,4b40d9ca
+Aaron Ramsdale,GK,Arsenal,23,27.9,414,26,6.3,466fb2c5
+David Raya,GK,Brentford,25,42.7,402,27,6.7,98ea5115
+John Ruddy,GK,Wolves,34,9.1,13,1,7.7,da8b19e2
+José Sá,GK,Wolves,28,29.4,549,43,7.8,903b6e8b
+Robert Sánchez,GK,Brighton,23,28.2,517,60,11.6,6a713852
+Kasper Schmeichel,GK,Leicester City,34,39.9,533,15,2.8,53af52f3
+Jason Steele,GK,Brighton,30,33.3,16,0,0.0,28300a16
+Jed Steer,GK,Aston Villa,28,27.3,11,1,9.1,a8a3d139
+Zack Steffen,GK,Manchester City,26,16.7,10,0,0.0,42130443
+Danny Ward,GK,Leicester City,28,40.0,18,1,5.6,d3ce0e89
+Freddie Woodman,GK,Newcastle Utd,24,34.8,55,3,5.5,19e50035

@@ -8,8 +8,11 @@ Created on Mon Jan 23 21:35:28 2023
 import pandas as pd
 import numpy as np
 
+opt = "eng_"
+opt2 = "_eng"
+
 ##STANDARD
-standard = pd.read_csv("bdd/data/dl_fbref/stat_joueur_stand_21_22.txt", sep= ",", index_col = 0)
+standard = pd.read_csv("bdd/data/dl_fbref/stat_joueur_stand_"+str(opt)+"21_22.txt", sep= ",", index_col = 0)
 
 standard.columns = standard.iloc[0]
                          
@@ -25,7 +28,7 @@ standard["key"] = standard["Player"] + standard["Pos"] + standard["Squad"]
 #fichier de base sur lequel je vais joindre les autres
 
 ##TIRS
-shots = pd.read_csv("bdd/data/dl_fbref/stat_joueur_shots_21_22.txt", sep= ",", index_col = 0)
+shots = pd.read_csv("bdd/data/dl_fbref/stat_joueur_shots_"+str(opt)+"21_22.txt", sep= ",", index_col = 0)
 
 shots = shots.reset_index()
 shots["key"] = shots["Player"] + shots["Pos"] + shots["Squad"]
@@ -40,7 +43,7 @@ shots = shots.rename(columns = {
 full = pd.merge(standard,shots, how = "inner", on = ["key"])
 
 ##PASSES
-passes = pd.read_csv("bdd/data/dl_fbref/stat_joueur_pass_21_22.txt", sep= ",", index_col = 0)
+passes = pd.read_csv("bdd/data/dl_fbref/stat_joueur_pass_"+str(opt)+"21_22.txt", sep= ",", index_col = 0)
 
 passes = passes.reset_index()
 passes["key"] = passes["Player"] + passes["Pos"] + passes["Squad"]
@@ -55,7 +58,7 @@ passes = passes.rename(columns = {
 full = full.merge(passes, how = "left", on = "key")
 
 ##SHOOTING CREATING ACTION
-sca = pd.read_csv("bdd/data/dl_fbref/stat_joueur_sca_21_22.txt", sep= ",", index_col = 0)
+sca = pd.read_csv("bdd/data/dl_fbref/stat_joueur_sca_"+str(opt)+"21_22.txt", sep= ",", index_col = 0)
 
 sca = sca.reset_index()
 sca["key"] = sca["Player"] + sca["Pos"] + sca["Squad"]
@@ -67,7 +70,7 @@ full = full.merge(sca, how = "left", on = "key")
 
 
 ##DEFENSE
-defense = pd.read_csv("bdd/data/dl_fbref/stat_joueur_def_21_22.txt", sep= ",", index_col = 0)
+defense = pd.read_csv("bdd/data/dl_fbref/stat_joueur_def_"+str(opt)+"21_22.txt", sep= ",", index_col = 0)
 
 defense = defense.reset_index()
 defense["key"] = defense["Player"] + defense["Pos"] + defense["Squad"]
@@ -85,7 +88,7 @@ full = full.merge(defense, how = "left", on = "key")
 
 
 ##POSSESSION
-poss = pd.read_csv("bdd/data/dl_fbref/stat_joueur_poss_21_22.txt", sep= ",", index_col = 0)
+poss = pd.read_csv("bdd/data/dl_fbref/stat_joueur_poss_"+str(opt)+"21_22.txt", sep= ",", index_col = 0)
 
 poss = poss.reset_index()
 poss["key"] = poss["Player"] + poss["Pos"] + poss["Squad"]
@@ -99,7 +102,7 @@ poss = poss.rename(columns={
 full = full.merge(poss, how = "left", on = "key")
 
 ##MISC ATTENTION DOUBLONS DE VARIABLES
-misc = pd.read_csv("bdd/data/dl_fbref/stat_joueur_misc_21_22.txt", sep= ",", index_col = 0)
+misc = pd.read_csv("bdd/data/dl_fbref/stat_joueur_misc_"+str(opt)+"21_22.txt", sep= ",", index_col = 0)
 
 misc = misc.reset_index()
 misc["key"] = misc["Player"] + misc["Pos"] + misc["Squad"]
@@ -114,13 +117,13 @@ misc = misc.rename(columns={
 full = full.merge(misc, how = "left", on = "key")
 
 ##GARDIENS
-goal = pd.read_csv("bdd/data/dl_fbref/stat_goal_stand_21_22.txt", sep= ",", index_col = 0)
+goal = pd.read_csv("bdd/data/dl_fbref/stat_goal_stand_"+str(opt)+"21_22.txt", sep= ",", index_col = 0)
                          
 goal = goal.reset_index()
 goal = goal.loc[goal["-9999"] != "-9999"]
 goal["key"] = goal["Player"] + goal["Pos"] + goal["Squad"]
 
-goal_adv = pd.read_csv("bdd/data/dl_fbref/stat_goal_adv_21_22.txt", sep= ",", index_col = 0)
+goal_adv = pd.read_csv("bdd/data/dl_fbref/stat_goal_adv_"+str(opt)+"21_22.txt", sep= ",", index_col = 0)
                          
 goal_adv = goal_adv.reset_index()
 goal_adv["key"] = goal_adv["Player"] + goal_adv["Pos"] + goal_adv["Squad"]
@@ -146,8 +149,8 @@ full = full.drop_duplicates()
 
 ##REGROUPER LES POSTES
 
-full['Squad'] = full['Squad'].replace('Inter','Internazionale')
-full['Squad'] = full['Squad'].replace('Hellas Verona','Hellas-Verona')
+# full['Squad'] = full['Squad'].replace('Inter','Internazionale')
+# full['Squad'] = full['Squad'].replace('Hellas Verona','Hellas-Verona')
 
 full.Pos.value_counts()
 
@@ -160,7 +163,7 @@ full['Pos'] = full['Pos'].replace('DFFW','Milieu')
 
 full.Pos.value_counts()
 
-dm = pd.read_csv("bdd/data/dl_fbref/milieu_def.txt", sep= ",")
+dm = pd.read_csv("bdd/data/dl_fbref/milieu_def"+str(opt2)+".txt", sep= ",")
 dm["DM"]=1
 
 full = full.merge(dm, how = "left", left_on=("Player"), right_on=("PLAYER"))
@@ -169,6 +172,10 @@ full.loc[full.DM == 1, 'Pos'] = "DM"
 
 full['Pos'] = full['Pos'].replace('Milieu','MF')
 
+full["MP"] = full["MP"].astype("float")
+full["Min"] = full["Min"].astype("float")
+full["90s"] = full["90s"].astype("float")
+
 ##VERIF FICHIER
 lignes = full.groupby("Squad").count().reset_index()
 
@@ -176,7 +183,7 @@ test = full.groupby("Squad").sum().reset_index()
 test = test[["Squad", "MP","Min","90s"]]
 test["n"] = test["90s"]/11
 
-team = pd.read_csv("bdd/data/data_2021-2022.csv", sep= ";", index_col = 0)
+team = pd.read_csv("bdd/data/data_"+str(opt)+"2021-2022.csv", sep= ";", index_col = 0)
 nb_match = team.groupby("team").count().reset_index()
 nb_match = nb_match[["team","Date"]]
 
@@ -240,7 +247,7 @@ df["score"] = ((df["Tkl_pct_rel"]/(df.Tkl_pct_rel.quantile([0.8]).values)) +
                (df["Sh_block_rel"]/(df.Sh_block_rel.quantile([0.8]).values)) +
                (df["duels_aeriens_pct_rel"]/(df.duels_aeriens_pct_rel.quantile([0.8]).values)) 
                ) - (df["Fls_rel"]/(df.Fls_rel.quantile([0.8]).values) +
-                    df["CrdR_rel"]/(df.CrdR_rel.quantile([0.8]).values) + 
+                    # df["CrdR_rel"]/(df.CrdR_rel.quantile([0.8]).values) + 
                     df["Err_rel"]/(df.Err_rel.quantile([0.8]).values) + 
                     df["CrdY_rel"]/(df.CrdY_rel.quantile([0.8]).values)
                     )
@@ -440,9 +447,9 @@ table = table.reset_index()
 
 table = table.merge(table_mean, how = "left", on = ["Squad"])
 ##XPORT
-full.to_csv("bdd/data/table_joueurs.csv",sep=";")
+full.to_csv("bdd/data/table_joueurs"+str(opt2)+".csv",sep=";")
 
-table.to_csv("bdd/data/nb_top_joueurs.csv",sep=";")
+table.to_csv("bdd/data/nb_top_joueurs"+str(opt2)+".csv",sep=";")
 ##IMPORT
-full = pd.read_csv("bdd/data/table_joueurs.csv",sep=";", index_col = 0)
+full = pd.read_csv("bdd/data/table_joueurs"+str(opt2)+".csv",sep=";", index_col = 0)
 

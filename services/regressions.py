@@ -50,7 +50,7 @@ table_resultat.to_csv("Sorties/chisquare.csv", sep= ";")
 ##SECONDE REGRESSION
 reg_test = smf.logit('victoire ~ C(home)*Sh + Poss*score_mf_mean + FDA + \
                      diff_value + Att + age + SoT + C(saison) + \
-                         + C(PK) + C(CrdR) + C(Formation)*C(top_AIL)\
+                         + C(PK) + C(CrdR) + C(Formation)*C(top_DM)\
                              + score_df_mean + \
                                  repos ',
                   data=df_reg).fit()

@@ -1,0 +1,547 @@
+Player,Pos,Squad,Age,CrdY,CrdR,2CrdY,Fls,Fld,Off,Crs,Int,TklW,PKwon,PKcon,OG,Recov,Won,Lost,Won%,-9999
+Max Aarons,DF,Norwich City,21,8,0,0,27,52,1,50,28,44,0,2,1,154,13,50,20.6,774cf58b
+Che Adams,FW,Southampton,25,0,0,0,29,40,7,8,8,6,0,0,0,70,61,91,40.1,f2bf1b0f
+Rayan Aït Nouri,DFMF,Wolves,20,4,0,0,14,20,3,96,22,36,1,0,0,128,17,13,56.7,9b398aea
+Kristoffer Ajer,DF,Brentford,23,5,0,0,12,16,0,17,26,18,0,0,0,109,49,31,61.3,a8c0acb7
+Nathan Aké,DF,Manchester City,26,0,0,0,9,2,0,1,8,9,0,0,0,43,37,12,75.5,eaeca114
+Marc Albrighton,FWDF,Leicester City,31,3,0,0,6,13,2,78,14,19,0,0,0,65,4,13,23.5,b827d5b3
+Thiago Alcántara,MF,Liverpool,30,2,0,0,19,13,0,4,26,29,0,0,0,126,31,12,72.1,77e84962
+Trent Alexander-Arnold,DF,Liverpool,22,2,0,0,12,7,11,273,43,23,0,0,0,235,15,13,53.6,cd1acf9d
+Alisson,GK,Liverpool,28,0,0,0,0,2,0,0,0,1,0,0,1,80,15,1,93.8,7a2e46a8
+Allan,MF,Everton,30,7,1,0,30,22,0,10,23,44,1,0,0,191,11,15,42.3,cc700722
+Dele Alli,MF,Tottenham,25,1,0,0,12,11,2,5,6,8,1,0,0,40,7,11,38.9,cea4ee8f
+Dele Alli,MFFW,Everton,25,3,0,0,9,7,2,1,6,2,0,0,0,24,9,8,52.9,cea4ee8f
+Miguel Almirón,MFFW,Newcastle Utd,27,2,0,0,17,25,9,20,20,29,0,0,0,96,5,14,26.3,862a1c15
+Marcos Alonso,DF,Chelsea,30,8,0,0,25,28,3,149,43,29,0,1,0,139,40,28,58.8,f4290206
+Steven Alzate,MF,Brighton,22,0,0,0,6,4,0,0,10,4,0,0,0,39,4,8,33.3,ad1f61f3
+Daniel Amartey,DF,Leicester City,26,4,0,0,14,8,1,0,21,13,0,0,0,145,33,37,47.1,1a4ef233
+Joachim Andersen,DF,Crystal Palace,25,4,0,0,19,8,1,8,37,23,0,0,1,152,56,48,53.8,e34fc66d
+Michail Antonio,FW,West Ham,31,8,1,1,50,52,13,63,3,17,0,0,0,90,79,112,41.4,ac05f970
+Cameron Archer,FWMF,Aston Villa,20,0,0,0,3,0,0,0,0,0,0,0,0,1,1,1,50.0,05e8ca6d
+Alphonse Areola,GK,West Ham,28,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,2f965a72
+Adam Armstrong,FW,Southampton,24,1,0,0,13,6,2,18,3,4,1,0,0,36,13,23,36.1,68c720b5
+Stuart Armstrong,MF,Southampton,29,1,0,0,11,20,1,35,8,19,1,0,0,94,3,11,21.4,97333cf5
+Kepa Arrizabalaga,GK,Chelsea,26,0,0,0,0,1,0,0,0,0,0,0,0,3,1,0,100.0,28d596a0
+Harrison Ashby,DF,West Ham,19,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,,b391383a
+Pierre-Emerick Aubameyang,FW,Arsenal,32,3,0,0,15,8,10,11,0,5,0,0,0,22,25,28,47.2,d5dd5f1f
+Jordan Ayew,FW,Crystal Palace,29,2,0,0,38,66,2,74,15,30,1,0,0,132,32,58,35.6,da052c14
+Luke Ayling,DF,Leeds United,29,4,1,0,22,19,2,31,28,42,0,1,0,187,34,50,40.5,420d7c7d
+César Azpilicueta,DF,Chelsea,31,3,0,0,25,5,2,47,23,28,0,1,0,110,46,29,61.3,53cad200
+Daniel Bachmann,GK,Watford,27,0,0,0,1,1,0,0,1,0,0,1,0,10,2,0,100.0,1c0eea98
+Leon Bailey,FWMF,Aston Villa,23,3,0,0,12,11,4,33,1,11,0,0,0,38,10,16,38.5,3a233281
+Eric Bailly,DF,Manchester Utd,27,1,0,0,2,0,0,0,3,4,0,0,1,10,6,2,75.0,a1232f4e
+Folarin Balogun,FW,Arsenal,20,0,0,0,0,1,1,0,0,1,0,0,0,2,1,3,25.0,31822f8c
+Patrick Bamford,FW,Leeds United,27,2,0,0,5,5,5,3,2,0,0,0,0,12,5,14,26.3,93feac6e
+Shandon Baptiste,MF,Brentford,23,2,1,1,6,11,1,8,11,4,0,0,0,62,7,18,28.0,2886c9b5
+Ross Barkley,MFFW,Chelsea,27,0,0,0,2,4,0,7,1,0,0,0,0,17,6,2,75.0,3a24769f
+Ashley Barnes,FW,Burnley,31,4,0,0,21,12,9,2,2,2,0,1,0,34,49,65,43.0,2691c772
+Harvey Barnes,FWMF,Leicester City,23,2,0,0,19,20,10,45,5,16,0,0,0,93,24,41,36.9,3ea50f67
+Lewis Bate,MF,Leeds United,18,0,0,0,3,1,0,0,1,0,0,0,0,8,0,2,0.0,cd4256d3
+Mads Bech Sørensen,DF,Brentford,22,3,0,0,8,4,0,10,6,7,0,1,0,41,9,4,69.2,30db8574
+Jan Bednarek,DF,Southampton,25,10,0,0,30,15,1,1,72,15,0,1,1,177,91,38,70.5,4115ce4e
+Donny van de Beek,MF,Manchester Utd,24,0,0,0,2,2,0,0,2,4,0,0,0,7,1,2,33.3,50dc94ce
+Donny van de Beek,MF,Everton,24,1,0,0,7,1,0,6,6,7,0,0,0,35,7,5,58.3,50dc94ce
+Asmir Begović,GK,Everton,34,0,0,0,0,0,0,0,0,0,0,0,0,2,5,0,100.0,7b4de647
+Saïd Benrahma,FWMF,West Ham,25,0,0,0,9,15,9,74,9,17,0,0,0,128,10,19,34.5,5a04fd92
+Rodrigo Bentancur,MF,Tottenham,24,5,0,0,22,13,0,9,20,18,0,0,0,88,21,18,53.8,3b8674e6
+Christian Benteke,FW,Crystal Palace,30,3,0,0,16,16,10,0,2,2,0,0,0,25,85,54,61.2,ab070c55
+Jóhann Berg Guðmundsson,MF,Burnley,30,2,0,0,16,14,3,44,12,6,0,0,0,71,15,20,42.9,f72293fc
+Steven Bergwijn,FWMF,Tottenham,23,1,0,0,9,9,1,8,1,2,0,0,0,22,4,5,44.4,a29b1131
+Ryan Bertrand,DF,Leicester City,31,1,0,0,3,1,0,12,1,5,0,0,0,11,1,8,11.1,01226327
+Mads Bidstrup,MF,Brentford,20,0,0,0,1,0,0,0,1,0,0,0,0,3,0,0,,407db0d5
+Yves Bissouma,MF,Brighton,24,10,0,0,30,19,0,2,50,49,0,1,0,161,16,15,51.6,6c203af0
+Willy Boly,DF,Wolves,30,1,0,0,7,2,1,0,14,19,0,1,0,62,20,20,50.0,a4ac4b8f
+Jarrod Bowen,FW,West Ham,24,6,0,0,25,43,14,141,21,20,2,0,0,151,38,65,36.9,79c84d1c
+Jarrad Branthwaite,DF,Everton,19,0,1,0,3,4,0,0,1,1,0,0,0,24,11,5,68.8,c1949191
+Armando Broja,FW,Southampton,19,2,0,0,29,26,13,8,3,5,1,0,0,81,88,166,34.6,97220da2
+Josh Brownhill,MF,Burnley,25,10,0,0,39,20,0,53,68,37,0,0,0,198,47,32,59.5,47369df8
+Lewis Brunt,MF,Leicester City,20,0,0,0,0,0,0,0,0,0,0,0,0,2,0,1,0.0,a2081c6b
+Bryan,FWMF,Tottenham,20,0,0,0,1,4,0,6,0,0,0,0,0,12,0,1,0.0,7b5ab7f2
+Emi Buendía,MFFW,Aston Villa,24,1,0,0,17,44,3,34,9,18,0,1,0,110,19,35,35.2,66b76d44
+Dan Burn,DF,Newcastle Utd,29,4,0,0,11,6,5,0,20,11,0,0,0,73,68,31,68.7,b2d31e83
+Dan Burn,DF,Brighton,29,4,0,0,15,0,0,1,24,12,0,0,0,56,32,21,60.4,b2d31e83
+Jack Butland,GK,Crystal Palace,28,0,0,0,0,2,0,0,0,0,0,0,0,4,1,2,33.3,cc70a1d5
+Sam Byram,DF,Norwich City,27,3,0,0,12,4,0,9,22,15,0,1,0,57,28,28,50.0,1bf811d4
+Willy Caballero,GK,Southampton,39,1,0,0,0,0,0,0,0,0,0,0,0,4,0,1,0.0,a179d516
+Moisés Caicedo,MF,Brighton,19,2,0,0,7,11,1,0,10,10,0,0,0,56,9,4,69.2,16264a81
+Dominic Calvert-Lewin,FW,Everton,24,2,0,0,17,16,4,2,3,8,1,0,0,34,94,93,50.3,59e6e5bf
+Chem Campbell,MF,Wolves,18,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0.0,6f711f67
+João Cancelo,DF,Manchester City,27,7,0,0,34,26,2,124,59,54,0,0,0,217,57,51,52.8,bd6351cd
+Sergi Canós,DFFW,Brentford,24,8,1,1,28,15,5,87,22,25,0,0,1,183,9,27,25.0,1137759d
+Todd Cantwell,FWMF,Norwich City,23,2,0,0,4,12,2,3,3,13,0,0,0,22,3,4,42.9,f63d8a4b
+Matty Cash,DF,Aston Villa,23,8,0,0,38,38,2,98,49,50,0,1,0,190,42,45,48.3,2389cdc2
+Timothy Castagne,DF,Leicester City,25,1,0,0,15,7,1,40,29,31,0,0,0,102,39,38,50.6,197640fd
+Jonny Castro,DF,Wolves,27,1,0,0,10,16,0,14,13,15,0,0,0,49,11,7,61.1,e28868f3
+Craig Cathcart,DF,Watford,32,3,0,0,13,4,0,4,28,15,0,0,0,127,48,34,58.5,89e4b358
+Edinson Cavani,FW,Manchester Utd,34,0,0,0,7,5,6,2,2,1,0,0,0,22,7,17,29.2,527f063d
+Kayky Chagas,FW,Manchester City,18,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,,17734ea0
+Trevoh Chalobah,DF,Chelsea,22,2,0,0,19,14,0,4,19,27,0,1,0,74,32,28,53.3,5515376c
+Calum Chambers,DF,Arsenal,26,0,0,0,2,1,0,3,0,3,0,0,0,14,2,1,66.7,dc6f5bdd
+Calum Chambers,DF,Aston Villa,26,1,0,0,12,2,0,2,5,8,0,0,0,49,26,25,51.0,dc6f5bdd
+Daniel Chesters,MF,West Ham,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,240c8ab6
+Ben Chilwell,DF,Chelsea,24,0,0,0,10,15,2,32,4,3,0,1,0,32,7,10,41.2,d2424d1b
+Chiquinho,DFFW,Wolves,21,0,0,0,9,8,0,25,2,6,0,0,0,17,4,5,44.4,dc6c2f02
+Hamza Choudhury,DFMF,Leicester City,23,1,0,0,4,5,0,0,12,3,0,0,0,15,10,2,83.3,7d2d3329
+Andreas Christensen,DF,Chelsea,25,2,0,0,11,7,0,1,29,8,0,0,0,110,48,38,55.8,1cb49278
+Carney Chukwuemeka,MFFW,Aston Villa,17,0,0,0,3,9,0,0,1,1,0,0,0,16,7,9,43.8,b2f9c73e
+Ciaran Clark,DF,Newcastle Utd,31,2,1,0,6,5,1,1,13,10,0,1,0,49,26,15,63.4,2b91cf8e
+Tom Cleverley,MF,Watford,31,2,0,0,28,19,2,54,18,20,0,0,0,81,14,29,32.6,6cdd8245
+Nathaniel Clyne,DF,Crystal Palace,30,1,0,0,3,5,0,17,15,10,0,0,0,73,10,7,58.8,0442183b
+Conor Coady,DF,Wolves,28,4,0,0,20,1,2,2,28,14,0,0,0,162,32,24,57.1,2928dca2
+Séamus Coleman,DF,Everton,32,4,0,0,14,17,2,41,32,36,1,0,1,188,25,23,52.1,0420d84f
+Nathan Collins,DF,Burnley,20,2,1,0,20,12,4,3,24,15,0,2,0,128,57,31,64.8,a8c19eb8
+Aaron Connolly,FWMF,Brighton,21,0,0,0,0,6,0,0,0,0,0,0,0,7,2,5,28.6,27c01749
+Liam Cooper,DF,Leeds United,29,5,0,0,19,9,2,1,43,23,0,1,0,118,82,44,65.1,dc64b8b3
+Jack Cork,MF,Burnley,32,4,0,0,31,10,1,8,17,6,0,0,0,96,26,21,55.3,74e12f1e
+Maxwel Cornet,FWMF,Burnley,24,2,0,0,20,20,26,55,10,9,2,0,0,81,24,45,34.8,beb391dd
+Hélder Costa,MF,Leeds United,27,0,0,0,1,2,0,0,0,0,0,0,0,1,0,1,0.0,f13d02a6
+Vladimír Coufal,DF,West Ham,28,5,1,1,29,15,2,107,22,25,0,1,1,131,33,34,49.3,fdf3cb77
+Philippe Coutinho,MFFW,Aston Villa,29,0,0,0,8,20,4,18,7,12,0,0,0,53,5,17,22.7,0ef89a37
+Aaron Cresswell,DF,West Ham,31,3,0,0,14,10,2,145,35,18,0,1,0,163,32,24,57.1,4f974391
+Charlie Cresswell,DF,Leeds United,18,1,0,0,3,0,1,1,2,2,0,0,0,6,6,3,66.7,4654e5f5
+Cucho,FWMF,Watford,22,3,0,0,13,12,1,52,5,5,0,0,1,65,31,51,37.8,71b47ab9
+Marc Cucurella,DF,Brighton,23,6,0,0,28,30,3,115,30,62,0,0,0,247,40,36,52.6,1daec722
+Luke Cundle,MF,Wolves,19,0,0,0,3,1,0,2,1,3,0,0,0,12,0,2,0.0,cc3b8e78
+Patson Daka,FW,Leicester City,22,2,0,0,17,14,7,1,2,10,0,0,0,29,17,44,27.9,ca45605e
+Stuart Dallas,DFMF,Leeds United,30,5,0,0,33,30,2,101,57,55,0,1,0,219,32,34,48.5,67ca8566
+Diogo Dalot,DF,Manchester Utd,22,4,0,0,18,4,1,58,29,41,0,0,0,151,29,17,63.0,d9565625
+Karl Darlow,GK,Newcastle Utd,30,1,0,0,1,2,0,0,0,0,0,1,0,5,2,0,100.0,cde3309f
+Josh Dasilva,MFFW,Brentford,22,0,1,0,4,3,0,4,1,1,0,0,0,23,3,1,75.0,60344e4f
+Ben Davies,DF,Tottenham,28,6,0,0,31,18,5,19,30,21,0,1,0,106,67,52,56.3,44781702
+Tom Davies,MF,Everton,23,1,0,0,4,3,0,0,2,1,0,0,0,9,3,2,60.0,9228b07c
+Keinan Davis,FW,Aston Villa,23,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0.0,9deaf2c8
+Craig Dawson,DF,West Ham,31,5,1,0,39,12,1,1,29,17,0,3,0,113,93,55,62.8,3e9e06cb
+Kevin De Bruyne,MF,Manchester City,30,2,0,0,21,27,4,180,6,16,0,0,0,114,11,18,37.9,e46012d4
+Troy Deeney,FW,Watford,33,0,0,0,0,0,0,0,0,0,0,0,0,0,6,3,66.7,82e34b69
+Liam Delap,FW,Manchester City,18,0,0,0,1,1,0,0,0,0,1,0,0,0,0,0,,dd897ee7
+Fabian Delph,MF,Everton,31,2,0,0,8,6,0,1,14,15,0,0,0,61,5,4,55.6,111c3236
+Leander Dendoncker,MF,Wolves,26,4,0,0,13,6,0,5,9,17,0,0,0,107,30,33,47.6,5a7301ae
+Emmanuel Dennis,FWMF,Watford,23,9,1,1,59,40,12,39,15,35,1,0,0,125,45,78,36.6,2c44a35d
+Kiernan Dewsbury-Hall,MF,Leicester City,22,4,0,0,20,29,0,86,21,24,0,0,0,155,16,23,41.0,5c74c0f5
+Ibrahima Diallo,MF,Southampton,22,1,0,0,8,15,0,7,9,11,0,0,0,77,11,12,47.8,11ff3d56
+Rúben Dias,DF,Manchester City,24,5,0,0,27,9,2,3,23,19,0,0,0,108,50,37,57.5,31c69ef1
+Luis Díaz,FW,Liverpool,24,0,0,0,14,14,3,14,4,7,0,0,0,54,15,16,48.4,4a1a9578
+Eric Dier,DF,Tottenham,27,1,0,0,12,9,0,1,27,9,0,0,1,131,70,54,56.5,ac861941
+Lucas Digne,DF,Aston Villa,28,2,0,0,18,16,3,101,23,10,0,0,0,77,23,20,53.5,1b84dbe1
+Lucas Digne,DF,Everton,28,4,0,0,15,9,0,71,14,19,0,0,1,83,24,16,60.0,1b84dbe1
+Issa Diop,DF,West Ham,24,0,0,0,5,5,1,0,7,8,0,0,0,55,16,17,48.5,a712ca2b
+Moussa Djenepo,MF,Southampton,23,3,0,0,9,10,0,6,2,3,0,0,0,28,1,9,10.0,254147d4
+Lewis Dobbin,FWMF,Everton,18,1,0,0,1,1,0,0,0,1,0,0,0,4,0,6,0.0,e814e1cf
+Matt Doherty,DF,Tottenham,29,0,0,0,11,4,0,20,13,12,0,0,0,48,16,8,66.7,d557d734
+Gabriel Dos Santos,DF,Arsenal,23,8,1,1,23,38,1,1,13,30,0,0,0,178,55,39,58.5,67ac5bb8
+Abdoulaye Doucouré,MF,Everton,28,6,0,0,39,16,1,11,28,43,0,0,0,213,35,37,48.6,02b29014
+Kieran Dowell,FWMF,Norwich City,23,0,0,0,19,4,0,38,7,7,0,0,0,37,8,28,22.2,2f6ec02a
+Cody Drameh,DFMF,Leeds United,19,1,0,0,2,0,0,2,1,2,0,0,0,3,1,1,50.0,e0d1510a
+Martin Dúbravka,GK,Newcastle Utd,32,1,0,0,0,6,0,0,0,1,0,0,0,19,4,1,80.0,3a949a25
+Shane Duffy,DF,Brighton,29,7,0,0,15,5,1,1,16,12,0,0,0,68,65,26,71.4,7314bba4
+Paul Dummett,DF,Newcastle Utd,29,2,0,0,3,3,0,3,3,3,0,0,0,5,5,2,71.4,3fe6bd8c
+Lewis Dunk,DF,Brighton,29,3,1,0,9,4,0,3,27,8,0,0,0,170,81,37,68.6,282f75f3
+Ederson,GK,Manchester City,27,3,0,0,1,4,0,0,0,1,0,1,0,43,10,3,76.9,3bb7b8b4
+Odsonne Édouard,FW,Crystal Palace,23,4,0,0,25,6,4,7,0,10,0,0,0,62,38,45,45.8,0562b7f1
+CJ Egan-Riley,DF,Manchester City,18,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,,d313e8ff
+Anthony Elanga,FW,Manchester Utd,19,0,0,0,8,22,3,21,9,20,0,0,0,50,24,18,57.1,2fba6108
+Harvey Elliott,MF,Liverpool,18,0,0,0,2,6,0,10,4,0,0,0,0,31,2,2,50.0,c8387671
+Mohamed Elneny,MF,Arsenal,29,1,0,0,5,5,0,0,14,8,0,0,0,51,6,6,50.0,47a34c4f
+Mohamed Elyounoussi,MFFW,Southampton,26,4,0,0,28,18,1,29,12,17,0,0,0,82,38,46,45.2,68dc0dac
+Emerson,DFMF,Tottenham,22,5,0,0,28,45,2,74,22,47,0,0,0,152,33,42,44.0,df8b52a5
+Christian Eriksen,MF,Brentford,29,1,0,0,5,3,0,86,9,6,0,0,0,69,5,6,45.5,980522ec
+Oghenekaro Etebo,MF,Watford,25,3,0,0,8,3,0,2,5,8,0,0,0,31,3,1,75.0,b579e83d
+Jonny Evans,DF,Leicester City,33,3,0,0,15,11,0,3,20,14,0,0,0,105,48,17,73.8,f8fcd2a5
+Eberechi Eze,MFFW,Crystal Palace,23,1,0,0,5,12,0,27,5,6,0,0,0,38,7,13,35.0,ae4fc6a4
+Łukasz Fabiański,GK,West Ham,36,2,0,0,1,7,0,0,0,0,0,1,0,21,11,0,100.0,9328b835
+Fabinho,MF,Liverpool,27,7,0,0,40,28,0,6,39,25,0,0,0,193,43,24,64.2,7f3b388c
+Kiko Femenía,DF,Watford,30,2,0,0,12,13,2,106,37,22,0,0,0,135,12,14,46.2,e5d01ecf
+Evan Ferguson,MF,Brighton,16,0,0,0,0,0,0,1,0,0,0,0,0,1,0,2,0.0,4596da74
+Nathan Ferguson,DF,Crystal Palace,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,2f8d27bc
+Bruno Fernandes,MF,Manchester Utd,26,10,0,0,33,47,3,148,17,28,0,0,0,180,19,30,38.8,507c7bdf
+Álvaro Fernández,GK,Brentford,23,0,0,0,0,3,0,0,0,0,0,0,1,18,2,2,50.0,f127d782
+Federico Fernández,DF,Newcastle Utd,32,0,0,0,1,2,0,1,4,0,0,0,0,24,10,5,66.7,f25b010f
+Fernandinho,MFDF,Manchester City,36,1,0,0,14,10,0,2,8,10,0,0,0,85,22,15,59.5,101da2b5
+Roberto Firmino,FW,Liverpool,29,3,0,0,7,6,3,8,4,14,0,0,0,53,14,27,34.1,4c370d81
+Junior Firpo,DFMF,Leeds United,24,11,0,0,39,15,1,26,24,29,0,0,1,89,27,19,58.7,24f59bb2
+Ashley Fletcher,FW,Watford,25,0,0,0,1,0,0,1,0,1,0,0,0,2,1,7,12.5,eeb6551f
+Phil Foden,FW,Manchester City,21,1,0,0,15,23,14,132,11,8,0,0,0,83,5,27,15.6,ed1e53f3
+Wesley Fofana,DF,Leicester City,20,2,0,0,7,7,0,0,12,8,0,0,0,43,20,10,66.7,132a82f1
+Pablo Fornals,FWMF,West Ham,25,4,0,0,24,28,6,87,27,28,1,0,0,182,23,30,43.4,82927de4
+Adam Forshaw,MF,Leeds United,29,5,0,0,26,15,2,5,19,23,0,0,0,119,11,11,50.0,9f1938ab
+Marcus Forss,FWMF,Brentford,22,0,0,0,3,1,0,1,1,3,0,0,0,4,2,7,22.2,82c215a0
+Fraser Forster,GK,Southampton,33,1,0,0,0,3,0,0,0,0,0,0,0,7,7,0,100.0,c3e39f12
+Ben Foster,GK,Watford,38,0,0,0,1,4,0,0,0,0,0,1,0,54,5,3,62.5,d0b3ceb9
+Tariqe Fosu,DF,Brentford,25,0,0,0,0,1,0,1,0,0,0,0,0,1,0,1,0.0,3dcef539
+Ryan Fraser,FWMF,Newcastle Utd,27,3,0,0,10,24,2,88,11,3,0,0,0,61,5,22,18.5,d56543a0
+Fred,MF,Manchester Utd,28,5,0,0,31,30,0,3,32,27,1,0,1,197,15,13,53.6,b853e0ad
+Ryan Fredericks,DF,West Ham,28,1,0,0,3,1,0,9,4,2,0,0,0,11,3,2,60.0,c067631c
+Leo Fuhr Hjelde,MFDF,Leeds United,17,0,0,0,1,0,0,3,4,4,0,0,0,9,3,2,60.0,d102b8a2
+Conor Gallagher,MF,Crystal Palace,21,10,0,0,65,65,2,128,29,38,1,0,0,187,23,37,38.3,c2731c10
+Alejandro Garnacho,FWMF,Manchester Utd,17,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,,7aa8adfe
+Dwight Gayle,FWDF,Newcastle Utd,30,1,0,0,2,2,0,0,1,0,0,0,0,2,1,1,50.0,e58a03c6
+Jean-Philippe Gbamin,MF,Everton,25,0,0,0,0,1,0,0,1,1,0,0,0,4,1,0,100.0,6bd603db
+David de Gea,GK,Manchester Utd,30,0,0,0,0,1,0,0,0,0,0,0,0,30,8,0,100.0,7ba6d84e
+Joe Gelhardt,FWMF,Leeds United,19,4,0,0,17,24,5,3,0,3,2,0,0,30,11,21,34.4,01962d0d
+Anwar El Ghazi,FWMF,Aston Villa,26,2,0,0,8,5,2,14,1,4,0,0,0,20,10,11,47.6,ffa90327
+Anwar El Ghazi,FWMF,Everton,26,0,0,0,0,0,0,0,0,1,0,0,0,2,0,3,0.0,ffa90327
+Saman Ghoddos,MFDF,Brentford,27,2,0,0,12,10,0,21,3,10,1,0,0,36,11,15,42.3,f7b1d4e0
+Dimitris Giannoulis,DF,Norwich City,25,2,0,0,16,22,0,44,19,21,0,0,0,105,8,7,53.3,112c495e
+Morgan Gibbs-White,DFFW,Wolves,21,1,0,0,2,0,0,1,0,0,0,0,0,2,0,2,0.0,32f60ed8
+Ben Gibson,DF,Norwich City,28,5,1,1,12,9,0,1,27,16,0,3,0,108,52,39,57.1,bcfb0142
+Billy Gilmour,MF,Norwich City,20,2,0,0,28,21,1,98,17,21,0,1,0,124,13,20,39.4,df10e27c
+Ben Godfrey,DF,Everton,23,6,0,0,17,12,0,12,15,32,0,0,0,94,36,43,45.6,9f7c837d
+André Gomes,MF,Everton,28,3,0,0,24,8,0,6,1,4,0,0,0,53,8,9,47.1,1961b2aa
+Toti Gomes,DF,Wolves,22,1,0,0,2,3,1,1,8,7,0,0,0,17,13,10,56.5,f0caab96
+Joe Gomez,DF,Liverpool,24,2,0,0,5,2,0,19,5,6,0,0,0,19,10,6,62.5,7a11550b
+Charlie Goode,DF,Brentford,25,3,0,0,5,7,0,6,2,5,0,1,0,30,15,8,65.2,7aee4dd3
+Anthony Gordon,MFFW,Everton,20,4,0,0,25,64,8,119,22,32,2,0,0,116,17,38,30.9,2bd83368
+Kaide Gordon,FW,Liverpool,16,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0.0,19a9cb70
+Dan Gosling,MF,Watford,31,0,0,0,2,5,0,1,0,1,0,0,0,14,5,4,55.6,7fec31a0
+Demarai Gray,MFFW,Everton,25,3,0,0,12,32,3,129,15,19,0,0,0,100,4,31,11.4,4468ec10
+Jack Grealish,FW,Manchester City,25,3,0,0,17,55,5,32,8,17,0,0,0,63,14,28,33.3,b0b4fd3e
+Mason Greenwood,FWMF,Manchester Utd,19,1,0,0,15,16,3,34,1,9,0,0,0,55,4,8,33.3,58eee997
+Sam Greenwood,MFFW,Leeds United,19,0,0,0,7,2,2,6,2,5,0,0,0,14,2,3,40.0,f3354c07
+Pascal Groß,MFDF,Brighton,30,1,0,0,15,6,4,189,18,15,0,0,0,119,15,21,41.7,8aec0537
+Vicente Guaita,GK,Crystal Palace,34,2,0,0,1,2,0,0,1,0,0,1,0,22,8,1,88.9,ab13a5aa
+Marc Guéhi,DF,Crystal Palace,21,4,0,0,14,34,0,3,30,17,0,1,0,192,68,54,55.7,d0706b27
+Bruno Guimarães,MF,Newcastle Utd,23,4,0,0,13,36,4,12,9,23,0,0,0,81,4,9,30.8,82518f62
+İlkay Gündoğan,MF,Manchester City,30,1,0,0,13,10,2,67,15,9,0,0,0,110,11,12,47.8,819b3158
+Angus Gunn,GK,Norwich City,25,0,0,0,0,0,0,0,0,0,0,0,0,9,2,1,66.7,e082af5b
+Grant Hanley,DF,Norwich City,29,2,0,0,22,22,2,0,56,25,0,0,0,121,102,33,75.6,e9254eec
+Jack Harrison,FWMF,Leeds United,24,3,0,0,29,23,4,142,21,37,0,0,0,170,19,54,26.0,aa849a12
+Kortney Hause,DF,Aston Villa,26,0,0,0,6,2,1,0,6,3,0,1,0,41,20,8,71.4,bf8fad51
+Kai Havertz,FWMF,Chelsea,22,3,0,0,40,25,12,8,4,8,1,0,0,62,38,52,42.2,fed7cb61
+Isaac Hayden,MFDF,Newcastle Utd,26,5,0,0,14,8,0,8,14,14,0,0,0,46,19,15,55.9,c951a6df
+Hwang Hee-chan,FWMF,Wolves,25,2,0,0,29,42,3,7,13,13,0,0,0,92,7,21,25.0,169fd162
+Jordan Henderson,MF,Liverpool,31,3,0,0,23,7,3,56,23,20,0,0,0,228,18,13,58.1,935e6b8f
+Jeff Hendrick,MF,Newcastle Utd,29,0,0,0,1,0,0,0,0,1,0,0,0,2,1,1,50.0,989d5705
+Wayne Hennessey,GK,Burnley,34,0,0,0,0,1,0,0,1,0,0,0,0,3,1,0,100.0,76eca7e2
+Rico Henry,DF,Brentford,24,2,0,0,20,27,1,74,26,20,0,1,0,189,27,40,40.3,8a3c1dc7
+Son Heung-min,MFFW,Tottenham,29,2,0,0,14,36,17,192,13,6,2,0,0,144,16,35,31.4,92e7e919
+Ki-Jana Hoever,DFMF,Wolves,19,1,0,0,5,4,1,8,6,6,0,0,0,13,3,2,60.0,9a71e978
+Rob Holding,DF,Arsenal,25,4,1,1,9,3,0,0,10,9,0,0,0,49,28,22,56.0,d79a8c87
+Mason Holgate,DF,Everton,24,7,1,0,26,15,0,4,26,18,0,0,1,105,61,31,66.3,d0042ab9
+Callum Hudson-Odoi,MFFW,Chelsea,20,1,0,0,10,17,4,32,2,10,1,0,0,39,4,8,33.3,15f3ec41
+Will Hughes,MF,Crystal Palace,26,6,0,0,18,17,0,35,8,14,1,1,0,84,11,20,35.5,a0666d3e
+Pierre Højbjerg,MF,Tottenham,25,3,0,0,28,39,0,18,48,45,0,0,0,281,23,19,54.8,8b04d6c1
+Adam Idah,FWMF,Norwich City,20,0,0,0,7,10,10,13,3,6,0,0,0,29,16,27,37.2,291e3ec3
+Kelechi Iheanacho,FW,Leicester City,24,1,0,0,17,11,7,6,4,7,0,0,0,42,16,38,29.6,c92e1a31
+Danny Ings,FW,Aston Villa,29,4,0,0,16,12,11,13,6,16,0,0,0,47,27,40,40.3,07802f7f
+Tim Iroegbunam,MF,Aston Villa,18,1,0,0,2,0,0,0,2,4,0,0,0,9,3,0,100.0,84c5ceea
+Alex Iwobi,MFDF,Everton,25,1,0,0,16,6,3,32,20,19,0,1,0,130,9,21,30.0,6ca5ec4b
+Daniel James,FW,Manchester Utd,23,0,0,0,1,0,2,5,0,1,0,0,0,4,1,1,50.0,c931d9f9
+Daniel James,FWMF,Leeds United,23,7,1,0,30,38,13,60,8,14,1,0,0,82,13,53,19.7,c931d9f9
+Reece James,DF,Chelsea,21,4,1,0,20,31,4,108,17,25,0,1,1,99,17,21,44.7,1265a93a
+Vitaly Janelt,MF,Brentford,23,3,0,0,26,25,3,40,28,32,0,0,0,143,33,25,56.9,8449d35e
+Pontus Jansson,DF,Brentford,30,7,0,0,15,8,5,1,52,21,1,0,0,166,102,81,55.7,172e52d8
+Mathias Jensen,MF,Brentford,25,0,0,0,19,6,3,79,22,18,0,0,0,100,7,16,30.4,0f134faf
+Gabriel Jesus,FW,Manchester City,24,1,0,0,26,26,10,24,15,12,2,0,0,76,21,36,36.8,b66315ae
+Raúl Jiménez,FW,Wolves,30,9,2,2,43,48,23,10,13,14,0,0,0,88,63,85,42.6,b561db50
+João Pedro,FWMF,Watford,19,1,0,0,13,30,6,24,15,14,0,0,0,78,55,90,37.9,e8832875
+Joelinton,MFFW,Newcastle Utd,24,8,0,0,64,33,3,22,34,38,0,0,0,181,99,97,50.5,c17bfb65
+Ben Johnson,DF,West Ham,21,1,0,0,10,4,0,55,22,16,0,0,0,78,15,19,44.1,9319781b
+Curtis Jones,MF,Liverpool,20,0,0,0,11,19,1,6,6,9,0,0,0,54,7,7,50.0,4fb9c88f
+Phil Jones,DF,Manchester Utd,29,0,0,0,0,2,0,0,3,5,0,0,0,9,2,0,100.0,def899bd
+Jorginho,MF,Chelsea,29,5,0,0,30,38,0,3,36,33,0,0,0,208,13,26,33.3,45db685d
+Diogo Jota,FW,Liverpool,24,3,0,0,41,40,5,21,6,18,2,0,0,100,37,83,30.8,178ae8f8
+James Justin,DF,Leicester City,23,0,0,0,7,12,1,15,17,13,0,0,0,62,13,16,44.8,fb614c44
+Mathias Jørgensen,DF,Brentford,31,2,0,0,10,1,0,7,10,4,0,0,0,20,10,9,52.6,0db5d2c8
+Ozan Kabak,DF,Norwich City,21,2,0,0,10,10,1,1,16,5,0,2,0,50,22,27,44.9,2d61d13a
+Christian Kabasele,DF,Watford,30,0,0,0,5,3,0,1,14,5,0,0,0,58,47,12,79.7,914ab9a1
+Samuel Kalu,FW,Watford,23,0,0,0,0,4,3,8,3,2,0,0,0,9,0,3,0.0,b8d22478
+Hassane Kamara,DF,Watford,27,5,1,1,24,16,0,23,69,34,0,1,0,153,30,15,66.7,19a12bed
+Harry Kane,FW,Tottenham,28,5,0,0,42,54,16,42,3,5,0,0,0,92,75,81,48.1,21a66f6a
+N'Golo Kanté,MF,Chelsea,30,2,0,0,22,11,0,11,31,31,0,0,0,153,14,14,50.0,b9fbae28
+Edo Kayembe,MF,Watford,23,0,0,0,4,5,1,8,9,13,0,0,0,77,13,19,40.6,f99b71de
+Moise Kean,FW,Everton,21,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,,3d50bcdb
+Michael Keane,DF,Everton,28,4,1,1,16,7,1,1,62,25,0,0,2,149,96,59,61.9,c5b7c315
+Naby Keïta,MF,Liverpool,26,3,0,0,21,9,0,8,14,23,0,0,0,68,6,15,28.6,f25c8e3a
+Caoimhín Kelleher,GK,Liverpool,22,0,0,0,0,1,0,0,0,1,0,0,0,4,1,0,100.0,62d7ef38
+Kenedy,DF,Chelsea,25,0,0,0,0,0,0,1,0,2,0,0,0,8,0,1,0.0,5eebbfdf
+Jonjoe Kenny,DF,Everton,24,3,1,1,9,6,1,23,20,7,0,0,0,58,9,11,45.0,099e666f
+Max Kilman,DF,Wolves,24,3,0,0,17,11,0,2,45,26,0,1,0,155,66,39,62.9,d0f72bf1
+Joshua King,FW,Watford,29,5,0,0,43,21,8,13,8,15,1,0,0,83,100,119,45.7,43458538
+Kristoffer Klaesson,GK,Leeds United,20,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,100.0,3f70db80
+Mateusz Klich,MF,Leeds United,31,5,0,0,40,15,2,30,11,25,0,1,0,171,7,13,35.0,282679b4
+Robin Koch,MFDF,Leeds United,25,3,0,0,22,10,0,4,20,13,0,0,0,104,45,44,50.6,ea6bc03a
+Sead Kolašinac,DF,Arsenal,28,1,0,0,2,0,0,0,4,0,0,0,0,2,0,0,,3935e52e
+Ibrahima Konaté,DF,Liverpool,22,2,0,0,10,3,0,0,16,10,0,0,0,64,34,19,64.2,5ed9b537
+Ezri Konsa,DF,Aston Villa,23,6,2,1,18,36,1,1,15,15,0,1,0,105,58,42,58.0,0313a347
+Cheikhou Kouyaté,MF,Crystal Palace,31,3,0,0,30,21,0,4,38,38,0,0,0,136,50,29,63.3,8d3c902d
+Mateo Kovačić,MF,Chelsea,27,4,0,0,24,20,0,6,7,31,0,0,0,111,5,5,50.0,79c0821a
+Emil Krafth,DF,Newcastle Utd,26,5,0,0,22,11,0,21,25,16,0,0,0,94,22,29,43.1,77cf6852
+Alex Král,MF,West Ham,23,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,50.0,e717705a
+Tim Krul,GK,Norwich City,33,1,0,0,0,0,0,0,0,1,0,0,1,19,7,3,70.0,f23f9d20
+Juraj Kucka,MF,Watford,34,5,1,1,46,49,2,16,27,39,0,1,1,158,56,47,54.4,5aaef9ef
+Dejan Kulusevski,MFFW,Tottenham,21,3,0,0,20,15,4,25,13,13,0,0,0,75,3,8,27.3,df3cda47
+Alexandre Lacazette,FW,Arsenal,30,0,0,0,32,29,6,7,5,10,4,0,0,52,21,47,30.9,9dbb75ca
+Adam Lallana,MF,Brighton,33,4,0,0,11,17,0,3,16,17,0,0,0,126,15,8,65.2,99813635
+Tariq Lamptey,DFFW,Brighton,20,4,0,0,27,50,3,93,21,25,0,0,0,100,7,27,20.6,f4e433d4
+Manuel Lanzini,MFFW,West Ham,28,2,0,0,11,18,1,28,19,15,0,0,0,124,5,17,22.7,26f6dca8
+Aymeric Laporte,DF,Manchester City,27,5,1,0,14,10,2,5,20,15,1,0,0,182,52,32,61.9,119b9a8e
+Jamaal Lascelles,DF,Newcastle Utd,27,5,0,0,17,4,0,0,22,7,0,3,2,86,89,31,74.2,450ab6fc
+Pierre Lees-Melou,MF,Norwich City,28,5,0,0,35,23,2,33,25,36,1,0,0,181,14,15,48.3,f5044e54
+Aaron Lennon,MFFW,Burnley,34,2,0,0,19,20,4,40,9,17,0,1,0,73,7,21,25.0,2ff964a0
+Bernd Leno,GK,Arsenal,29,0,0,0,0,0,0,0,0,1,0,0,0,2,3,1,75.0,2628fd2b
+Jamal Lewis,DF,Newcastle Utd,23,1,0,0,2,2,0,3,3,6,0,0,0,13,1,4,20.0,efb9215a
+Victor Lindelöf,DF,Manchester Utd,27,4,0,0,19,6,2,0,25,11,0,0,0,161,52,33,61.2,f5deef4c
+Jesse Lingard,FWMF,Manchester Utd,28,1,0,0,5,4,1,8,0,7,0,0,0,19,0,1,0.0,810e3c74
+Valentino Livramento,DF,Southampton,18,2,0,0,12,36,1,62,47,28,1,0,0,176,24,25,49.0,afed6722
+Diego Llorente,DF,Leeds United,27,7,0,0,23,21,0,2,40,31,0,0,0,171,49,64,43.4,bba30585
+Hugo Lloris,GK,Tottenham,34,2,0,0,0,2,0,0,1,1,0,0,0,28,12,2,85.7,8f62b6ee
+Giovani Lo Celso,MFFW,Tottenham,25,0,0,0,2,6,1,10,1,4,0,0,0,11,0,3,0.0,d7553721
+Jürgen Locadia,MFFW,Brighton,27,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,,6cc47ae1
+Ruben Loftus-Cheek,MFDF,Chelsea,25,1,0,0,18,41,2,7,11,10,0,0,0,109,36,18,66.7,e97fd090
+Kevin Long,DF,Burnley,30,1,0,0,4,3,1,0,1,2,0,0,0,11,12,7,63.2,5a4280b1
+Shane Long,FW,Southampton,34,1,0,0,9,8,3,1,0,5,0,0,0,9,24,19,55.8,9f472354
+Sean Longstaff,MF,Newcastle Utd,23,1,0,0,14,17,0,11,9,34,0,0,0,95,13,18,41.9,a2b105e0
+Ademola Lookman,FWMF,Leicester City,23,2,0,0,27,33,6,18,10,14,0,0,0,102,3,11,21.4,7c104bb7
+Jonas Lössl,GK,Brentford,32,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,,939bc634
+Imran Louza,MF,Watford,22,6,0,0,24,13,0,54,42,21,0,0,0,129,12,19,38.7,e1df6989
+Matthew Lowton,DF,Burnley,32,3,1,0,13,6,0,51,26,24,0,0,0,118,25,16,61.0,9a9c05db
+Douglas Luiz,MF,Aston Villa,23,7,0,0,37,41,0,83,34,39,0,0,0,183,26,32,44.8,6f7d826d
+Romelu Lukaku,FW,Chelsea,28,1,0,0,8,12,14,7,0,1,3,0,0,33,51,47,52.0,5eae500a
+Lyanco,DF,Southampton,24,2,0,0,13,7,0,4,13,15,0,0,0,73,19,14,57.6,b5bf1770
+Alexis Mac Allister,MFFW,Brighton,22,4,0,0,30,39,4,66,13,40,0,0,0,149,24,23,51.1,83d074ff
+James Maddison,MFFW,Leicester City,24,3,0,0,22,64,4,124,11,20,1,0,0,107,5,12,29.4,ee38d9c5
+Harry Maguire,DF,Manchester Utd,28,9,1,1,21,19,1,2,32,21,0,0,1,148,75,28,72.8,d8931174
+Riyad Mahrez,FW,Manchester City,30,0,0,0,10,15,3,97,6,3,0,0,0,70,8,14,36.4,892d5bb1
+Ainsley Maitland-Niles,MF,Arsenal,23,0,0,0,4,3,0,2,4,4,0,0,0,23,3,3,50.0,e3a5814e
+Sadio Mané,FW,Liverpool,29,5,0,0,50,50,19,50,8,20,1,0,0,109,30,50,37.5,c691bfe2
+Javier Manquillo,DF,Newcastle Utd,27,5,0,0,9,17,1,9,10,29,0,0,0,57,16,13,55.2,758dd7f0
+Fernando Marçal,MFDF,Wolves,32,3,0,0,29,9,1,60,28,22,0,1,0,94,26,18,59.1,9ae9eaea
+Solly March,DFFW,Brighton,27,1,0,0,31,20,12,94,17,17,0,0,0,92,17,26,39.5,bb5fbd2b
+Pablo Marí,DF,Arsenal,27,1,0,0,1,1,0,0,3,3,0,0,0,10,5,3,62.5,aa54ec6f
+Anthony Martial,FW,Manchester Utd,25,0,0,0,0,4,2,4,0,0,0,0,0,5,4,4,50.0,8b788c01
+Martinelli,FWMF,Arsenal,20,3,1,1,24,20,10,74,20,19,0,0,0,86,18,44,29.0,48a5a5d6
+Emiliano Martínez,GK,Aston Villa,28,4,0,0,0,6,0,0,0,1,0,0,0,32,8,1,88.9,7956236f
+Adam Masina,DF,Watford,27,0,0,0,14,4,0,30,18,13,0,1,0,70,29,17,63.0,de0f152c
+Arthur Masuaku,DFFW,West Ham,27,1,0,0,8,4,0,23,9,23,0,0,0,50,16,6,72.7,57df7a11
+Juan Mata,MF,Manchester Utd,33,0,0,0,2,4,2,6,1,4,0,0,0,22,0,0,,29733c72
+Jean-Philippe Mateta,FW,Crystal Palace,24,2,0,0,16,7,13,6,4,4,0,0,0,30,39,43,47.6,50e6dc35
+Nemanja Matić,MF,Manchester Utd,32,3,0,0,26,3,0,6,31,18,0,0,0,124,28,17,62.2,eb7822d7
+Joël Matip,DF,Liverpool,29,2,0,0,13,11,0,1,44,34,0,0,0,185,108,50,68.4,b217ef29
+Neal Maupay,FW,Brighton,24,7,0,0,33,31,6,8,2,10,0,0,0,76,21,56,27.3,4bcf39f6
+Bryan Mbeumo,FW,Brentford,21,4,0,0,20,38,13,75,11,16,0,0,0,130,29,103,22.0,6afaebf2
+James McArthur,MF,Crystal Palace,33,4,0,0,24,20,3,18,30,23,0,0,0,135,22,31,41.5,cee31595
+James Mcatee,MFFW,Manchester City,18,0,0,0,1,0,0,0,0,0,0,0,0,1,1,0,100.0,96593e89
+Kasey McAteer,FW,Leicester City,19,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,,b2c66859
+Liam McCarron,FW,Leeds United,20,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,,076bb352
+Alex McCarthy,GK,Southampton,31,1,0,0,0,1,0,0,0,0,0,0,0,9,6,0,100.0,36c2ca73
+John McGinn,MF,Aston Villa,26,8,0,0,57,81,0,110,35,64,0,0,0,200,22,17,56.4,90f91999
+Stuart McKinstry,MF,Leeds United,18,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,,1000a059
+Kenny McLean,MF,Norwich City,29,3,0,0,16,38,3,37,34,22,0,1,0,149,68,72,48.6,471f16b3
+Dwight McNeil,MF,Burnley,21,1,0,0,16,36,1,199,35,49,0,0,0,223,13,16,44.8,fc15fb84
+Scott McTominay,MF,Manchester Utd,24,9,0,0,55,33,1,13,31,33,0,1,0,171,67,34,66.3,d93c2511
+Ben Mee,DF,Burnley,31,3,0,0,9,7,2,4,24,12,0,0,1,132,68,41,62.4,8df7a2fb
+Hannibal Mejbri,FW,Manchester Utd,18,2,0,0,3,0,1,0,0,1,0,0,0,1,0,1,0.0,ca22ccb0
+Benjamin Mendy,DF,Manchester City,27,0,0,0,2,0,0,9,0,2,0,0,0,5,0,3,0.0,5271c8f1
+Edouard Mendy,GK,Chelsea,29,3,0,0,1,3,0,0,0,0,0,1,0,42,11,1,91.7,33887998
+Nampalys Mendy,MF,Leicester City,29,3,0,0,17,18,0,0,11,6,0,0,0,72,5,9,35.7,1598599e
+Illan Meslier,GK,Leeds United,21,2,0,0,0,8,0,0,0,1,0,0,0,25,13,2,86.7,6b625ac2
+Luka Milivojević,MF,Crystal Palace,30,1,0,0,15,10,0,43,11,9,0,1,1,58,13,6,68.4,2ce2508a
+James Milner,MFDF,Liverpool,35,2,0,0,17,14,0,43,17,16,0,0,0,72,13,10,56.5,2f90f6b8
+Yerry Mina,DF,Everton,26,3,0,0,5,9,1,3,11,10,0,0,0,45,30,16,65.2,6d5701f2
+Takumi Minamino,FWMF,Liverpool,26,1,0,0,4,4,0,0,1,2,0,0,0,13,1,5,16.7,f833a830
+Tyrone Mings,DF,Aston Villa,28,11,0,0,27,24,1,4,46,12,0,1,0,191,81,47,63.3,8397a50c
+Tyrick Mitchell,DF,Crystal Palace,21,1,0,0,15,14,2,62,41,57,1,0,0,237,29,32,47.5,5cbd1eb0
+Jakub Moder,MF,Brighton,22,1,0,0,19,11,0,45,10,25,0,0,0,107,25,37,40.3,f230bc30
+Wesley Moraes,FW,Aston Villa,24,0,0,0,1,0,0,0,0,0,0,0,0,0,1,2,33.3,bfae110f
+Tyler Morton,MF,Liverpool,18,1,0,0,1,0,0,0,3,0,0,0,0,5,2,3,40.0,2bc28bb9
+Mason Mount,MF,Chelsea,22,4,0,0,30,23,5,153,13,16,0,0,0,107,6,31,16.2,9674002f
+Lucas Moura,FWMF,Tottenham,28,4,0,0,20,37,3,33,18,10,0,0,0,95,48,32,60.0,2b622f01
+João Moutinho,MF,Wolves,34,4,0,0,36,15,0,108,34,39,0,1,0,254,15,23,39.5,f5a00fa4
+Bali Mumba,DF,Norwich City,19,0,0,0,0,0,0,0,0,1,0,0,0,2,0,1,0.0,2d760d7b
+Jacob Murphy,FWDF,Newcastle Utd,26,4,0,0,16,14,2,54,23,26,0,1,0,98,14,33,29.8,de112b84
+Enock Mwepu,MF,Brighton,23,2,0,0,18,15,2,7,12,12,1,1,0,70,9,29,23.7,1d5cab82
+Vitaliy Mykolenko,DF,Everton,22,0,0,0,13,9,0,41,16,15,1,0,0,64,10,12,45.5,30d4a2e5
+Marvelous Nakamba,MF,Aston Villa,27,5,0,0,16,9,0,1,12,19,0,0,0,82,10,12,45.5,de5b5570
+Wilfred Ndidi,MFDF,Leicester City,24,4,0,0,30,22,1,1,42,32,0,2,0,165,42,32,56.8,6b47c5db
+Tanguy Ndombele,MF,Tottenham,24,1,0,0,3,9,0,3,1,7,0,0,0,27,2,1,66.7,5cdddffa
+Reiss Nelson,FW,Arsenal,21,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,,c5bdb6e3
+Pedro Neto,FWMF,Wolves,21,3,0,0,2,6,1,37,6,4,0,0,0,21,3,6,33.3,7ba2eaa9
+Rúben Neves,MF,Wolves,24,9,0,0,25,12,1,44,41,37,0,0,0,243,19,26,42.2,44bfb6c5
+Jeremy Ngakia,DF,Watford,20,0,0,0,10,6,0,25,12,18,0,0,0,56,16,18,47.1,3631ad41
+Saúl Ñíguez,DFMF,Chelsea,26,1,0,0,9,0,0,10,7,9,0,0,0,18,8,11,42.1,c14bc029
+Eddie Nketiah,FW,Arsenal,22,3,0,0,17,14,5,4,4,4,0,0,0,27,8,33,19.5,a53649b7
+Nicolas Nkoulou,DF,Watford,31,0,0,0,1,0,0,0,2,0,0,0,0,9,2,0,100.0,93cf32a8
+Mark Noble,MF,West Ham,34,0,0,0,3,4,0,2,4,2,0,0,0,38,1,1,50.0,ff527768
+Mathias Normann,MF,Norwich City,25,6,0,0,37,28,1,34,19,21,0,1,0,106,27,15,64.3,8996350d
+Christian Nørgaard,MF,Brentford,27,8,0,0,56,33,0,13,64,60,0,0,0,270,50,68,42.4,df0a4c90
+Angelo Ogbonna,DF,West Ham,33,1,0,0,5,3,0,0,11,4,0,0,0,45,27,12,69.2,74b2cd7e
+Michael Olise,FWMF,Crystal Palace,19,4,0,0,16,27,1,96,6,18,0,0,0,66,7,17,29.2,c4486bac
+Robin Olsen,GK,Aston Villa,31,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,e7ee38c3
+Andrew Omobamidele,DF,Norwich City,19,1,0,0,3,5,0,0,5,6,0,0,0,29,5,10,33.3,c393a6c4
+Tyler Onyango,MF,Everton,18,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,33.3,d86a1f3e
+Frank Onyeka,MF,Brentford,23,4,0,0,33,25,0,12,14,17,1,0,0,69,15,21,41.7,2944f86f
+Divock Origi,FW,Liverpool,26,0,0,0,2,1,0,0,1,0,0,0,0,7,2,4,33.3,43a166b4
+Alex Oxlade-Chamberlain,MFFW,Liverpool,27,0,0,0,10,3,2,26,6,11,0,0,0,33,5,12,29.4,38c7feef
+Cole Palmer,FWMF,Manchester City,19,0,0,0,1,1,0,3,1,1,0,0,0,3,2,0,100.0,dc7f8a28
+Emerson Palmieri,DF,Chelsea,26,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,e0bc6fdc
+Thomas Partey,MF,Arsenal,28,6,0,0,33,17,0,3,23,29,0,0,0,153,23,25,47.9,529f49ab
+Nicolas Pépé,FWMF,Arsenal,26,0,0,0,8,3,4,37,8,5,0,0,0,43,18,31,36.7,57e3f0c7
+Ricardo Pereira,DF,Leicester City,27,3,0,0,6,16,0,14,17,20,0,0,0,64,15,14,51.7,75a72a99
+Ayoze Pérez,MFFW,Leicester City,28,0,1,0,6,7,0,3,2,2,0,0,0,21,6,13,31.6,819aa8e7
+Sonny Perkins,FW,West Ham,17,0,0,0,0,0,0,0,0,0,,,0,,,,,87f12e30
+Romain Perraud,DF,Southampton,23,3,0,0,31,16,0,69,17,22,0,0,0,77,16,24,40.0,6dfd8f05
+Kalvin Phillips,MF,Leeds United,25,4,0,0,33,19,0,16,24,25,0,0,0,180,17,29,37.0,4f565d77
+Jaden Philogene Bidace,FW,Aston Villa,19,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,,19f4d211
+Jordan Pickford,GK,Everton,27,2,0,0,0,6,0,0,1,1,0,0,0,18,10,1,90.9,4806ec67
+Erik Pieters,DF,Burnley,32,1,0,0,14,5,0,14,10,15,0,0,0,53,12,7,63.2,1ef37668
+Ethan Pinnock,DF,Brentford,28,1,0,0,9,14,1,21,44,35,0,0,0,141,142,71,66.7,e541326e
+Daniel Podence,FWMF,Wolves,25,2,0,0,8,25,3,50,10,11,0,0,0,79,2,17,10.5,7fcc71d8
+Paul Pogba,MFFW,Manchester Utd,28,7,1,0,39,29,0,12,13,9,0,0,0,98,35,20,63.6,867239d3
+Nick Pope,GK,Burnley,29,1,0,0,0,4,0,0,2,0,0,0,0,50,18,0,100.0,4b40d9ca
+Isaac Price,MF,Everton,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,b9403c99
+Teemu Pukki,FW,Norwich City,31,4,0,0,31,25,12,13,4,11,1,0,0,76,15,73,17.0,0745b37d
+Christian Pulisic,MFFW,Chelsea,22,2,0,0,15,31,4,14,5,7,0,0,0,53,12,28,30.0,1bf33a9a
+Przemysław Płacheta,FWMF,Norwich City,23,1,0,0,1,6,0,23,2,3,0,0,0,25,1,8,11.1,3c33f9d9
+Jesuran Rak Sakyi,FWMF,Crystal Palace,18,0,0,0,1,3,0,2,1,0,0,0,0,6,0,1,0.0,45685411
+Aaron Ramsdale,GK,Arsenal,23,1,0,0,0,5,0,0,0,1,0,0,0,40,6,2,75.0,466fb2c5
+Jacob Ramsey,MF,Aston Villa,20,6,0,0,32,44,1,26,24,44,0,0,0,126,16,34,32.0,1544f145
+Raphinha,FWMF,Leeds United,24,7,0,0,40,47,14,162,29,29,1,1,0,166,22,31,41.5,3423f250
+Marcus Rashford,FWMF,Manchester Utd,23,2,0,0,13,18,15,22,5,5,0,0,0,44,10,27,27.0,a1d5bd30
+Milot Rashica,FWMF,Norwich City,25,0,0,0,23,47,13,128,15,19,0,0,0,110,12,28,30.0,6c6a3300
+David Raya,GK,Brentford,25,1,0,0,1,2,0,0,0,0,0,1,0,29,9,2,81.8,98ea5115
+Nathan Redmond,MFFW,Southampton,27,0,0,0,16,15,3,60,8,14,0,0,0,102,13,32,28.9,ab651565
+Sergio Reguilón,DFMF,Tottenham,24,4,0,0,22,24,1,84,31,24,0,0,0,99,31,22,58.5,3353737a
+Declan Rice,MF,West Ham,22,8,0,0,28,11,0,30,63,42,0,0,0,286,42,27,60.9,1c7012b8
+Taylor Richards,MF,Brighton,20,0,0,0,1,1,0,0,0,0,0,0,0,3,1,0,100.0,e0243d23
+Richarlison,FW,Everton,24,9,0,0,36,68,21,38,12,23,1,0,0,114,66,155,29.9,fa031b34
+Jaïro Riedewald,MF,Crystal Palace,24,0,0,0,1,0,0,2,1,1,0,0,0,10,0,2,0.0,7a1f2c08
+Matt Ritchie,DF,Newcastle Utd,31,5,0,0,13,9,0,104,13,15,0,0,0,70,14,17,45.2,71ef519e
+Connor Roberts,DF,Burnley,25,2,0,0,7,29,1,29,22,13,0,0,0,82,13,17,43.3,24fae784
+Tyler Roberts,MFFW,Leeds United,22,5,0,0,14,20,3,14,5,7,0,0,0,47,8,23,25.8,6c17e046
+Andrew Robertson,DF,Liverpool,27,5,1,0,19,9,4,195,23,21,0,0,0,180,26,14,65.0,2e4f5f03
+Joe Rodon,DF,Tottenham,23,0,0,0,0,1,0,0,0,0,0,0,0,3,2,2,50.0,8d62d31a
+Rodri,MF,Manchester City,25,5,0,0,43,20,0,9,28,43,0,0,0,292,85,33,72.0,6434f10d
+Rodrigo,MFFW,Leeds United,30,9,0,0,21,30,4,29,11,9,0,0,0,103,17,48,26.2,1fb1c435
+Jay Rodriguez,FW,Burnley,32,3,0,0,31,16,17,7,4,12,0,0,0,37,55,67,45.1,4ab53cdb
+Mads Roerslev,DF,Brentford,22,1,0,0,18,8,2,35,16,12,0,1,0,54,12,25,32.4,57c94db2
+Cristian Romero,DF,Tottenham,23,8,0,0,28,15,2,0,33,39,0,1,0,148,43,30,58.9,a3d94a58
+Oriol Romeu,MF,Southampton,29,9,0,0,46,24,0,13,51,39,0,0,0,259,67,47,58.8,4b511457
+Cristiano Ronaldo,FW,Manchester Utd,36,8,0,0,16,18,33,15,2,6,2,0,0,52,42,68,38.2,dea698d9
+Salomón Rondón,FW,Everton,31,3,1,0,12,4,5,6,0,1,0,0,0,20,38,56,40.4,b318a643
+Danny Rose,DF,Watford,31,4,0,0,10,14,1,24,14,10,0,1,0,41,4,7,36.4,89d10e53
+Jon Rowe,FWMF,Norwich City,18,0,0,0,3,7,1,4,3,2,0,0,0,13,1,8,11.1,8c12f884
+John Ruddy,GK,Wolves,34,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,100.0,da8b19e2
+Antonio Rüdiger,DF,Chelsea,28,9,0,0,35,12,0,15,28,28,2,0,0,183,56,20,73.7,18b896d6
+Lukas Rupp,MF,Norwich City,30,0,0,0,7,8,0,3,9,4,0,0,0,55,5,10,33.3,3faa1780
+José Sá,GK,Wolves,28,3,0,0,3,12,0,0,2,1,0,3,1,57,12,0,100.0,903b6e8b
+Allan Saint-Maximin,FWMF,Newcastle Utd,24,6,0,0,22,48,13,60,11,8,0,0,0,110,18,18,50.0,2b16cb1a
+Romain Saïss,DF,Wolves,31,6,0,0,30,15,3,9,58,27,0,2,0,157,72,50,59.0,9fbbcf39
+Bukayo Saka,FWMF,Arsenal,19,6,0,0,39,59,17,110,22,21,2,0,0,141,23,43,34.8,bc7dc64d
+Mohamed Salah,FW,Liverpool,29,1,0,0,12,23,12,41,6,8,2,0,0,86,7,33,17.5,e342ad68
+Mohammed Salisu,DF,Southampton,22,10,1,1,38,7,2,13,78,47,0,1,1,244,101,60,62.7,0b33f6ad
+Albert Sambi Lokonga,MF,Arsenal,21,5,0,0,12,15,0,2,13,18,0,0,0,72,15,20,42.9,1b4f1169
+Davinson Sánchez,DF,Tottenham,25,4,0,0,16,11,1,2,30,22,0,0,0,103,45,36,55.6,da7b447d
+Robert Sánchez,GK,Brighton,23,3,1,0,1,2,0,0,0,1,0,0,0,61,17,0,100.0,6a713852
+Jadon Sancho,FWMF,Manchester Utd,21,0,0,0,4,7,7,28,15,8,0,0,0,112,2,11,15.4,dbf053da
+Morgan Sanson,MF,Aston Villa,26,0,0,0,3,13,0,8,10,8,0,0,0,33,3,6,33.3,6e7f1353
+Samir Santos,DF,Watford,26,4,0,0,17,16,0,0,43,11,0,0,0,103,47,34,58.0,92b4758e
+Josh Sargent,FWMF,Norwich City,21,1,0,0,9,23,4,11,11,14,0,0,0,70,40,48,45.5,a8d4428b
+Jeremy Sarmiento,FWMF,Brighton,19,0,0,0,0,2,0,0,0,1,0,0,0,3,1,2,33.3,ac0d576d
+Ismaila Sarr,FWMF,Watford,23,2,0,0,17,47,12,61,9,7,0,0,0,88,10,17,37.0,bfdb33aa
+Malang Sarr,DF,Chelsea,22,2,0,0,8,1,0,4,11,7,0,0,0,36,13,7,65.0,4315f30d
+Dane Scarlett,MF,Tottenham,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,21945a9e
+Fabian Schär,DF,Newcastle Utd,29,4,0,0,24,11,3,7,32,11,0,0,0,131,45,42,51.7,c8aa95da
+Jeffrey Schlupp,MFFW,Crystal Palace,28,1,0,0,26,22,0,20,18,25,1,0,0,115,31,39,44.3,3312f911
+Kasper Schmeichel,GK,Leicester City,34,2,0,0,0,2,0,0,1,0,0,0,0,45,9,4,69.2,53af52f3
+Ken Sema,MFFW,Watford,27,1,0,0,15,7,0,31,5,6,0,0,0,53,12,23,34.3,1770bd68
+Nélson Semedo,MFDF,Wolves,27,1,0,0,23,24,4,32,21,39,0,1,0,155,15,27,35.7,d04b94db
+Ryan Sessegnon,DFMF,Tottenham,21,2,0,0,19,7,5,38,7,19,0,0,0,40,11,15,42.3,6aa3e78b
+Jamie Shackleton,DFMF,Leeds United,21,4,0,0,13,6,0,4,8,16,0,0,0,50,5,15,25.0,8d03ca5a
+Luke Shaw,DF,Manchester Utd,26,8,0,0,32,16,3,109,9,13,0,1,0,95,20,15,57.1,9c94165b
+Jonjo Shelvey,MF,Newcastle Utd,29,7,1,1,18,8,0,43,22,17,0,0,0,160,10,10,50.0,3727dd3c
+Shola Shoretire,MF,Manchester Utd,17,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,,00f0482f
+Francisco Sierralta,DF,Watford,24,0,0,0,4,3,0,0,6,3,0,0,1,17,15,1,93.8,0f933743
+Bernardo Silva,MFFW,Manchester City,26,6,0,0,30,33,9,58,20,29,1,0,0,156,7,15,31.8,3eb22ec9
+Fábio Silva,FW,Wolves,19,0,0,0,13,7,4,2,1,2,0,0,0,18,9,27,25.0,e7aa9d7c
+Thiago Silva,DF,Chelsea,36,2,0,0,12,12,1,2,44,21,1,0,0,214,56,31,64.4,86e7deaf
+Ellis Simms,FW,Everton,20,0,0,0,0,0,0,0,0,0,0,0,0,1,2,4,33.3,26d3b5be
+Moussa Sissoko,MF,Watford,31,5,0,0,35,11,2,26,30,27,0,0,0,241,64,52,55.2,2acd49b9
+Oliver Skipp,MF,Tottenham,20,6,0,0,16,16,1,6,12,19,0,0,0,77,12,10,54.5,6250083a
+William Smallbone,MFFW,Southampton,21,0,0,0,2,1,0,4,2,4,0,0,0,12,1,3,25.0,5e105217
+Emile Smith Rowe,MFFW,Arsenal,21,1,0,0,5,21,2,45,15,7,0,0,0,105,7,18,28.0,17695062
+Cédric Soares,DF,Arsenal,29,3,0,0,15,6,3,100,16,26,0,1,0,79,12,27,30.8,839c14e1
+Tomáš Souček,MF,West Ham,26,3,0,0,39,18,4,13,52,32,0,0,0,176,133,141,48.5,6613c819
+Boubakary Soumaré,MF,Leicester City,22,0,0,0,16,17,0,4,14,13,0,0,0,62,27,11,71.1,ae59b359
+Çağlar Söyüncü,DF,Leicester City,25,5,0,0,24,14,1,5,32,30,0,2,0,164,92,48,65.7,21166ff4
+Tony Springett,MFFW,Norwich City,18,1,0,0,1,4,0,2,0,1,0,0,0,6,1,6,14.3,35be8087
+Jason Steele,GK,Brighton,30,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,100.0,28300a16
+Jed Steer,GK,Aston Villa,28,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,,a8a3d139
+Zack Steffen,GK,Manchester City,26,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,,42130443
+Dale Stephens,MF,Burnley,32,1,0,0,5,0,0,0,1,1,0,0,0,7,0,2,0.0,653ee42d
+Jack Stephens,DF,Southampton,27,3,0,0,8,2,0,0,19,12,0,0,0,68,13,12,52.0,6adbc307
+Raheem Sterling,FW,Manchester City,26,1,0,0,19,37,10,50,12,10,2,0,0,86,4,18,18.2,b400bde0
+Finley Stevens,DF,Brentford,18,0,0,0,0,0,0,1,0,1,0,0,0,0,1,0,100.0,7e003182
+John Stones,DF,Manchester City,27,0,0,0,3,6,0,3,11,3,0,0,0,52,47,10,82.5,5eecec3d
+Pascal Struijk,DFMF,Leeds United,21,6,1,0,25,8,1,0,33,39,0,0,0,161,40,39,50.6,f4d296e4
+Crysencio Summerville,MFFW,Leeds United,19,0,0,0,1,1,0,3,2,3,0,0,0,11,0,6,0.0,df04eb4b
+Jakob Sørensen,MFDF,Norwich City,23,0,0,0,7,1,0,2,10,11,0,1,0,48,11,9,55.0,953c30b0
+Japhet Tanganga,DF,Tottenham,22,4,1,1,19,8,1,11,9,8,0,0,0,24,15,9,62.5,e9971f2d
+Matt Targett,DF,Aston Villa,25,2,0,0,15,11,0,59,23,18,0,1,1,73,32,14,69.6,e514ab62
+Matt Targett,DF,Newcastle Utd,25,1,0,0,9,12,1,76,25,26,0,0,0,72,19,12,61.3,e514ab62
+James Tarkowski,DF,Burnley,28,11,0,0,30,19,2,1,48,45,0,0,1,171,153,62,71.2,15ea812b
+Nuno Tavares,DF,Arsenal,21,2,0,0,23,13,1,40,9,14,0,1,0,68,23,22,51.1,a65c844b
+Charlie Taylor,DF,Burnley,27,3,0,0,17,43,0,104,58,26,0,0,0,183,58,30,65.9,cc2d7ad5
+Nathan Tella,MFFW,Southampton,22,2,0,0,17,22,3,12,6,9,0,0,0,54,6,18,25.0,f1e94cd6
+Alex Telles,DF,Manchester Utd,28,1,0,0,23,9,1,127,26,27,0,2,0,99,30,24,55.6,e73c9bb2
+Luke Thomas,DF,Leicester City,20,2,0,0,15,16,0,33,40,31,0,0,0,97,24,32,42.9,fc027d02
+Dominic Thompson,DF,Brentford,21,0,0,0,1,0,0,2,2,0,0,0,0,5,1,2,33.3,235a62f8
+Youri Tielemans,MF,Leicester City,24,3,0,0,32,36,0,56,21,38,0,4,0,188,24,19,55.8,56f7a928
+Kieran Tierney,DF,Arsenal,24,0,0,0,5,16,1,79,15,14,0,0,0,85,12,23,34.3,fce2302c
+Takehiro Tomiyasu,DF,Arsenal,22,2,0,0,16,13,0,31,24,17,0,0,0,89,48,39,55.2,b3af9be1
+James Tomkins,DF,Crystal Palace,32,2,0,0,7,2,0,0,4,3,0,0,0,33,10,5,66.7,e7ca0439
+Ivan Toney,FW,Brentford,25,8,0,0,50,80,25,28,14,21,3,0,0,105,147,114,56.3,e09f279b
+Ferrán Torres,FW,Manchester City,21,0,0,0,1,1,1,4,0,2,0,0,0,6,4,1,80.0,9e1035f8
+Cenk Tosun,MF,Everton,30,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0.0,9a104dee
+Andros Townsend,MFFW,Everton,30,3,0,0,10,39,1,96,14,17,0,1,0,80,7,18,28.0,b28bbd58
+Adama Traoré,FWMF,Wolves,25,0,0,0,10,26,9,39,2,3,0,0,0,49,15,16,48.4,9a28eba4
+Bertrand Traoré,MFFW,Aston Villa,25,0,0,0,0,4,2,5,0,3,1,0,0,11,4,4,50.0,c47541e0
+Trézéguet,FW,Aston Villa,26,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,3ae14ed1
+Francisco Trincão,FWMF,Wolves,21,0,0,0,13,22,1,33,12,15,0,0,0,73,6,16,27.3,77e39b04
+Kieran Trippier,DF,Newcastle Utd,30,0,0,0,3,3,0,28,10,10,0,0,0,31,10,5,66.7,21512407
+William Troost-Ekong,DF,Watford,27,3,0,0,13,2,1,0,7,9,0,1,0,74,24,23,51.1,7ed4921e
+Leandro Trossard,FWMF,Brighton,26,2,0,0,24,26,13,51,15,20,1,1,0,142,9,20,31.0,38ceb24a
+Kostas Tsimikas,DF,Liverpool,25,3,0,0,20,6,0,116,10,12,0,0,0,62,12,11,52.2,f315ca93
+Axel Tuanzebe,DF,Aston Villa,23,1,0,0,3,3,0,1,5,3,0,0,0,29,13,12,52.0,2baec6ce
+Ozan Tufan,MF,Watford,26,0,0,0,9,0,0,7,2,2,0,0,0,13,3,9,25.0,17d45fb2
+Christos Tzolis,FWMF,Norwich City,19,0,0,0,2,4,2,7,1,3,0,0,0,13,3,11,21.4,9f333379
+Yan Valery,DF,Southampton,22,0,0,0,3,3,0,4,6,6,0,0,0,27,11,9,55.0,531a4aa8
+Virgil van Dijk,DF,Liverpool,30,3,0,0,9,8,0,0,31,10,0,0,0,204,117,34,77.5,e06683ca
+Raphaël Varane,DF,Manchester Utd,28,0,0,0,5,7,0,1,18,19,0,0,0,78,55,20,73.3,9f8e9423
+Jamie Vardy,FW,Leicester City,34,2,0,0,13,12,19,12,1,5,0,0,1,25,24,50,32.4,45963054
+Joël Veltman,DF,Brighton,29,6,0,0,39,38,0,42,45,48,1,1,0,182,55,29,65.5,dad4b285
+Jannik Vestergaard,DF,Leicester City,28,2,0,0,4,1,0,0,7,10,0,1,0,32,13,10,56.5,1900032e
+Nikola Vlašić,FWMF,West Ham,23,0,0,0,8,16,3,15,2,7,0,0,0,30,5,7,41.7,aa8e289e
+Matěj Vydra,FW,Burnley,29,1,0,0,9,8,5,2,0,7,0,0,0,14,18,50,26.5,0d4ceb32
+Theo Walcott,MFFW,Southampton,32,0,0,0,1,6,2,5,5,2,0,0,0,12,4,4,50.0,1ecb65be
+Kyle Walker,DF,Manchester City,31,1,0,0,7,12,1,35,14,6,0,0,0,104,19,16,54.3,86dd77d1
+Kyle Walker-Peters,DF,Southampton,24,5,0,0,27,47,3,50,37,33,0,0,0,187,27,28,49.1,984a5a64
+Aaron Wan-Bissaka,DF,Manchester Utd,23,2,0,0,15,13,1,35,34,36,0,1,0,126,19,32,37.3,9e525177
+Danny Ward,GK,Leicester City,28,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,,d3ce0e89
+Joel Ward,DF,Crystal Palace,31,8,0,0,22,21,1,43,32,26,0,0,0,140,58,39,59.8,8a7ff278
+James Ward-Prowse,MF,Southampton,26,3,1,0,22,15,0,302,40,24,0,0,0,259,27,34,44.3,3515d404
+Ollie Watkins,FW,Aston Villa,25,7,0,0,33,39,16,15,12,13,1,0,0,66,65,95,40.6,aed3a70f
+Adam Webster,DF,Brighton,26,5,0,0,16,4,0,6,17,8,0,0,0,89,56,15,78.9,c40b6180
+Wout Weghorst,FW,Burnley,28,3,0,0,30,18,9,4,6,9,0,0,0,65,55,79,41.0,c4e87b8b
+Danny Welbeck,FWMF,Brighton,30,0,0,0,17,13,4,1,5,7,1,0,0,29,47,51,48.0,ce5143da
+Timo Werner,FWMF,Chelsea,25,1,0,0,11,12,11,23,2,4,0,0,0,37,6,16,27.3,49fe9070
+Ashley Westwood,MF,Burnley,31,7,0,0,29,22,0,122,30,12,0,1,0,174,9,13,40.9,495945ef
+Ben White,DF,Arsenal,23,3,0,0,19,27,0,0,42,23,0,1,1,158,60,40,60.0,35e413f1
+Brandon Williams,DF,Norwich City,20,8,0,0,23,44,0,14,44,37,0,0,0,158,14,17,45.2,5e74d6c8
+Neco Williams,DF,Liverpool,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0.0,dd323728
+Joe Willock,MF,Newcastle Utd,21,0,0,0,34,26,0,16,21,37,0,0,0,121,16,24,40.0,a3b03921
+Callum Wilson,FW,Newcastle Utd,29,4,0,0,27,22,17,3,3,8,0,0,0,28,29,50,36.7,c596fcb0
+Harry Winks,MF,Tottenham,25,2,0,0,11,13,0,26,16,10,0,0,0,47,4,4,50.0,2f7acede
+Yoane Wissa,FW,Brentford,24,0,0,0,8,22,7,11,8,6,0,0,0,58,20,31,39.2,2500cef9
+Chris Wood,FW,Burnley,29,1,0,0,14,7,16,5,0,5,0,0,0,23,92,91,50.3,4e9a0555
+Chris Wood,FW,Newcastle Utd,29,0,0,0,19,10,10,2,2,0,1,0,0,23,112,100,52.8,4e9a0555
+Freddie Woodman,GK,Newcastle Utd,24,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,,19e50035
+Granit Xhaka,MFDF,Arsenal,28,10,1,0,29,19,2,25,21,18,0,1,0,146,27,29,48.2,e61b8aee
+Andriy Yarmolenko,FWMF,West Ham,31,1,0,0,1,4,3,8,0,2,0,0,0,5,5,8,38.5,849c826a
+Ashley Young,DFFW,Aston Villa,36,2,0,0,16,32,1,44,13,6,0,0,1,66,6,15,28.6,be927d03
+Nathan Young-Coombes,MF,Brentford,18,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,,f9682888
+Wilfried Zaha,FW,Crystal Palace,28,6,1,1,37,101,24,48,5,20,1,0,0,166,12,35,25.5,b2bc3b1f
+Christoph Zimmermann,DF,Norwich City,28,0,0,0,1,2,0,0,1,3,0,0,0,11,2,0,100.0,2d5f03bf
+Oleksandr Zinchenko,DF,Manchester City,24,0,0,0,11,2,1,31,14,14,0,0,0,65,15,16,48.4,51cf8561
+Hakim Ziyech,MFFW,Chelsea,28,3,0,0,24,29,5,101,10,10,0,0,0,87,12,14,46.2,6622454d
+Kurt Zouma,DF,West Ham,26,1,0,0,11,6,0,1,34,6,0,0,1,92,50,31,61.7,ce4246f5
+Martin Ødegaard,MFFW,Arsenal,22,4,0,0,27,20,3,59,11,21,0,2,0,162,14,23,37.8,79300479

@@ -13,12 +13,22 @@ import pandas as pd
 import numpy as np
 
 #•IMPORT DU FICHIER
-data = pd.read_csv("bdd/data/data_premier_2021-2022.csv", sep= ";", index_col = 0)
+data = pd.read_csv("bdd/data/data_eng_2021-2022.csv", sep= ";", index_col = 0)
 
 ##CREATION DES ID DE L EQUIPE ADVERSE
 
-data['Opponent'] = data['Opponent'].replace('Inter','Internazionale')
-data['Opponent'] = data['Opponent'].replace('Hellas Verona','Hellas-Verona')
+data['Opponent'] = data['Opponent'].replace('Manchester City','Manchester-City')
+data['Opponent'] = data['Opponent'].replace('Tottenham','Tottenham-Hotspur')
+data['Opponent'] = data['Opponent'].replace('Manchester Utd','Manchester-United')
+data['Opponent'] = data['Opponent'].replace('West Ham','West-Ham-United')
+data['Opponent'] = data['Opponent'].replace('Leicester City','Leicester-City')
+data['Opponent'] = data['Opponent'].replace('Brighton','Brighton-and-Hove-Albion')
+data['Opponent'] = data['Opponent'].replace('Wolves','Wolverhampton-Wanderers')
+data['Opponent'] = data['Opponent'].replace('Newcastle Utd','Newcastle-United')
+data['Opponent'] = data['Opponent'].replace('Crystal Palace','Crystal-Palace')
+data['Opponent'] = data['Opponent'].replace('Aston Villa','Aston-Villa')
+data['Opponent'] = data['Opponent'].replace('Leeds United','Leeds-United')
+data['Opponent'] = data['Opponent'].replace('Norwich City','Norwich-City')
 
 data["key"] = data["Date"]+data["team"]+data["Opponent"]+data["Round"]+data["Comp"]
 
@@ -26,6 +36,8 @@ data["opp_key"] = data["Date"]+data["Opponent"]+data["team"]+data["Round"]+data[
 
 data["value"] = data["value"].str[1:]
 data["value"] = data['value'].str.replace('m', '')
+data["value"] = data['value'].str.replace('bn', '')
+data["value"] = data['value'].str.replace('1.00', '1000')
 data["value"] = pd.to_numeric(data['value'], errors='coerce').convert_dtypes()
 
 ##BASE DE L EQUIPE ADVERSE

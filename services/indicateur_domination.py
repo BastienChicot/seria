@@ -10,9 +10,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+opt = "eng_"
+opt2 = "_eng"
+
 #IMPORT DU FICHIER
-data = pd.read_csv("bdd/data/data_ml_21_22.csv", sep= ";", index_col = 0)
-nb_top = pd.read_csv("bdd/data/nb_top_joueurs.csv",sep=";", index_col = 0)
+data = pd.read_csv("bdd/data/data_ml_"+str(opt)+"21_22.csv", sep= ";", index_col = 0)
+nb_top = pd.read_csv("bdd/data/nb_top_joueurs"+str(opt2)+".csv",sep=";", index_col = 0)
 nb_top_precis = pd.read_csv("bdd/data/nb_top_joueurs_poste_precis.csv",sep=";", index_col = 0)
 opp_score = pd.read_csv("bdd/data/score_dis_opp.csv",sep=";", index_col = 0)
 

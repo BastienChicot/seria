@@ -3778,3 +3778,66 @@ Il marche aussi super!
  
 
 RESTE A COMMENTER DANS L ETUDE
+
+
+TEST AVEC LES DONNEES PREMIER LEAGUE
+
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:               victoire   No. Observations:                  365
+Model:                          Logit   Df Residuals:                      344
+Method:                           MLE   Df Model:                           20
+Date:                Mon, 13 Mar 2023   Pseudo R-squ.:                  0.3859
+Time:                        18:05:21   Log-Likelihood:                -152.21
+converged:                       True   LL-Null:                       -247.88
+Covariance Type:            nonrobust   LLR p-value:                 5.797e-30
+========================================================================================================
+                                           coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------
+Intercept                                5.5144      5.043      1.093      0.274      -4.370      15.399
+C(home)[T.1]                             0.3569      0.863      0.414      0.679      -1.335       2.048
+C(saison)[T.reste]                       0.3285      0.342      0.960      0.337      -0.342       0.999
+C(PK)[T.1.0]                             1.9851      0.525      3.782      0.000       0.956       3.014
+C(PK)[T.2.0]                             0.6769      1.344      0.504      0.614      -1.957       3.311
+C(CrdR)[T.1.0]                          -1.6199      0.869     -1.865      0.062      -3.322       0.083
+C(Formation)[T.4-5-1]                   -1.0364      0.394     -2.631      0.009      -1.808      -0.264
+C(top_DM)[T.1]                          -0.8891      0.682     -1.304      0.192      -2.225       0.447
+C(Formation)[T.4-5-1]:C(top_DM)[T.1]     1.7306      0.743      2.330      0.020       0.275       3.187
+Sh                                      -0.0520      0.059     -0.882      0.378      -0.168       0.064
+C(home)[T.1]:Sh                          0.0130      0.060      0.216      0.829      -0.105       0.131
+Poss                                    -0.0769      0.052     -1.473      0.141      -0.179       0.025
+score_mf_mean                           -0.4703      0.757     -0.621      0.534      -1.953       1.013
+Poss:score_mf_mean                       0.0061      0.014      0.426      0.670      -0.022       0.034
+FDA                                      0.0011      0.496      0.002      0.998      -0.971       0.973
+diff_value                               0.0042      0.001      5.438      0.000       0.003       0.006
+Att                                     -0.0006      0.003     -0.179      0.858      -0.007       0.006
+age                                     -0.2212      0.191     -1.161      0.246      -0.595       0.152
+SoT                                      0.6075      0.096      6.346      0.000       0.420       0.795
+score_df_mean                            0.6530      0.573      1.139      0.255      -0.471       1.777
+repos                                    0.0213      0.040      0.530      0.596      -0.058       0.100
+========================================================================================================
+"""
+
+R² bien plus élevé qu'en série A
+LLR p-value pas mal
+Le modèle à l'air mieux MDR
+
+Home non significatif
+saison non significatif
+peno significatif
+Seulement 2 formation (manque de diversité en premier league ?) == 4-3-3 et 4-5-1 étonnant mais significatif
+Du coup top DM croisé Formation ==> Significatif
+Sh non significatif
+hom X Sh non significatif
+possession non significatif ???
+score mf et score lf X poss non significatif
+FDA à chier
+diff_value == significatif
+Att non significatif
+age  non significatif
+SoT significatif
+score df non significatif
+repos non significatif
+
+Finalement le modèle est vraiment pas fou. Trois variables gardent la significativité (diff value et formationX top_DM et les tirs cadrés)
+Avec ce modèle on confirme donc l'impact de la formation sur la productivité du milieu défensif. C'est un fait aussi commun (ou presque) que la différence de valeur et les tirs carés.
