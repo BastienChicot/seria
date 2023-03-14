@@ -3841,3 +3841,77 @@ repos non significatif
 
 Finalement le modèle est vraiment pas fou. Trois variables gardent la significativité (diff value et formationX top_DM et les tirs cadrés)
 Avec ce modèle on confirme donc l'impact de la formation sur la productivité du milieu défensif. C'est un fait aussi commun (ou presque) que la différence de valeur et les tirs carés.
+
+
+TEST SUR LES DONNEES FRANCE
+
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:               victoire   No. Observations:                  336
+Model:                          Logit   Df Residuals:                      312
+Method:                           MLE   Df Model:                           23
+Date:                Tue, 14 Mar 2023   Pseudo R-squ.:                  0.2891
+Time:                        17:51:09   Log-Likelihood:                -158.02
+converged:                      False   LL-Null:                       -222.29
+Covariance Type:            nonrobust   LLR p-value:                 1.184e-16
+========================================================================================================
+                                           coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------
+Intercept                                3.6115      5.551      0.651      0.515      -7.268      14.491
+C(home)[T.1]                            -0.0951      0.845     -0.112      0.910      -1.752       1.562
+C(saison)[T.reste]                       0.0094      0.316      0.030      0.976      -0.611       0.630
+C(PK)[T.1.0]                             1.4905      0.446      3.344      0.001       0.617       2.364
+C(PK)[T.2.0]                            13.9011    739.877      0.019      0.985   -1436.232    1464.034
+C(CrdR)[T.1.0]                          -1.5394      0.537     -2.868      0.004      -2.591      -0.488
+C(CrdR)[T.2.0]                           0.4686      1.386      0.338      0.735      -2.249       3.186
+C(Formation)[T.4-4-2]                    0.1756      0.498      0.352      0.725      -0.801       1.152
+C(Formation)[T.4-5-1]                   -0.1780      0.499     -0.357      0.721      -1.156       0.800
+C(top_DM)[T.1]                          -0.6319      0.643     -0.983      0.326      -1.892       0.629
+C(Formation)[T.4-4-2]:C(top_DM)[T.1]    -0.0760      1.099     -0.069      0.945      -2.230       2.078
+C(Formation)[T.4-5-1]:C(top_DM)[T.1]     0.6340      0.807      0.785      0.432      -0.948       2.216
+Sh                                      -0.1762      0.063     -2.799      0.005      -0.300      -0.053
+C(home)[T.1]:Sh                          0.0313      0.067      0.470      0.638      -0.099       0.162
+Poss                                    -0.0796      0.057     -1.391      0.164      -0.192       0.033
+score_mf_mean                            1.5330      1.380      1.111      0.267      -1.171       4.237
+Poss:score_mf_mean                      -0.0285      0.027     -1.072      0.284      -0.081       0.024
+FDA                                      0.9775      0.532      1.839      0.066      -0.064       2.019
+diff_value                               0.0055      0.001      5.297      0.000       0.003       0.008
+Att                                      0.0013      0.004      0.351      0.725      -0.006       0.008
+age                                     -0.0133      0.222     -0.060      0.952      -0.448       0.421
+SoT                                      0.4899      0.100      4.906      0.000       0.294       0.686
+score_df_mean                           -0.7939      0.426     -1.862      0.063      -1.630       0.042
+repos                                   -0.0271      0.042     -0.651      0.515      -0.108       0.054
+========================================================================================================
+"""
+
+Pseudo R² pas fou
+LLR value pas mal 
+
+- home non significatif de fou
+- saison non significatif 
+- PK significatif
+- Carton rouge significatif
+- formations non significatives
+- top DM à 32 %
+- croisement top_DM et Formation non significatif
+- Sh significatif
+- home X Sh non significatif
+- Poss à 16%
+- score mf mean non significatif
+- croisement Poss et score mf non significatif
+- FDA à 6.6%
+- diff_value significatif comme d'hab
+- Att non significatif
+- age non significatif
+- Sot significatif
+-  score df  à 6 % honorable
+- repos non significatif
+
+Bon en gros, on retrouve toujours les mêmes trucs c'est à dire les péno, les carton, les tirs et la valeur
+Cependant en ligue 1 on a aussi les tirs normaux et les score des défenseurs
+Contrairement à l'angleterre on ne retrouve pas la significativité du lien entre formation et top DM.
+
+Le modèle ayant été conçu avec les données de série A et optimisé depuis celles ci, je n'obtiens évidemment pas les mêmes resultats et j'ai beaucoup de coeff qui deviennent mauvais. Par contre lorsqu'un truc est significatif dans le modèle avec deux sets de données différents c'est plutôt cool je trouve.
+
+
+

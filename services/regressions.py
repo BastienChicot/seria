@@ -15,6 +15,8 @@ import statsmodels.formula.api as smf
 from scipy.stats import chi2_contingency
 
 df_reg = pd.read_csv("bdd/data/df_reg.csv", sep= ";", index_col = 0)
+# df_reg["age"] = df_reg["age"].str.replace(',', '.')
+# df_reg["age"] = df_reg["age"].astype(float)
 
 corr = df_reg.corr()
 corr.to_csv("Sorties/corr.csv", sep= ";")

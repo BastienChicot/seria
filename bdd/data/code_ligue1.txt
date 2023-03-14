@@ -1,0 +1,21 @@
+code;team;code_url
+Paris-Saint-Germain;Paris S-G;e2d8892c
+Marseille;Marseille;5725cc7b
+Monaco;Monaco;fd6114db
+Rennes;Rennes;b3072e00
+Nice;Nice;132ebc33
+Strasbourg;Strasbourg;c0d3eab4
+Lens;Lens;fd4e0f7d
+Lyon;Lyon;d53c0b06
+Nantes;Nantes;d7a486cd
+Lille;Lille;cb188c0c
+Brest;Brest;fb08dbb3
+Reims;Reims;7fdd64e0
+Montpellier;Montpellier;281b0e73
+Angers;Angers;69236f98
+Troyes;Troyes;54195385
+Lorient;Lorient;d2c87802
+Clermont-Foot;Clermont Foot;d9676424
+Saint-Etienne;Saint-Étienne;d298ef2c
+Metz;Metz;f83960ae
+Bordeaux;Bordeaux;123f3efe

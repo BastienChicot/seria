@@ -8,8 +8,8 @@ Created on Mon Jan 23 21:35:28 2023
 import pandas as pd
 import numpy as np
 
-opt = "eng_"
-opt2 = "_eng"
+opt = "fr_"
+opt2 = "_fr"
 
 ##STANDARD
 standard = pd.read_csv("bdd/data/dl_fbref/stat_joueur_stand_"+str(opt)+"21_22.txt", sep= ",", index_col = 0)
@@ -95,7 +95,7 @@ poss["key"] = poss["Player"] + poss["Pos"] + poss["Squad"]
 
 poss.columns
 
-poss = poss[["Touches","Succ%", "Mis","Dis","key"]]
+poss = poss[["Succ%", "Mis","Dis","key"]]
 poss = poss.rename(columns={
     "Succ%":"Drib_pct"
     })
@@ -202,7 +202,7 @@ mf = full.loc[full["Pos"] == "MF"]
 mf = mf.loc[mf["90s"] >= 15]
 
 mf["Drib_pct_rel"] = mf["Drib_pct"] / mf["90s"]
-mf["Touches_rel"] = mf["Touches"] / mf["90s"]
+# mf["Touches_rel"] = mf["Touches"] / mf["90s"]
 mf["Cmp_pct_rel"] = mf["Cmp_pct"] / mf["90s"]
 mf["Ast_rel"] = mf["Ast"] / mf["90s"]
 mf["Gls_rel"] = mf["Gls"] / mf["90s"]
@@ -212,7 +212,7 @@ mf["Off_rel"] = mf["Off"] / mf["90s"]
 mf["CrdY_rel"] = mf["CrdY"] / mf["90s"]
 
 mf["score"] = ((mf["Drib_pct_rel"]/(mf.Drib_pct_rel.quantile([0.8]).values)) + 
-               (mf["Touches_rel"]/(mf.Touches_rel.quantile([0.8]).values)) + 
+               # (mf["Touches_rel"]/(mf.Touches_rel.quantile([0.8]).values)) + 
                (mf["Cmp_pct_rel"]/(mf.Cmp_pct_rel.quantile([0.8]).values)) +
                (mf["Ast_rel"]/(mf.Ast_rel.quantile([0.8]).values)) +
                (mf["Gls_rel"]/(mf.Gls_rel.quantile([0.8]).values)) +
@@ -288,7 +288,7 @@ dm = dm.loc[dm["90s"] >= 2]
 dm["Int_rel"] = dm["Int"] / dm["90s"]
 dm["Blocks_rel"] = dm["Blocks"] / dm["90s"]
 dm["Cmp_pct_rel"] = dm["Cmp_pct"] / dm["90s"]
-dm["Touches_rel"] = dm["Touches"] / dm["90s"]
+# dm["Touches_rel"] = dm["Touches"] / dm["90s"]
 dm["Tkl_pct_rel"] = dm["Tkl_pct"] / dm["90s"]
 dm["Fls_rel"] = dm["Fls"] / dm["90s"]
 dm["CrdY_rel"] = dm["CrdY"] / dm["90s"]
@@ -296,7 +296,7 @@ dm["CrdY_rel"] = dm["CrdY"] / dm["90s"]
 dm["score"] = ((dm["Tkl_pct_rel"]/(dm.Tkl_pct_rel.quantile([0.8]).values)) + 
                (dm["Int_rel"]/(dm.Int_rel.quantile([0.8]).values)) + 
                (dm["Blocks_rel"]/(dm.Blocks_rel.quantile([0.8]).values)) +
-               (dm["Touches_rel"]/(dm.Touches_rel.quantile([0.8]).values)) +
+               # (dm["Touches_rel"]/(dm.Touches_rel.quantile([0.8]).values)) +
                (dm["Cmp_pct_rel"]/(dm.Cmp_pct_rel.quantile([0.8]).values))
                ) - (dm["Fls_rel"]/(dm.Fls_rel.quantile([0.8]).values) +
                     dm["CrdY_rel"]/(dm.CrdY_rel.quantile([0.8]).values)

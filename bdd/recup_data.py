@@ -17,7 +17,7 @@ def recup_values(annee):
     driver = webdriver.Chrome()
     
     
-    driver.get("https://www.transfermarkt.com/premier-league/startseite/wettbewerb/GB1/plus/?saison_id=2021")
+    driver.get("https://www.transfermarkt.fr/ligue-1/startseite/wettbewerb/FR1/plus/?saison_id=2021")
     time.sleep(20)
     print("Va cliquer sur accepter les cookies blaireau !")
     ####ALLEZ CLIQUER SUR VALIDER LES COOKIES AVANT DE LANCER LA SUITE
@@ -42,7 +42,7 @@ def recup_values(annee):
     final.drop([0], axis=0, inplace=True)
     final.drop([1], axis=0, inplace=True)
     
-    final.to_csv("data/value_tm_premier.txt",sep = ";")
+    final.to_csv("data/value_tm_ligue1.txt",sep = ";")
     
     print("Tu peux aller modifier le fichier sur bloc note morray !")
 
@@ -62,8 +62,8 @@ def data_fbref(saison):
     
     liste_saison = ["2021-2022"]
     
-    codes = pd.read_csv("data/code_premiere.txt", sep = ";")
-    values = pd.read_csv("data/value_tm_premier.txt", sep=";")
+    codes = pd.read_csv("data/code_ligue1.txt", sep = ";")
+    values = pd.read_csv("data/value_tm_ligue1.txt", sep=";")
     liste_df = []
 
     for saison in liste_saison:
@@ -157,7 +157,7 @@ def data_fbref(saison):
     
     # data["team"].unique()
     
-    data.to_csv("data/data_premier_"+str(saison)+".csv",sep=";")
+    data.to_csv("data/data_ligue1_"+str(saison)+".csv",sep=";")
 
 ##MERGE all
 

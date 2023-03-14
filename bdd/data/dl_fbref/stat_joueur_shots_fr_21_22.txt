@@ -1,0 +1,604 @@
+Player,Pos,Squad,Age,90s,Sh,SoT,SoT%,-9999
+Yunis Abdelhamid,DF,Reims,33,33.1,18,6,33.3,32c2d95f
+Salis Abdul Samed,MF,Clermont Foot,21,27.4,18,5,27.8,82464ce3
+Laurent Abergel,MF,Lorient,28,32.8,29,7,24.1,31626657
+Charles Abi,FW,Saint-Étienne,21,0.5,0,0,,469d3d84
+Matthis Abline,FW,Rennes,18,1.1,2,0,0.0,0e46fa2f
+Mohamed Achi,MF,Nantes,19,0.1,0,0,,1e93fc5d
+Martin Adeline,MFFW,Reims,17,3.9,4,1,25.0,7587446d
+Yacine Adli,MFFW,Bordeaux,21,25.1,32,15,46.9,26777636
+Lucien Agoume,MF,Brest,19,20.8,15,1,6.7,8bc8829a
+Nayef Aguerd,DF,Rennes,25,30.4,25,7,28.0,288e1e13
+Ruben Aguilar,DF,Monaco,28,23.8,10,2,20.0,3dd738a1
+Anel Ahmedhodzic,DF,Bordeaux,22,15.0,8,4,50.0,eab957a3
+Jean-Eudes Aholou,MF,Strasbourg,27,11.2,17,2,11.8,48b28bfd
+Ludovic Ajorque,FW,Strasbourg,27,30.4,56,24,42.9,462475ed
+Maghnes Akliouche,MFFW,Monaco,19,0.6,2,1,50.0,b625b241
+Sofiane Alakouch,DFMF,Metz,23,1.8,1,0,0.0,5314e067
+Josué Albert,DF,Clermont Foot,29,0.2,1,0,0.0,3d738df0
+Doğan Alemdar,GK,Rennes,18,12.0,0,0,,9e17ccff
+Mohamed Ali Cho,FW,Angers,17,20.4,42,15,35.7,f8405304
+Jim Allevinah,FW,Clermont Foot,26,16.5,43,15,34.9,1956b948
+Ibrahim Amadou,DFMF,Metz,28,9.0,3,2,66.7,9260926b
+Jordan Amavi,DF,Nice,27,4.6,0,0,,22721b88
+Jordan Amavi,DFFW,Marseille,27,1.4,0,0,,22721b88
+Benjamin André,MF,Lille,30,30.6,18,5,27.8,ef9c1c95
+Houssem Aouar,MFFW,Lyon,23,27.8,76,24,31.6,a5db0bec
+Adil Aouchiche,MFFW,Saint-Étienne,19,12.0,21,10,47.6,b94b8be1
+Dennis Appiah,DF,Nantes,29,23.3,2,0,0.0,feb5d3ab
+Lorenz Assignon,DF,Rennes,21,6.8,6,4,66.7,b026bbf6
+Youcef Atal,DF,Nice,25,12.7,13,5,38.5,6a827d8e
+Jean-Kévin Augustin,FWMF,Nantes,24,0.9,2,0,0.0,97bfa797
+Karim Azamoum,DF,Troyes,31,4.3,3,3,100.0,eaf71a5e
+Loïc Bade,DF,Rennes,21,10.9,7,0,0.0,114bbdee
+Benoît Badiashile,DF,Monaco,20,20.4,14,4,28.6,06df8256
+Youssouph Badji,FWMF,Brest,19,1.5,2,0,0.0,6a2b9aee
+Stéphane Bahoken,FW,Angers,29,12.2,24,14,58.3,5046b7d4
+Dénys Bain,DF,Brest,28,2.0,0,0,,5065d67d
+Stefan Bajic,GK,Saint-Étienne,19,5.7,0,0,,be13e5a8
+Cédric Bakambu,FW,Marseille,30,4.0,19,8,42.1,0af4dcf0
+Abdoulaye Bakayoko,DF,Saint-Étienne,18,3.4,0,0,,ee95585f
+Dilane Bakwa,FWMF,Bordeaux,18,0.5,2,1,50.0,2b5a35e5
+Ibrahima Baldé,FWMF,Lens,18,0.6,0,0,,a30cb0d4
+Leonardo Balerdi,DF,Marseille,22,10.6,2,0,0.0,7c3ed041
+Abdoulaye Bamba,DFFW,Angers,31,5.1,1,0,0.0,7fecbcdb
+Jonathan Bamba,MFFW,Lille,25,27.0,51,12,23.5,b2bd0f6c
+Simon Banza,FW,Lens,24,1.4,6,4,66.7,be47b750
+Danilo Barbosa,DF,Nice,25,1.0,0,0,,0557ff4f
+Bradley Barcola,FWMF,Lyon,18,2.9,5,2,40.0,a0d55a09
+Melvin Bard,DF,Nice,20,28.8,5,2,40.0,1ddbc7ca
+Toma Bašić,MF,Bordeaux,24,2.3,2,0,0.0,80556f08
+Amine Bassi,MFFW,Metz,23,2.0,4,1,25.0,ced1d98f
+Paul Baysse,MFDF,Bordeaux,33,0.1,0,0,,2515040a
+Youcef Belaïli,MFFW,Brest,29,9.2,16,6,37.5,1a248246
+Haris Belkebla,MF,Brest,27,25.7,4,1,25.0,2b1bed19
+Jean-Ricner Bellegarde,MF,Strasbourg,23,25.9,31,7,22.6,10f0fdd3
+Jeanöel Belocian,DF,Rennes,16,0.1,0,0,,c678ddd7
+Hatem Ben Arfa,FWMF,Lille,34,3.5,3,1,33.3,74dc806c
+Salim Ben Seghir,MF,Marseille,18,0.0,0,0,,1f6298f2
+Wissam Ben Yedder,FW,Monaco,30,28.1,64,36,56.3,942b4f90
+Darío Benedetto,FWMF,Marseille,31,0.6,3,0,0.0,bef0a7ac
+Walter Benítez,GK,Nice,28,37.0,0,0,,8a2248b4
+Loris Benito,DF,Bordeaux,29,0.7,0,0,,f5b6fb78
+Nabil Bentaleb,MF,Angers,26,16.8,15,7,46.7,3189f61a
+Patrick Berg,MF,Lens,23,3.4,1,0,0.0,e4114f5d
+Mitchell van Bergen,FWMF,Reims,21,10.9,12,5,41.7,0b2c9aec
+Valon Berisha,MFFW,Reims,28,5.1,4,0,0.0,d5575935
+Paul Bernardoni,GK,Angers,24,13.0,0,0,,28dabd43
+Paul Bernardoni,GK,Saint-Étienne,24,19.0,0,0,,28dabd43
+Juan Bernat,DFMF,Paris S-G,28,10.6,1,1,100.0,433dc9a2
+Dimitry Bertaud,GK,Montpellier,23,9.3,0,0,,380a15e2
+Jason Berthomier,MF,Clermont Foot,31,19.2,23,4,17.4,03e91055
+Giulian Biancone,DFMF,Troyes,21,25.5,28,9,32.1,de40e38c
+El Bilal Touré,FW,Reims,19,13.3,32,10,31.3,47c609d5
+Jean-Claude Billong,DF,Clermont Foot,27,10.9,5,1,20.0,a3e1d20d
+Nathan Bitu Mazala,DF,Paris S-G,18,0.1,0,0,,0f697e02
+Marco Bizot,GK,Brest,30,38.0,0,0,,3d214e5f
+Ludovic Blas,MFFW,Nantes,23,32.9,85,32,37.6,6191093d
+Myron Boadu,FW,Monaco,20,10.7,21,8,38.1,5b479568
+Jérôme Boateng,DF,Lyon,32,18.0,5,3,60.0,2db2fd7b
+Antonin Bobichon,MFFW,Angers,25,0.4,0,0,,7d937aa1
+Quentin Boisgard,MFFW,Lorient,24,10.6,16,8,50.0,f6496133
+Charles Boli,MFDF,Lens,22,0.4,0,0,,bbdd999a
+Sven Botman,DF,Lille,21,25.0,15,5,33.3,ccce7025
+Denis Bouanga,FWMF,Saint-Étienne,26,27.1,84,30,35.7,0b0cbe5b
+Hicham Boudaoui,MF,Nice,21,18.0,16,5,31.3,f9d5908e
+Ryad Boudebouz,MFFW,Saint-Étienne,31,25.0,27,9,33.3,1001ae82
+Sofiane Boufal,FWMF,Angers,27,25.9,60,24,40.0,b0c71810
+Farid Boulaya,MFFW,Metz,28,17.0,19,6,31.6,a0791826
+Ismaëlben Boura,DF,Lens,20,1.1,1,0,0.0,62e02107
+Benjamin Bourigeaud,FWMF,Rennes,27,35.5,51,21,41.2,20e73fac
+Redwan Bourles,MFFW,Lorient,18,0.2,0,0,,5c7895a0
+Domagoj Bradarić,DF,Lille,21,4.6,1,0,0.0,8bbe2df5
+Bilal Brahimi,MF,Nice,21,4.2,4,0,0.0,02bcaf8e
+Bilal Brahimi,FW,Angers,21,3.8,6,2,33.3,02bcaf8e
+Lilian Brassier,DF,Brest,21,25.1,11,2,18.2,5b146df3
+Jimmy Briand,FWMF,Bordeaux,35,2.5,8,2,25.0,f83c8d6c
+Dylan Bronn,DF,Metz,26,28.3,15,7,46.7,edd81e2a
+Osman Bukari,FWMF,Nantes,22,11.2,20,9,45.0,eab85789
+Maxime Busi,DF,Reims,21,14.4,6,2,33.3,7b082ec2
+Oriol Busquets,MF,Clermont Foot,22,2.2,1,0,0.0,49712367
+Marcin Bułka,GK,Nice,21,1.0,0,0,,db87a2c4
+Rémy Cabella,MFFW,Montpellier,31,3.5,2,0,0.0,148e136f
+Jimmy Cabot,DF,Angers,27,22.3,11,3,27.3,46359159
+Anthony Caci,DF,Strasbourg,24,26.6,15,4,26.7,0118c54c
+Mathieu Cafaro,MFFW,Reims,24,2.1,6,2,33.3,2a657da0
+Yannick Cahuzac,MF,Lens,36,6.9,1,0,0.0,677ee102
+Marc-Aurèle Caillard,GK,Metz,27,17.1,0,0,,5ee6e943
+Jens Cajuste,MFFW,Reims,21,4.0,8,6,75.0,928a4a61
+Duje Ćaleta-Car,DF,Marseille,24,22.9,12,4,33.3,94f8d10c
+Lucas Calodat,DF,Saint-Étienne,19,0.0,0,0,,7a72e960
+Mahdi Camara,MFDF,Saint-Étienne,23,34.1,28,15,53.6,8577e60a
+Mamadou Camara,FW,Troyes,20,0.4,1,1,100.0,316e70c7
+Eduardo Camavinga,MF,Rennes,18,1.6,0,0,,7b9c2d84
+Fali Candé,DF,Metz,23,10.8,6,2,33.3,3cc4bb19
+Pierrick Capelle,MFDF,Angers,34,13.3,17,1,5.9,79b2399c
+Maxence Caqueret,MF,Lyon,21,25.9,15,2,13.3,f81ef10d
+Irvin Cardona,FWMF,Brest,23,14.8,26,12,46.2,5e080f73
+Igor Carioca,DF,Lorient,24,17.5,14,6,42.9,e3e32fbb
+Moreto Cassamã,MF,Reims,23,8.9,11,7,63.6,f54d2149
+Jean-Charles Castelletto,DF,Nantes,26,27.9,16,4,25.0,e0f3a1f6
+Zeki Çelik,DF,Lille,24,30.0,23,3,13.0,31a62dc7
+Fabien Centonze,DF,Metz,25,17.6,15,7,46.7,3c6bbbab
+Leonardo César Jardim,GK,Lille,26,17.0,0,0,,f5dfc256
+El Chadaille Bitshiabu,DF,Paris S-G,16,0.1,0,0,,2180c761
+Nassim Chadli,MFDF,Troyes,20,1.1,2,0,0.0,5c61496e
+Mehdi Chahiri,DF,Strasbourg,25,0.2,0,0,,1787195f
+Dylan Chambost,MFFW,Troyes,23,8.4,10,1,10.0,dbde4959
+Brendan Chardonnet,DF,Brest,26,29.8,14,6,42.9,16aa7d4c
+Xavier Chavalerin,MF,Troyes,30,30.2,31,10,32.3,279ddf6a
+Xavier Chavalerin,MF,Reims,30,2.4,3,0,0.0,279ddf6a
+Rayan Cherki,FWMF,Lyon,17,4.9,14,3,21.4,b34c63a5
+Pedro Chirivella,MF,Nantes,24,29.3,21,6,28.6,68a26d51
+Joris Chotard,MF,Montpellier,19,32.6,18,3,16.7,7909ffa4
+Alexis Claude-Maurice,MF,Nice,23,2.3,6,1,16.7,741418c3
+Jonathan Clauss,DF,Lens,28,33.8,40,16,40.0,5219ab4a
+Marcus Coco,MFFW,Nantes,25,10.3,12,3,25.0,3010aefb
+Abdu Conté,DF,Troyes,23,15.0,5,1,20.0,cfa49cc1
+Sébastien Corchia,DF,Nantes,30,14.7,11,3,27.3,0e7ccfc4
+Maxwel Cornet,DF,Lyon,24,0.7,0,0,,beb391dd
+David Pereira da Costa,MFFW,Lens,20,16.3,25,8,32.0,59948ef7
+Benoît Costil,GK,Bordeaux,34,25.0,0,0,,2434f24a
+Kalifa Coulibaly,FW,Nantes,29,9.4,26,10,38.5,9980269a
+Nicolas Cozza,DF,Montpellier,22,30.8,6,3,50.0,8f325097
+Enzo Crivelli,FWMF,Saint-Étienne,26,1.1,3,1,33.3,06f33dc8
+Wylan Cyprien,MF,Nantes,26,16.6,20,8,40.0,3e092724
+Lucas Da Cunha,MF,Nice,20,4.4,10,3,30.0,007faf7a
+Lucas Da Cunha,FWMF,Clermont Foot,20,9.3,18,6,33.3,007faf7a
+Damien Da Silva,DF,Lyon,33,12.5,12,1,8.3,1ec7e1c5
+Colin Dagba,DF,Paris S-G,22,1.8,0,0,,29c02c9f
+Flavius Daniliuc,DF,Nice,20,14.4,4,0,0.0,7ef972c3
+Kevin Danso,DF,Lens,22,31.0,13,4,30.8,6e33125f
+Dante,DF,Nice,37,31.9,12,2,16.7,fd2bc67d
+Jonathan David,FW,Lille,21,31.2,67,30,44.8,ce50fd99
+Konrad De La Fuente,FWMF,Marseille,20,8.7,15,4,26.7,4b77bb89
+Romain Del Castillo,MFFW,Rennes,25,0.3,1,0,0.0,0be95d34
+Romain Del Castillo,MFFW,Brest,25,10.8,12,3,25.0,0be95d34
+Thomas Delaine,DF,Metz,29,25.7,18,5,27.8,8332db56
+Sacha Delaye,MFFW,Montpellier,19,2.9,3,0,0.0,e4448c8c
+Andy Delort,FW,Nice,29,27.2,95,37,38.9,d33c706e
+Andy Delort,FW,Montpellier,29,3.0,14,5,35.7,d33c706e
+Moussa Dembélé,FW,Lyon,25,24.5,83,37,44.6,e7986081
+Jason Denayer,DF,Lyon,26,11.1,6,4,66.7,47af88b8
+Arthur Desmas,GK,Clermont Foot,27,14.5,0,0,,e8c5dd4d
+Ángel Di María,FW,Paris S-G,33,18.3,51,22,43.1,19cda00b
+Yadaly Diaby,FWMF,Clermont Foot,20,0.7,2,0,0.0,5630a6e0
+Ibrahim Diakité,MF,Reims,17,0.0,0,0,,d8c19a60
+Abdou Diallo,DF,Paris S-G,25,9.7,2,1,50.0,fc62f087
+Habib Diallo,FW,Strasbourg,26,17.1,49,21,42.9,6605d143
+Mouhamadou Diarra,MF,Strasbourg,17,1.2,0,0,,6d0fe035
+Stéphane Diarra,MFFW,Lorient,22,5.8,13,4,30.8,29939a1d
+Krépin Diatta,MFDF,Monaco,22,3.2,3,3,100.0,8104e41e
+Bamba Dieng,FW,Marseille,21,10.8,36,18,50.0,40774c6b
+Elhadji Dieye,FWMF,Saint-Étienne,19,0.4,2,0,0.0,6a04bb7c
+Javairô Dilrosun,MFFW,Bordeaux,23,19.2,40,10,25.0,34a0f5ff
+Junior Dina Ebimbe,MF,Paris S-G,20,3.5,4,1,25.0,95bb6ddc
+Tristan Dingomé,MFFW,Troyes,30,12.0,20,4,20.0,92b56413
+Sinaly Diomande,DF,Lyon,20,6.4,3,0,0.0,6de23ab0
+Sofiane Diop,MFFW,Monaco,21,21.6,37,13,35.1,19053e31
+Andy Diouf,MF,Rennes,18,0.2,0,0,,9b5237b1
+Assane Dioussé,MF,Saint-Étienne,23,0.3,0,0,,7f622eef
+Axel Disasi,DF,Monaco,23,30.2,20,2,10.0,ad82197c
+Tiago Djaló,DF,Lille,21,25.9,12,5,41.7,b2336681
+Alexander Djiku,DF,Strasbourg,26,29.9,15,7,46.7,43e7a164
+Bryan Djile Nokoué,DFMF,Saint-Étienne,19,0.6,0,0,,75186a6a
+Ouparine Djoco,GK,Clermont Foot,23,23.5,0,0,,62124972
+Jeremy Doku,FWMF,Rennes,19,5.2,5,2,40.0,fffea3e5
+Kasper Dolberg,FW,Nice,23,16.6,38,13,34.2,cc83b74d
+Brandon Domingues,MFFW,Troyes,21,2.6,4,2,50.0,2a00c6c0
+Anastasios Donis,FWMF,Reims,24,4.1,10,0,0.0,0f26fd24
+Gianluigi Donnarumma,GK,Paris S-G,22,17.0,0,0,,08f5afaa
+Jodel Dossou,FW,Clermont Foot,29,22.3,52,17,32.7,a1dbfcb1
+Lohann Doucet,MFDF,Nantes,18,0.1,0,0,,dff0c299
+Cheick Doucouré,MF,Lens,21,32.7,31,11,35.5,ce4f40c7
+Fodé Doucouré,DFFW,Reims,20,1.7,0,0,,1bfe34dc
+Ismaël Doukouré,DF,Strasbourg,18,0.2,0,0,,0512a60a
+Kamory Doumbia,MFFW,Reims,18,3.9,4,2,50.0,9226aa22
+Moussa Doumbia,FW,Reims,26,1.0,3,2,66.7,6481421d
+Souleyman Doumbia,DFFW,Angers,24,24.7,14,3,21.4,9daeac61
+Julian Draxler,FWMF,Paris S-G,27,6.1,9,3,33.3,1a992676
+Matthieu Dreyer,GK,Lorient,32,16.0,0,0,,fbf83734
+Leo Dubois,DF,Lyon,26,19.4,10,1,10.0,ff0ab48c
+Jean-Kevin Duverne,DF,Brest,24,33.4,12,3,25.0,0cbc8baa
+Enzo Ebosse,DF,Angers,22,21.0,3,0,0.0,9ba7b4fa
+Hugo Ekitike,FW,Reims,19,14.1,29,16,55.2,5b92d896
+Alberth Elis,FWMF,Bordeaux,25,15.7,30,11,36.7,104b4ad3
+Sepe Elye Wahi,FW,Montpellier,18,19.8,43,20,46.5,0d7b6576
+Renaud Emond,FWMF,Nantes,29,2.1,1,0,0.0,5c9ac7f0
+Maxime Estève,DF,Montpellier,19,20.6,5,1,20.0,1a066e69
+Fábio,DF,Nantes,31,18.5,11,1,9.1,bc7b4580
+Cesc Fàbregas,MF,Monaco,34,0.4,0,0,,33508c78
+Wout Faes,DF,Reims,23,37.0,22,9,40.9,9c221d14
+Romain Faivre,FWMF,Lyon,23,9.9,20,6,30.0,745ca0a3
+Romain Faivre,MF,Brest,23,19.9,32,12,37.5,745ca0a3
+Wuilker Faríñez,GK,Lens,23,12.3,0,0,,2c127b6f
+Noah Fatar,DFMF,Angers,19,0.1,0,0,,2693f6bc
+Julien Faussurier,MFDF,Brest,34,5.4,4,3,75.0,767212e6
+Jordan Ferri,MF,Montpellier,29,32.3,14,2,14.3,375622c5
+Karol Fila,DF,Strasbourg,23,6.2,0,0,,50ac8941
+Alexis Flips,MFDF,Reims,21,11.7,18,9,50.0,caef7840
+Mamadou Fofana,DF,Metz,23,0.4,0,0,,4c4ffacc
+Seko Fofana,MF,Lens,26,37.3,97,32,33.0,5313ed43
+Youssouf Fofana,MF,Monaco,22,24.3,30,6,20.0,822d51d7
+Thomas Foket,DFFW,Reims,26,24.8,8,3,37.5,90eb507d
+Thomas Fontaine,DF,Lorient,30,1.9,0,0,,9f90c06b
+José Fonte,DF,Lille,37,38.0,21,6,28.6,90f87966
+Steven Fortes,DF,Lens,29,1.0,0,0,,574aa9ec
+Przemysław Frankowski,DF,Lens,26,27.2,34,13,38.2,00a8d210
+Fransérgio,MF,Bordeaux,30,14.0,14,2,14.3,deba6b05
+Angelo Fulgini,MFFW,Angers,24,32.5,58,17,29.3,4b96c347
+Gauthier Gallon,GK,Troyes,28,31.0,0,0,,db3164e1
+Kévin Gameiro,FW,Strasbourg,34,26.5,65,25,38.5,42276181
+Idrissa Gana Gueye,MF,Paris S-G,31,18.2,24,7,29.2,72c812f3
+Ignatius Ganago,FW,Lens,22,11.4,31,10,32.3,23c63b7f
+Djeidi Gassama,FW,Paris S-G,17,0.0,0,0,,bbdb2789
+Johan Gastien,MF,Clermont Foot,33,30.5,24,7,29.2,868eaba0
+Valère Germain,FW,Montpellier,31,21.9,32,16,50.0,ea0ff634
+Gerson,MFFW,Marseille,24,28.3,45,18,40.0,8827bf46
+Willem Geubbels,FWMF,Nantes,19,6.0,12,3,25.0,9836e892
+Ismaël Gharbi,FW,Paris S-G,17,0.0,0,0,,5b3cfa12
+Lamine Ghezali,DF,Saint-Étienne,22,0.0,0,0,,ce84946a
+Nicholas Gioacchini,FWMF,Montpellier,21,5.5,11,2,18.2,79ab7593
+Jimmy Giraudon,DF,Troyes,29,18.0,0,0,,6ba71da5
+Andrei Girotto,DFMF,Nantes,29,35.0,45,10,22.2,3befc2b6
+Aleksandr Golovin,FWMF,Monaco,25,16.7,23,7,30.4,3708e9fa
+Angel Gomes,MFFW,Lille,20,10.6,14,2,14.3,645a3363
+Alfred Gomis,GK,Rennes,27,25.0,0,0,,cecbce23
+Vagner Gonçalves,FW,Metz,25,1.0,1,1,100.0,743fd71f
+Álvaro González,DF,Marseille,31,5.0,2,0,0.0,42dcf26d
+Amine Gouiri,FWMF,Nice,21,30.6,71,33,46.5,aad56ca3
+Lucas Gourna-Douath,MF,Saint-Étienne,17,20.0,12,2,16.7,3cd7820a
+Jonathan Gradit,DF,Lens,28,34.1,5,0,0.0,06c48679
+Andrew Gravillon,DF,Reims,23,23.7,16,4,25.0,49136c42
+Adrian Grbić,FWMF,Lorient,24,5.8,12,7,58.3,4a987ffa
+Ivo Grbić,GK,Lille,25,21.0,0,0,,3f034750
+Etienne Green,GK,Saint-Étienne,21,13.3,0,0,,667b65da
+Gabriel Gudmundsson,DFMF,Lille,22,14.9,19,6,31.6,d5d22a58
+Noah Guede-Nadje,MF,Angers,17,0.0,0,0,,94b442c0
+Mattéo Guendouzi,MF,Marseille,22,35.0,50,18,36.0,5ea8ef20
+Yanis Guermouche,MFFW,Montpellier,20,0.1,0,0,,642f9f79
+Evann Guessand,FW,Nice,20,4.9,12,5,41.7,b73f17f8
+Lamine Gueye,FWMF,Metz,23,6.2,14,7,50.0,9d5dcc23
+Pape Gueye,MF,Marseille,22,17.0,30,4,13.3,7155e3e1
+Josuha Guilavogui,MFDF,Bordeaux,30,14.8,9,3,33.3,e6c43eec
+Frederic Guilbert,DF,Strasbourg,26,28.0,24,5,20.8,5d8d7454
+Bruno Guimarães,MF,Lyon,23,18.2,11,2,18.2,82518f62
+Sehrou Guirassy,FW,Rennes,25,11.3,46,17,37.0,923f4dda
+Malo Gusto,DF,Lyon,18,20.9,11,0,0.0,d56b9520
+Massadio Haïdara,DF,Lens,28,12.0,5,2,40.0,5167c97e
+Oualid El Hajjam,DF,Troyes,30,11.9,10,3,30.0,9f29c204
+Achraf Hakimi,DF,Paris S-G,22,27.5,20,10,50.0,e42d61c7
+Pierre-Yves Hamel,FWMF,Lorient,27,0.3,0,0,,a99da9ec
+Pierre-Yves Hamel,FW,Clermont Foot,27,5.8,13,4,30.8,a99da9ec
+Romain Hamouma,FWMF,Saint-Étienne,34,9.8,23,7,30.4,0b4d8274
+Amine Harit,FWMF,Marseille,24,12.9,15,7,46.7,e7d59f4f
+Henrique,DF,Lyon,27,12.3,5,0,0.0,f28474a4
+Luis Henrique,FWMF,Marseille,19,7.8,6,2,33.3,f36d5624
+Christophe Hérelle,DF,Brest,28,21.5,6,2,33.3,3681cfff
+Jérôme Hergault,DF,Lorient,35,3.9,1,0,0.0,a84f9a4b
+Ander Herrera,MF,Paris S-G,31,12.1,14,3,21.4,436a9dd0
+Franck Honorat,FWMF,Brest,24,32.2,60,30,50.0,db7849ca
+Fraser Hornby,FWMF,Reims,21,3.9,6,2,33.3,29aee77c
+Cédric Hountondji,DF,Clermont Foot,27,22.6,8,3,37.5,00891164
+Suk Hyun-jun,FWMF,Troyes,30,1.7,8,2,25.0,7ffaf233
+Mauro Icardi,FW,Paris S-G,28,11.4,28,9,32.1,43b78598
+Jonathan Iglesias,MF,Clermont Foot,32,6.4,1,0,0.0,639ca1cf
+Juan Ignacio Ramírez,FW,Saint-Étienne,24,1.4,2,0,0.0,ad513a6b
+Danylo Ihnatenko,MF,Bordeaux,24,7.7,12,1,8.3,65bbfba3
+Jonathan Ikone,MFFW,Lille,23,11.8,22,8,36.4,42eaa028
+Bonke Innocent,MF,Lorient,25,9.7,3,1,33.3,546bb36e
+Wilson Isidor,FWMF,Monaco,20,0.6,1,0,0.0,a671316d
+Ismail Jakobs,DFFW,Monaco,21,13.4,5,1,20.0,a0415710
+Marin Jakoliš,FW,Angers,24,2.5,9,3,33.3,96f4ebc0
+Abdel Jalil Medioub,DF,Bordeaux,23,6.9,3,0,0.0,4937a9f7
+Corentin Jean,FWMF,Lens,26,2.8,7,2,28.6,7d9b37bf
+Jemerson,DF,Metz,28,13.4,5,2,40.0,7cab69b5
+Moritz Jenz,DF,Lorient,22,15.3,9,1,11.1,ee644761
+Lenny Joseph,FWMF,Metz,20,1.7,0,0,,d1828392
+Issa Kaboré,DF,Troyes,20,25.0,7,2,28.6,c066d1a5
+Tino Kadewere,FW,Lyon,25,5.6,18,7,38.9,7d08063d
+Gaël Kakuta,MFFW,Lens,30,18.6,40,14,35.0,5b1bf5e3
+Arnaud Kalimuendo,FW,Paris S-G,19,0.1,0,0,,bf4c41f9
+Arnaud Kalimuendo,FW,Lens,19,23.9,60,29,48.3,bf4c41f9
+Samuel Kalu,FWMF,Bordeaux,23,3.6,13,8,61.5,b8d22478
+Boubacar Kamara,MFDF,Marseille,21,30.9,22,3,13.6,cc77354e
+Hassane Kamara,MFDF,Nice,27,6.0,13,1,7.7,19a12bed
+Jean-Armel Kana-Biyik,DF,Metz,32,7.4,1,0,0.0,76a4233b
+Nordine Kandil,MFFW,Strasbourg,19,1.0,1,0,0.0,c5908bc4
+Eiji Kawashima,GK,Strasbourg,38,1.0,0,0,,a4527d33
+Ilan Kebbal,MFFW,Reims,23,19.7,27,6,22.2,37d04e90
+Thilo Kehrer,DF,Paris S-G,24,16.8,9,4,44.4,51dbeea9
+Habib Keita,MFFW,Lyon,19,0.1,2,2,100.0,cc588cbe
+Saîf-Eddine Khaoui,MFFW,Clermont Foot,26,10.3,20,7,35.0,796b1c41
+Wahbi Khazri,FWMF,Saint-Étienne,30,24.7,69,18,26.1,2677a1de
+Presnel Kimpembe,DF,Paris S-G,25,28.6,7,1,14.3,aef6e670
+Thibault Klidje,MFFW,Bordeaux,20,1.0,1,0,0.0,db013c7d
+Justin Kluivert,MF,Nice,22,20.8,30,10,33.3,4c3a6744
+Samuel Koeberlé,FW,Reims,16,0.0,0,0,,6751b938
+Philippe Koffi,FW,Reims,19,4.2,9,2,22.2,9f1c2822
+Sead Kolašinac,DF,Marseille,28,4.9,0,0,,3935e52e
+Randal Kolo Muani,FWMF,Nantes,22,32.8,54,26,48.1,c0b3669f
+Timothée Kolodziejczak,DF,Saint-Étienne,29,28.5,15,6,40.0,ab096c6f
+Ghislain Konan,DF,Reims,25,26.9,19,5,26.3,6b2c894b
+Ibrahima Koné,FW,Lorient,22,8.1,15,8,53.3,04bb2b06
+Youssouf Koné,DF,Troyes,26,10.9,9,3,33.3,e6eadfb8
+Laurent Koscielny,DF,Bordeaux,35,10.4,0,0,,f5efb153
+Rominigue Kouamé,MF,Troyes,24,33.0,37,11,29.7,86a2ba20
+Boubakar Kouyaté,DF,Metz,24,29.6,22,6,27.3,562a4799
+Jean-Philippe Krasso,FW,Saint-Étienne,24,5.0,12,2,16.7,037f2523
+Mykola Kukharevych,FW,Troyes,20,0.2,1,0,0.0,8197a269
+Enock Kwateng,DF,Bordeaux,24,22.2,7,3,42.9,4bf69118
+Grejohn Kyei,FW,Clermont Foot,25,4.4,11,3,27.3,397ba086
+Gaëtan Laborde,FW,Montpellier,27,3.8,14,4,28.6,7cdda3bf
+Gaëtan Laborde,FW,Rennes,27,30.3,84,32,38.1,7cdda3bf
+Tom Lacoux,DFMF,Bordeaux,19,10.1,2,0,0.0,295ba708
+Lenny Lacroix,DF,Metz,18,2.2,2,0,0.0,5413ef36
+Alban Lafont,GK,Nantes,22,38.0,0,0,,4e7db402
+Mohamed Lamine Bayo,FW,Clermont Foot,23,26.8,63,26,41.3,01870104
+Didier Lamkel Zé,FW,Metz,24,6.7,14,7,50.0,b229aa13
+Julien Laporte,DF,Lorient,27,32.1,17,3,17.6,f066022d
+Yasser Larouci,DF,Troyes,20,3.8,3,1,33.3,0ed063d6
+Paul Lasne,MF,Brest,32,9.4,8,1,12.5,542cc80f
+Armand Lauriente,FWMF,Lorient,22,27.5,84,36,42.9,2d22cea7
+Théo Le Bris,MF,Lorient,18,0.7,0,0,,afe39ca8
+Jérémy Le Douaron,FWMF,Brest,23,16.1,35,16,45.7,88c4d190
+Enzo Le Fée,MFFW,Lorient,21,24.4,33,9,27.3,6f806d99
+Vincent Le Goff,DF,Lorient,31,34.0,27,4,14.8,2321ea6e
+Maxime Le Marchand,DF,Strasbourg,31,9.6,3,2,66.7,321a71a7
+Jean-Louis Leca,GK,Lens,35,25.7,0,0,,edbe46dc
+Félix Lemaréchal,MF,Monaco,17,0.1,0,0,,8ca9415f
+Mario Lemina,MF,Nice,27,21.9,16,4,25.0,2b471f99
+Fabien Lemoine,MF,Lorient,34,12.4,4,0,0.0,54d51e22
+Léo Leroy,MF,Montpellier,21,7.0,8,3,37.5,fcc84a07
+Alexandre Letellier,GK,Paris S-G,30,0.1,0,0,,96fcd380
+Yanis Lhery,FWMF,Saint-Étienne,18,0.8,2,1,50.0,cc972842
+Dimitri Liénard,DFMF,Strasbourg,33,22.7,23,3,13.0,f7691f63
+Isaac Lihadji,MFFW,Lille,19,2.6,3,2,66.7,57a46f3f
+Pol Lirola,DFFW,Marseille,23,19.7,13,2,15.4,ff800ed8
+Banzouzi Locko,MFDF,Reims,19,11.2,7,2,28.6,40221fa7
+Anthony Lopes,GK,Lyon,30,33.1,0,0,,f00de885
+Pau López,GK,Marseille,26,29.0,0,0,,20b9f052
+Dion Lopy,MF,Reims,19,18.2,16,2,12.5,64c14d49
+Samuel Loric,DF,Lorient,21,3.0,1,0,0.0,9004f318
+Jordan Lotomba,DF,Nice,22,19.8,9,2,22.2,fc4cf6a7
+Johaneko Louisjean,DF,Bordeaux,17,0.1,0,0,,9af3613f
+Jean Lucas,MF,Monaco,23,16.1,26,9,34.6,a99138af
+Castello Lukeba,DF,Lyon,18,23.3,6,3,50.0,5b9512c5
+Levi Lumeka,MFFW,Troyes,22,0.7,0,0,,199ff86e
+Yannis M'Bemba,DFFW,Nantes,20,0.1,2,1,50.0,080de72a
+Deiver Machado,DFMF,Lens,27,5.8,2,0,0.0,b3f8bdef
+Yvann Macon,DF,Saint-Étienne,22,17.0,15,4,26.7,0bb6e193
+Louis Mafouta,FW,Metz,27,5.8,9,7,77.8,bec3d251
+Hugo Magnetti,MF,Brest,23,16.3,17,2,11.8,d4d35152
+Yohann Magnin,MFDF,Clermont Foot,24,19.1,19,3,15.8,caa7aaea
+Habib Maïga,MF,Metz,25,14.1,11,5,45.5,e768de1f
+Josh Maja,FW,Bordeaux,22,0.1,0,0,,bc0bfc64
+Abdul Majeed Waris,FWMF,Strasbourg,29,3.6,7,3,42.9,46907171
+Lovro Majer,MFFW,Rennes,23,20.4,45,18,40.0,fc46aab1
+Béni Makouana,FWMF,Montpellier,18,3.6,7,0,0.0,654f49ca
+Hianga Mananga Mbock,MF,Brest,21,8.9,9,0,0.0,0f86995c
+Vincent Manceau,DF,Angers,32,26.2,3,0,0.0,c26a3918
+Steve Mandanda,GK,Marseille,36,9.0,0,0,,1d2d5cc8
+Reinildo Mandava,DF,Lille,27,16.9,6,3,50.0,c20bdcd7
+Anthony Mandrea,GK,Angers,24,10.0,0,0,,f7d3a773
+Eliaquim Mangala,DF,Saint-Étienne,30,13.1,3,1,33.3,f520049f
+Thomas Mangani,MF,Angers,34,24.4,12,3,25.0,c801616a
+Ricardo Mangas,DF,Bordeaux,23,26.1,17,5,29.4,eef2d8ce
+Myziane Maolida,MF,Nice,22,0.4,1,0,0.0,706a60e1
+Sekou Mara,FWMF,Bordeaux,19,10.1,37,16,43.2,3544641e
+Marcelo,DF,Bordeaux,34,10.0,3,0,0.0,e3d0b0c4
+Marcelo,DF,Lyon,34,2.0,2,0,0.0,e3d0b0c4
+Guillermo Maripán,DF,Monaco,27,20.4,7,2,28.6,d9764034
+Marquinhos,DF,Paris S-G,27,31.8,21,7,33.3,d5f2f82b
+Jonas Martin,MF,Rennes,31,23.4,21,4,19.0,468fdbad
+Gelson Martins,MFFW,Monaco,26,21.2,30,11,36.7,3ef0fa48
+Pape Matar Sarr,MF,Metz,18,23.7,31,8,25.8,feb5d972
+Eliot Matazo,MF,Monaco,19,8.8,4,1,25.0,15944afd
+Chrislain Matsima,DF,Monaco,19,1.5,1,0,0.0,cf1ef7ec
+Azor Matusiwa,MF,Reims,23,27.4,10,5,50.0,a17a94d6
+Stephy Mavididi,FWMF,Montpellier,23,25.5,60,23,38.3,30144daa
+Derek Mazou-Sacko,FWDF,Troyes,16,0.0,0,0,,810edef9
+Kylian Mbappé,FW,Paris S-G,22,33.6,143,59,41.3,42fd9c7f
+Amadou Mbengue,DFMF,Metz,19,6.8,3,0,0.0,14d2670e
+Jason Mbock,FW,Angers,21,0.2,0,0,,890bc029
+Moustapha Mbow,DF,Reims,21,1.0,0,0,,3f3a2cba
+Nathanael Mbuku,FWMF,Reims,19,15.8,33,13,39.4,46750e9c
+Facundo Medina,DF,Lens,22,28.8,9,2,22.2,6f5ec8bb
+Farid El Melali,FW,Angers,24,0.2,1,0,0.0,d21e361a
+Birger Meling,DF,Rennes,26,20.3,3,1,33.3,70c52749
+Houboulang Mendes,DF,Lorient,23,35.8,21,5,23.8,1545cf15
+Nuno Mendes,DF,Paris S-G,19,18.4,7,1,14.3,f20e4cc9
+Pedro Mendes,DF,Montpellier,30,0.2,0,0,,6690ef25
+Thiago Mendes,MFDF,Lyon,29,20.7,16,4,25.0,c6e5d20f
+Arial Mendy,DFFW,Clermont Foot,26,8.8,10,3,30.0,9f0f4b49
+Batista Mendy,MFDF,Angers,21,26.8,14,6,42.9,e472a6f6
+Gideon Mensah,DF,Bordeaux,23,13.4,2,0,0.0,9bdd8118
+Quentin Merlin,DFMF,Nantes,19,21.4,11,4,36.4,0bfca6a1
+Lionel Messi,FWMF,Paris S-G,34,23.9,89,29,32.6,d70ce98e
+Mexer,DF,Bordeaux,32,13.6,5,1,20.0,ce492295
+Edouard Michut,MF,Paris S-G,18,0.8,0,0,,fe6c1add
+Georges Mikautadze,FW,Metz,20,0.0,2,0,0.0,4788cb6b
+William Mikelbrencis,DF,Metz,17,6.8,6,1,16.7,14df1d7f
+Arkadiusz Milik,FW,Marseille,27,15.7,53,19,35.8,85613cf0
+Terem Moffi,FW,Lorient,22,30.1,58,20,34.5,065dc209
+Dion Moise Sahi,FWMF,Strasbourg,19,1.4,5,2,40.0,cdc4458b
+Florent Mollet,FWMF,Montpellier,29,29.2,55,17,30.9,7e82a78f
+Thomas Monconduit,MF,Lorient,30,25.0,36,12,33.3,84d94b91
+Jérémy Morel,DF,Lorient,37,6.7,1,0,0.0,e97150c0
+Lebo Mothiba,FWMF,Troyes,25,5.8,5,2,40.0,3eaf8817
+Lebo Mothiba,FW,Strasbourg,25,0.0,0,0,,3eaf8817
+Baptiste Mouazan,MF,Lorient,19,1.1,1,0,0.0,81ac108d
+Aimen Moueffek,MF,Saint-Étienne,20,4.8,4,1,25.0,2591b066
+Harold Moukoudi,DF,Saint-Étienne,23,18.5,7,0,0.0,5f26e0c5
+Jessy Moulin,GK,Troyes,35,7.0,0,0,,28a65a2c
+Steve Mounié,FW,Brest,26,25.7,72,23,31.9,19ba6c6d
+Samuel Moutoussamy,MF,Nantes,24,16.8,14,6,42.9,af0c835b
+Marshall Munetsi,MFDF,Reims,25,20.9,32,13,40.6,2acf0cd7
+Junior Mwanga,DF,Bordeaux,18,1.0,0,0,,ee158be5
+Kévin N'Doram,MF,Metz,25,13.7,7,1,14.3,e50623a0
+Eric N'Jo,DF,Troyes,17,1.1,0,0,,b85e57bb
+Vital N'Simba,DF,Clermont Foot,28,31.0,19,5,26.3,249ac66d
+Mickael Nade,DF,Saint-Étienne,22,28.5,7,1,14.3,a6b6fa6e
+Paul Nardi,GK,Lorient,27,22.0,0,0,,2d70dbe5
+Keylor Navas,GK,Paris S-G,34,20.6,0,0,,ecada4fc
+Papa Ndiaga Yade,DFFW,Metz,21,7.7,8,0,0.0,87e9c7cd
+Tanguy Ndombele,MF,Lyon,24,7.8,5,0,0.0,5cdddffa
+Dan Ndoye,FWMF,Nice,20,2.3,3,0,0.0,8e697a8f
+Neymar,FWMF,Paris S-G,29,20.6,50,25,50.0,69384e5d
+Yvan Neyou,MF,Saint-Étienne,24,10.4,6,2,33.3,0ad37003
+Opa Nguette,FWMF,Metz,27,11.6,23,7,30.4,75a63397
+Sikou Niakaté,DF,Metz,22,7.3,4,1,25.0,8eef18aa
+Ibrahima Niane,FW,Metz,22,17.6,42,9,21.4,46faabfa
+M'Baye Niang,FW,Bordeaux,26,8.6,26,11,42.3,2054d037
+Cheikh Niasse,FWMF,Lille,21,0.5,0,0,,ff20acfe
+Casimir Ninga,FW,Angers,28,4.5,9,2,22.2,91f2da4c
+Arnaud Nordin,FWMF,Saint-Étienne,23,20.8,45,20,44.4,7b9a9e25
+Alexander Nübel,GK,Monaco,24,38.0,0,0,,afb0c500
+Gerzino Nyamsi,DF,Strasbourg,24,33.2,28,6,21.4,6043997c
+Florent Ogier,DF,Clermont Foot,32,27.0,7,3,42.9,6993927b
+Warmed Omari,DF,Rennes,21,31.1,5,0,0.0,4534a352
+Jonas Omlin,GK,Montpellier,27,28.7,0,0,,c631f952
+Amadou Onana,MF,Lille,19,15.1,15,6,40.0,828657ff
+Jean Onana,MF,Bordeaux,21,20.4,21,4,19.0,b5bb8188
+Otávio,MF,Bordeaux,27,12.7,12,3,25.0,243f4a0b
+Dango Ouattara,MFFW,Lorient,19,9.0,24,8,33.3,2f9e4435
+Remi Oudin,MFFW,Bordeaux,24,19.3,57,16,28.1,ea02beaf
+Alexandre Oukidja,GK,Metz,33,20.8,0,0,,ae7d0ecd
+Azzedine Ounahi,MF,Angers,21,18.1,26,4,15.4,83299cc0
+Ambroise Oyongo,DF,Montpellier,30,7.3,6,3,50.0,e3e05edf
+Vincent Pajot,MF,Metz,30,25.7,14,2,14.3,f86ca403
+Nicolas Pallois,DF,Nantes,33,27.2,8,2,25.0,779847d6
+Erik Palmer-Brown,DF,Troyes,24,19.3,4,0,0.0,e5c1e0ca
+Emerson Palmieri,DF,Lyon,26,25.2,16,5,31.3,e0bc6fdc
+Lucas Paquetá,MFFW,Lyon,23,30.0,86,33,38.4,9b6f7fd5
+Rubén Pardo,MF,Bordeaux,28,0.1,0,0,,2306bfde
+Leandro Paredes,MF,Paris S-G,27,9.3,8,2,25.0,dff153a4
+Strahinja Pavlović,DF,Monaco,20,5.0,5,1,20.0,25146df0
+Dimitri Payet,FWMF,Marseille,34,28.8,61,18,29.5,58ae47b2
+Timothee Pembele,DF,Bordeaux,18,15.7,18,4,22.2,f8ce97ca
+Brayann Pereira,DFMF,Lens,18,0.2,0,0,,5c42e7ce
+Danilo Pereira,MF,Paris S-G,29,22.6,19,8,42.1,8fd9996f
+Mathias Pereira Lage,DF,Angers,24,11.6,19,6,31.6,8846a40f
+Luan Peres Petroni,DF,Marseille,27,29.8,3,0,0.0,a5549ec1
+Lucas Perrin,DF,Strasbourg,22,27.8,9,3,33.3,49070d66
+Danijel Petković,GK,Angers,28,15.0,0,0,,b98cea65
+Léo Pétrot,DF,Lorient,24,20.2,5,3,60.0,00638016
+Romain Philippoteaux,MF,Brest,33,0.3,0,0,,f98b15f0
+Jérôme Phojo,DF,Clermont Foot,28,0.1,0,0,,ff44d058
+Jérémy Pied,DFFW,Lille,32,0.1,0,0,,a634b9d2
+Ronaël Pierre-Gabriel,DF,Brest,23,28.3,5,2,40.0,64ba07c0
+Julian Pollersbeck,GK,Lyon,26,4.8,0,0,,d6f6ce93
+Gaëtan Poussin,GK,Bordeaux,22,13.0,0,0,,c252c705
+Sanjin Prcić,MF,Strasbourg,27,24.3,46,11,23.9,51c30111
+Nicolas de Préville,FWMF,Metz,30,21.9,41,10,24.4,b0547a87
+Nemanja Radonjić,FW,Marseille,25,0.2,0,0,,0630eb63
+Rafinha,FWMF,Paris S-G,28,2.4,5,0,0.0,0c2ac3cb
+Predrag Rajković,GK,Reims,25,38.0,0,0,,58ad9383
+Adil Rami,DF,Troyes,35,13.0,5,3,60.0,8dbff17c
+Sergio Ramos,DF,Paris S-G,35,8.9,12,4,33.3,08511d65
+Elba Rashani,FWMF,Clermont Foot,28,19.5,30,12,40.0,25749008
+Jeff Reine-Adélaïde,MFDF,Lyon,23,2.2,3,1,33.3,d504b3e1
+Tiago Ribeiro,FW,Monaco,19,0.0,0,0,,507d7569
+Sergio Rico,GK,Paris S-G,27,0.3,0,0,,5f0241b2
+Renaud Ripart,MFFW,Troyes,28,21.0,41,13,31.7,beae3a73
+Mihailo Ristić,DF,Montpellier,25,20.0,18,5,27.8,ea0aa7e0
+Maxence Rivera,FW,Saint-Étienne,19,0.1,0,0,,46a7b605
+Patrick Roberts,MF,Troyes,24,0.2,1,0,0.0,59d93937
+Stian Rode Gregersen,DF,Bordeaux,26,21.7,6,1,16.7,5f011e05
+Gerson Rodrigues,FWMF,Troyes,26,9.4,23,7,30.4,3814b753
+Valentin Rongier,MFDF,Marseille,26,24.4,28,9,32.1,ed45c4a5
+Pablo Rosario,MF,Nice,24,30.3,19,3,15.8,1a6b7ea4
+Roli Pereira de Sa,MF,Nantes,24,6.4,5,1,20.0,60f58477
+Mathys Saban,FWMF,Saint-Étienne,19,0.8,0,0,,7d9f3d69
+Falaye Sacko,DF,Saint-Étienne,26,7.4,1,0,0.0,6388e356
+Rafiki Said Ahamada,MFFW,Brest,21,1.4,6,2,33.3,c2e5f306
+Wesley Saïd,FWMF,Lens,26,7.3,26,10,38.5,90fcf472
+Mamadou Sakho,DF,Montpellier,31,28.6,1,0,0.0,87935cf3
+Bakary Sako,FWMF,Saint-Étienne,33,1.7,6,0,0.0,381d7d54
+William Saliba,DF,Marseille,20,36.0,17,4,23.5,972aeb2a
+Romain Salin,GK,Rennes,37,1.0,0,0,,74733221
+Yoann Salmier,DF,Troyes,28,29.6,10,1,10.0,c3725db2
+Mama Samba Baldé,MFFW,Troyes,25,19.1,47,17,36.2,fb14aa28
+Junior Sambia,DFFW,Montpellier,24,17.0,20,6,30.0,24eb7ed6
+Renato Sanches,MFFW,Lille,23,18.3,22,4,18.2,032f894e
+Philippe Sandler,DF,Troyes,24,0.8,0,0,,60740e70
+Baptiste Santamaria,MFDF,Rennes,26,28.0,34,7,20.6,5e22e2a4
+Pablo Sarabia,FW,Paris S-G,29,0.2,1,1,100.0,9744ff80
+Martin Satriano,FW,Brest,20,10.4,24,10,41.7,86383d0e
+Téji Savanier,MF,Montpellier,29,26.8,77,34,44.2,6bde367b
+Morgan Schneiderlin,MF,Nice,31,7.2,2,0,0.0,51b41c5c
+Alidu Seidu,DF,Clermont Foot,21,15.7,9,1,11.1,cea59f02
+Matz Sels,GK,Strasbourg,29,37.0,2,0,0.0,834b5c4c
+Xherdan Shaqiri,FWMF,Lyon,29,7.5,13,5,38.5,6421ec64
+Mahame Siby,DF,Strasbourg,25,0.2,0,0,,6d075c67
+Aboubakar Sidibé,DF,Clermont Foot,25,0.1,0,0,,ae5b93a0
+Djibril Sidibé,DF,Monaco,29,10.5,4,1,25.0,4c5b714f
+Kaj Sierhuis,FW,Reims,23,0.9,2,0,0.0,9c2b1f11
+Caio Henrique Oliveira Silva,DF,Monaco,24,29.6,19,6,31.6,30af8b93
+Gabriel Silva,DFMF,Saint-Étienne,30,7.9,1,0,0.0,4914ed4a
+Moses Simon,FWMF,Nantes,26,25.9,42,16,38.1,5f3eaaf5
+Xavi Simons,MFFW,Paris S-G,18,1.5,2,0,0.0,da4d670f
+Issouf Sissokho,MF,Bordeaux,19,4.8,3,2,66.7,792a9d41
+Ibrahima Sissoko,MFDF,Strasbourg,23,25.6,26,6,23.1,0f8418aa
+Nelson Sissoko,DF,Saint-Étienne,24,0.5,0,0,,12bd0579
+Sambou Sissoko,MFDF,Reims,22,2.0,3,0,0.0,e4bb1f08
+Islam Slimani,FW,Lyon,33,6.4,12,4,33.3,ffec9769
+Florian Sotoca,FWMF,Lens,30,27.6,69,24,34.8,7a42d0df
+Sambou Soumano,FWMF,Lorient,20,5.0,18,4,22.2,7cc00776
+Arnaud Souquet,DF,Montpellier,29,25.9,18,4,22.2,4e0afc5d
+Saidou Sow,DF,Saint-Étienne,19,11.0,3,2,66.7,f6b94e8d
+Calvin Stengs,MF,Nice,22,11.9,21,5,23.8,8f7e6783
+Kamaldeen Sulemana,MFFW,Rennes,19,11.3,26,8,30.8,a62f8bf1
+Abdoulaye Sylla,DF,Nantes,21,1.7,0,0,,2aeb43f1
+Waniss Taibi,MFFW,Angers,19,1.5,1,0,0.0,95192fe4
+Flavien Tait,MF,Rennes,28,23.6,42,12,28.6,a0f9b535
+Florian Tardieu,MF,Troyes,29,29.2,20,5,25.0,ed39121c
+Oussama Targhalline,FW,Marseille,19,0.1,0,0,,abd56820
+Loum Tchaouna,FWMF,Rennes,17,1.0,2,1,50.0,a3c8b4d3
+Warren Tchimbembé,MF,Metz,23,2.3,0,0,,93b8f9f4
+Aurélien Tchouaméni,MF,Monaco,21,32.5,55,10,18.2,4f255115
+Mathys Tel,FWMF,Rennes,16,0.6,3,1,33.3,829aa60c
+Jordan Tell,FW,Clermont Foot,24,3.2,8,3,37.5,4f093689
+Martin Terrier,FWMF,Rennes,24,30.9,86,44,51.2,5148dcc5
+Tetê,FWMF,Lyon,21,6.5,17,7,41.2,7120a04d
+Sada Thioub,FW,Angers,26,0.0,0,0,,f4bc42b1
+Sada Thioub,DFMF,Saint-Étienne,26,10.6,5,0,0.0,f4bc42b1
+Romain Thomas,DF,Angers,33,28.5,14,4,28.6,275e2c51
+Adrien Thomasson,MF,Strasbourg,27,26.5,48,19,39.6,c76b7567
+Thuler,DF,Montpellier,22,9.5,1,0,0.0,db23d9fc
+Khéphren Thuram-Ulie,MF,Nice,20,21.1,23,7,30.4,7d9397f8
+Cheikh Tidiane Sabaly,FWMF,Metz,22,1.7,2,1,50.0,9ddf7fae
+Jean-Clair Todibo,DF,Nice,21,34.6,19,6,31.6,88f130ed
+Karl Toko Ekambi,FW,Lyon,28,25.5,74,36,48.6,5ceba7fc
+Yoann Touzghar,FW,Troyes,34,16.2,28,12,42.9,4e47507a
+Amadou Traore,FW,Bordeaux,19,0.2,0,0,,4eb0686f
+Boubacar Traoré,MF,Metz,19,19.2,22,5,22.7,999ceb5f
+Charles Traore,DF,Nantes,29,8.0,0,0,,de488e56
+Hamari Traoré,DF,Rennes,29,32.1,31,9,29.0,a4b1028a
+Ismaël Traoré,DF,Angers,34,35.7,25,9,36.0,b666421b
+Miguel Trauco,DFMF,Saint-Étienne,28,12.4,11,3,27.3,e4b72e34
+Adrien Truffert,DF,Rennes,19,18.2,19,5,26.3,5d0e0a1f
+Matthieu Udol,DF,Metz,25,11.2,5,2,40.0,cc41f558
+Ike Ugbo,FW,Troyes,22,9.0,15,6,40.0,8a53d24b
+Chimuanya Ugochukwu,MF,Rennes,17,4.5,4,1,25.0,1df4a109
+Hwang Ui-jo,FW,Bordeaux,28,27.9,55,22,40.0,a2d873dd
+Cengiz Ünder,FWMF,Marseille,24,24.4,57,19,33.3,1880614f
+Jere Uronen,DF,Brest,27,9.8,4,1,25.0,d75f3980
+Vanderson,FWDF,Monaco,20,12.4,14,6,42.9,ee45fd85
+Jonathan Varane,MF,Lens,19,0.0,0,0,,4ade359f
+Marco Verratti,MF,Paris S-G,28,21.5,7,2,28.6,1467af0d
+Kevin Volland,MFFW,Monaco,29,27.1,50,23,46.0,64f69877
+Timothy Weah,MFFW,Lille,21,18.0,34,9,26.5,8eec784d
+Georginio Wijnaldum,MF,Paris S-G,30,18.4,22,2,9.1,eb58eef0
+Christopher Wooh,DF,Lens,19,11.7,8,2,25.0,b003239d
+Xeka,MF,Lille,26,18.0,22,5,22.7,f3600c02
+Sekou Yansané,FW,Paris S-G,18,0.2,0,0,,bce37ac0
+Yusuf Yazıcı,MFFW,Lille,24,5.7,10,6,60.0,f5c8b425
+Burak Yılmaz,FW,Lille,36,24.6,68,25,36.8,165a2e40
+Leny Yoro,MF,Lille,15,0.1,0,0,,6763f716
+Zaydou Youssouf,MF,Saint-Étienne,22,17.3,20,6,30.0,e2f9bb5f
+Akim Zedadka,DF,Clermont Foot,26,37.1,31,6,19.4,0ff630d0
+Arber Zeneli,FW,Reims,26,4.5,11,3,27.3,095e4199
+Mehdi Zerkane,MFDF,Bordeaux,22,0.9,1,0,0.0,53f6306f
+Edon Zhegrova,MFFW,Lille,22,5.3,15,7,46.7,34a88e3e
+Banhie Zoukrou,DF,Troyes,18,0.9,1,1,100.0,aefa3050

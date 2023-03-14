@@ -10,8 +10,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-opt = "eng_"
-opt2 = "_eng"
+opt = "fr_"
+opt2 = "_fr"
 
 #IMPORT DU FICHIER
 data = pd.read_csv("bdd/data/data_ml_"+str(opt)+"21_22.csv", sep= ";", index_col = 0)
@@ -52,6 +52,10 @@ Def = data.groupby("team").mean("FDD").reset_index()
 Def = Def[["team","FDD"]].sort_values(by = ["FDD"],ascending=True)
 Def.head
 
+nb_top['Squad'] = nb_top['Squad'].replace('Clermont Foot','Clermont-Foot')
+nb_top['Squad'] = nb_top['Squad'].replace('Saint-Étienne','Saint-Etienne')
+nb_top['Squad'] = nb_top['Squad'].replace('Paris S-G','Paris-Saint-Germain')
+
 data = data.merge(nb_top, how = "left", left_on = "team", right_on = "Squad")
 data = data.merge(nb_top_precis, how = "left", left_on = "team", right_on = "Squad")
 data = data.merge(opp_score, how = "left", on = "Opponent")
@@ -68,14 +72,14 @@ a = a.reset_index()
 a = a.rename(columns={"index":"opp_Formation", "opp_Formation":"n_form"})
 
 df_reg = df_reg.merge(a, how="left", on="opp_Formation")
-df_reg = df_reg.loc[df_reg["n_form"] >= 100]
+df_reg = df_reg.loc[df_reg["n_form"] >= 80]
 
 b = df_reg.Formation.value_counts()
 b = b.reset_index()
 b = b.rename(columns={"index":"Formation", "Formation":"n"})
 
 df_reg = df_reg.merge(b, how="left", on="Formation")
-df_reg = df_reg.loc[df_reg["n"] >= 100]
+df_reg = df_reg.loc[df_reg["n"] >= 80]
 
 corr = df_reg.corr()
 
