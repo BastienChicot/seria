@@ -1,0 +1,620 @@
+Player,Pos,Squad,Age,CrdY,CrdR,2CrdY,Fls,Fld,Off,Crs,Int,TklW,PKwon,PKcon,OG,Recov,Won,Lost,Won%,-9999
+Gennaro Acampora,MFFW,Spezia,26,2,0,0,10,12,1,7,4,4,0,0,0,31,3,5,37.5,01040647
+Francesco Acerbi,DF,Lazio,32,9,1,1,31,24,2,32,76,32,0,0,0,227,62,25,71.3,b96b595c
+Andrea Adorante,FW,Parma,20,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0.0,7005ac66
+Lucien Agoume,MF,Spezia,18,2,0,0,17,8,0,1,15,10,0,0,0,75,12,2,85.7,8bc8829a
+Kevin Agudelo,FW,Spezia,21,4,0,0,20,32,2,11,10,28,0,0,0,60,16,34,32.0,46fa7204
+Jean-Daniel Akpa-Akpro,MF,Lazio,27,9,0,0,31,12,0,4,18,25,0,0,0,70,9,9,50.0,fdf4b948
+Luis Alberto,MF,Lazio,27,5,0,0,19,36,2,150,13,24,0,0,0,209,10,12,45.5,5294a83f
+Bruno Alves,DF,Parma,38,3,0,0,20,9,1,8,26,10,0,0,0,74,43,5,89.6,585a73a8
+Wisdom Amey,DF,Bologna,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,35b4bc62
+Sofyan Amrabat,MF,Fiorentina,23,7,0,0,59,44,0,16,23,22,0,0,0,188,18,26,40.9,5a2cb25d
+Djavan Anderson,DF,Lazio,25,0,0,0,1,1,0,2,1,0,0,0,0,4,0,0,,ca241ad3
+Nícolas Andrade,GK,Udinese,32,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,,326d09ef
+Davide Angelo Ghislandi,DF,Atalanta,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0.0,0e0e4422
+Philip Ankhrah,MF,Hellas Verona,17,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,,f5409698
+Cristian Ansaldi,DFFW,Torino,33,1,0,0,24,22,0,177,16,33,0,1,0,99,7,14,33.3,bbafc0c4
+Valentin Antov,DF,Bologna,19,1,0,0,2,2,0,0,4,2,0,0,0,11,3,5,37.5,8f68aa41
+Nicolò Armini,DF,Lazio,19,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0.0,2f7407fa
+Tolgay Arslan,MF,Udinese,29,9,0,0,38,45,0,13,22,32,0,1,0,139,11,9,55.0,963a328b
+Kwadwo Asamoah,DFMF,Cagliari,31,0,0,0,0,4,0,7,4,3,0,0,0,20,2,1,66.7,089550f5
+Kristoffer Askildsen,MF,Sampdoria,19,2,0,0,3,1,0,1,3,0,0,0,0,5,1,1,50.0,a69cc629
+Emil Audero,GK,Sampdoria,23,0,0,0,0,6,0,0,1,1,0,0,0,61,6,0,100.0,649b01d8
+Tommaso Augello,DF,Sampdoria,25,2,1,0,13,25,2,148,32,30,0,0,0,214,41,30,57.7,3cd3b384
+Kaan Ayhan,DF,Sassuolo,25,3,0,0,8,2,0,3,16,9,0,0,0,37,12,22,35.3,2200181e
+Milan Badelj,MF,Genoa,31,7,0,0,34,32,1,15,87,27,1,0,0,228,16,12,57.1,e8c930bb
+Tiemoué Bakayoko,MF,Napoli,25,6,1,1,36,52,1,2,36,41,1,0,0,129,44,34,56.4,59bf127b
+Keita Baldé,FW,Sampdoria,25,4,1,0,32,35,4,8,0,6,1,1,0,25,20,41,32.8,509a4ccb
+Botond Balogh,DF,Parma,18,1,0,0,1,0,0,0,2,7,0,0,0,5,2,3,40.0,348bafd4
+Mattia Bani,DF,Genoa,26,4,0,0,13,7,1,2,27,5,0,0,0,39,32,29,52.5,0821331c
+Mattia Bani,DF,Parma,26,6,0,0,16,8,0,3,33,11,0,0,0,54,34,24,58.6,0821331c
+Antonín Barák,MF,Hellas Verona,25,5,1,0,60,17,4,14,12,19,0,1,0,216,65,81,44.5,01efac19
+Federico Barba,DF,Benevento,26,8,0,0,27,10,1,38,48,16,0,0,1,116,22,30,42.3,c010b898
+Nicolò Barella,MF,Inter,23,5,0,0,43,53,2,64,26,31,0,1,0,193,30,28,51.7,6928979a
+Antonio Barreca,DF,Fiorentina,25,0,0,0,1,0,1,11,0,0,0,1,0,3,3,2,60.0,6a189491
+Musa Barrow,FWMF,Bologna,21,0,0,0,17,32,11,138,11,10,0,0,0,110,23,73,24.0,e5bf73f3
+Paolo Bartolomei,MF,Spezia,30,1,0,0,4,1,0,13,1,2,0,1,0,9,1,1,50.0,6029a945
+Daniele Baselli,MF,Torino,28,2,0,0,6,9,0,14,9,7,0,0,0,39,7,7,50.0,ea06dd97
+Alessandro Bastoni,DF,Inter,21,6,0,0,40,28,0,24,40,22,0,0,0,164,48,32,60.0,75b86fb3
+Simone Bastoni,DF,Spezia,23,7,0,0,35,27,2,93,16,29,0,1,0,122,27,25,51.9,1ac232b8
+Bastos,DF,Lazio,29,0,0,0,1,4,0,0,0,1,0,0,0,8,1,0,100.0,c01c66d9
+Rodrigo Becão,DF,Udinese,24,5,0,0,50,47,0,13,68,33,0,1,0,142,61,36,62.9,19e4eab9
+Valon Behrami,MF,Genoa,35,3,1,1,28,21,0,3,9,9,1,0,0,41,12,18,40.0,d3d758d8
+Andrea Belotti,FW,Torino,26,4,0,0,58,135,21,25,12,18,3,1,0,87,81,111,42.2,d705ba44
+Ahmad Benali,MF,Crotone,28,2,0,0,12,16,1,28,6,11,0,0,0,94,10,4,71.4,a128b07e
+Ismaël Bennacer,MF,Milan,22,4,0,0,20,30,0,10,20,18,1,1,0,118,11,21,34.4,db092d3b
+Rodrigo Bentancur,MF,Juventus,23,8,1,1,45,27,2,25,47,33,0,0,0,205,30,21,58.8,3b8674e6
+Alessandro Berardi,GK,Hellas Verona,29,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,,ec1f737d
+Domenico Berardi,FW,Sassuolo,25,4,0,0,43,59,2,117,26,22,1,0,0,136,12,32,27.3,53a0e358
+Álex Berenguer,MF,Torino,25,0,0,0,2,3,1,5,0,0,0,0,0,5,2,2,50.0,dc1c2fce
+Bartosz Bereszyński,DF,Sampdoria,28,2,0,0,28,28,0,46,42,44,0,0,0,152,28,33,45.9,61b3978f
+Federico Bernardeschi,MFDF,Juventus,26,3,0,0,13,17,2,85,14,4,0,0,0,64,6,7,46.2,ee93c1a9
+Marco Bertini,MF,Lazio,17,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,,4b520f96
+Daniel Bessa,MF,Hellas Verona,27,1,0,0,16,6,3,16,2,8,0,0,0,39,2,16,11.1,88895312
+Cristiano Biraghi,DF,Fiorentina,27,8,0,0,27,23,4,286,27,23,0,0,0,136,9,19,32.1,9e1577aa
+Davide Biraschi,DF,Genoa,26,2,0,0,16,7,0,13,21,9,0,0,0,61,9,14,39.1,64cd167d
+Jeremie Boga,FWMF,Sassuolo,23,0,0,0,9,35,9,11,8,9,0,0,0,69,2,8,20.0,fe012aca
+Giacomo Bonaventura,MF,Fiorentina,30,5,0,0,39,41,7,38,39,19,1,0,0,139,29,31,48.3,d995ed27
+Federico Bonazzoli,FW,Torino,23,2,0,0,11,19,4,1,2,4,0,0,0,21,4,9,30.8,bf57eaab
+Federico Bonazzoli,FW,Sampdoria,23,0,0,0,3,2,0,1,0,0,0,0,0,6,0,1,0.0,bf57eaab
+Kevin Bonifazi,DF,Udinese,24,4,0,0,26,14,0,4,50,21,0,2,0,164,41,24,63.1,fb77bfef
+Leonardo Bonucci,DF,Juventus,33,4,0,0,21,16,3,5,33,14,0,2,0,93,34,19,64.2,52ec54d0
+Mehdi Bourabia,MF,Sassuolo,28,2,0,0,15,6,0,5,12,5,0,1,0,43,14,5,73.7,0d077b88
+Edoardo Bove,MF,Roma,18,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,100.0,ae94a6c5
+Jayden Braaf,FW,Udinese,17,0,0,0,2,1,0,1,0,0,0,0,0,7,0,5,0.0,c609e90e
+Gleison Bremer,DF,Torino,23,2,0,0,30,16,0,2,70,34,1,1,0,206,96,65,59.6,5fd5ed86
+Marcelo Brozović,MF,Inter,27,9,1,1,34,13,0,86,40,29,0,0,0,175,21,28,42.9,33b8d077
+Gastón Brugman,MF,Parma,27,7,0,0,27,22,1,56,45,19,0,0,0,126,8,8,50.0,e947ee4a
+Juan Brunetta,FWMF,Parma,23,3,0,0,11,16,1,24,1,2,0,0,0,25,3,6,33.3,d60099bc
+Gianluigi Buffon,GK,Juventus,42,0,0,0,0,1,0,0,0,0,0,0,0,11,0,0,,e40d028b
+Alessandro Buongiorno,DF,Torino,21,4,0,0,17,11,1,1,11,5,0,0,0,43,22,10,68.8,4ae67f27
+Maxime Busi,DF,Parma,20,3,0,0,23,8,1,32,16,13,0,2,0,74,9,25,26.5,7b082ec2
+Martín Cáceres,DF,Fiorentina,33,4,0,0,19,18,0,45,14,12,0,1,0,126,25,24,51.0,e94d79e3
+Felipe Caicedo,FW,Lazio,31,5,0,0,25,17,8,0,4,7,0,0,0,24,26,24,52.0,93b891d1
+Arturo Calabresi,DFFW,Bologna,24,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0.0,34bb6fbd
+Arturo Calabresi,DF,Cagliari,24,0,0,0,0,0,0,1,0,0,0,0,0,2,1,0,100.0,34bb6fbd
+Davide Calabria,DF,Milan,23,7,0,0,31,36,3,69,37,64,1,0,1,191,27,28,49.1,2146785a
+Riccardo Calafiori,DF,Roma,18,2,0,0,6,2,0,0,0,0,0,0,0,7,2,1,66.7,aded8e6f
+Mattia Caldara,DF,Atalanta,26,1,0,0,3,1,0,1,4,0,0,0,0,15,6,5,54.5,ac7e640b
+Luca Caldirola,DF,Benevento,29,6,1,1,20,25,1,3,20,13,0,0,0,60,26,25,51.0,226008f1
+Hakan Çalhanoğlu,MFFW,Milan,26,4,0,0,29,43,4,221,15,7,1,0,0,141,17,32,34.7,cd0fa27b
+Fabrizio Caligara,MFFW,Cagliari,20,2,0,0,10,2,0,6,3,4,0,1,0,9,2,0,100.0,22ca11f1
+José Callejón,FWMF,Fiorentina,33,0,0,0,6,12,0,28,4,7,0,0,0,33,9,8,52.9,78841da9
+Drissa Camara,MF,Parma,18,0,0,0,0,0,0,1,0,0,0,0,0,1,1,0,100.0,543d9d2b
+Antonio Candreva,MF,Sampdoria,33,1,0,0,15,29,10,291,9,19,1,0,0,160,3,8,27.3,356c9002
+Elio Capradossi,DF,Spezia,24,0,0,0,1,0,0,0,1,1,0,0,0,4,1,2,33.3,174944a3
+Gianluca Caprari,MFFW,Benevento,27,4,1,0,23,55,8,106,18,11,1,0,0,129,3,30,9.1,54e53b7e
+Francesco Caputo,FW,Sassuolo,32,1,0,0,16,32,19,1,1,0,3,0,0,29,11,16,40.7,5bd72174
+Andrea Carboni,DF,Cagliari,19,2,0,0,11,6,0,22,14,23,0,0,0,46,16,20,44.4,f7e2af2c
+Giuseppe Caso,DFFW,Genoa,21,0,0,0,2,2,0,2,0,0,0,0,0,7,0,1,0.0,099a2de5
+Francesco Cassata,DFFW,Genoa,23,2,0,0,10,8,0,6,3,6,0,0,0,16,3,4,42.9,96960855
+Samu Castillejo,FW,Milan,25,5,0,0,25,30,4,34,6,12,1,0,0,78,8,20,28.6,130a7a3f
+Gaetano Castrovilli,MF,Fiorentina,23,8,1,0,41,63,1,36,34,19,0,1,0,136,13,39,25.0,0728bebe
+Danilo Cataldi,MF,Lazio,25,4,0,0,9,4,0,30,9,2,0,1,0,64,1,5,16.7,ba3d3bea
+Federico Ceccherini,DF,Hellas Verona,28,8,0,0,47,33,1,6,40,12,0,0,0,92,72,42,63.2,d9624b51
+Federico Ceccherini,DF,Fiorentina,28,2,0,0,5,3,0,0,7,1,0,1,1,12,4,4,50.0,d9624b51
+Luca Ceppitelli,DF,Cagliari,30,3,0,0,15,13,1,11,25,19,0,0,0,77,46,29,61.3,7d50454d
+Alberto Cerri,FW,Cagliari,24,1,0,0,18,15,1,3,2,2,0,0,0,12,34,23,59.6,1079c685
+Julian Chabot,DF,Spezia,22,11,1,1,32,32,0,2,37,34,0,1,0,82,57,33,63.3,ae7058f9
+Giorgio Chiellini,DF,Juventus,35,4,0,0,19,15,1,3,27,9,1,3,1,66,26,21,55.3,e85fb9b8
+Federico Chiesa,DF,Fiorentina,22,0,0,0,2,3,2,11,1,2,0,0,0,10,1,1,50.0,b0f7e36c
+Federico Chiesa,MFDF,Juventus,22,3,1,0,30,36,11,70,12,26,2,0,0,104,6,28,17.6,b0f7e36c
+Vlad Chiricheș,DF,Sassuolo,30,6,0,0,31,14,1,4,50,23,0,0,1,135,52,45,53.6,c316607a
+Luca Cigarini,MF,Crotone,34,5,1,1,27,18,0,24,12,14,1,0,0,65,9,9,50.0,ae64d449
+Antonio Cioffi,FW,Napoli,17,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,,3f1107d5
+Ebrima Colley,MFFW,Hellas Verona,20,1,0,0,13,18,7,12,6,4,0,0,0,34,2,36,5.3,bf356094
+Omar Colley,DF,Sampdoria,27,6,0,0,34,23,1,5,68,16,0,0,0,151,73,39,65.2,8b95acda
+Simone Colombi,GK,Parma,29,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,,72be9309
+Lorenzo Colombo,FW,Milan,18,0,0,0,1,0,3,1,0,1,0,0,0,7,2,4,33.3,04df29a5
+Andrea Consigli,GK,Sassuolo,33,1,0,0,2,5,0,0,0,2,0,0,0,45,16,2,88.9,8cabdc1e
+Andrea Conti,DF,Milan,26,0,0,0,2,1,0,1,1,1,0,0,0,0,0,1,0.0,8fef5412
+Andrea Conti,DF,Parma,26,3,0,0,15,8,0,24,16,10,0,0,0,36,7,8,46.7,8fef5412
+Alex Cordaz,GK,Crotone,37,1,0,0,0,7,0,0,1,0,0,0,0,49,4,0,100.0,e66ebabb
+Andreas Cornelius,FW,Parma,27,4,0,0,36,48,15,6,1,4,1,0,0,47,148,83,64.1,c693347d
+Joaquín Correa,FW,Lazio,25,3,1,1,24,52,4,19,7,12,3,0,0,50,12,20,37.5,45b9b619
+Félix Correia,MF,Juventus,19,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,,c803c92a
+Douglas Costa,MFFW,Juventus,29,0,0,0,0,0,0,4,0,0,0,0,0,4,0,1,0.0,4fa7cb9b
+Angelo da Costa Júnior,GK,Bologna,36,2,0,0,0,0,0,0,0,0,0,0,0,16,0,0,,18736214
+Mamadou Coulibaly,MF,Udinese,21,0,0,0,3,1,1,3,1,8,0,0,0,13,0,7,0.0,c976160c
+Alessio Cragno,GK,Cagliari,26,1,0,0,2,5,0,0,1,0,0,2,0,36,8,0,100.0,f554e29b
+Gian Crespi,GK,Crotone,19,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,,4dea2f2c
+Domenico Criscito,DF,Genoa,33,6,0,0,23,26,0,27,44,22,0,1,0,110,20,26,43.5,35dd6d80
+Bryan Cristante,DFMF,Roma,25,8,0,0,31,13,4,12,40,20,0,0,1,141,30,30,50.0,16657b95
+Giovanni Crociata,DF,Crotone,22,0,0,0,2,1,0,1,0,0,0,0,0,1,0,0,,8c964914
+Juan Cuadrado,DFMF,Juventus,32,9,1,0,33,65,3,162,43,25,2,0,0,125,12,21,36.4,0ab1f153
+Giuseppe Cuomo,DF,Crotone,22,4,0,0,15,6,0,0,18,19,0,0,0,59,22,6,78.6,ae5b04fe
+Patrick Cutrone,FW,Fiorentina,22,0,0,0,8,3,0,3,1,3,0,0,0,5,3,7,30.0,a4fe8cda
+Wylan Cyprien,MF,Parma,25,2,0,0,6,7,0,19,5,4,0,0,0,26,5,1,83.3,3e092724
+Lennart-Marten Czyborra,DF,Genoa,21,2,0,0,11,4,0,27,17,10,0,0,0,55,9,18,33.3,7ba1f1ef
+Danilo D'Ambrosio,DF,Inter,31,2,0,0,11,11,0,8,4,9,0,0,0,35,10,10,50.0,44eb9093
+Bryan Dabo,MF,Benevento,28,5,0,0,17,19,1,14,13,8,0,0,0,84,52,19,73.2,c53083ad
+Diogo Dalot,DF,Milan,21,5,0,0,25,4,2,34,25,17,0,0,0,65,21,8,72.4,d9565625
+Mikkel Damsgaard,MFFW,Sampdoria,20,3,0,0,26,28,3,61,24,21,0,1,0,108,23,25,47.9,215f3907
+Danilo,DFMF,Juventus,29,6,0,0,25,20,2,39,66,31,0,0,0,213,30,20,60.0,94b2001f
+Andrea Danzi,DF,Hellas Verona,21,1,0,0,1,0,0,0,3,0,0,0,0,0,0,0,,263b855a
+Ebrima Darboe,MF,Roma,19,2,0,0,3,3,0,0,8,2,0,0,0,40,2,4,33.3,cf043a33
+Matteo Darmian,DF,Inter,30,4,0,0,21,16,2,30,17,16,1,1,0,42,13,9,59.1,96e0490d
+Matteo Darmian,DF,Parma,30,1,0,0,3,3,0,2,6,5,0,0,0,12,2,2,50.0,96e0490d
+Paweł Dawidowicz,DF,Hellas Verona,25,9,0,0,39,8,2,9,27,28,0,0,0,120,41,51,44.6,16bb656a
+Sebastien De Maio,DF,Udinese,33,1,0,0,11,3,3,1,18,10,0,0,0,61,25,18,58.1,952a03fe
+Rodrigo De Paul,MF,Udinese,26,5,2,1,33,125,1,262,17,24,0,1,0,208,5,11,31.3,162efffd
+Mattia De Sciglio,DF,Juventus,27,0,0,0,1,0,0,1,0,0,0,0,0,1,0,0,,ae4e2852
+Lorenzo De Silvestri,DF,Bologna,32,4,0,0,42,18,1,43,30,24,0,0,0,97,49,35,58.3,e74f0e59
+Grégoire Defrel,MFFW,Sassuolo,29,1,0,0,14,20,5,6,7,8,0,0,0,41,13,21,38.2,854ee61a
+Alessandro Deiola,MF,Spezia,24,1,0,0,6,5,0,8,3,3,0,0,0,21,3,4,42.9,7f267d66
+Alessandro Deiola,MF,Cagliari,24,2,0,0,12,3,0,7,11,5,0,0,0,44,7,3,70.0,7f267d66
+Lorenzo Del Pinto,MF,Benevento,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,081b6080
+Cristian Dell'Orco,DF,Spezia,26,0,0,0,1,2,0,1,7,0,0,0,0,17,7,5,58.3,b0243215
+Merih Demiral,DF,Juventus,22,1,0,0,11,1,2,1,21,9,0,1,0,32,22,11,66.7,e3cceee6
+Diego Demme,MF,Napoli,28,6,0,0,33,28,1,5,11,32,0,0,0,113,5,16,23.8,dc3fa3b5
+Stefano Denswil,DF,Bologna,27,0,0,0,0,2,0,0,1,1,0,0,0,6,3,1,75.0,5832ebfe
+Fabio Depaoli,DF,Benevento,23,2,0,0,17,8,1,23,12,13,0,0,1,45,12,14,46.2,d97f2e8d
+Fabio Depaoli,MF,Sampdoria,23,0,0,0,5,2,2,2,1,0,0,0,0,2,0,1,0.0,d97f2e8d
+Fabio Depaoli,DF,Atalanta,23,0,0,0,5,1,0,1,3,2,0,0,0,9,2,3,40.0,d97f2e8d
+Kastriot Dermaku,DFMF,Parma,28,0,0,0,2,2,0,0,2,1,0,0,0,4,0,1,0.0,2990c466
+Kiril Despodov,FW,Cagliari,23,0,0,0,1,0,0,0,0,1,0,0,0,0,0,1,0.0,13c8e5f6
+Mattia Destro,FW,Genoa,29,5,0,0,39,37,22,4,4,3,0,0,0,40,34,61,35.8,d7d32194
+Gerard Deulofeu,FWMF,Udinese,26,0,0,0,7,6,11,30,3,2,1,0,0,29,0,5,0.0,39583cfd
+Jacopo Dezi,FWMF,Parma,28,0,0,0,1,3,0,4,0,3,0,0,0,3,0,2,0.0,e921b9db
+Samuel Di Carmine,FW,Hellas Verona,31,1,0,0,16,20,6,11,0,2,0,0,0,12,25,21,54.3,ef94dc2f
+Samuel Di Carmine,FW,Crotone,31,1,0,0,5,15,0,3,0,2,1,0,0,12,15,15,50.0,ef94dc2f
+Giovanni Di Lorenzo,DF,Napoli,26,11,0,0,49,60,3,72,35,50,1,1,0,177,55,40,57.9,230a2fac
+Alessandro Di Pardo,FWDF,Juventus,21,0,0,0,0,1,0,1,0,0,0,0,0,1,0,0,,e0ce7038
+Giuseppe Di Serio,FWMF,Benevento,19,1,0,0,13,17,2,1,0,2,0,0,0,12,7,17,29.2,5048486b
+Amad Diallo,MF,Atalanta,18,1,0,0,1,2,0,0,0,0,0,0,0,2,1,0,100.0,9dc96f10
+Amadou Diambo,FW,Benevento,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,c3a847c7
+Amadou Diawara,MF,Roma,23,4,1,1,17,4,0,0,12,8,0,0,0,43,3,3,50.0,bf309d24
+Brahim Díaz,MFFW,Milan,20,2,0,0,14,29,0,16,2,10,1,0,0,56,4,27,12.9,407feb71
+Daan Dierckx,DF,Parma,17,1,0,0,5,0,1,0,13,4,0,0,0,16,4,9,30.8,3a35db3d
+Mitchell Dijks,DF,Bologna,27,7,1,1,32,15,1,37,17,14,0,1,0,85,13,14,48.1,0a3065c8
+Federico Dimarco,DF,Hellas Verona,22,6,0,0,32,50,6,262,47,19,0,1,0,192,15,27,35.7,970b8574
+Koffi Djidji,DF,Crotone,27,4,0,0,22,2,1,5,28,28,0,0,0,85,27,22,55.1,933d3b51
+Berat Djimsiti,DF,Atalanta,27,8,0,0,31,26,1,9,62,29,0,0,0,192,76,31,71.0,6eee05f1
+Nicolás Domínguez,MF,Bologna,22,8,0,0,23,15,1,11,24,28,0,1,0,113,20,22,47.6,20b3a502
+Gianluigi Donnarumma,GK,Milan,21,1,0,0,0,2,0,0,1,0,0,0,0,60,8,1,88.9,08f5afaa
+Bartłomiej Drągowski,GK,Fiorentina,22,0,1,0,1,6,0,0,1,0,0,1,0,43,6,1,85.7,085e71a7
+Denis Drăguș,FWMF,Crotone,21,1,0,0,4,4,2,2,1,1,0,0,0,10,1,4,20.0,0e490f6e
+Radu Drăgușin,DF,Juventus,18,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,,620922ed
+Léo Duarte,DF,Milan,24,0,0,0,0,0,0,0,1,1,0,0,0,1,0,1,0.0,73ddc40c
+Alfred Duncan,MF,Fiorentina,27,0,0,0,2,2,0,1,2,0,0,0,0,12,2,4,33.3,528492ea
+Alfred Duncan,MF,Cagliari,27,2,0,0,16,12,0,12,16,10,0,0,0,77,8,12,40.0,528492ea
+Paulo Dybala,FW,Juventus,26,0,0,0,10,29,3,65,1,8,0,0,0,32,2,9,18.2,e0921a4f
+Edin Džeko,FW,Roma,34,2,0,0,25,37,10,16,1,6,1,0,0,28,82,54,60.3,3bb7f478
+Steeve-Mike Ebongue,MF,Genoa,19,0,0,0,0,0,0,0,0,1,0,0,0,9,0,0,,9d5ab351
+Simone Edera,DFMF,Torino,23,0,0,0,1,1,0,5,1,1,0,0,0,3,0,0,,8697c095
+Albin Ekdal,MF,Sampdoria,31,9,0,0,49,57,0,2,49,29,0,1,0,188,34,28,54.8,f503ea63
+Elif Elmas,MFFW,Napoli,20,3,0,0,10,8,1,5,2,4,0,0,0,36,2,10,16.7,cf007308
+Alan Empereur,DF,Hellas Verona,26,1,0,0,3,1,0,0,6,0,0,0,0,7,2,3,40.0,825b8997
+Christian Eriksen,MF,Inter,28,1,0,0,13,4,1,103,9,6,0,1,0,109,8,6,57.1,980522ec
+Martin Erlic,DF,Spezia,22,6,0,0,37,12,0,2,41,14,0,0,0,100,44,36,55.0,0fee6bda
+Gonzalo Escalante,MF,Lazio,27,5,0,0,14,8,0,4,19,13,0,0,0,67,12,18,40.0,3f79a1c8
+Nahuel Estévez,MF,Spezia,24,7,0,0,33,22,0,91,20,5,0,0,0,116,13,18,41.9,cec60a2f
+Valentin Eysseric,MFFW,Fiorentina,28,2,0,0,12,11,0,33,7,8,0,0,0,40,10,9,52.6,ae82fa48
+Nicolò Fagioli,MF,Juventus,19,0,0,0,1,2,0,1,0,0,0,0,0,1,1,1,50.0,366be751
+Iago Falque,MFFW,Benevento,30,0,0,0,0,3,0,30,0,2,0,0,0,27,1,5,16.7,440c84ed
+Andri Fannar Baldursson,MF,Bologna,18,2,0,0,7,3,1,0,3,6,0,0,0,8,3,6,33.3,61f2f56a
+Paolo Faragò,DF,Bologna,27,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,,9085dd7c
+Paolo Faragò,DF,Cagliari,27,2,0,0,7,1,0,11,6,9,0,0,0,19,5,1,83.3,9085dd7c
+Davide Faraoni,DF,Hellas Verona,28,8,0,0,47,38,9,62,49,33,0,0,0,227,42,34,55.3,aae9d04a
+Mohamed Fares,DF,Lazio,24,5,0,0,28,7,2,60,16,15,0,1,0,68,10,15,40.0,b7a5bc86
+Diego Farias,FW,Spezia,30,5,0,0,18,15,2,21,13,5,0,0,0,59,8,4,66.7,157d29b6
+Andrea Favilli,FW,Hellas Verona,23,1,0,0,14,8,9,0,0,1,0,0,0,8,17,27,38.6,44510fde
+Federico Fazio,DF,Roma,33,2,0,0,6,3,0,4,7,2,0,1,0,20,17,12,58.6,4e358a2d
+Luiz Felipe,DF,Lazio,23,5,0,0,14,8,1,2,21,20,0,0,0,58,14,16,46.7,15d0c248
+Alex Ferrari,DF,Sampdoria,26,3,0,0,9,10,0,4,23,15,0,0,0,55,17,8,68.0,d0dbca9f
+Salvador Ferrer,DF,Spezia,22,4,0,0,15,7,0,57,24,10,0,1,0,78,25,16,61.0,eb76987d
+Marco Festa,GK,Crotone,28,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,,c195ae4a
+Fernando Forestieri,FWMF,Udinese,30,1,0,0,12,22,5,10,2,7,0,0,0,24,4,12,25.0,d60c26fc
+Daam Foulon,DF,Benevento,21,4,0,0,16,22,0,27,14,15,0,0,1,36,11,6,64.7,658d44be
+Gianluca Frabotta,DFMF,Juventus,21,5,0,0,12,2,0,32,14,4,0,0,0,43,12,14,46.2,d80b1835
+Remo Freuler,MF,Atalanta,28,5,0,0,38,31,1,19,39,39,0,0,0,258,17,24,41.5,98d2c2c4
+Daniel Fuzato,GK,Roma,23,0,0,0,0,0,0,0,0,0,0,0,0,5,1,0,100.0,82328faf
+Matteo Gabbia,DF,Milan,20,2,0,0,5,5,0,0,3,5,0,0,0,33,17,10,63.0,c235e803
+Manolo Gabbiadini,FW,Sampdoria,28,1,0,0,12,18,3,6,3,2,0,0,0,23,12,22,35.3,8f866fe8
+Roberto Gagliardini,MF,Inter,26,2,0,0,23,16,0,10,19,17,0,0,0,55,19,11,63.3,ce30bfc8
+Riccardo Gagliolo,DF,Parma,30,6,0,0,28,34,0,38,36,18,0,0,0,118,25,25,50.0,173061c0
+Adolfo Gaich,FW,Benevento,21,1,0,0,24,19,3,1,2,4,0,1,0,16,14,39,26.4,8dfed6e9
+Andrey Galabinov,FW,Spezia,31,0,0,0,5,4,3,2,0,1,0,0,0,6,10,19,34.5,0a1efd3c
+Manuel Gasparini,GK,Udinese,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,7033ca08
+Gervinho,FW,Parma,33,0,0,0,8,11,20,12,10,1,0,0,0,70,0,2,0.0,e468c053
+Paolo Ghiglione,DFMF,Genoa,23,4,0,0,18,13,3,85,13,15,0,0,0,60,15,18,45.5,71dc23da
+Faouzi Ghoulam,DFFW,Napoli,29,1,0,0,2,7,1,29,3,5,0,0,0,17,7,1,87.5,c5adc293
+Kamil Glik,DF,Benevento,32,10,1,1,32,21,0,1,62,24,0,0,1,137,87,55,61.3,c6056d58
+Diego Godín,DF,Cagliari,34,3,0,0,31,28,2,2,56,32,0,0,0,154,68,42,61.8,fc4f85b1
+Amer Gojak,MFFW,Torino,23,1,0,0,12,9,3,36,3,0,0,0,0,21,1,10,9.1,51ffa295
+Edoardo Goldaniga,DF,Genoa,26,8,0,0,30,24,1,33,38,18,0,0,0,75,25,36,41.0,4b029b31
+Vladimir Golemić,DF,Crotone,29,4,1,0,30,8,0,2,40,16,0,2,0,112,45,42,51.7,1db295e5
+Pierluigi Gollini,GK,Atalanta,25,0,1,0,1,4,0,0,1,0,0,0,0,48,5,0,100.0,f0f7f62f
+Tomislav Gomelt,MF,Crotone,25,0,0,0,0,0,0,0,1,1,0,0,0,1,0,0,,a5055b1b
+Papu Gómez,MFFW,Atalanta,32,0,0,0,10,19,0,27,1,2,0,0,0,48,0,2,0.0,6e4df551
+Robin Gosens,DF,Atalanta,26,9,1,1,50,26,9,62,41,35,0,2,1,167,36,20,64.3,2d970560
+Alberto Grassi,MFDF,Parma,25,3,0,0,16,27,1,11,26,11,0,0,1,63,13,9,59.1,6cc97b6a
+Koray Günter,DF,Hellas Verona,25,4,0,0,31,11,0,3,70,10,0,1,0,124,73,53,57.9,f1f1f238
+Manu Gyabuaa,MF,Atalanta,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,a69eb5fd
+Emmanuel Gyasi,FW,Spezia,26,4,0,0,65,52,28,30,14,16,1,0,0,134,27,51,34.6,f9758dae
+Achraf Hakimi,DF,Inter,21,6,0,0,31,36,7,115,22,32,2,0,0,124,16,28,36.4,e42d61c7
+Samir Handanović,GK,Inter,36,1,0,0,0,5,0,0,0,0,0,0,1,33,6,0,100.0,74419746
+Lukáš Haraslín,FWMF,Sassuolo,24,1,1,0,7,18,2,19,0,4,1,1,0,21,2,1,66.7,5c397195
+Hans Hateboer,DF,Atalanta,26,3,0,0,20,8,3,24,17,17,0,1,0,65,23,20,53.5,3b333ac3
+Eduardo Henrique,MF,Crotone,25,4,0,0,18,14,1,3,7,2,0,0,0,54,9,19,32.1,1bd5fc78
+Theo Hernández,DF,Milan,22,9,0,0,39,81,6,76,34,29,2,0,0,211,50,25,66.7,d4c9725f
+Hernani,MF,Parma,26,11,0,0,50,23,1,85,31,25,0,0,0,108,29,21,58.0,6f5ead86
+Përparim Hetemaj,MF,Benevento,33,5,0,0,41,78,1,43,22,27,0,0,0,158,14,28,33.3,90b70194
+Aaron Hickey,DF,Bologna,18,3,1,0,11,14,0,7,15,8,0,0,0,51,6,5,54.5,1780bb4a
+Wesley Hoedt,DF,Lazio,26,6,0,0,11,2,0,1,17,16,0,2,0,76,19,9,67.9,875898c7
+Elseid Hysaj,DF,Napoli,26,2,0,0,16,20,0,18,30,17,0,1,0,116,18,13,58.1,2f3452eb
+Simone Iacoponi,DF,Parma,33,3,1,0,15,14,2,13,11,12,0,0,2,72,12,9,57.1,63071a3f
+Roger Ibanez,DF,Roma,21,7,1,1,53,30,0,5,68,37,0,1,1,187,56,36,60.9,82efe6fa
+Zlatan Ibrahimović,FW,Milan,38,2,1,0,33,25,40,15,6,4,2,0,0,21,83,41,66.9,4cde5509
+Igor,DF,Fiorentina,22,5,0,0,21,6,1,4,23,9,0,1,0,59,10,13,43.5,a4e85758
+Ivan Ilić,MF,Hellas Verona,19,2,0,0,23,29,0,40,27,14,0,0,0,125,35,25,58.3,bb376bed
+Josip Iličić,MFFW,Atalanta,32,2,0,0,22,71,8,97,2,4,2,0,0,75,0,18,0.0,68252d6d
+Ciro Immobile,FW,Lazio,30,4,1,0,37,44,30,18,6,13,3,0,0,79,26,54,32.5,4431aed2
+Riccardo Improta,DFMF,Benevento,26,7,0,0,23,55,2,77,28,23,0,0,1,121,49,49,50.0,f6dfa5b8
+Roberto Inglese,FW,Parma,28,2,0,0,14,10,8,4,0,2,0,0,0,19,15,15,50.0,6c1f7328
+Lorenzo Insigne,FW,Napoli,29,2,1,0,9,39,11,113,37,18,0,0,0,199,2,5,28.6,2f557579
+Roberto Insigne,MFFW,Benevento,26,2,0,0,13,15,3,47,7,10,0,0,0,79,5,19,20.8,8faf7b3c
+Artur Ioniță,MF,Benevento,29,6,0,0,59,23,1,25,19,22,2,0,0,125,65,91,41.7,cedb3e36
+Ardian Ismajli,DF,Spezia,23,3,1,1,19,13,0,0,23,9,0,0,0,68,40,28,58.8,6b635f5c
+Armando Izzo,DF,Torino,28,3,0,0,43,35,2,22,53,16,0,1,0,134,48,37,56.5,89976232
+Mato Jajalo,MF,Udinese,32,0,0,0,0,1,0,0,2,1,0,0,0,3,0,0,,8c65eb5f
+Jakub Jankto,MF,Sampdoria,24,6,0,0,18,28,7,81,24,17,0,1,0,141,9,22,29.0,1ea5f91c
+Juan Jesus,DF,Roma,29,0,0,0,4,0,0,0,2,1,0,0,0,7,2,2,50.0,79083382
+Hamed Junior Traorè,MFFW,Sassuolo,20,6,0,0,25,19,3,62,18,17,1,0,0,77,13,20,39.4,570bb4b9
+Musa Juwara,MFDF,Bologna,18,1,0,0,1,2,0,5,0,2,0,0,0,2,0,0,,7737dee2
+Nikola Kalinić,FW,Hellas Verona,32,2,0,0,27,34,10,1,1,1,0,0,0,22,17,51,25.0,d4931a5a
+Yayah Kallon,FW,Genoa,19,0,0,0,0,0,2,1,0,0,0,0,0,1,2,1,66.7,f95f49d2
+Pierre Kalulu,DF,Milan,20,1,0,0,9,2,0,17,19,14,0,1,0,51,11,13,45.8,85f7d1be
+Yann Karamoh,FWMF,Parma,22,3,0,0,14,13,7,21,4,17,1,0,0,69,8,13,38.1,8b66d9cc
+Isaac Karamoko,DF,Sassuolo,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,4c7919df
+Augustus Kargbo,FW,Crotone,20,0,0,0,0,1,0,1,0,0,0,0,0,2,0,0,,0c8f27b5
+Rick Karsdorp,DF,Roma,25,2,0,0,36,13,3,55,30,23,0,0,0,141,6,21,22.2,9f84febe
+Franck Kessié,MF,Milan,23,8,0,0,65,40,1,13,46,30,1,1,0,269,56,45,55.4,05e19d6a
+Omar Khailoti,DF,Bologna,18,0,0,0,0,0,0,1,1,0,0,0,0,2,0,0,,19d1c41f
+Simon Kjær,DF,Milan,31,3,0,0,26,10,1,3,42,26,0,0,0,126,54,43,55.7,8b8a56ce
+Ragnar Klavan,DF,Cagliari,34,1,0,0,8,1,0,1,8,9,0,1,0,39,12,14,46.2,008a6e6d
+Justin Kluivert,MF,Roma,21,0,0,0,1,0,0,1,0,0,0,0,0,2,0,0,,4c3a6744
+Aleksandr Kokorin,FWMF,Fiorentina,29,1,0,0,1,0,0,0,0,0,0,0,0,3,0,1,0.0,fec5accc
+Aleksandar Kolarov,DF,Inter,34,0,0,0,3,4,0,18,7,4,0,1,0,30,11,6,64.7,eda40760
+Márk Kosznovszky,MF,Parma,18,0,0,0,2,0,0,0,1,2,0,0,0,3,0,0,,185bf610
+Christian Kouamé,FW,Fiorentina,22,4,0,0,25,32,5,6,5,4,0,0,0,31,38,56,40.4,58e933d2
+Kalidou Koulibaly,DF,Napoli,29,10,1,1,29,9,0,5,29,24,0,0,0,172,40,37,51.9,da974c7b
+Viktor Kovalenko,FW,Atalanta,24,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,9d60028d
+Rade Krunić,MFFW,Milan,26,3,0,0,11,20,2,3,10,12,0,1,0,36,9,17,34.6,817c6964
+Juraj Kucka,MFFW,Parma,33,8,0,0,65,71,3,15,28,36,0,0,0,133,79,59,57.2,5aaef9ef
+Dejan Kulusevski,MFFW,Juventus,20,7,0,0,41,29,5,59,9,19,0,0,0,97,11,29,27.5,df3cda47
+Marash Kumbulla,DF,Roma,20,8,0,0,26,14,0,1,24,11,0,0,0,52,26,19,57.8,a40819d9
+Jasmin Kurtić,MF,Parma,31,5,0,0,45,37,3,90,33,28,0,0,0,156,36,28,56.3,144607cc
+Giorgos Kyriakopoulos,DF,Sassuolo,24,3,1,1,17,7,1,64,15,18,0,0,0,83,17,16,51.5,0a483542
+Antonino La Gumina,FW,Sampdoria,24,0,0,0,5,6,2,4,3,2,0,0,0,9,11,22,33.3,822a7761
+Sam Lammers,FWMF,Atalanta,23,0,0,0,5,5,2,0,0,0,0,0,0,8,6,6,50.0,c283ddef
+Gianluca Lapadula,FW,Benevento,30,2,0,0,48,68,34,14,5,12,3,0,0,55,34,88,27.9,2ead2809
+Danilo Larangeira,DF,Bologna,36,8,0,0,38,15,1,2,51,24,0,2,0,168,79,74,51.6,fed5f993
+Kevin Lasagna,FW,Udinese,27,1,0,0,20,11,9,17,6,1,0,0,0,32,18,37,32.7,09538fdb
+Kevin Lasagna,FW,Hellas Verona,27,0,0,0,32,21,23,4,1,3,0,0,0,30,26,48,35.1,09538fdb
+Vincent Laurini,DF,Parma,31,1,0,0,12,18,0,28,17,11,0,0,0,31,6,12,33.3,3535098b
+Darko Lazović,DFMF,Hellas Verona,29,3,0,0,10,2,10,125,20,17,0,0,0,157,17,18,48.6,5128bde4
+Manuel Lazzari,DF,Lazio,26,2,1,0,26,53,2,114,18,14,0,0,1,111,13,18,41.9,02caf6e0
+Rafael Leão,FW,Milan,21,5,0,0,28,21,4,32,4,6,1,0,0,62,42,59,41.6,20730eae
+Lucas Leiva,MF,Lazio,33,10,0,0,47,24,1,16,57,32,0,0,0,175,47,42,52.8,4c78b5ed
+Lukas Lerager,MF,Genoa,27,0,0,0,16,16,3,7,14,13,0,0,0,85,9,14,39.1,1b82f8df
+Mehdi Léris,DFMF,Sampdoria,22,1,0,0,13,3,0,17,12,5,0,0,0,43,7,8,46.7,7d3cbc67
+Karlo Letica,GK,Sampdoria,23,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,,4a6914ff
+Gaetano Letizia,DF,Benevento,30,2,0,0,14,22,0,84,20,25,0,0,0,116,13,8,61.9,3dd45b70
+Matthijs de Ligt,DF,Juventus,20,4,0,0,40,23,2,5,31,19,0,1,0,140,58,31,65.2,d6e53a3a
+Karol Linetty,MF,Torino,25,5,0,0,31,29,1,6,15,28,0,0,0,116,8,14,36.4,d023d70f
+Pol Lirola,DFFW,Fiorentina,22,3,0,0,4,3,1,22,6,8,0,0,0,30,3,4,42.9,ff800ed8
+Fernando Llorente,FW,Udinese,35,2,0,0,21,11,3,0,2,1,0,0,0,21,54,32,62.8,82dbf623
+Fernando Llorente,FWMF,Napoli,35,0,0,0,3,1,0,0,0,0,0,0,0,2,5,1,83.3,82dbf623
+Stanislav Lobotka,MF,Napoli,25,2,0,0,5,2,0,0,0,1,0,0,0,10,2,4,33.3,e1cbb531
+Manuel Locatelli,MF,Sassuolo,22,9,0,0,52,48,1,41,51,47,1,1,0,239,48,45,51.6,a8a874f1
+Maxime Lopez,MF,Sassuolo,22,7,0,0,24,22,0,38,16,13,0,0,0,100,3,10,23.1,20094685
+Pau López,GK,Roma,25,0,0,0,0,1,0,0,0,0,0,0,0,23,2,0,100.0,20b9f052
+Matteo Lovato,DF,Hellas Verona,20,5,0,0,25,9,0,2,37,12,0,1,0,102,30,41,42.3,5fa57166
+Hirving Lozano,FW,Napoli,25,6,0,0,33,69,11,73,18,18,1,0,0,95,15,23,39.5,a69e4806
+José Luis Palomino,DF,Atalanta,30,3,0,0,48,16,2,14,79,33,0,1,0,222,59,45,56.7,921f6058
+Romelu Lukaku,FW,Inter,27,4,0,0,34,48,19,19,3,1,0,0,0,51,45,57,44.1,5eae500a
+Saša Lukić,MF,Torino,23,4,0,0,45,37,1,35,17,13,1,0,0,101,23,55,29.5,c6e8cf1f
+Senad Lulić,DF,Lazio,34,1,0,0,13,3,2,23,4,7,0,0,0,53,9,4,69.2,7fd58fe3
+Sebastiano Luperto,DF,Crotone,23,5,1,1,28,19,0,1,27,20,0,0,0,113,26,22,54.2,997fff07
+Lyanco,DF,Torino,23,8,0,0,24,13,0,6,46,14,0,1,0,178,36,24,60.0,b5bf1770
+Charalambos Lykogiannis,DF,Cagliari,26,10,2,2,29,24,2,118,32,21,0,1,0,121,57,33,63.3,5efc5389
+Lisandro Magallán,DF,Crotone,26,10,0,0,65,13,0,1,44,31,0,1,0,141,43,26,62.3,01a49bd2
+Christian Maggio,DF,Benevento,38,2,0,0,6,7,0,3,2,4,0,0,0,12,3,8,27.3,31d7f557
+Giulio Maggiore,MF,Spezia,22,3,0,0,58,41,4,19,19,36,0,0,0,132,31,33,48.4,957e4c87
+Francesco Magnanelli,MF,Sassuolo,35,2,0,0,5,6,0,0,13,5,0,0,0,50,3,13,18.8,07767f42
+Giangiacomo Magnani,DF,Hellas Verona,24,8,0,0,44,29,0,2,44,15,0,0,1,82,76,40,65.5,cce9f582
+Jean-Victor Makengo,MF,Udinese,22,1,0,0,12,4,0,5,5,7,0,0,0,27,6,0,100.0,22bfb57e
+Nikola Maksimović,DF,Napoli,28,1,0,0,5,6,0,2,21,9,0,0,1,71,35,11,76.1,16b9d5cf
+Kévin Malcuit,DF,Fiorentina,29,0,0,0,4,1,0,10,3,3,0,0,0,7,2,1,66.7,d6a889ea
+Kévin Malcuit,FWMF,Napoli,29,0,0,0,0,0,0,0,2,1,0,0,0,2,1,1,50.0,d6a889ea
+Daniel Maldini,FWDF,Milan,18,0,0,0,3,1,0,2,0,0,0,0,0,4,0,0,,801831fe
+Ruslan Malinovskyi,MFFW,Atalanta,27,3,0,0,46,53,1,122,2,8,0,0,0,121,29,31,48.3,48d5bd33
+Dennis Man,FWMF,Parma,21,1,0,0,6,7,0,7,2,6,0,0,0,31,6,7,46.2,2079b3cc
+Gianluca Mancini,DF,Roma,24,10,0,0,67,26,1,14,72,29,0,1,0,181,55,33,62.5,5aa53281
+Rolando Mandragora,MF,Udinese,23,0,0,0,5,4,0,6,6,5,0,1,0,14,6,2,75.0,c7259b83
+Rolando Mandragora,MF,Torino,23,5,1,1,32,30,1,36,20,4,0,0,0,85,9,8,52.9,c7259b83
+Mario Mandžukić,FW,Milan,34,1,0,0,9,2,2,1,2,6,0,0,0,7,9,13,40.9,afa0d4e0
+Niccolò Manfredini,GK,Benevento,32,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,100.0,e4b39692
+Kostas Manolas,DF,Napoli,29,5,0,0,21,12,0,0,23,18,1,1,0,93,41,37,52.6,c707411f
+Juan Manuel Ramos,DF,Spezia,23,1,0,0,3,2,1,12,2,0,0,0,0,12,4,0,100.0,36d7971a
+Federico Marchetti,GK,Genoa,37,0,0,0,0,0,0,0,0,0,0,0,0,7,0,1,0.0,f794b426
+Riccardo Marchizza,DF,Spezia,22,4,0,0,17,14,3,71,11,11,0,1,0,82,22,18,55.0,91d0fabf
+Gian Marco Ferrari,DF,Sassuolo,28,7,0,0,41,36,0,2,50,20,1,0,0,172,69,52,57.0,8650af85
+Răzvan Marin,MF,Cagliari,24,6,0,0,49,23,2,161,29,33,0,0,0,186,10,18,35.7,7fac99d4
+Marlon,DF,Sassuolo,24,6,1,1,26,8,0,0,27,13,0,2,0,112,38,30,55.9,cdf65d12
+Luca Marrone,DF,Crotone,30,8,0,0,36,10,0,0,26,18,0,1,1,105,20,22,47.6,ea468ea8
+Lautaro Martínez,FW,Inter,22,5,0,0,64,61,11,12,27,12,3,0,0,97,25,48,34.2,f7036e1c
+Lucas Martínez Quarta,DF,Fiorentina,24,4,1,0,23,10,0,5,39,20,0,1,0,107,28,22,56.0,3ec3c1c9
+Adam Marušić,DF,Lazio,27,3,0,0,19,16,4,64,40,22,0,1,1,185,28,27,50.9,d4535821
+Andrea Masiello,DF,Genoa,34,6,0,0,15,12,1,8,53,22,0,1,0,156,40,34,54.1,e0314d87
+Giuseppe Mastinu,FW,Spezia,28,0,0,0,1,1,0,0,0,1,0,0,0,0,0,0,,26cd1bff
+Ryder Matos,MF,Udinese,27,0,0,0,0,2,0,2,0,0,0,0,0,0,0,1,0.0,7280b54f
+Federico Mattiello,DF,Spezia,25,0,0,0,0,1,0,2,0,0,0,0,0,4,1,3,25.0,fba81826
+Borja Mayoral,FW,Roma,23,1,0,0,10,28,13,7,0,2,1,0,0,27,15,51,22.7,64e8ed6d
+Antonio Mazzotta,DF,Crotone,30,1,0,0,2,0,0,2,0,1,0,0,0,0,0,0,,4366d5e9
+Ibrahima Mbaye,DF,Bologna,25,2,0,0,3,5,1,2,1,5,0,0,0,26,12,11,52.2,cfbf9881
+Weston McKennie,MF,Juventus,21,5,0,0,44,7,4,9,28,19,0,0,0,100,29,28,50.9,01c3aff5
+Gary Medel,DFMF,Bologna,32,1,0,0,5,10,0,0,7,9,0,0,0,43,7,6,53.8,563a68ad
+Soualiho Meïté,MF,Torino,26,0,0,0,11,9,1,2,10,7,0,0,0,57,6,10,37.5,5cec2c74
+Soualiho Meïté,MF,Milan,26,2,0,0,13,14,2,1,8,10,0,0,0,62,12,8,60.0,5cec2c74
+Filippo Melegoni,MFDF,Genoa,21,1,0,0,3,5,0,14,5,6,0,0,0,14,2,2,50.0,6604165d
+Arthur Melo,MF,Juventus,23,3,0,0,11,21,0,3,18,9,0,0,0,93,2,4,33.3,48b3dd60
+Alex Meret,GK,Napoli,23,0,0,0,0,1,0,0,0,0,0,0,0,35,5,1,83.3,9413b19f
+Yıldırım Mert Çetin,DF,Hellas Verona,23,1,0,0,6,4,0,1,14,4,0,0,0,26,13,10,56.5,c730da00
+Dries Mertens,FWMF,Napoli,33,2,0,0,15,9,5,64,9,14,0,0,0,40,2,11,15.4,89b2c8a9
+Junior Messias,MFFW,Crotone,29,6,0,0,34,93,5,123,35,35,1,0,0,166,34,65,34.3,f49c4ae9
+Petar Mićin,MF,Udinese,21,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,,259deea9
+Valentin Mihaila,FWMF,Parma,20,2,0,0,5,8,5,14,5,1,1,0,0,20,3,15,16.7,81a4c239
+Nikola Milenković,DF,Fiorentina,22,7,1,0,56,16,0,6,44,29,0,1,0,148,101,30,77.1,bee704fc
+Sergej Milinković-Savić,MF,Lazio,25,4,0,0,56,50,9,57,33,40,2,2,0,212,99,85,53.8,4e6dbac4
+Vanja Milinković-Savić,GK,Torino,23,0,1,0,0,2,0,0,0,1,0,0,0,11,1,0,100.0,9fa26bc2
+Vincenzo Millico,FWMF,Torino,19,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,,6817095b
+Aleksei Miranchuk,MFFW,Atalanta,24,0,0,0,17,20,2,15,3,13,0,0,0,44,8,12,40.0,a9aa0d1d
+Antonio Mirante,GK,Roma,37,2,0,0,0,1,0,0,0,0,0,0,0,29,0,1,0.0,30223b33
+Henrikh Mkhitaryan,MFFW,Roma,31,2,0,0,36,46,10,53,39,24,1,0,0,150,13,27,32.5,dd0daf32
+Johan Mojica,DF,Atalanta,27,1,0,0,4,1,0,20,7,4,0,1,0,32,5,4,55.6,608f2092
+Nahuel Molina,DF,Udinese,22,1,0,0,16,11,4,85,21,18,0,2,0,106,11,13,45.8,23610943
+Salvatore Molina,MFDF,Crotone,28,1,0,0,23,39,2,71,17,22,0,0,1,161,21,18,53.8,54ab971f
+Gabriele Moncini,FWMF,Benevento,24,0,0,0,9,10,1,0,2,1,0,0,0,18,10,17,37.0,c4efe2b4
+Cristóbal Montiel,MFFW,Fiorentina,20,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,,dd52d069
+Lorenzo Montipò,GK,Benevento,24,3,0,0,3,6,0,0,0,0,0,2,1,31,9,2,81.8,c1d95617
+Luca Mora,MF,Spezia,32,0,0,0,2,2,0,1,0,1,0,0,0,5,5,1,83.3,42fff925
+Álvaro Morata,FW,Juventus,27,3,1,0,37,44,19,18,5,12,1,0,0,55,33,34,49.3,129af0db
+Raúl Moro,FW,Lazio,17,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,,919dd4b1
+Mert Müldür,DF,Sassuolo,21,2,0,0,20,15,0,48,36,20,0,0,0,86,19,21,47.5,1295552e
+Luis Muriel,FW,Atalanta,29,0,0,0,18,20,3,82,7,9,1,0,0,51,25,47,34.7,eb2fe5b6
+Vedat Muriqi,FW,Lazio,26,1,0,0,14,19,15,3,3,1,0,0,0,30,54,43,55.7,0cadc46d
+Nicola Murru,DF,Torino,25,0,0,0,12,12,0,21,12,6,0,0,0,35,10,9,52.6,d183e9d6
+Mateo Musacchio,DF,Lazio,29,2,0,0,3,4,0,1,2,1,0,0,0,8,2,7,22.2,91899ca8
+Mateo Musacchio,DF,Milan,29,0,0,0,1,0,0,0,3,1,0,0,0,3,0,0,,91899ca8
+Juan Musso,GK,Udinese,26,5,0,0,4,4,0,0,1,1,0,4,0,43,8,0,100.0,a111cf41
+Joakim Mæhle,DF,Atalanta,23,0,0,0,10,11,0,36,11,10,0,1,0,74,7,12,36.8,c459a650
+Radja Nainggolan,MF,Cagliari,32,5,0,0,21,21,0,72,15,26,0,0,0,141,17,15,53.1,1f9328da
+Radja Nainggolan,MF,Inter,32,0,0,0,1,0,0,0,1,0,0,0,0,3,0,0,,1f9328da
+Nahitan Nández,MFDF,Cagliari,24,8,1,0,40,59,8,95,23,28,0,0,0,181,42,59,41.6,95facda1
+Ilija Nestorovski,FWMF,Udinese,30,1,0,0,16,16,5,3,1,4,0,0,0,22,13,20,39.4,b1236c63
+Nicolas Nkoulou,DF,Torino,30,5,0,0,15,25,0,0,33,9,0,3,0,104,26,38,40.6,93cf32a8
+Bram Nuytinck,DF,Udinese,30,1,0,0,8,5,0,3,25,15,0,0,0,65,35,15,70.0,e33f36d5
+Simeon Nwankwo,FW,Crotone,28,1,0,0,50,44,23,3,6,2,0,0,0,64,61,98,38.4,80dbbd10
+M'Bala Nzola,FW,Spezia,23,5,0,0,55,27,26,2,3,5,0,1,0,54,41,84,32.8,a4948e67
+Pedro Obiang,MF,Sassuolo,28,4,1,0,24,20,0,1,22,22,0,0,0,66,29,21,58.0,ba1e04b3
+Brian Oddei,FWMF,Sassuolo,17,0,0,0,0,1,0,7,0,1,0,0,0,3,0,0,,97e8ea97
+Stefano Okaka,FW,Udinese,30,2,0,0,38,35,13,4,2,7,0,0,0,36,44,49,47.3,601ef102
+Christian Oliva,MF,Cagliari,24,2,0,0,7,5,0,2,8,4,0,0,0,20,5,4,55.6,d3b888e3
+Maximiliano Olivera,DF,Fiorentina,28,0,0,0,1,1,0,0,0,0,0,0,0,2,1,2,33.3,32a33c68
+Jérôme Onguéné,DF,Genoa,22,0,0,0,3,1,0,1,2,1,0,0,0,14,2,6,25.0,e81f0356
+Riccardo Orsolini,FWMF,Bologna,23,0,0,0,21,44,7,100,10,18,0,1,0,83,25,25,50.0,e14ec482
+Victor Osimhen,FW,Napoli,21,4,0,0,34,36,20,14,7,15,1,0,0,37,45,63,41.7,8c90fd7a
+Yordan Osorio,DF,Parma,26,2,0,0,16,17,1,2,53,14,0,1,0,140,45,25,64.3,4d17df3e
+David Ospina,GK,Napoli,31,2,0,0,1,5,0,0,0,0,0,1,0,26,7,1,87.5,82b1198a
+Adam Ounas,FWMF,Crotone,23,1,0,0,11,31,9,41,3,4,0,0,0,62,9,14,39.1,ed90babd
+Adam Ounas,MFFW,Cagliari,23,0,0,0,3,9,1,10,3,2,0,0,0,17,3,4,42.9,ed90babd
+Thomas Ouwejan,DF,Udinese,23,0,0,0,7,2,0,49,5,1,0,0,0,12,2,7,22.2,36d9dabe
+Daniele Padelli,GK,Inter,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,cf1c23d8
+Mattia Pagliuca,MF,Bologna,18,0,0,0,0,1,0,0,1,0,0,0,0,0,0,1,0.0,ad84294f
+Rodrigo Palacio,FW,Bologna,38,5,0,0,39,72,35,72,7,6,1,0,0,85,33,66,33.3,8d8178ac
+Alberto Paleari,GK,Genoa,27,0,0,0,0,1,0,0,0,0,0,0,0,2,0,1,0.0,94a3606c
+Antonio Palumbo,MF,Sampdoria,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,33e98344
+Martin Palumbo,MF,Udinese,18,0,0,0,1,0,0,0,1,0,0,0,0,1,0,0,,f8d41a8c
+Goran Pandev,FWMF,Genoa,37,5,0,0,12,36,7,10,2,5,0,0,0,78,16,27,37.2,d711d04f
+Ivor Pandur,GK,Hellas Verona,20,0,0,0,0,0,0,0,0,0,0,0,0,8,1,0,100.0,457cb02f
+Vittorio Parigini,MFDF,Genoa,24,0,0,0,0,2,1,9,0,2,0,0,0,2,2,2,50.0,75efed2e
+Marco Parolo,DFMF,Lazio,35,5,0,0,21,1,1,4,14,8,0,1,0,46,21,17,55.3,ed5886d2
+Mario Pašalić,MF,Atalanta,25,2,0,0,19,10,1,6,8,15,0,0,0,85,16,16,50.0,e599253a
+Christian Pastina,DF,Benevento,19,1,0,0,1,0,0,2,1,0,0,0,0,2,0,0,,38bf62b5
+Javier Pastore,MFFW,Roma,31,0,0,0,1,1,0,0,0,2,0,0,0,2,1,1,50.0,881ef58c
+Patric,DF,Lazio,27,8,0,0,21,5,1,30,18,16,0,1,0,90,14,15,48.3,f7223718
+Leonardo Pavoletti,FW,Cagliari,31,8,0,0,44,29,9,1,4,3,1,0,0,38,113,67,62.8,d37b0350
+Nehuén Paz,DF,Bologna,27,0,0,0,3,2,0,0,11,4,0,0,0,21,21,3,87.5,42b1a58a
+Pedro,MFFW,Roma,33,5,1,1,25,34,7,35,9,14,2,0,0,67,3,12,20.0,3ca7254a
+João Pedro,FWMF,Cagliari,28,4,0,0,46,98,11,25,13,6,3,0,0,97,65,87,42.8,81255c03
+Gianluca Pegolo,GK,Sassuolo,39,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,,f058ed1f
+Graziano Pellè,FW,Parma,35,1,0,0,19,13,4,0,2,2,1,0,0,13,45,26,63.4,9654d8de
+Lorenzo Pellegrini,MF,Roma,24,10,0,0,43,51,6,171,42,24,0,1,0,139,21,27,43.8,4a5a45c7
+Luca Pellegrini,DFMF,Genoa,21,2,0,0,10,16,0,29,8,6,0,0,1,50,4,13,23.5,3b61c9ec
+Federico Peluso,DF,Sassuolo,36,1,0,0,2,1,0,0,3,1,0,0,0,10,2,2,50.0,4f2908e5
+Andreas Pereira,FWMF,Lazio,24,7,1,1,12,8,3,49,1,0,0,1,0,31,2,22,8.3,6639e500
+Pedro Pereira,DF,Crotone,22,6,0,0,33,18,5,71,19,32,0,1,0,127,27,40,40.3,c77be0cf
+Gastón Pereiro,MFDF,Cagliari,25,0,0,0,2,3,0,10,1,1,0,0,0,13,10,6,62.5,7ec7738e
+Bruno Peres,DF,Roma,30,6,0,0,23,16,1,68,27,11,0,0,0,102,7,12,36.8,852351df
+Roberto Pereyra,MFFW,Udinese,29,8,0,0,38,59,7,37,27,11,1,0,0,156,5,10,33.3,75f2c59f
+Carles Pérez,MFFW,Roma,22,0,0,0,12,7,0,25,6,4,1,0,0,31,3,11,21.4,a8f21b9f
+Mattia Perin,GK,Genoa,27,1,1,0,2,4,0,0,1,0,0,1,0,38,9,1,90.0,4c62d0c8
+Ivan Perišić,DFFW,Inter,31,3,0,0,13,2,8,90,19,13,0,1,0,85,32,24,57.1,6fe90922
+Matteo Pessina,MF,Atalanta,23,2,0,0,24,23,1,17,17,7,0,0,0,138,20,24,45.5,780e3631
+Andrea Petagna,FW,Napoli,25,0,0,0,19,17,7,1,1,0,0,0,0,30,27,28,49.1,03f946ed
+Jacopo Petriccione,MF,Crotone,25,5,1,0,18,17,0,14,8,8,0,0,0,65,2,8,20.0,909bce7f
+Jens Petter Hauge,FW,Milan,20,0,0,0,11,1,1,3,1,4,0,0,0,22,5,10,33.3,12c35abe
+Germán Pezzella,DF,Fiorentina,29,5,0,0,33,17,4,2,36,20,0,2,0,130,66,45,59.5,8c725b43
+Giuseppe Pezzella,DF,Parma,22,7,0,0,24,25,0,92,12,19,0,0,0,121,20,10,66.7,149c5f5d
+Cristiano Piccini,DF,Atalanta,27,0,0,0,1,1,0,0,0,1,0,0,0,3,1,0,100.0,32c0491f
+Roberto Piccoli,FW,Spezia,19,0,0,0,16,13,3,2,2,3,1,0,0,8,17,43,28.3,1cadaf34
+Andrea Pinamonti,FW,Inter,21,0,0,0,2,6,1,1,1,0,0,0,0,5,2,2,50.0,08aa9cd1
+Carlo Pinsoglio,GK,Juventus,30,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,,f6a06749
+Fabio Pisacane,DF,Cagliari,34,1,0,0,2,0,0,2,1,2,0,0,0,10,3,1,75.0,56400c01
+Marko Pjaca,FWMF,Genoa,25,0,0,0,19,24,2,4,7,6,0,0,0,65,15,47,24.2,2c38b327
+Tommaso Pobega,MF,Spezia,21,6,0,0,28,17,0,9,9,13,3,1,0,61,17,20,45.9,55a1cac2
+Andrea Poli,MF,Bologna,30,1,0,0,5,7,0,2,7,7,0,0,1,27,0,7,0.0,b3fd7075
+Matteo Politano,FWMF,Napoli,26,3,0,0,15,47,0,90,14,16,0,0,0,68,4,18,18.2,5e861944
+Manolo Portanova,MFFW,Genoa,20,0,0,0,3,6,0,0,1,3,0,0,0,5,0,4,0.0,c8c0dccd
+Manolo Portanova,MF,Juventus,20,1,0,0,2,3,0,0,0,0,0,0,0,3,1,0,100.0,c8c0dccd
+Ivan Provedel,GK,Spezia,26,1,0,0,0,9,0,0,2,0,0,0,0,60,5,1,83.3,277da414
+Erick Pulgar,MF,Fiorentina,26,8,0,0,23,22,0,80,41,18,0,1,0,140,28,12,70.0,4611e028
+Ignacio Pussetto,FW,Udinese,24,2,0,0,18,10,7,14,13,8,1,0,0,33,22,21,51.2,62437b4f
+Fabio Quagliarella,FW,Sampdoria,37,1,0,0,27,35,18,20,7,8,1,0,0,69,34,50,40.5,ee4f2f3b
+Simone Rabbi,FWDF,Bologna,18,0,0,0,3,1,1,1,0,0,0,0,0,2,0,3,0.0,3688af6c
+Adrien Rabiot,MF,Juventus,25,7,1,1,44,21,0,20,43,42,0,2,0,147,37,20,64.9,8794e251
+Ivan Radovanović,DFMF,Genoa,31,6,0,0,28,25,0,4,37,15,0,2,0,156,54,45,54.5,023937a9
+Ionuț Radu,GK,Inter,23,0,0,0,0,0,0,0,0,0,0,0,0,4,1,0,100.0,67f649be
+Ștefan Radu,DF,Lazio,33,2,0,0,20,22,0,61,45,24,0,0,0,146,41,21,66.1,53de807a
+Rafael,GK,Spezia,38,0,0,0,0,0,0,0,0,0,0,0,0,2,2,0,100.0,dd06d56c
+Antonio Raimondo,FW,Bologna,16,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,100.0,ce1a6c7e
+Gastón Ramírez,FWMF,Sampdoria,29,5,0,0,32,33,3,55,4,15,0,0,0,51,26,34,43.3,2c851997
+Aaron Ramsey,MF,Juventus,29,2,0,0,19,18,3,22,7,14,1,0,0,56,8,13,38.1,ef619b0b
+Andrea Ranocchia,DF,Inter,32,2,0,0,13,7,1,0,12,10,0,0,0,40,20,10,66.7,539230cf
+Giacomo Raspadori,FWMF,Sassuolo,20,1,0,0,8,23,4,42,2,3,4,0,0,29,3,7,30.0,6e058f06
+Federico Ravaglia,GK,Bologna,20,0,0,0,1,0,0,0,0,0,0,0,0,5,0,0,,6662d731
+Ante Rebić,FW,Milan,26,4,1,0,33,14,11,61,7,9,3,0,0,48,23,35,39.7,536cebe5
+Arkadiusz Reca,DF,Crotone,25,7,0,0,34,25,5,81,50,16,4,0,0,159,34,36,48.6,6213fd82
+Vasco Regini,DF,Sampdoria,29,0,0,0,1,1,0,2,1,2,0,0,1,1,0,1,0.0,339c6ed4
+Pepe Reina,GK,Lazio,37,1,0,0,0,1,0,0,1,0,0,0,0,23,4,0,100.0,e358587b
+Bryan Reynolds,DF,Roma,19,0,0,0,5,3,0,7,6,2,0,0,0,10,2,3,40.0,2306bf5c
+Franck Ribéry,FW,Fiorentina,37,6,1,0,36,73,7,18,3,11,1,0,0,72,6,20,23.1,f61c7c4e
+Federico Ricci,FW,Sassuolo,26,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,,524eb8c5
+Giacomo Ricci,DF,Parma,23,0,0,0,0,0,0,1,1,1,0,0,0,0,1,2,33.3,cfb38237
+Matteo Ricci,MF,Spezia,26,5,0,0,27,29,0,32,34,23,0,0,0,188,15,12,55.6,3cf7dc7e
+Tomás Rincón,MF,Torino,32,10,1,1,72,44,0,21,31,38,0,0,0,175,48,36,57.1,f1cfc209
+Andrea Rispoli,DF,Crotone,31,4,0,0,8,4,1,30,5,3,0,0,0,22,4,7,36.4,39ee6cb6
+Emmanuel Rivière,FW,Crotone,30,2,0,0,10,18,1,1,1,1,0,0,0,18,14,21,40.0,2bae5658
+Ricardo Rodríguez,DF,Torino,27,1,0,0,13,6,0,20,20,14,0,0,0,53,16,12,57.1,7f78ad23
+Marko Rog,MF,Cagliari,25,2,0,0,34,23,0,6,19,24,0,0,0,95,5,13,27.8,b6b2b820
+Rogério,DF,Sassuolo,22,4,0,0,28,25,1,75,31,13,0,0,0,93,13,16,44.8,10e7f486
+Luis Rojas,MFFW,Crotone,18,1,0,0,2,0,0,0,1,0,0,0,0,8,1,1,50.0,11e0904f
+Alessio Romagnoli,DF,Milan,25,7,0,0,19,11,0,1,24,7,0,1,0,85,55,26,67.9,3ead85f9
+Cristian Romero,DF,Atalanta,22,10,0,0,70,32,0,0,96,32,1,0,0,237,112,50,69.1,a3d94a58
+Cristiano Ronaldo,FW,Juventus,35,3,0,0,17,43,31,64,5,3,1,0,0,71,21,23,47.7,dea698d9
+Marten de Roon,MF,Atalanta,29,8,1,0,65,23,0,16,69,48,0,0,0,258,65,44,59.6,2a1beb34
+Nicolò Rovella,MF,Genoa,18,4,0,0,19,23,0,29,20,16,0,1,0,93,7,13,35.0,e58cbfd5
+Amir Rrahmani,DF,Napoli,26,2,0,0,11,8,0,1,8,8,2,0,0,54,24,21,53.3,4b3e1a38
+Kevin Rüegg,DFMF,Hellas Verona,21,0,0,0,2,1,1,3,2,0,1,0,0,9,1,4,20.0,90573602
+Daniele Rugani,DF,Cagliari,26,2,0,0,15,4,0,5,15,11,0,0,0,49,33,16,67.3,14b8fcdf
+Matteo Ruggeri,DF,Atalanta,18,0,0,0,3,0,0,8,4,0,0,0,0,11,3,2,60.0,ae9898c5
+Mário Rui,DF,Napoli,29,4,0,0,17,41,3,83,28,13,0,0,0,106,9,13,40.9,0b5a292a
+Fabián Ruiz Peña,MF,Napoli,24,1,0,0,11,26,1,23,36,31,0,1,0,186,15,7,68.2,c0c7ff58
+Alexis Saelemaekers,FW,Milan,21,7,1,1,29,34,6,47,25,26,1,0,0,113,7,16,30.4,ee251371
+Jacopo Sala,DF,Spezia,28,1,0,0,7,4,0,14,5,9,0,0,0,23,4,3,57.1,da5a981b
+Eddie Salcedo,MFFW,Hellas Verona,18,3,0,0,14,15,3,18,6,2,1,0,0,34,36,57,38.7,0489bb30
+Antonio Sanabria,FW,Torino,24,2,0,0,17,12,3,2,5,3,0,0,0,24,29,38,43.3,0a447501
+Alexis Sánchez,FW,Inter,31,0,0,0,19,33,10,28,7,8,0,0,0,53,9,10,47.4,2c0f8e9e
+Alex Sandro,DF,Juventus,29,2,0,0,26,28,0,60,31,23,0,0,1,123,38,23,62.3,0d82903c
+Siriki Sanogo,MF,Benevento,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,ff120e44
+Nicola Sansone,FWMF,Bologna,28,2,0,0,23,40,3,49,9,11,0,0,0,68,5,24,17.2,7eb97a8e
+Federico Santander,FW,Bologna,29,0,0,0,2,2,0,0,0,0,0,0,0,1,4,3,57.1,df85d472
+Davide Santon,DF,Roma,29,3,0,0,11,3,1,16,4,3,0,0,0,27,3,2,60.0,88c89891
+Samir Santos,DF,Udinese,25,6,0,0,39,36,3,18,58,23,0,0,0,97,49,32,60.5,92b4758e
+Riccardo Saponara,MF,Fiorentina,28,0,0,0,1,1,0,0,1,1,0,0,0,4,0,2,0.0,3bb7af3b
+Riccardo Saponara,FWMF,Spezia,28,2,1,1,4,14,2,4,1,1,0,0,0,31,8,6,57.1,3bb7af3b
+Marco Sau,MFFW,Benevento,32,1,1,0,8,19,1,40,5,2,1,0,0,37,1,16,5.9,1ad1f50d
+Gianluca Scamacca,FW,Genoa,21,1,0,0,32,17,10,10,9,10,0,0,1,54,41,39,51.3,8790f988
+Nicolás Schiappacasse,MF,Sassuolo,21,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0.0,afe31d55
+Pasquale Schiattarella,MF,Benevento,33,13,1,0,36,54,1,6,32,22,0,0,0,172,12,8,60.0,bd84fc61
+Jerdy Schouten,MF,Bologna,23,8,1,0,48,24,1,9,79,25,0,1,0,249,34,30,53.1,2cfae697
+Matteo Scozzarella,MF,Parma,32,1,0,0,3,1,0,13,6,0,0,0,0,9,0,0,,ea164f99
+Simone Scuffet,GK,Udinese,24,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,100.0,41bd99ea
+Jacopo Segre,MF,Torino,23,1,0,0,2,9,1,0,0,2,0,0,0,10,1,1,50.0,3cb132e6
+Léo Sena,MF,Spezia,24,0,0,0,7,61,0,12,11,12,0,0,0,77,4,11,26.7,1de40dae
+Stefano Sensi,MF,Inter,24,1,1,0,10,14,0,34,7,6,0,0,0,49,2,2,50.0,b70bde8f
+Luigi Sepe,GK,Parma,29,0,0,0,0,2,0,0,2,0,0,0,0,34,3,2,60.0,343f753a
+Stephan El Shaarawy,MFFW,Roma,27,1,0,0,8,9,1,10,3,3,0,0,0,19,2,6,25.0,d3aaad90
+Eldor Shomurodov,FW,Genoa,25,1,0,0,39,21,11,15,6,14,0,0,0,59,46,79,36.8,57469b2d
+Luca Siligardi,MFFW,Crotone,32,0,0,0,0,1,0,0,0,2,0,0,0,0,0,1,0.0,1cac99dc
+Luca Siligardi,FWMF,Parma,32,0,0,0,0,0,0,5,0,0,0,0,0,3,0,0,,1cac99dc
+Adrien Silva,MF,Sampdoria,31,8,1,1,35,23,0,9,30,22,0,2,0,142,19,15,55.9,d6f88a1d
+Marco Silvestri,GK,Hellas Verona,29,1,0,0,2,3,0,0,0,0,0,2,1,61,7,3,70.0,0d422df7
+Giovanni Simeone,FW,Cagliari,25,1,0,0,24,25,18,8,10,11,0,0,0,55,29,66,30.5,343c0d52
+Wilfried Singo,DF,Torino,19,4,1,1,27,50,2,79,29,14,1,0,0,129,50,26,65.8,8b609c34
+Salvatore Sirigu,GK,Torino,33,0,0,0,1,3,0,0,0,0,0,1,0,42,4,1,80.0,10dc46f0
+Łukasz Skorupski,GK,Bologna,29,1,0,0,0,1,0,0,0,1,0,0,0,37,6,1,85.7,ab4449d6
+Andreas Skov Olsen,FWDF,Bologna,20,1,0,0,12,12,2,66,3,10,0,0,0,58,9,10,47.4,c50cee19
+Milan Škriniar,DF,Inter,25,1,0,0,34,27,0,4,30,32,0,0,0,163,32,43,42.7,30f5ffa9
+Chris Smalling,DF,Roma,30,3,0,0,13,8,1,1,28,8,0,0,0,67,25,13,65.8,b6964eb6
+Simon Sohm,MF,Parma,19,1,0,0,8,4,2,4,5,12,0,0,0,47,9,7,56.3,a5f458d9
+Roberto Soriano,MF,Bologna,29,5,0,0,75,49,3,34,18,26,2,0,0,184,34,58,37.0,9d4c45d6
+Riccardo Sottil,FWMF,Cagliari,21,3,0,0,17,35,1,43,5,3,0,0,0,82,3,12,20.0,94816803
+Adama Soumaoro,DF,Bologna,28,4,0,0,33,19,0,0,20,14,0,3,0,111,60,15,80.0,7b075c75
+Leonardo Spinazzola,DF,Roma,27,0,0,0,8,11,2,103,25,6,0,0,1,107,10,1,90.9,3626daea
+Marco Sportiello,GK,Atalanta,28,0,0,0,0,1,0,0,2,2,0,0,0,29,5,1,83.3,ac4003af
+Mattia Sprocati,MFFW,Parma,27,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,,bdd0692f
+Thomas Strakosha,GK,Lazio,25,1,0,0,0,2,0,0,1,1,0,0,0,14,3,0,100.0,339fe0e8
+Kevin Strootman,MF,Genoa,30,7,0,0,25,13,1,39,25,18,0,0,0,89,15,15,50.0,ef2e5e1a
+Jens Stryger Larsen,DF,Udinese,29,0,0,0,12,13,4,60,24,11,0,1,0,131,22,32,40.7,f91e81c9
+Stefano Sturaro,MF,Hellas Verona,27,5,0,0,17,6,0,5,5,3,0,0,0,16,7,8,46.7,2334478a
+Stefano Sturaro,MF,Genoa,27,1,0,0,14,12,2,22,7,5,0,0,0,33,7,12,36.8,2334478a
+Bosko Sutalo,DF,Atalanta,20,0,0,0,2,4,0,3,2,5,0,0,0,21,12,8,60.0,1d0bb7e4
+Mattias Svanberg,MF,Bologna,21,8,1,1,46,44,0,6,30,17,0,0,0,109,20,16,55.6,92d83c27
+Wojciech Szczęsny,GK,Juventus,30,0,0,0,0,1,0,0,3,0,0,0,0,59,7,0,100.0,01b8a2b2
+Adrien Tameze,MF,Hellas Verona,26,6,0,0,35,29,2,15,32,25,0,1,0,188,44,48,47.8,8da74c05
+Ciprian Tătărușanu,GK,Milan,34,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,,b056e3da
+Andrés Tello,DFMF,Benevento,23,3,0,0,6,4,0,10,6,6,0,0,0,35,10,10,50.0,5f951ef1
+Hidde ter Avest,DF,Udinese,23,0,0,0,3,2,1,16,2,2,0,0,0,19,1,2,33.3,18f9dbd0
+Pietro Terracciano,GK,Fiorentina,30,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,,e1b0a70d
+Claudio Terzi,DF,Spezia,36,9,1,1,24,16,2,4,35,21,0,2,0,112,35,35,50.0,5570e6fb
+Morten Thorsby,MF,Sampdoria,24,10,0,0,72,24,2,4,25,42,0,2,0,145,153,111,58.0,d1b49282
+Jeremy Toljan,DF,Sassuolo,25,2,0,0,24,14,4,30,13,12,0,0,0,83,4,9,30.8,a96e5dc0
+Rafael Tolói,DF,Atalanta,29,9,0,0,38,15,1,30,33,23,0,2,0,190,46,28,62.2,c56dc39e
+Takehiro Tomiyasu,DF,Bologna,21,4,0,0,31,13,2,23,54,31,0,0,1,155,91,64,58.7,b3af9be1
+Fikayo Tomori,DF,Milan,22,0,0,0,14,1,0,1,18,18,0,0,0,99,30,26,53.6,7edfbb8a
+Sandro Tonali,MF,Milan,20,1,1,0,18,17,0,26,22,19,0,0,0,99,6,9,40.0,0db169ae
+Lorenzo Tonelli,DF,Sampdoria,30,11,0,0,29,26,1,0,25,18,0,1,0,88,42,39,51.9,8cc29864
+Ernesto Torregrossa,FW,Sampdoria,28,0,0,0,7,1,3,0,1,1,0,0,0,4,5,8,38.5,bf39bdec
+Mattéo Tramoni,MFFW,Cagliari,20,1,0,0,1,1,0,0,1,2,0,0,0,4,0,2,0.0,2e0ae188
+Chaka Traorè,FWDF,Parma,15,0,0,0,0,3,0,0,0,0,0,0,0,1,1,0,100.0,ee6e2b92
+Alessandro Tripaldelli,DF,Cagliari,21,1,0,0,9,4,0,9,3,6,0,0,0,14,7,10,41.2,4571fa88
+Alessandro Tuia,DF,Benevento,30,6,0,0,26,10,0,3,36,17,0,2,0,61,29,20,59.2,26c54058
+Ľubomír Tupta,FW,Hellas Verona,22,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,100.0,b02af64f
+Iyenoma Udogie,DFMF,Hellas Verona,17,1,0,0,5,3,1,1,2,4,0,0,0,13,3,5,37.5,7cd520e8
+Samir Ujkani,GK,Torino,32,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,,96640846
+Kacper Urbanski,FW,Bologna,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,2d9d9e42
+Lautaro Valenti,DF,Parma,21,0,0,0,5,7,0,2,11,4,0,0,0,26,7,0,100.0,55db5c36
+Borja Valero,MFFW,Fiorentina,35,3,0,0,10,15,1,2,6,9,0,0,0,41,1,5,16.7,0e21fc3c
+Denis Vavro,DF,Lazio,24,0,0,0,0,0,0,0,1,0,0,0,0,2,0,1,0.0,08990838
+Matías Vecino,MF,Inter,28,0,0,0,3,2,0,2,4,1,0,0,0,7,3,4,42.9,44ac04e9
+Miguel Veloso,MF,Hellas Verona,34,1,0,0,19,10,0,37,12,17,0,0,0,98,24,22,52.2,ab1ca213
+Lorenzo Venuti,DF,Fiorentina,25,3,0,0,10,26,1,56,17,11,0,0,1,77,8,12,40.0,983ff2c7
+Daniele Verde,FW,Spezia,24,1,0,0,2,12,2,45,9,4,0,0,0,45,0,0,,d3298c99
+Simone Verdi,MFFW,Torino,28,6,0,0,24,24,3,154,8,12,0,0,0,78,4,14,22.2,0375723e
+Jordan Veretout,MF,Roma,27,4,0,0,32,11,2,68,14,12,0,1,0,113,12,13,48.0,4a56052c
+Edoardo Vergani,FW,Bologna,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,2873973b
+Valerio Verre,FWMF,Sampdoria,26,3,0,0,25,21,1,20,9,7,0,0,0,67,18,25,41.9,33ecf462
+Guglielmo Vicario,GK,Cagliari,23,0,0,0,0,1,0,0,0,0,0,0,0,2,0,0,,77d6fd4d
+Arturo Vidal,MF,Inter,33,3,0,0,28,15,0,8,29,14,0,1,0,95,19,20,48.7,67cdbc0e
+Ronaldo Vieira,MF,Hellas Verona,22,1,0,0,6,4,0,0,0,3,,,0,,,,,75e60d75
+Luca Vignali,DF,Spezia,24,4,1,0,17,21,1,34,22,9,0,0,0,115,30,15,66.7,c1e8e74e
+Emanuel Vignato,FWMF,Bologna,19,4,0,0,13,12,2,61,10,9,0,0,0,83,3,15,16.7,ec5dae45
+Gonzalo Villar,MF,Roma,22,7,0,0,51,49,0,7,22,18,0,1,0,124,26,19,57.8,bdc74a8f
+Nicolas Viola,MF,Benevento,30,1,0,0,14,23,0,47,9,9,0,0,0,64,6,11,35.3,45392b06
+Dušan Vlahović,FW,Fiorentina,20,1,0,0,53,70,26,21,4,4,2,0,0,79,114,144,44.2,79443529
+Mërgim Vojvoda,DFFW,Torino,25,4,0,0,11,6,0,64,18,14,0,1,0,78,12,8,60.0,be2706c0
+Stefan de Vrij,DF,Inter,28,2,0,0,19,10,0,2,41,16,0,0,0,147,64,40,61.5,d0d8dd44
+Giacomo Vrioni,FW,Juventus,21,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,bf4d31d3
+Miloš Vulić,MF,Crotone,23,2,0,0,12,32,1,27,8,8,0,0,0,73,15,13,53.6,5944af8f
+Walace,MF,Udinese,25,4,0,0,31,26,1,2,34,23,0,0,0,179,13,14,48.1,26db8853
+Sebastian Walukiewicz,DF,Cagliari,20,1,0,0,17,4,0,2,36,19,0,0,0,68,16,19,45.7,217875a4
+Maya Yoshida,DF,Sampdoria,31,5,0,0,16,20,0,0,57,4,0,0,0,136,46,25,64.8,caffaf5a
+Ashley Young,DF,Inter,35,4,0,0,13,15,3,44,6,7,0,1,0,55,3,10,23.1,be927d03
+Mattia Zaccagni,MF,Hellas Verona,25,6,0,0,36,109,11,83,27,13,1,0,0,148,47,57,45.2,d85c238b
+Vasilios Zagaritis,DF,Parma,19,0,0,0,0,1,1,7,0,0,0,0,0,4,0,0,,b4a3d61a
+Miha Zajc,MF,Genoa,26,4,0,0,27,27,3,77,27,14,0,0,0,107,18,26,40.9,83e4643e
+Nicola Zalewski,MF,Roma,18,0,0,0,0,1,0,0,0,1,0,0,0,1,0,0,,45191c29
+Niccolò Zanellato,MF,Crotone,22,3,0,0,30,34,0,9,16,14,0,0,0,102,19,21,47.5,741e058f
+Cristián Zapata,DF,Genoa,33,2,0,0,6,5,0,0,15,12,0,1,0,45,27,13,67.5,b1deecf8
+Duván Zapata,FW,Atalanta,29,0,0,0,29,49,21,48,6,5,1,0,0,69,48,52,48.0,d3de9af0
+Gabriele Zappa,DF,Cagliari,20,3,0,0,25,11,1,69,24,17,0,0,0,126,10,24,29.4,ca3db240
+Davide Zappacosta,DF,Genoa,28,3,0,0,23,19,8,83,18,16,0,0,0,119,14,11,56.0,7fe90ccd
+Simone Zaza,FW,Torino,29,4,0,0,36,31,14,5,3,9,0,0,0,32,44,63,41.1,9592289a
+Marvin Zeegelaar,DF,Udinese,29,6,0,0,39,6,4,45,24,18,0,1,0,68,33,28,54.1,8abd0c03
+Piotr Zieliński,MF,Napoli,26,2,0,0,12,45,7,65,18,10,0,0,0,108,4,8,33.3,a5296e55
+Joshua Zirkzee,FWMF,Parma,19,0,0,0,4,1,0,0,0,2,0,0,0,7,1,9,10.0,028e70b9
+Jeroen Zoet,GK,Spezia,29,1,0,0,2,1,0,0,0,0,0,1,0,8,2,0,100.0,cc1a0c57
+Filip Đuričić,MFFW,Sassuolo,28,5,0,0,52,39,5,12,9,23,0,0,0,90,13,35,27.1,eccbe56a

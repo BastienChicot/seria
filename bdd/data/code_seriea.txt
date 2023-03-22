@@ -19,3 +19,6 @@ Udinese;Udinese;04eea015
 Cagliari;Cagliari;c4260e09
 Genoa;Genoa;658bf2de
 Venezia;Venezia;af5d5982
+Crotone;Crotone;3074d7b1
+Benevento;Benevento;4fcb34fd
+Parma;Parma;eab4234c

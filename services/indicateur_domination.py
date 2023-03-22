@@ -10,12 +10,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-opt = "fr_"
-opt2 = "_fr"
+opt = ""
+opt2 = ""
 
 #IMPORT DU FICHIER
-data = pd.read_csv("bdd/data/data_ml_"+str(opt)+"21_22.csv", sep= ";", index_col = 0)
-nb_top = pd.read_csv("bdd/data/nb_top_joueurs"+str(opt2)+".csv",sep=";", index_col = 0)
+data = pd.read_csv("bdd/data/data_ml_"+str(opt)+"20-21.csv", sep= ";", index_col = 0)
+nb_top = pd.read_csv("bdd/data/nb_top_joueurs_20_21"+str(opt2)+".csv",sep=";", index_col = 0)
 nb_top_precis = pd.read_csv("bdd/data/nb_top_joueurs_poste_precis.csv",sep=";", index_col = 0)
 opp_score = pd.read_csv("bdd/data/score_dis_opp.csv",sep=";", index_col = 0)
 
@@ -52,9 +52,9 @@ Def = data.groupby("team").mean("FDD").reset_index()
 Def = Def[["team","FDD"]].sort_values(by = ["FDD"],ascending=True)
 Def.head
 
-nb_top['Squad'] = nb_top['Squad'].replace('Clermont Foot','Clermont-Foot')
-nb_top['Squad'] = nb_top['Squad'].replace('Saint-Étienne','Saint-Etienne')
-nb_top['Squad'] = nb_top['Squad'].replace('Paris S-G','Paris-Saint-Germain')
+# nb_top['Squad'] = nb_top['Squad'].replace('Hellas Verona','Hellas-Verona')
+# nb_top['Squad'] = nb_top['Squad'].replace('Saint-Étienne','Saint-Etienne')
+# nb_top['Squad'] = nb_top['Squad'].replace('Paris S-G','Paris-Saint-Germain')
 
 data = data.merge(nb_top, how = "left", left_on = "team", right_on = "Squad")
 data = data.merge(nb_top_precis, how = "left", left_on = "team", right_on = "Squad")
