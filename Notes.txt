@@ -3914,4 +3914,70 @@ Contrairement à l'angleterre on ne retrouve pas la significativité du lien ent
 Le modèle ayant été conçu avec les données de série A et optimisé depuis celles ci, je n'obtiens évidemment pas les mêmes resultats et j'ai beaucoup de coeff qui deviennent mauvais. Par contre lorsqu'un truc est significatif dans le modèle avec deux sets de données différents c'est plutôt cool je trouve.
 
 
+Résultat du modèle entraîné avec les données 2021-2022 sur les données 2020-2021 :
 
+Le modèle de base
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:               victoire   No. Observations:                  702
+Model:                          Logit   Df Residuals:                      674
+Method:                           MLE   Df Model:                           27
+Date:                Thu, 23 Mar 2023   Pseudo R-squ.:                  0.2947
+Time:                        17:35:52   Log-Likelihood:                -325.62
+converged:                       True   LL-Null:                       -461.65
+Covariance Type:            nonrobust   LLR p-value:                 2.509e-42
+========================================================================================================
+                                           coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------
+Intercept                                7.4709      3.504      2.132      0.033       0.603      14.339
+C(home)[T.1]                             1.3623      0.529      2.576      0.010       0.326       2.399
+C(saison)[T.reste]                      -0.2520      0.211     -1.196      0.232      -0.665       0.161
+C(PK)[T.1]                               0.9814      0.307      3.198      0.001       0.380       1.583
+C(PK)[T.2]                               1.7040      0.898      1.897      0.058      -0.056       3.464
+C(CrdR)[T.1]                            -0.5621      0.345     -1.629      0.103      -1.238       0.114
+C(CrdR)[T.2]                            -0.7909      1.129     -0.701      0.484      -3.004       1.422
+C(Formation)[T.3-5-2]                    0.6485      0.477      1.360      0.174      -0.286       1.583
+C(Formation)[T.4-3-3]                    0.5290      0.471      1.124      0.261      -0.394       1.452
+C(Formation)[T.4-4-2]                    0.7171      0.653      1.098      0.272      -0.562       1.997
+C(Formation)[T.4-5-1]                    0.6919      0.444      1.558      0.119      -0.179       1.562
+C(top_DM)[T.1]                           1.2691      0.547      2.321      0.020       0.198       2.341
+C(Formation)[T.3-5-2]:C(top_DM)[T.1]    -2.0981      0.728     -2.882      0.004      -3.525      -0.671
+C(Formation)[T.4-3-3]:C(top_DM)[T.1]    -2.2396      0.755     -2.968      0.003      -3.719      -0.761
+C(Formation)[T.4-4-2]:C(top_DM)[T.1]    -0.7105      0.756     -0.939      0.348      -2.193       0.772
+C(Formation)[T.4-5-1]:C(top_DM)[T.1]    -1.8084      0.673     -2.688      0.007      -3.127      -0.490
+Sh                                      -0.0868      0.042     -2.052      0.040      -0.170      -0.004
+C(home)[T.1]:Sh                         -0.0867      0.037     -2.314      0.021      -0.160      -0.013
+Poss                                    -0.1662      0.037     -4.547      0.000      -0.238      -0.095
+score_mf_mean                           -0.9448      0.621     -1.523      0.128      -2.161       0.271
+Poss:score_mf_mean                       0.0211      0.012      1.733      0.083      -0.003       0.045
+FDA                                      0.7930      0.404      1.961      0.050       0.001       1.585
+diff_value                               0.0047      0.001      7.520      0.000       0.004       0.006
+Att                                      0.0053      0.002      2.374      0.018       0.001       0.010
+age                                     -0.1800      0.125     -1.438      0.150      -0.425       0.065
+SoT                                      0.4683      0.063      7.426      0.000       0.345       0.592
+score_df_mean                           -0.5980      0.197     -3.028      0.002      -0.985      -0.211
+repos                                    0.0503      0.025      2.009      0.045       0.001       0.099
+========================================================================================================
+"""
+
+resultats:
+victoire      y_pred        diff
+count  360.000000  360.000000  360.000000
+mean     0.380556    0.338595    0.278328
+std      0.486199    0.309532    0.269554
+min      0.000000    0.003881    0.003881
+25%      0.000000    0.075067    0.061964
+50%      0.000000    0.215392    0.171688
+75%      1.000000    0.581390    0.438624
+max      1.000000    0.989408    0.952845
+
+le R²  == 0.364008
+
+Biais == -0.041960834198898234 --> plutot proche de 0 c'est bon signe
+
+Erreur moyenne absolue == 0.2783283361839674 --> Moins ouf
+
+Erreur quadratique moyenne == 0.3872004066967107 pour une moyenne des observations de0.380556 c'est mauvais
+Les résultats sont dispersés
+
++ GRAPH DE DISTRI DES ERREUR EN LIGNE

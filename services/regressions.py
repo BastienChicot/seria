@@ -14,7 +14,7 @@ import statsmodels.formula.api as smf
 
 from scipy.stats import chi2_contingency
 
-df_reg = pd.read_csv("bdd/data/df_reg.csv", sep= ";", index_col = 0)
+df_reg = pd.read_csv("bdd/data/df_reg_21_22.csv", sep= ";", index_col = 0)
 # df_reg["age"] = df_reg["age"].str.replace(',', '.')
 # df_reg["age"] = df_reg["age"].astype(float)
 
@@ -59,6 +59,43 @@ reg_test = smf.logit('victoire ~ C(home)*Sh + Poss*score_mf_mean + FDA + \
 
 reg_test.summary()
 
+df_20_21 = pd.read_csv("bdd/data/df_reg.csv", sep= ";", index_col = 0)
+
+res = df_20_21[["victoire"]]
+
+df_20_21 = df_20_21[["home","Sh","Poss","score_mf_mean","FDA",
+                     "diff_value","Att","age","SoT","saison",
+                     "PK","CrdR","Formation","top_DM","score_df_mean","repos" ]]
+
+df_20_21["age"] = df_20_21['age'].str.replace(',', '.')
+df_20_21["age"] = df_20_21["age"].astype(float)
+
+df_20_21["y_pred"] = reg_test.predict(df_20_21)
+
+res = res.merge(df_20_21,  left_index=True, right_index=True)
+res=res[["victoire","y_pred"]]
+
+res["diff"] = abs(res["y_pred"]-res["victoire"])
+res["dif_pred"] = res["victoire"] - res["y_pred"]
+res["dif_vic"] = res["y_pred"] - res["victoire"]
+res["dif_moy"] = res["victoire"] - np.mean(res["victoire"])
+
+res.describe()
+r_car = sum(res["dif_pred"]**2)/sum(res["dif_moy"]**2)
+
+1-r_car
+
+bias = sum(res["dif_vic"])/len(res)
+
+MAE = sum(res["diff"])/len(res)
+
+RMSE = (sum(res["dif_vic"]**2)/len(res))**(1/2)
+
+import seaborn as sns
+
+sns.displot(data=res, x="diff", kind="kde")
+
+res.to_csv("bdd/data/res_20_21.csv")
 ##TEST colinéarité
 from statsmodels.stats.outliers_influence import variance_inflation_factor
 from patsy import dmatrices

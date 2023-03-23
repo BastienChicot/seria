@@ -14,8 +14,8 @@ opt = ""
 opt2 = ""
 
 #IMPORT DU FICHIER
-data = pd.read_csv("bdd/data/data_ml_"+str(opt)+"20-21.csv", sep= ";", index_col = 0)
-nb_top = pd.read_csv("bdd/data/nb_top_joueurs_20_21"+str(opt2)+".csv",sep=";", index_col = 0)
+data = pd.read_csv("bdd/data/data_ml_"+str(opt)+"21_22.csv", sep= ";", index_col = 0)
+nb_top = pd.read_csv("bdd/data/nb_top_joueurs"+str(opt2)+".csv",sep=";", index_col = 0)
 nb_top_precis = pd.read_csv("bdd/data/nb_top_joueurs_poste_precis.csv",sep=";", index_col = 0)
 opp_score = pd.read_csv("bdd/data/score_dis_opp.csv",sep=";", index_col = 0)
 
@@ -156,7 +156,7 @@ df_reg.info()
 
 df_reg['opp_Formation'] = pd.Categorical(df_reg['opp_Formation'])
 
-df_reg.to_csv("bdd/data/df_reg.csv", sep= ";")
+df_reg.to_csv("bdd/data/df_reg_21_22.csv", sep= ";")
  
 
 
