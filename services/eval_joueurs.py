@@ -12,7 +12,7 @@ opt = ""
 opt2 = ""
 
 ##STANDARD
-standard = pd.read_csv("bdd/data/dl_fbref/stat_joueur_stand_"+str(opt)+"20_21.txt", sep= ",", index_col = 0)
+standard = pd.read_csv("bdd/data/dl_fbref/stat_joueur_stand_"+str(opt)+"22_23.txt", sep= ",", index_col = 0)
 
 standard.columns = standard.iloc[0]
                          
@@ -28,7 +28,7 @@ standard["key"] = standard["Player"] + standard["Pos"] + standard["Squad"]
 #fichier de base sur lequel je vais joindre les autres
 
 ##TIRS
-shots = pd.read_csv("bdd/data/dl_fbref/stat_joueur_shots_"+str(opt)+"20_21.txt", sep= ",", index_col = 0)
+shots = pd.read_csv("bdd/data/dl_fbref/stat_joueur_shots_"+str(opt)+"22_23.txt", sep= ",", index_col = 0)
 
 shots = shots.reset_index()
 shots["key"] = shots["Player"] + shots["Pos"] + shots["Squad"]
@@ -43,7 +43,7 @@ shots = shots.rename(columns = {
 full = pd.merge(standard,shots, how = "inner", on = ["key"])
 
 ##PASSES
-passes = pd.read_csv("bdd/data/dl_fbref/stat_joueur_pass_"+str(opt)+"20_21.txt", sep= ",", index_col = 0)
+passes = pd.read_csv("bdd/data/dl_fbref/stat_joueur_pass_"+str(opt)+"22_23.txt", sep= ",", index_col = 0)
 
 passes = passes.reset_index()
 passes["key"] = passes["Player"] + passes["Pos"] + passes["Squad"]
@@ -58,7 +58,7 @@ passes = passes.rename(columns = {
 full = full.merge(passes, how = "left", on = "key")
 
 ##SHOOTING CREATING ACTION
-sca = pd.read_csv("bdd/data/dl_fbref/stat_joueur_sca_"+str(opt)+"20_21.txt", sep= ",", index_col = 0)
+sca = pd.read_csv("bdd/data/dl_fbref/stat_joueur_sca_"+str(opt)+"22_23.txt", sep= ",", index_col = 0)
 
 sca = sca.reset_index()
 sca["key"] = sca["Player"] + sca["Pos"] + sca["Squad"]
@@ -70,7 +70,7 @@ full = full.merge(sca, how = "left", on = "key")
 
 
 ##DEFENSE
-defense = pd.read_csv("bdd/data/dl_fbref/stat_joueur_def_"+str(opt)+"20_21.txt", sep= ",", index_col = 0)
+defense = pd.read_csv("bdd/data/dl_fbref/stat_joueur_def_"+str(opt)+"22_23.txt", sep= ",", index_col = 0)
 
 defense = defense.reset_index()
 defense["key"] = defense["Player"] + defense["Pos"] + defense["Squad"]
@@ -88,21 +88,21 @@ full = full.merge(defense, how = "left", on = "key")
 
 
 ##POSSESSION
-poss = pd.read_csv("bdd/data/dl_fbref/stat_joueur_poss_"+str(opt)+"20_21.txt", sep= ",", index_col = 0)
+poss = pd.read_csv("bdd/data/dl_fbref/stat_joueur_poss_"+str(opt)+"22_23.txt", sep= ",", index_col = 0)
 
 poss = poss.reset_index()
 poss["key"] = poss["Player"] + poss["Pos"] + poss["Squad"]
 
 poss.columns
 
-poss = poss[["Succ%", "Mis","Dis","key"]]
+poss = poss[["Succ%", "Mis","Dis","key","Touches"]]
 poss = poss.rename(columns={
     "Succ%":"Drib_pct"
     })
 full = full.merge(poss, how = "left", on = "key")
 
 ##MISC ATTENTION DOUBLONS DE VARIABLES
-misc = pd.read_csv("bdd/data/dl_fbref/stat_joueur_misc_"+str(opt)+"20_21.txt", sep= ",", index_col = 0)
+misc = pd.read_csv("bdd/data/dl_fbref/stat_joueur_misc_"+str(opt)+"22_23.txt", sep= ",", index_col = 0)
 
 misc = misc.reset_index()
 misc["key"] = misc["Player"] + misc["Pos"] + misc["Squad"]
@@ -117,13 +117,13 @@ misc = misc.rename(columns={
 full = full.merge(misc, how = "left", on = "key")
 
 ##GARDIENS
-goal = pd.read_csv("bdd/data/dl_fbref/stat_goal_stand_"+str(opt)+"20_21.txt", sep= ",", index_col = 0)
+goal = pd.read_csv("bdd/data/dl_fbref/stat_goal_stand_"+str(opt)+"22_23.txt", sep= ",", index_col = 0)
                          
 goal = goal.reset_index()
 goal = goal.loc[goal["-9999"] != "-9999"]
 goal["key"] = goal["Player"] + goal["Pos"] + goal["Squad"]
 
-goal_adv = pd.read_csv("bdd/data/dl_fbref/stat_goal_adv_"+str(opt)+"20_21.txt", sep= ",", index_col = 0)
+goal_adv = pd.read_csv("bdd/data/dl_fbref/stat_goal_adv_"+str(opt)+"22_23.txt", sep= ",", index_col = 0)
                          
 goal_adv = goal_adv.reset_index()
 goal_adv["key"] = goal_adv["Player"] + goal_adv["Pos"] + goal_adv["Squad"]
@@ -183,7 +183,7 @@ test = full.groupby("Squad").sum().reset_index()
 test = test[["Squad", "MP","Min","90s"]]
 test["n"] = test["90s"]/11
 
-team = pd.read_csv("bdd/data/data_"+str(opt)+"2020-2021.csv", sep= ";", index_col = 0)
+team = pd.read_csv("bdd/data/data_"+str(opt)+"2022-2023.csv", sep= ";", index_col = 0)
 nb_match = team.groupby("team").count().reset_index()
 nb_match = nb_match[["team","Date"]]
 
@@ -202,7 +202,7 @@ mf = full.loc[full["Pos"] == "MF"]
 mf = mf.loc[mf["90s"] >= 15]
 
 mf["Drib_pct_rel"] = mf["Drib_pct"] / mf["90s"]
-# mf["Touches_rel"] = mf["Touches"] / mf["90s"]
+mf["Touches_rel"] = mf["Touches"] / mf["90s"]
 mf["Cmp_pct_rel"] = mf["Cmp_pct"] / mf["90s"]
 mf["Ast_rel"] = mf["Ast"] / mf["90s"]
 mf["Gls_rel"] = mf["Gls"] / mf["90s"]
@@ -212,7 +212,7 @@ mf["Off_rel"] = mf["Off"] / mf["90s"]
 mf["CrdY_rel"] = mf["CrdY"] / mf["90s"]
 
 mf["score"] = ((mf["Drib_pct_rel"]/(mf.Drib_pct_rel.quantile([0.8]).values)) + 
-               # (mf["Touches_rel"]/(mf.Touches_rel.quantile([0.8]).values)) + 
+                (mf["Touches_rel"]/(mf.Touches_rel.quantile([0.8]).values)) + 
                (mf["Cmp_pct_rel"]/(mf.Cmp_pct_rel.quantile([0.8]).values)) +
                (mf["Ast_rel"]/(mf.Ast_rel.quantile([0.8]).values)) +
                (mf["Gls_rel"]/(mf.Gls_rel.quantile([0.8]).values)) +
@@ -288,7 +288,7 @@ dm = dm.loc[dm["90s"] >= 2]
 dm["Int_rel"] = dm["Int"] / dm["90s"]
 dm["Blocks_rel"] = dm["Blocks"] / dm["90s"]
 dm["Cmp_pct_rel"] = dm["Cmp_pct"] / dm["90s"]
-# dm["Touches_rel"] = dm["Touches"] / dm["90s"]
+dm["Touches_rel"] = dm["Touches"] / dm["90s"]
 dm["Tkl_pct_rel"] = dm["Tkl_pct"] / dm["90s"]
 dm["Fls_rel"] = dm["Fls"] / dm["90s"]
 dm["CrdY_rel"] = dm["CrdY"] / dm["90s"]
@@ -296,7 +296,7 @@ dm["CrdY_rel"] = dm["CrdY"] / dm["90s"]
 dm["score"] = ((dm["Tkl_pct_rel"]/(dm.Tkl_pct_rel.quantile([0.8]).values)) + 
                (dm["Int_rel"]/(dm.Int_rel.quantile([0.8]).values)) + 
                (dm["Blocks_rel"]/(dm.Blocks_rel.quantile([0.8]).values)) +
-               # (dm["Touches_rel"]/(dm.Touches_rel.quantile([0.8]).values)) +
+                (dm["Touches_rel"]/(dm.Touches_rel.quantile([0.8]).values)) +
                (dm["Cmp_pct_rel"]/(dm.Cmp_pct_rel.quantile([0.8]).values))
                ) - (dm["Fls_rel"]/(dm.Fls_rel.quantile([0.8]).values) +
                     dm["CrdY_rel"]/(dm.CrdY_rel.quantile([0.8]).values)
@@ -436,7 +436,7 @@ gk_sc_mean = pd.merge(somme,compte,on = ["Squad"])
 gk_sc_mean["score_gk_mean"] = gk_sc_mean["score"] / gk_sc_mean["Player"]
 gk_sc_mean = gk_sc_mean[["Squad","score_gk_mean"]]
 
-table_mean = pd.merge(df_sc_mean,mf_sc_mean, on = ["Squad"])
+table_mean = pd.merge(df_sc_mean,mf_sc_mean,how = "left", on = ["Squad"])
 table_mean = table_mean.merge(fw_sc_mean,how = "left", on = ["Squad"])
 table_mean = table_mean.merge(dm_sc_mean,how = "left", on = ["Squad"])
 table_mean = table_mean.merge(gk_sc_mean,how = "left", on = ["Squad"])
@@ -447,9 +447,9 @@ table = table.reset_index()
 
 table = table.merge(table_mean, how = "left", on = ["Squad"])
 ##XPORT
-full.to_csv("bdd/data/table_joueurs_20_21"+str(opt2)+".csv",sep=";")
+full.to_csv("bdd/data/table_joueurs_22_23"+str(opt2)+".csv",sep=";")
 
-table.to_csv("bdd/data/nb_top_joueurs_20_21"+str(opt2)+".csv",sep=";")
+table.to_csv("bdd/data/nb_top_joueurs_22_23"+str(opt2)+".csv",sep=";")
 ##IMPORT
 full = pd.read_csv("bdd/data/table_joueurs"+str(opt2)+".csv",sep=";", index_col = 0)
 

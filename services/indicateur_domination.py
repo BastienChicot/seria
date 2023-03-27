@@ -14,7 +14,7 @@ opt = ""
 opt2 = ""
 
 #IMPORT DU FICHIER
-data = pd.read_csv("bdd/data/data_ml_"+str(opt)+"21_22.csv", sep= ";", index_col = 0)
+data = pd.read_csv("bdd/data/data_ml_"+str(opt)+"22-23.csv", sep= ";", index_col = 0)
 nb_top = pd.read_csv("bdd/data/nb_top_joueurs"+str(opt2)+".csv",sep=";", index_col = 0)
 nb_top_precis = pd.read_csv("bdd/data/nb_top_joueurs_poste_precis.csv",sep=";", index_col = 0)
 opp_score = pd.read_csv("bdd/data/score_dis_opp.csv",sep=";", index_col = 0)
@@ -72,14 +72,14 @@ a = a.reset_index()
 a = a.rename(columns={"index":"opp_Formation", "opp_Formation":"n_form"})
 
 df_reg = df_reg.merge(a, how="left", on="opp_Formation")
-df_reg = df_reg.loc[df_reg["n_form"] >= 80]
+df_reg = df_reg.loc[df_reg["n_form"] >= 30]
 
 b = df_reg.Formation.value_counts()
 b = b.reset_index()
 b = b.rename(columns={"index":"Formation", "Formation":"n"})
 
 df_reg = df_reg.merge(b, how="left", on="Formation")
-df_reg = df_reg.loc[df_reg["n"] >= 80]
+df_reg = df_reg.loc[df_reg["n"] >= 30]
 
 corr = df_reg.corr()
 
@@ -156,7 +156,7 @@ df_reg.info()
 
 df_reg['opp_Formation'] = pd.Categorical(df_reg['opp_Formation'])
 
-df_reg.to_csv("bdd/data/df_reg_21_22.csv", sep= ";")
+df_reg.to_csv("bdd/data/df_reg_22_23.csv", sep= ";")
  
 
 

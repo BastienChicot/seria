@@ -3981,3 +3981,31 @@ Erreur quadratique moyenne == 0.3872004066967107 pour une moyenne des observatio
 Les résultats sont dispersés
 
 + GRAPH DE DISTRI DES ERREUR EN LIGNE
+
+
+DONNEES 2022-2023 SERIE A
+
+corrélation attendance et value == 0.5 
+
+résultats :
+
+         victoire      y_pred        diff    dif_pred     dif_vic       dif_moy
+count  409.000000  409.000000  409.000000  409.000000  409.000000  4.090000e+02
+mean     0.393643    0.372580    0.320514    0.021063   -0.021063  1.031503e-16
+std      0.489156    0.292639    0.263854    0.414915    0.414915  4.891556e-01
+min      0.000000    0.005840    0.003341   -0.902085   -0.962396 -3.936430e-01
+25%      0.000000    0.102315    0.090103   -0.221112   -0.269404 -3.936430e-01
+50%      0.000000    0.305587    0.247229   -0.043326    0.043326 -3.936430e-01
+75%      1.000000    0.605049    0.534528    0.269404    0.221112  6.063570e-01
+max      1.000000    0.996659    0.962396    0.962396    0.902085  6.063570e-01
+
+pseudo R² = 0.27865110114228075
+Moins bon que sur 20-21
+
+Biais -> -0.02106285060315758 Mieux que 20-21
+
+Erreur moyenne absolue :: 0.3205135253392621 : Pire que 20-21 pas foufou
+
+Erreur quadratique == 0.4149427272030514 === HORRIBLE !! car plus élevé que la moyenne des observations --> Grosse grosse dispersion
+
++ GRAPH DE DISTRI DES ERREUR EN LIGNE

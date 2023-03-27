@@ -59,21 +59,55 @@ reg_test = smf.logit('victoire ~ C(home)*Sh + Poss*score_mf_mean + FDA + \
 
 reg_test.summary()
 
-df_20_21 = pd.read_csv("bdd/data/df_reg.csv", sep= ";", index_col = 0)
+from joblib import dump,load
 
-res = df_20_21[["victoire"]]
+dump(reg_test, 'model_serieA.joblib')
+reg_test=load('model_serieA.joblib')
 
-df_20_21 = df_20_21[["home","Sh","Poss","score_mf_mean","FDA",
+tab = pd.read_csv("bdd/data/df_reg_22_23.csv", sep= ";", index_col = 0)
+
+res = tab[["victoire"]]
+
+df = tab[["home","Sh","Poss","score_mf_mean","FDA",
                      "diff_value","Att","age","SoT","saison",
                      "PK","CrdR","Formation","top_DM","score_df_mean","repos" ]]
 
-df_20_21["age"] = df_20_21['age'].str.replace(',', '.')
-df_20_21["age"] = df_20_21["age"].astype(float)
+# df["age"] = df['age'].str.replace(',', '.')
+# df["age"] = df["age"].astype(float)
 
-df_20_21["y_pred"] = reg_test.predict(df_20_21)
+# test_pred = pd.DataFrame({'home': [1],
+#                               'Sh': [16], 
+#                               'Poss': [61],
+#                               'score_mf_mean': [3.72272] ,
+#                               "FDA" : [2],
+#                               "diff_value" : [81.75],
+#                               "Att": [630],
+#                               "age" : [26.1],
+#                               "SoT" : [5.75],
+#                               "saison" : ["reste"],
+#                               "PK" : [0],
+#                               "CrdR" : [0],
+#                               "Formation" : ["4-3-3"],
+#                               "top_DM" : [0],
+#                               "score_df_mean" : [2.02083],
+#                               "repos" : [14]
+#                               })
 
-res = res.merge(df_20_21,  left_index=True, right_index=True)
-res=res[["victoire","y_pred"]]
+# test_pred = test_pred.append([test_pred]*4,ignore_index=True)
+
+# test_pred["PK"][1] = 1
+# test_pred["PK"][2] = 2
+# test_pred["CrdR"][3] = 1
+# test_pred["Sh"][4] = 20
+
+# test_pred["pred"] = reg_test.predict(test_pred)
+
+df["y_pred"] = reg_test.predict(df)
+
+df = df.merge(tab,  left_index=True, right_index=True)
+df=df[["Date","team","Opponent","victoire","y_pred"]]
+
+res = df[["victoire","y_pred"]]
 
 res["diff"] = abs(res["y_pred"]-res["victoire"])
 res["dif_pred"] = res["victoire"] - res["y_pred"]
@@ -93,9 +127,11 @@ RMSE = (sum(res["dif_vic"]**2)/len(res))**(1/2)
 
 import seaborn as sns
 
+res.boxplot(column =['diff'])
+
 sns.displot(data=res, x="diff", kind="kde")
 
-res.to_csv("bdd/data/res_20_21.csv")
+res.to_csv("bdd/data/res_22_23.csv")
 ##TEST colinéarité
 from statsmodels.stats.outliers_influence import variance_inflation_factor
 from patsy import dmatrices

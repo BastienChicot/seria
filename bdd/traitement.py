@@ -13,7 +13,7 @@ import pandas as pd
 import numpy as np
 
 #•IMPORT DU FICHIER
-data = pd.read_csv("bdd/data/data_2020-2021.csv", sep= ";", index_col = 0)
+data = pd.read_csv("bdd/data/data_2022-2023.csv", sep= ";", index_col = 0)
 
 ##CREATION DES ID DE L EQUIPE ADVERSE
 
@@ -105,4 +105,4 @@ data_ml = data_ml[["Date","Result","victoire","not_lose","Venue","home","Poss","
                    "Sh","PK","CrdY","CrdR","card", "opp_Sh", "coup_arret", "opp_fls","Opponent",
                    "CMP","Att"]]
 #EXPORT
-data_ml.to_csv("bdd/data/data_ml_20-21.csv",sep=";")
+data_ml.to_csv("bdd/data/data_ml_22-23.csv",sep=";")
