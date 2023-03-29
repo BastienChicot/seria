@@ -3961,7 +3961,7 @@ repos                                    0.0503      0.025      2.009      0.045
 """
 
 resultats:
-victoire      y_pred        diff
+	   victoire      y_pred        diff
 count  360.000000  360.000000  360.000000
 mean     0.380556    0.338595    0.278328
 std      0.486199    0.309532    0.269554

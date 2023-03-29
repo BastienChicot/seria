@@ -72,37 +72,29 @@ df = tab[["home","Sh","Poss","score_mf_mean","FDA",
                      "diff_value","Att","age","SoT","saison",
                      "PK","CrdR","Formation","top_DM","score_df_mean","repos" ]]
 
-# df["age"] = df['age'].str.replace(',', '.')
-# df["age"] = df["age"].astype(float)
+df["age"] = df['age'].str.replace(',', '.')
+df["age"] = df["age"].astype(float)
 
-# test_pred = pd.DataFrame({'home': [1],
-#                               'Sh': [16], 
-#                               'Poss': [61],
-#                               'score_mf_mean': [3.72272] ,
-#                               "FDA" : [2],
-#                               "diff_value" : [81.75],
-#                               "Att": [630],
-#                               "age" : [26.1],
-#                               "SoT" : [5.75],
-#                               "saison" : ["reste"],
-#                               "PK" : [0],
-#                               "CrdR" : [0],
-#                               "Formation" : ["4-3-3"],
-#                               "top_DM" : [0],
-#                               "score_df_mean" : [2.02083],
-#                               "repos" : [14]
-#                               })
+ekip = tab.groupby(["team","Formation"]).mean().reset_index()
+form = tab.groupby(["team","Formation"]).nunique().reset_index()
 
-# test_pred = test_pred.append([test_pred]*4,ignore_index=True)
+df = ekip.loc[ekip["team"] == "Milan"]
+df = df.loc[df["Formation"] == "4-5-1"]
 
-# test_pred["PK"][1] = 1
-# test_pred["PK"][2] = 2
-# test_pred["CrdR"][3] = 1
-# test_pred["Sh"][4] = 20
+df["home"] = 0
+df["saison"] = "reste"
 
-# test_pred["pred"] = reg_test.predict(test_pred)
+df = df[["home","Sh","Poss","score_mf_mean","FDA",
+                     "diff_value","Att","age","SoT","saison",
+                     "PK","CrdR","Formation","top_DM","score_df_mean","repos" ]]
+
+df["diff_value"] = -81.75
+df["repos"] = 14
+df["PK"] = 0
+df["CrdR"] = 0
 
 df["y_pred"] = reg_test.predict(df)
+df["y_pred"]
 
 df = df.merge(tab,  left_index=True, right_index=True)
 df=df[["Date","team","Opponent","victoire","y_pred"]]
