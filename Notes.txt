@@ -4009,3 +4009,60 @@ Erreur moyenne absolue :: 0.3205135253392621 : Pire que 20-21 pas foufou
 Erreur quadratique == 0.4149427272030514 === HORRIBLE !! car plus élevé que la moyenne des observations --> Grosse grosse dispersion
 
 + GRAPH DE DISTRI DES ERREUR EN LIGNE
+
+
+MODELE EFFETS VARIABLES/FIXES
+
+OU
+
+MODELE AVEC N GROUP TYPOLOGIE EQUIPE (CLUSTERING)
+
+Etape 1 : création d'une table à partir des 2 années de stats utilisées pour les régressions précédente et filtre sur les colonnes pour n'en garder que 39
+
+                  Conditional Logit Model Regression Results                  
+==============================================================================
+Dep. Variable:               victoire   No. Observations:                 1471
+Model:               ConditionalLogit   No. groups:                         23
+Log-Likelihood:               -777.01   Min group size:                      7
+Method:                          BFGS   Max group size:                     94
+Date:                Fri, 31 Mar 2023   Mean group size:                  64.0
+Time:                        17:37:50                                         
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+diff_value     0.0038      0.000      9.920      0.000       0.003       0.005
+==============================================================================
+"""
+
+Problème de covariance des variables dans le modèle conditional
+Vient à priori d'une variable du modèle
+
+PREMIER TEST 
+                  Conditional Logit Model Regression Results                  
+==============================================================================
+Dep. Variable:               victoire   No. Observations:                 1378
+Model:               ConditionalLogit   No. groups:                         19
+Log-Likelihood:               -715.87   Min group size:                     53
+Method:                          BFGS   Max group size:                     94
+Date:                Fri, 31 Mar 2023   Mean group size:                  72.5
+Time:                        18:10:25                                         
+================================================================================
+                   coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------
+C(top_DM)[0]    -0.1323    796.577     -0.000      1.000   -1561.394    1561.130
+C(top_DM)[1]     0.1323    796.577      0.000      1.000   -1561.130    1561.395
+diff_value       0.0051      0.000     11.333      0.000       0.004       0.006
+Poss            -0.0590      0.008     -7.365      0.000      -0.075      -0.043
+================================================================================
+"""
+ 
+C'est un peu pourri comme modèle quand même !!
+
+
+Créé 4 groupes d'équipes en fonction des variables pertinentes de la base
+
+RETENTER LES MODELE CONDITIONNELS ET VOIR CE QUI MARCHE PAS
+TESTER UN LOGIT AVEC LES GROUPES EN VARIABLE QUALI 
+
+
+
