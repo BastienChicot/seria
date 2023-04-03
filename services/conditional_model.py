@@ -39,42 +39,51 @@ df23 = df23[["victoire","not_lose","home","Poss","age","Formation","SoT","Dist",
              'score_dm_mean','score_gk_mean','top_GK','top_MF', 'top_DM', 
              'top_DF', 'top_FW']]
 
+df21["age"] = df21['age'].str.replace(',', '.')
+df21["age"] = df21["age"].astype(float)
+
+df21["year"] = "2021"
+df22["year"] = "2022"
+df23["year"] = "2023"
+
 df = pd.concat([df21,df22,df23])
 
 df = df.dropna()
 
-moy = df.groupby(["team","Formation"]).mean().reset_index()
+moy = df.groupby(["team","year","Formation"]).mean().reset_index()
 
-apparition = df.groupby("team").count().reset_index()
-apparition = apparition[["team","victoire"]]
-apparition = apparition.rename(columns={
-    "victoire":"count"
-    })
+# apparition = df.groupby("team").count().reset_index()
+# apparition = apparition[["team","victoire"]]
+# apparition = apparition.rename(columns={
+#     "victoire":"count"
+#     })
 
-df = df.merge(apparition, how = "left")
-df = df.loc[df["count"] >= 50]
-##CONDITIONAL LOGIT
+# df = df.merge(apparition, how = "left")
+# df = df.loc[df["count"] >= 50]
+# ##CONDITIONAL LOGIT
 
-g = df["team"]
-x = df["diff_value"]
-y = df["victoire"]
+# g = df["team"]
+# x = df["diff_value"]
+# y = df["victoire"]
 
-formule = 'victoire ~ diff_value + Poss + C(top_DM) - 1 '
+# formule = 'victoire ~ diff_value + Poss + C(top_DM) - 1 '
 
-m = ConditionalLogit(endog=y, exog=x, groups=g)
-model = ConditionalLogit.from_formula(formule, df,groups=df['team'])
+# m = ConditionalLogit(endog=y, exog=x, groups=g)
+# model = ConditionalLogit.from_formula(formule, df,groups=df['team'])
 
-r = m.fit()
-test = model.fit()
+# r = m.fit()
+# test = model.fit()
 
-r.summary()
-test.summary()
+# r.summary()
+# test.summary()
 
 ##CLUSTERING
 group = moy.copy()
-group = group[['team','Formation','Poss','SoT','Dist','Fls','diff_value','CrdY',"CrdR","PK",
-               "coup_arret","top_DM"]]
-group = group.set_index(['team','Formation'])
+group["nb_top"] = group["top_GK"] + group["top_MF"] + group["top_DM"] + group["top_DF"] +\
+    group["top_FW"]
+group = group[['team','Formation',"year",'Poss','age','Dist','Fls','diff_value',"PK",
+               "coup_arret","nb_top"]]
+group = group.set_index(['team','Formation',"year"])
 
 x = group.values #returns a numpy array
 #min_max_scaler = preprocessing.MinMaxScaler()
@@ -97,3 +106,39 @@ group.loc[group.cluster == 2].count()
 
 group = group.reset_index()
 sns.swarmplot(group.cluster,group.cluster)
+
+test = group.groupby(["Formation","cluster"]).count().reset_index()
+test = test[["Formation","cluster","team"]]
+test_moy = group.groupby("cluster").mean().reset_index()
+
+group.to_csv("bdd/data/team_annee_cluster.csv",sep=";")
+test.to_csv("bdd/data/formation_cluster.csv",sep=";")
+test_moy.to_csv("bdd/data/moyennes_cluster.csv",sep=";")
+
+group = group[["team","Formation","year","cluster"]]
+
+df = df.merge(group, on = (["team","Formation","year"]), how = "left")
+
+df.to_csv("bdd/data/df_all_seasons.csv",sep=";")
+
+##REGRESSION
+
+corr = df.corr()
+
+import statsmodels.api as sm
+import statsmodels.formula.api as smf
+
+reg = smf.logit('victoire ~ C(home)*Sh + Poss + FDA + \
+                     diff_value + Att + age + SoT + C(saison) + \
+                         + C(PK) + C(CrdR) + C(Formation)*C(top_DM)\
+                             + C(cluster) + score_df_mean',
+                  data=df).fit()
+
+reg.summary()
+
+from joblib import dump,load
+
+dump(reg, 'model_serieA_cluster.joblib')
+reg=load('model_serieA_cluster.joblib')
+
+

@@ -4065,4 +4065,135 @@ RETENTER LES MODELE CONDITIONNELS ET VOIR CE QUI MARCHE PAS
 TESTER UN LOGIT AVEC LES GROUPES EN VARIABLE QUALI 
 
 
+PERTINENCE D UN MODELE AVEC EFFETS FIXES LORSQU ON Y INTEGRE DES VARIABLES DUMMY ?
+Pas sûr du truc car c'est déjà des groupes en soit et quel est l'intérêt??
 
+On se focus sur le clustering
+
+Les groupes obtenus ::
+
+Groupe 0 :: Equipes jeunes avec une très faible valeur qui a peu la possession et provoque pas mal de fautes ==> Equipes qui sont dominées généralement dans le jeu (ex : Le 3-5-2 de Crotone en 2021 ,le 4-3-3 de l'Atalanta en 2022, le 4-5-1 de la Salernitana en 2023)
+
+Groupe 1 :: Equipes à forte valeur avec la possession et beaucoup de top joueurs ==> Equipes dominantes
+(ex : 4-5-1 de la Juve en 2021, le 4-5-1 du Milan en 2022, le 3-5-2 de l'Inter en 2023)
+
+Groupe 2 :: Equipe avec la possession et qui domine le jeu mais avec une valeur moins forte que le groupe 1 et moins de top joueurs ==> Challengers sérieux
+(ex : le 4-5-1 de la Fiorentina de 2021, le 3-4-3 du Napoli en 2022, le 4-5-1 de la Lazio en 2023)
+
+Groupe 3 :: équipes plutôt jeune avec une valeur assez faible et peu de top joueurs ==> EN VOIE DE DEVELOPPEMENT
+(ex : le 3-5-2 de Cagliari en 2021, le 4-3-3 de la Lazio en 2022, le 3-5-2 de la Salernitana en 2023)
+
+Par formation :
+
+3-4-3 plutot groupes 2 et 3
+3-5-2 plutot groupes 0 et 3
+4-3-3 plutot groupes 0 et 3
+4-4-2 plutot groupe 3
+4-5-1 plutot groupe 0 mais aussi le plus représenté très forte présence dans les 3 autres groupes
+
+TEST DU MODELE AVEC LE CLUSTER
+
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:               victoire   No. Observations:                 1471
+Model:                          Logit   Df Residuals:                     1440
+Method:                           MLE   Df Model:                           30
+Date:                Mon, 03 Apr 2023   Pseudo R-squ.:                  0.3168
+Time:                        17:51:01   Log-Likelihood:                -666.36
+converged:                       True   LL-Null:                       -975.37
+Covariance Type:            nonrobust   LLR p-value:                5.462e-111
+========================================================================================================
+                                           coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------
+Intercept                                4.2405      2.226      1.905      0.057      -0.122       8.603
+C(home)[T.1]                             1.6706      0.373      4.479      0.000       0.940       2.402
+C(saison)[T.reste]                      -0.2148      0.147     -1.462      0.144      -0.503       0.073
+C(PK)[T.1]                               0.9662      0.205      4.714      0.000       0.564       1.368
+C(PK)[T.2]                               2.2461      0.752      2.987      0.003       0.772       3.720
+C(CrdR)[T.1]                            -0.8995      0.262     -3.427      0.001      -1.414      -0.385
+C(CrdR)[T.2]                            -1.7097      1.110     -1.541      0.123      -3.885       0.465
+C(Formation)[T.3-5-2]                    0.4302      0.341      1.263      0.207      -0.238       1.098
+C(Formation)[T.4-3-3]                    0.9469      0.362      2.619      0.009       0.238       1.656
+C(Formation)[T.4-4-2]                    0.3438      0.555      0.620      0.535      -0.743       1.431
+C(Formation)[T.4-5-1]                    0.8217      0.355      2.315      0.021       0.126       1.517
+C(top_DM)[T.1]                           0.7828      0.405      1.932      0.053      -0.011       1.577
+C(cluster)[T.1]                          0.0602      0.339      0.178      0.859      -0.604       0.724
+C(cluster)[T.2]                          0.5117      0.286      1.790      0.074      -0.049       1.072
+C(cluster)[T.3]                          0.4334      0.228      1.897      0.058      -0.014       0.881
+C(Formation)[T.3-5-2]:C(top_DM)[T.1]    -0.8195      0.472     -1.734      0.083      -1.746       0.107
+C(Formation)[T.4-3-3]:C(top_DM)[T.1]    -1.8433      0.570     -3.233      0.001      -2.961      -0.726
+C(Formation)[T.4-4-2]:C(top_DM)[T.1]     0.0414      0.669      0.062      0.951      -1.269       1.352
+C(Formation)[T.4-5-1]:C(top_DM)[T.1]    -1.1188      0.484     -2.310      0.021      -2.068      -0.170
+Sh                                      -0.0576      0.029     -1.987      0.047      -0.114      -0.001
+C(home)[T.1]:Sh                         -0.0956      0.027     -3.590      0.000      -0.148      -0.043
+Poss                                    -0.1235      0.024     -5.219      0.000      -0.170      -0.077
+score_mf_mean                           -0.2632      0.413     -0.637      0.524      -1.073       0.547
+Poss:score_mf_mean                       0.0073      0.008      0.915      0.360      -0.008       0.023
+FDA                                      0.5750      0.267      2.157      0.031       0.052       1.098
+diff_value                               0.0049      0.000      9.786      0.000       0.004       0.006
+Att                                      0.0024      0.001      1.625      0.104      -0.000       0.005
+age                                     -0.1114      0.077     -1.449      0.147      -0.262       0.039
+SoT                                      0.4769      0.044     10.869      0.000       0.391       0.563
+score_df_mean                           -0.2710      0.128     -2.117      0.034      -0.522      -0.020
+repos                                    0.0109      0.012      0.942      0.346      -0.012       0.034
+========================================================================================================
+"""
+
+APRES QUELQUES MODIFS
+
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:               victoire   No. Observations:                 1471
+Model:                          Logit   Df Residuals:                     1443
+Method:                           MLE   Df Model:                           27
+Date:                Mon, 03 Apr 2023   Pseudo R-squ.:                  0.3154
+Time:                        17:51:54   Log-Likelihood:                -667.78
+converged:                       True   LL-Null:                       -975.37
+Covariance Type:            nonrobust   LLR p-value:                2.006e-112
+========================================================================================================
+                                           coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------
+Intercept                                3.3014      2.011      1.641      0.101      -0.641       7.244
+C(home)[T.1]                             1.6640      0.373      4.461      0.000       0.933       2.395
+C(saison)[T.reste]                      -0.1996      0.146     -1.364      0.172      -0.486       0.087
+C(PK)[T.1]                               0.9627      0.205      4.699      0.000       0.561       1.364
+C(PK)[T.2]                               2.2357      0.747      2.992      0.003       0.771       3.700
+C(CrdR)[T.1]                            -0.9025      0.263     -3.434      0.001      -1.418      -0.387
+C(CrdR)[T.2]                            -1.7329      1.115     -1.554      0.120      -3.919       0.453
+C(Formation)[T.3-5-2]                    0.3434      0.331      1.039      0.299      -0.305       0.991
+C(Formation)[T.4-3-3]                    0.9523      0.360      2.642      0.008       0.246       1.659
+C(Formation)[T.4-4-2]                    0.2459      0.539      0.456      0.648      -0.811       1.303
+C(Formation)[T.4-5-1]                    0.7987      0.352      2.267      0.023       0.108       1.489
+C(top_DM)[T.1]                           0.8042      0.405      1.988      0.047       0.011       1.597
+C(cluster)[T.1]                          0.1663      0.309      0.538      0.591      -0.440       0.772
+C(cluster)[T.2]                          0.5599      0.270      2.071      0.038       0.030       1.090
+C(cluster)[T.3]                          0.4535      0.222      2.046      0.041       0.019       0.888
+C(Formation)[T.3-5-2]:C(top_DM)[T.1]    -0.7840      0.470     -1.667      0.096      -1.706       0.138
+C(Formation)[T.4-3-3]:C(top_DM)[T.1]    -1.9126      0.567     -3.375      0.001      -3.023      -0.802
+C(Formation)[T.4-4-2]:C(top_DM)[T.1]     0.0448      0.663      0.068      0.946      -1.255       1.344
+C(Formation)[T.4-5-1]:C(top_DM)[T.1]    -1.1957      0.480     -2.491      0.013      -2.137      -0.255
+Sh                                      -0.0537      0.029     -1.867      0.062      -0.110       0.003
+C(home)[T.1]:Sh                         -0.0951      0.027     -3.573      0.000      -0.147      -0.043
+Poss                                    -0.1094      0.018     -6.177      0.000      -0.144      -0.075
+FDA                                      0.5399      0.264      2.045      0.041       0.022       1.057
+diff_value                               0.0049      0.000      9.835      0.000       0.004       0.006
+Att                                      0.0027      0.001      1.844      0.065      -0.000       0.006
+age                                     -0.0952      0.076     -1.259      0.208      -0.244       0.053
+SoT                                      0.4754      0.044     10.892      0.000       0.390       0.561
+score_df_mean                           -0.2609      0.127     -2.051      0.040      -0.510      -0.012
+========================================================================================================
+"""
+
+OBSERVATIONS :
+
+R² qui augmente
+LLR p-value en baisse == Cool
+
+Sur les Clusters :
+
+Pas de différence significative entre le groupe 0 et le groupe 1 sur les chances de victoire (ETONNANT !! groupe 0 == LES CHEVRES et groupe 1 == LES CHAMPIONS)
+
+Par contre le groupe 2 a 56% de chances de victoire en plus que le groupe 0 
+Le groupe 3 avec 45% de chances en plus de victoire que le groupe 0
+
+PROCHAINE ETAPE :: REDACTION, CREER UNE FONCTION POUR AUTOMATISER LES PREDICTIONS VIA LE MODELE ET ENSUITE MACHINE LEARNING
