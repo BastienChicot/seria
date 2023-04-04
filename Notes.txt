@@ -4197,3 +4197,5 @@ Par contre le groupe 2 a 56% de chances de victoire en plus que le groupe 0
 Le groupe 3 avec 45% de chances en plus de victoire que le groupe 0
 
 PROCHAINE ETAPE :: REDACTION, CREER UNE FONCTION POUR AUTOMATISER LES PREDICTIONS VIA LE MODELE ET ENSUITE MACHINE LEARNING
+
+FONCTION POUR LES PREDICTIONS
