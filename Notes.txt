@@ -4199,3 +4199,7 @@ Le groupe 3 avec 45% de chances en plus de victoire que le groupe 0
 PROCHAINE ETAPE :: REDACTION, CREER UNE FONCTION POUR AUTOMATISER LES PREDICTIONS VIA LE MODELE ET ENSUITE MACHINE LEARNING
 
 FONCTION POUR LES PREDICTIONS
+
+Ca fonctionne
+
+Voir pour un modèle multinomial

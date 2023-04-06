@@ -102,6 +102,16 @@ def get_predi(domicile, exterieur, h_pk = 0, h_crdr = 0, h_repos = 7, v_pk = 0, 
         nul = 1 - (pred_home.values + pred_exte.values)
         print(domicile," : ",pred_home.values*100,"        ",exterieur," : ",pred_exte.values*100)
         print("Nul : ",nul*100)
+
+listePK = [0,1]
+listecrdr = [0,1]
+
+for i in listePK :
+    for j in listecrdr:
+        print("penalty : ",i)
+        print("rouge : ",j)
         
-test = get_predi("Milan", "Internazionale")
+        get_predi("Lazio","Juventus",h_pk=i,h_crdr = j,h_repos= 5, v_repos = 6)
+        get_predi("Lazio","Juventus",v_pk=i,v_crdr = j,h_repos= 5, v_repos = 6)
+                
 
