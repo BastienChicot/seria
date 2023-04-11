@@ -4203,3 +4203,268 @@ FONCTION POUR LES PREDICTIONS
 Ca fonctionne
 
 Voir pour un modèle multinomial
+
+
+MODELE MULTINOMIAL
+
+                          MNLogit Regression Results                          
+==============================================================================
+Dep. Variable:                      y   No. Observations:                 1471
+Model:                        MNLogit   Df Residuals:                     1433
+Method:                           MLE   Df Model:                           36
+Date:                Tue, 11 Apr 2023   Pseudo R-squ.:                  0.2175
+Time:                        17:20:10   Log-Likelihood:                -1247.8
+converged:                       True   LL-Null:                       -1594.6
+Covariance Type:            nonrobust   LLR p-value:                1.007e-122
+==============================================================================
+       y=N       coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+x1            -0.0100      0.016     -0.638      0.524      -0.041       0.021
+x2             0.0259      0.032      0.801      0.423      -0.038       0.089
+x3             0.0775      0.044      1.755      0.079      -0.009       0.164
+x4             0.0353      0.025      1.393      0.164      -0.014       0.085
+x5            -0.0058      0.020     -0.295      0.768      -0.044       0.033
+x6             0.0075      0.021      0.361      0.718      -0.033       0.048
+x7             0.0034      0.000      8.242      0.000       0.003       0.004
+x8            -0.0088      0.013     -0.678      0.498      -0.034       0.017
+x9            -0.0291      0.018     -1.584      0.113      -0.065       0.007
+x10            0.5218      0.235      2.221      0.026       0.061       0.982
+x11           -0.3639      0.197     -1.846      0.065      -0.750       0.023
+x12           -0.0034      0.001     -2.504      0.012      -0.006      -0.001
+x13            0.2196      0.232      0.947      0.344      -0.235       0.674
+x14            0.0631      0.082      0.770      0.441      -0.098       0.224
+x15           -0.0057      0.108     -0.053      0.957      -0.217       0.205
+x16           -0.0012      0.113     -0.011      0.992      -0.222       0.219
+x17            0.0395      0.115      0.343      0.732      -0.186       0.266
+x18            0.0117      0.051      0.230      0.818      -0.088       0.111
+x19           -0.0921      0.064     -1.429      0.153      -0.218       0.034
+------------------------------------------------------------------------------
+       y=V       coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+x1            -0.0950      0.017     -5.551      0.000      -0.129      -0.061
+x2             0.1114      0.034      3.246      0.001       0.044       0.179
+x3             0.4335      0.046      9.501      0.000       0.344       0.523
+x4            -0.0209      0.028     -0.736      0.462      -0.077       0.035
+x5             0.0255      0.021      1.202      0.229      -0.016       0.067
+x6             0.0433      0.023      1.911      0.056      -0.001       0.088
+x7             0.0059      0.000     12.604      0.000       0.005       0.007
+x8             0.0019      0.013      0.141      0.888      -0.024       0.028
+x9             0.0054      0.020      0.275      0.783      -0.033       0.044
+x10            1.3103      0.232      5.651      0.000       0.856       1.765
+x11           -0.8994      0.248     -3.626      0.000      -1.385      -0.413
+x12            0.0002      0.001      0.156      0.876      -0.003       0.003
+x13           -0.0577      0.246     -0.234      0.815      -0.541       0.425
+x14            0.2156      0.092      2.341      0.019       0.035       0.396
+x15           -0.2919      0.118     -2.478      0.013      -0.523      -0.061
+x16            0.0125      0.118      0.106      0.916      -0.218       0.243
+x17            0.1922      0.120      1.606      0.108      -0.042       0.427
+x18            0.0139      0.057      0.241      0.809      -0.099       0.127
+x19           -0.0867      0.069     -1.262      0.207      -0.221       0.048
+==============================================================================
+"""
+
+x1 : Poss
+x2 : age
+x3 : SoT
+x4 : Dist
+x5 : Int
+x6 : Fls
+x7 : Diff_value
+x8 : repos
+x9 : Mois
+x10 : PK
+x11 : CrdR
+x12 : CMP
+x13 : FDA
+x14 : FDD
+x15 : score_m_df
+x16 : score_m_mf
+x17 : score_m_fw
+x18 : score_m_dm
+x19 : score_m_gk
+
+R² pas fou , on ne peut pas passer de variable quali dans le modèle du coup on perd pas mal d'info
+
+Les seules variables qui semblent impacter pertinemment le modèle sont les tirs cadrés, la différence de valeur les penaltys et les cartons rouges (comme d'hab).
+
+L'idée était interessante mais le phénomène ne peut pas s'expliquer sans introduire de variable quali.
+
+En utilisant la méthode get_dummies de pandas, j'introduis les variables home, saison, formation et cluster dans le modèle et j'obtiens ::
+
+                          MNLogit Regression Results                          
+==============================================================================
+Dep. Variable:                 result   No. Observations:                 1471
+Model:                        MNLogit   Df Residuals:                     1431
+Method:                           MLE   Df Model:                           38
+Date:                Tue, 11 Apr 2023   Pseudo R-squ.:                  0.2322
+Time:                        17:39:28   Log-Likelihood:                -1224.4
+converged:                       True   LL-Null:                       -1594.6
+Covariance Type:            nonrobust   LLR p-value:                4.382e-131
+=================================================================================
+     result=N       coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------
+Sh               -0.0021      0.026     -0.081      0.936      -0.053       0.048
+Poss             -0.0096      0.018     -0.543      0.587      -0.044       0.025
+FDA               0.0778      0.267      0.291      0.771      -0.446       0.601
+diff_value        0.0041      0.000      8.506      0.000       0.003       0.005
+Att              -0.0036      0.002     -2.308      0.021      -0.007      -0.001
+age               0.0416      0.023      1.831      0.067      -0.003       0.086
+SoT               0.0686      0.049      1.396      0.163      -0.028       0.165
+PK                0.5393      0.236      2.289      0.022       0.077       1.001
+CrdR             -0.4657      0.200     -2.326      0.020      -0.858      -0.073
+top_DM            0.1595      0.181      0.883      0.377      -0.195       0.514
+score_df_mean    -0.0108      0.124     -0.087      0.931      -0.254       0.233
+1                 0.2424      0.148      1.635      0.102      -0.048       0.533
+reste             0.5517      0.160      3.458      0.001       0.239       0.864
+3-5-2             0.0128      0.250      0.051      0.959      -0.477       0.503
+4-3-3             0.1259      0.292      0.431      0.666      -0.446       0.698
+4-4-2            -0.0584      0.335     -0.174      0.862      -0.716       0.599
+4-5-1            -0.0027      0.254     -0.011      0.992      -0.500       0.495
+1                -0.3185      0.326     -0.978      0.328      -0.957       0.320
+2                -0.1830      0.270     -0.677      0.498      -0.713       0.347
+3                 0.4597      0.191      2.408      0.016       0.086       0.834
+---------------------------------------------------------------------------------
+     result=V       coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------
+Sh               -0.1124      0.028     -4.039      0.000      -0.167      -0.058
+Poss             -0.0999      0.019     -5.160      0.000      -0.138      -0.062
+FDA               0.6266      0.294      2.130      0.033       0.050       1.203
+diff_value        0.0066      0.001     11.979      0.000       0.006       0.008
+Att               0.0004      0.002      0.215      0.830      -0.003       0.004
+age               0.1059      0.025      4.275      0.000       0.057       0.154
+SoT               0.5129      0.051     10.013      0.000       0.413       0.613
+PK                1.3134      0.231      5.675      0.000       0.860       1.767
+CrdR             -1.1243      0.253     -4.452      0.000      -1.619      -0.629
+top_DM            0.0787      0.198      0.398      0.691      -0.309       0.467
+score_df_mean    -0.2246      0.138     -1.627      0.104      -0.495       0.046
+1                 0.5339      0.159      3.358      0.001       0.222       0.845
+reste             0.1295      0.165      0.786      0.432      -0.194       0.453
+3-5-2            -0.1529      0.268     -0.570      0.569      -0.678       0.373
+4-3-3             0.1302      0.303      0.429      0.668      -0.464       0.725
+4-4-2             0.3768      0.366      1.030      0.303      -0.340       1.094
+4-5-1             0.1808      0.270      0.669      0.503      -0.349       0.710
+1                 0.0635      0.344      0.185      0.853      -0.610       0.737
+2                 0.6333      0.286      2.210      0.027       0.072       1.195
+3                 0.6195      0.224      2.770      0.006       0.181       1.058
+=================================================================================
+"""
+
+R² toujours pas très bon
+Pas mal de truc non significatifs
+Plus de significativité sur les victoires 
+Je ne peux pas passer de formule dans le modèle, par conséquent, je perds les liaisons notamment en ce qui concerne les formations et les top_DM.
+
+Effets marginaux ::
+
+       MNLogit Marginal Effects      
+=====================================
+Dep. Variable:                 result
+Method:                          dydx
+At:                           overall
+=================================================================================
+     result=D      dy/dx    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------
+Sh                0.0082      0.004      2.160      0.031       0.001       0.016
+Poss              0.0080      0.003      3.117      0.002       0.003       0.013
+FDA              -0.0517      0.039     -1.314      0.189      -0.129       0.025
+diff_value       -0.0008   5.62e-05    -15.043      0.000      -0.001      -0.001
+Att               0.0003      0.000      1.376      0.169      -0.000       0.001
+age              -0.0114      0.003     -3.486      0.000      -0.018      -0.005
+SoT              -0.0428      0.007     -6.388      0.000      -0.056      -0.030
+PK               -0.1434      0.034     -4.222      0.000      -0.210      -0.077
+CrdR              0.1232      0.029      4.178      0.000       0.065       0.181
+top_DM           -0.0205      0.027     -0.772      0.440      -0.072       0.032
+score_df_mean     0.0169      0.018      0.919      0.358      -0.019       0.053
+1                -0.0605      0.022     -2.803      0.005      -0.103      -0.018
+reste            -0.0607      0.023     -2.685      0.007      -0.105      -0.016
+3-5-2             0.0096      0.037      0.261      0.794      -0.063       0.082
+4-3-3            -0.0210      0.043     -0.491      0.623      -0.105       0.063
+4-4-2            -0.0213      0.049     -0.433      0.665      -0.117       0.075
+4-5-1            -0.0126      0.037     -0.336      0.737      -0.086       0.061
+1                 0.0252      0.047      0.537      0.591      -0.067       0.117
+2                -0.0278      0.039     -0.722      0.470      -0.103       0.048
+3                -0.0868      0.028     -3.101      0.002      -0.142      -0.032
+---------------------------------------------------------------------------------
+     result=N      dy/dx    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------
+Sh                0.0087      0.004      2.304      0.021       0.001       0.016
+Poss              0.0064      0.003      2.432      0.015       0.001       0.012
+FDA              -0.0372      0.041     -0.913      0.361      -0.117       0.043
+diff_value        0.0002   6.82e-05      2.546      0.011    3.99e-05       0.000
+Att              -0.0007      0.000     -2.810      0.005      -0.001      -0.000
+age              -0.0013      0.003     -0.389      0.697      -0.008       0.005
+SoT              -0.0296      0.007     -4.445      0.000      -0.043      -0.017
+PK               -0.0124      0.032     -0.387      0.699      -0.075       0.050
+CrdR              0.0099      0.033      0.299      0.765      -0.055       0.075
+top_DM            0.0214      0.028      0.771      0.441      -0.033       0.076
+score_df_mean     0.0163      0.019      0.863      0.388      -0.021       0.053
+1                -0.0010      0.022     -0.045      0.964      -0.045       0.043
+reste             0.0857      0.024      3.550      0.000       0.038       0.133
+3-5-2             0.0146      0.037      0.392      0.695      -0.059       0.088
+4-3-3             0.0114      0.043      0.264      0.792      -0.073       0.096
+4-4-2            -0.0407      0.052     -0.789      0.430      -0.142       0.060
+4-5-1            -0.0151      0.038     -0.400      0.689      -0.089       0.059
+1                -0.0607      0.050     -1.214      0.225      -0.159       0.037
+2                -0.0832      0.042     -1.972      0.049      -0.166      -0.001
+3                 0.0300      0.030      0.986      0.324      -0.030       0.090
+---------------------------------------------------------------------------------
+     result=V      dy/dx    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------
+Sh               -0.0169      0.004     -4.796      0.000      -0.024      -0.010
+Poss             -0.0144      0.002     -5.820      0.000      -0.019      -0.010
+FDA               0.0889      0.039      2.283      0.022       0.013       0.165
+diff_value        0.0007   6.65e-05     10.110      0.000       0.001       0.001
+Att               0.0003      0.000      1.603      0.109   -7.61e-05       0.001
+age               0.0127      0.003      3.910      0.000       0.006       0.019
+SoT               0.0724      0.006     13.068      0.000       0.062       0.083
+PK                0.1558      0.026      5.919      0.000       0.104       0.207
+CrdR             -0.1330      0.035     -3.777      0.000      -0.202      -0.064
+top_DM           -0.0010      0.027     -0.037      0.971      -0.053       0.051
+score_df_mean    -0.0332      0.018     -1.820      0.069      -0.069       0.003
+1                 0.0615      0.021      2.975      0.003       0.021       0.102
+reste            -0.0250      0.022     -1.144      0.253      -0.068       0.018
+3-5-2            -0.0243      0.035     -0.696      0.487      -0.093       0.044
+4-3-3             0.0096      0.039      0.245      0.807      -0.067       0.086
+4-4-2             0.0620      0.049      1.265      0.206      -0.034       0.158
+4-5-1             0.0277      0.035      0.791      0.429      -0.041       0.096
+1                 0.0355      0.046      0.770      0.441      -0.055       0.126
+2                 0.1110      0.039      2.854      0.004       0.035       0.187
+3                 0.0569      0.031      1.848      0.065      -0.003       0.117
+=================================================================================
+"""
+
+Interpretation ::
+
+La proba de défaite diminue de 6% à domicile
+La proba de nul diminue de 0.1% à domicile
+La proba de victoire augmente de 6% à domicile
+
+Le nombre de tir a quasiment le même effet sur le nul et la défaite . Par contre, plus je tir et plus je diminue ma proba de victoire ???
+
+Pour la possession, son effet va de concert avec les proba de défaites et de nuls mais en sens inverse de la proba de victoire (cohérent avec les résultats du modèle d'origine)
+
+ Diff value cohérent avec le modèle de base
+
+Une équipe qui a une moyenne d'a^ge d'un an de plus augmente ses probas de victoire de 1.2 % (inversement de la défaite) 
+
+Prendre plus de tirs cadrés augmente les chances de victoires et diminue les proba de nul ou de défaite
+
+Obtenir un pénalty augmente de 15% les chances de victoire
+Obtenir un carton rouge diminue les chances de victoire de 13%, augmente les chances de défaite de 12 % et est quasi sans effet sur le match nul (même si on dirait que proba D + proba N == proba V)
+
+Top Dm non significatif mais dans le même sens pour victoire et défaite (négatif) et positif pour le nul ??
+
+Plus les défenseurs ont un score moyen élevé, plus les chances de défaite et/ou de nul augmentent
+
+GROS RESULTAT :: LA SAISON IMPACT LA PROBA DE NUL === JUSTIFIE LA THEORIE DEVELOPPEE AUPARAVANT CAD --> LES EQUIPES SE CONCENTRENT PLUS EN AUTOMNE POUR GAGNER DES POINTS TOUT DE SUITE PUIS LAISSENT COULER OU REPOSENT PLUS LES MEILLEURS JOUEURS ET DONC FONT PLUS DE NUL (significatif qu'en Italie)
+
+Sur les clusters :: Par rapport au groupe 0 (les nullos )
+
+groupe 1 (les forts) : effet positif sur victoire mais aussi sur défaite ??? Par contre moins de nuls
+groupe 2 (les challengers) : effet positif sur les victoires et négatifs sur nuls et défaites
+groupe 3 (moyen faibles) : positif sur les victoires et les nuls mais négaitf sur les défaites.
+==> donc groupe 1 soit il gagnent soit ils perdent mais ont moins de chances de faire des nuls, les groupes 2 surtout sur la victoire, et le groupe 3 tendance à aller provoquer le nul.
+
+
+POUR INTEGRATION PREDICTION == VOIR LE NOMMAGE DES COLONNES GET DUMMIES
+

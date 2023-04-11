@@ -10,6 +10,18 @@ import pandas as pd
 import datetime
 
 df = pd.read_csv("bdd/data/df_all_seasons.csv", sep= ";", index_col = 0)
+df.loc[(df["not_lose"] + df["victoire"] == 0), "result"] = "D" 
+df.loc[(df["not_lose"] + df["victoire"] == 1), "result"] = "N" 
+df.loc[(df["not_lose"] + df["victoire"] == 2), "result"] = "V"
+
+domicile = pd.get_dummies(df["home"], drop_first=True)
+saison = pd.get_dummies(df["saison"], drop_first=True)
+formation = pd.get_dummies(df["Formation"], drop_first=True)
+cluster = pd.get_dummies(df["cluster"], drop_first=True)
+
+df= pd.concat([df,domicile,saison,formation,cluster],
+              axis = 1)
+
 values = pd.read_csv("bdd/data/value_tm_serieA_23.txt", sep=";")
 values["value"] = values["value"].str[1:]
 values["value"] = values['value'].str.replace('m', '')
@@ -18,6 +30,7 @@ values["value"] = pd.to_numeric(values['value'], errors='coerce').convert_dtypes
 
 reg=load('model_serieA_cluster.joblib')
 reg_test=load('model_serieA.joblib')
+mn_logit = load('model_serieA_multinomial.joblib')
 
 def get_df(team, opp, dom, pk = 0, crdr = 0, repos = 7):
 
@@ -71,12 +84,18 @@ def get_df(team, opp, dom, pk = 0, crdr = 0, repos = 7):
     home["home"] = dom
     home["Mois"] = mois
 
-    return(home)
+    x = home[["Sh","Poss","FDA","diff_value","Att","age","SoT",
+            "PK","CrdR","top_DM","score_df_mean",
+            1,"reste","3-5-2","4-3-3","4-4-2","4-5-1",1,2,3]]
+    
+    x = x.iloc[:,~x.columns.duplicated()]
+
+    return(home,x)
 
 def get_predi(domicile, exterieur, h_pk = 0, h_crdr = 0, h_repos = 7, v_pk = 0, v_crdr = 0, v_repos = 7):
     
-    home = get_df(domicile, exterieur, 1, pk = h_pk, crdr = h_crdr, repos = h_repos)
-    exte = get_df(exterieur, domicile, 0, pk = v_pk, crdr = v_crdr, repos = v_repos)
+    home,x = get_df(domicile, exterieur, 1, pk = h_pk, crdr = h_crdr, repos = h_repos)
+    exte,b = get_df(exterieur, domicile, 0, pk = v_pk, crdr = v_crdr, repos = v_repos)
     
     # df_h_1 = home[["home","Sh","Poss","score_mf_mean","FDA",
     #                  "diff_value","Att","age","SoT","saison",
@@ -95,6 +114,9 @@ def get_predi(domicile, exterieur, h_pk = 0, h_crdr = 0, h_repos = 7, v_pk = 0, 
 
     liste_model = [reg_test,reg]
     
+    pred_mn_h = mn_logit.predict(x)
+    pred_mn_v = mn_logit.predict(b)
+    
     for model in liste_model:
         
         pred_home = model.predict(home)
@@ -102,6 +124,8 @@ def get_predi(domicile, exterieur, h_pk = 0, h_crdr = 0, h_repos = 7, v_pk = 0, 
         nul = 1 - (pred_home.values + pred_exte.values)
         print(domicile," : ",pred_home.values*100,"        ",exterieur," : ",pred_exte.values*100)
         print("Nul : ",nul*100)
+        
+        print(pred_mn_h,pred_mn_v)
 
 listePK = [0,1]
 listecrdr = [0,1]
