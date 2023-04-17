@@ -19,6 +19,18 @@ saison = pd.get_dummies(df["saison"], drop_first=True)
 formation = pd.get_dummies(df["Formation"], drop_first=True)
 cluster = pd.get_dummies(df["cluster"], drop_first=True)
 
+domicile = domicile.rename(
+    columns = {
+        1:"Domicile"
+        })
+
+cluster = cluster.rename(
+    columns = {
+        1:"Cluster1",
+        2:"Cluster2",
+        3:"Cluster3"
+        })
+
 df= pd.concat([df,domicile,saison,formation,cluster],
               axis = 1)
 
@@ -86,7 +98,8 @@ def get_df(team, opp, dom, pk = 0, crdr = 0, repos = 7):
 
     x = home[["Sh","Poss","FDA","diff_value","Att","age","SoT",
             "PK","CrdR","top_DM","score_df_mean",
-            1,"reste","3-5-2","4-3-3","4-4-2","4-5-1",1,2,3]]
+            "Domicile","reste","3-5-2","4-3-3","4-4-2","4-5-1",
+            "Cluster1","Cluster2","Cluster3"]]
     
     x = x.iloc[:,~x.columns.duplicated()]
 
@@ -113,19 +126,41 @@ def get_predi(domicile, exterieur, h_pk = 0, h_crdr = 0, h_repos = 7, v_pk = 0, 
     #     ]]
 
     liste_model = [reg_test,reg]
+    liste_nom = ["logit","logit avec cluster"]
     
     pred_mn_h = mn_logit.predict(x)
-    pred_mn_v = mn_logit.predict(b)
     
-    for model in liste_model:
+    pred_mn_h = pred_mn_h.rename(
+        columns = {
+            0:"Défaite",
+            1:"Nul",
+            2:"Victoire"
+            })
+    
+    pred_mn_v = mn_logit.predict(b)
+
+    pred_mn_v = pred_mn_v.rename(
+        columns = {
+            0:"Défaite",
+            1:"Nul",
+            2:"Victoire"
+            })
+    
+    for i in range(len(liste_model)):
         
+        model = liste_model[i]
         pred_home = model.predict(home)
         pred_exte = model.predict(exte)
         nul = 1 - (pred_home.values + pred_exte.values)
+        print(liste_nom[i])
         print(domicile," : ",pred_home.values*100,"        ",exterieur," : ",pred_exte.values*100)
         print("Nul : ",nul*100)
         
-        print(pred_mn_h,pred_mn_v)
+    print(domicile)
+    print(pred_mn_h)
+
+    print(exterieur)
+    print(pred_mn_v)
 
 listePK = [0,1]
 listecrdr = [0,1]

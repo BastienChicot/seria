@@ -28,6 +28,18 @@ saison = pd.get_dummies(x["saison"], drop_first=True)
 formation = pd.get_dummies(x["Formation"], drop_first=True)
 cluster = pd.get_dummies(x["cluster"], drop_first=True)
 
+home = home.rename(
+    columns = {
+        1:"Domicile"
+        })
+
+cluster = cluster.rename(
+    columns = {
+        1:"Cluster1",
+        2:"Cluster2",
+        3:"Cluster3"
+        })
+
 x.drop(["home","saison","Formation","cluster"], axis = 1,
            inplace = True)
 
