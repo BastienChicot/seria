@@ -4468,3 +4468,22 @@ groupe 3 (moyen faibles) : positif sur les victoires et les nuls mais négaitf s
 
 POUR INTEGRATION PREDICTION == VOIR LE NOMMAGE DES COLONNES GET DUMMIES
 
+
+MACHINE LEARNING
+
+Integration des cluster des adversaires
+
+Pas de moyenne des erreurs sur les prédictions car classification == voir comment contourner ça
+
+Premiers résultats du premier lancement du script :
+
+Neural
+ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  warnings.warn(
+0.5833333333333334
+SGD
+0.5277777777777778
+KNN
+0.5694444444444444
+RFR
+0.5625
