@@ -14,29 +14,29 @@ df.loc[(df["not_lose"] + df["victoire"] == 0), "result"] = "D"
 df.loc[(df["not_lose"] + df["victoire"] == 1), "result"] = "N" 
 df.loc[(df["not_lose"] + df["victoire"] == 2), "result"] = "V"
 
-# clusters = df[["team","Opponent","year","cluster"]]
-# df["key"] = ""
-# clusters["key"] = ""
-# clusters["opp_key"] = ""
+clusters = df[["team","Opponent","year","cluster"]]
+df["key"] = ""
+clusters["key"] = ""
+clusters["opp_key"] = ""
 
-# for i in clusters.index :
-#     df["key"][i] = df["team"][i]+df["Opponent"][i]+str(df["year"][i])
-#     clusters["key"][i] = str(clusters["team"][i])+str(clusters["Opponent"][i])+str(clusters["year"][i])
-#     clusters["opp_key"][i] = clusters["Opponent"][i]+clusters["team"][i]+str(clusters["year"][i])
+for i in clusters.index :
+    df["key"][i] = df["team"][i]+df["Opponent"][i]+str(df["year"][i])
+    clusters["key"][i] = str(clusters["team"][i])+str(clusters["Opponent"][i])+str(clusters["year"][i])
+    clusters["opp_key"][i] = clusters["Opponent"][i]+clusters["team"][i]+str(clusters["year"][i])
 
-# Opp_tab = clusters[["opp_key","cluster"]]
+Opp_tab = clusters[["opp_key","cluster"]]
 
-# Opp_tab = Opp_tab.rename(
-#     columns = {
-#         "opp_key" : "key",
-#         "cluster" : "opp_cluster"
-#         })
+Opp_tab = Opp_tab.rename(
+    columns = {
+        "opp_key" : "key",
+        "cluster" : "opp_cluster"
+        })
 
-# clusters = clusters.merge(Opp_tab, on = ["key"], how = "left")
-# clusters = clusters.drop_duplicates()
+clusters = clusters.merge(Opp_tab, on = ["key"], how = "left")
+clusters = clusters.drop_duplicates()
 
-# df = df.merge(Opp_tab, on = ["key"], how = "left")
-# df = df.drop_duplicates()
+df = df.merge(Opp_tab, on = ["key"], how = "left")
+df = df.drop_duplicates()
 
 from sklearn.preprocessing import MinMaxScaler
 import matplotlib.pyplot as plt
@@ -158,4 +158,30 @@ for name, model in dict_of_models.items():
     print(name)
     evaluation(model)  
 
+###MLP opti
+
+from sklearn.model_selection import GridSearchCV
+
+parameters = {
+    "max_iter" : [500,750,1000],
+    'hidden_layer_sizes': [(50,50,50), (50,100,50), (100,)],
+    'activation': ["identity", "logistic", "tanh", "relu"],
+    'solver': ['sgd', 'adam'],
+    'alpha': [0.0001, 0.05],
+    'learning_rate': ['constant','adaptive'],
+}
+
+clf = make_pipeline(preprocessor, 
+                    GridSearchCV(MLPClassifier(), parameters, scoring='accuracy', n_jobs=-1, cv=3))
+clf.fit(X_train, y_train)
+
+
+clf['gridsearchcv'].best_params_
+
+# {'activation': 'logistic',
+#  'alpha': 0.0001,
+#  'hidden_layer_sizes': (100,),
+#  'learning_rate': 'adaptive',
+#  'max_iter': 500,
+#  'solver': 'sgd'}
 
