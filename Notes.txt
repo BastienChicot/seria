@@ -4514,3 +4514,32 @@ best params MLP
 #  'max_iter': 500,
 #  'solver': 'sgd'}
 
+OPTI Random Forest
+
+{'max_depth': 10,
+ 'max_features': 'log2',
+ 'min_samples_leaf': 1,
+ 'min_samples_split': 2,
+ 'n_estimators': 500}
+
+OPTI KNN
+
+{'algorithm': 'auto',
+ 'leaf_size': 10,
+ 'metric': 'manhattan',
+ 'n_neighbors': 50,
+ 'weights': 'distance'}
+
+Scores après opti :
+
+Neural
+ConvergenceWarning: Stochastic Optimizer: Maximum iterations (500) reached and the optimization hasn't converged yet.
+  warnings.warn(
+0.5694444444444444
+KNN
+0.6388888888888888
+RFR
+0.6180555555555556
+
+Pas vraiment d'amélioration pour le réseau de neurone, un peu mieux pour la random forest et beaucoup mieux pour les Kneighbors
+J'xporte le random forest et le KNN

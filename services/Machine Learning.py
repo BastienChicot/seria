@@ -131,14 +131,35 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import SGDClassifier
 from sklearn.neighbors import KNeighborsClassifier
 
-MLP = make_pipeline(preprocessor, MLPClassifier())
-RFR = make_pipeline(preprocessor, RandomForestClassifier(n_estimators=20))
-KNN = make_pipeline(preprocessor, KNeighborsClassifier())
+MLP = make_pipeline(preprocessor, MLPClassifier(
+    activation = 'logistic',
+    alpha = 0.0001,
+    hidden_layer_sizes = (100,),
+    learning_rate = 'adaptive',
+    max_iter = 500,
+    solver = 'sgd'
+    ))
+
+RFR = make_pipeline(preprocessor, RandomForestClassifier(
+    max_depth = 10,
+    max_features = 'log2',
+    min_samples_leaf = 1,
+    min_samples_split = 2,
+    n_estimators = 500
+    ))
+
+KNN = make_pipeline(preprocessor, KNeighborsClassifier(
+    algorithm = 'auto',
+    leaf_size = 10,
+    metric = 'manhattan',
+    n_neighbors = 50,
+    weights = 'distance'
+    ))
 SGD = make_pipeline(preprocessor, SGDClassifier())
 
 dict_of_models = {
-                  "Neural": MLP,
-                  "SGD" : SGD,
+                   "Neural": MLP,
+                  # "SGD" : SGD,
                   "KNN":KNN,
                   "RFR":RFR,
                  }
@@ -158,17 +179,43 @@ for name, model in dict_of_models.items():
     print(name)
     evaluation(model)  
 
-###MLP opti
+from joblib import dump
+dump(KNN, 'model_serieA_knn.joblib')
+dump(RFR, 'model_serieA_rf.joblib')
+
+###RF opti
 
 from sklearn.model_selection import GridSearchCV
 
 parameters = {
-    "max_iter" : [500,750,1000],
-    'hidden_layer_sizes': [(50,50,50), (50,100,50), (100,)],
-    'activation': ["identity", "logistic", "tanh", "relu"],
-    'solver': ['sgd', 'adam'],
-    'alpha': [0.0001, 0.05],
-    'learning_rate': ['constant','adaptive'],
+     'max_depth': [10],
+     'max_features': ['log2', 'sqrt',None],
+     'min_samples_leaf': [1],
+     'min_samples_split': [2, 3],
+     'n_estimators': [500, 800]}
+
+clf = make_pipeline(preprocessor, 
+                    GridSearchCV(RandomForestClassifier(), parameters, scoring='accuracy', n_jobs=-1, cv=3))
+clf.fit(X_train, y_train)
+
+
+clf['gridsearchcv'].best_params_
+
+# {'max_depth': 10,
+#  'max_features': 'log2',
+#  'min_samples_leaf': 1,
+#  'min_samples_split': 2,
+#  'n_estimators': 500}
+
+###MLP opti
+
+parameters = {
+    "max_iter" : [500,250,100],
+    'hidden_layer_sizes': [(100,50,50), (50,), (100,)],
+    'activation': ["logistic"],
+    'solver': ['sgd', 'lbfgs'],
+    'alpha': [0.0001],
+    'learning_rate': ['invscaling','adaptive'],
 }
 
 clf = make_pipeline(preprocessor, 
@@ -185,3 +232,25 @@ clf['gridsearchcv'].best_params_
 #  'max_iter': 500,
 #  'solver': 'sgd'}
 
+###KNN opti
+
+parameters = {
+    'n_neighbors' : [20,50],
+    'weights' : ['distance'],
+    "algorithm" : ["auto"],
+    "leaf_size" : [10,5],
+    'metric' : ['manhattan']
+}
+
+clf = make_pipeline(preprocessor, 
+                    GridSearchCV(KNeighborsClassifier(), parameters, scoring='accuracy', n_jobs=-1, cv=3))
+clf.fit(X_train, y_train)
+
+
+clf['gridsearchcv'].best_params_
+
+# {'algorithm': 'auto',
+#  'leaf_size': 10,
+#  'metric': 'manhattan',
+#  'n_neighbors': 50,
+#  'weights': 'distance'}
