@@ -4543,3 +4543,16 @@ RFR
 
 Pas vraiment d'amélioration pour le réseau de neurone, un peu mieux pour la random forest et beaucoup mieux pour les Kneighbors
 J'xporte le random forest et le KNN
+
+
+Prédictions journée 32/38
+
+Napoli-Salenrnitana : Tous == victoire Napoli
+Roma-Ac_Milan : Regressions == Milan ; ML == Nul
+Torino-Atalanta : Plutot Atalanta mais logit qui donne un Nul
+Inter-Lazio : Regression == serré genre vraiment serré mais pas de nul; ML == Lazio
+Sassuolo-Empoli : Plutot Nul mais multinomial et KNN donne Sassuolo
+Fiorentina-Sampdoria : Regressions logit == Nul ou fiorentina serré ; Multinomial donne plutot Fiorentina; ML (KNN = D des deux ; RFC == Fiorentina)
+Bologna-Juventus : Juve fort
+
+

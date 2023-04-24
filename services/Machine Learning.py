@@ -38,6 +38,8 @@ clusters = clusters.drop_duplicates()
 df = df.merge(Opp_tab, on = ["key"], how = "left")
 df = df.drop_duplicates()
 
+df.to_csv("bdd/data/df_all_seasons.csv", sep= ";")
+
 from sklearn.preprocessing import MinMaxScaler
 import matplotlib.pyplot as plt
 import seaborn as sns
