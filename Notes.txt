@@ -4555,4 +4555,6 @@ Sassuolo-Empoli : Plutot Nul mais multinomial et KNN donne Sassuolo
 Fiorentina-Sampdoria : Regressions logit == Nul ou fiorentina serré ; Multinomial donne plutot Fiorentina; ML (KNN = D des deux ; RFC == Fiorentina)
 Bologna-Juventus : Juve fort
 
+POUR L OUVERTURE
+Comparer les différences de niveaux et le jeu de chaque championnat pour tester un modèle sur 5 championnats plutot qu'un (techniquement j'ai prouvé que ce n'était pas possible en testant le modèle sur la ligue 1 et la premier league) => a moins de créer un modèle à effets fixes sur les championnats
 
